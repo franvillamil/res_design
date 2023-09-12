@@ -9,7 +9,7 @@
 ### Slides
 
 - [1. Introduction to Research Design](./slides/1_introduction/introduction.pdf)
-- 2. Elements of quantitative data
-- 3. Introduction to causality and experiments
-- 4. Methods of causal inference
-- 5. Advanced topics and overview
+- [2. Elements of quantitative data](.)
+- [3. Introduction to causality and experiments](.)
+- [4. Methods of causal inference](.)
+- [5. Advanced topics and overview](.)
