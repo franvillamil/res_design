@@ -1,0 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Theories and research questions}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Concepts and operationalization}{18}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Measurement}{21}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Describing variables and relationships}{26}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Example: Wartime civilian deaths}{27}{0}{5}
