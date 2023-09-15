@@ -1694,6 +1694,13 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/sansmathaccent/mathker
 INPUT ./basics_quant_data.toc
 INPUT basics_quant_data.toc
 INPUT basics_quant_data.toc
+INPUT ./basics_quant_data.toc
+INPUT basics_quant_data.toc
+INPUT basics_quant_data.toc
+INPUT ./img/mullercrepon.png
+INPUT img/mullercrepon.png
+INPUT ./img/mullercrepon.png
+INPUT ./img/mullercrepon.png
 OUTPUT basics_quant_data.nav
 OUTPUT basics_quant_data.toc
 OUTPUT basics_quant_data.snm

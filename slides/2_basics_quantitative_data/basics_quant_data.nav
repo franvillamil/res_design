@@ -115,21 +115,39 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {38}{40}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {26}{40}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {26}{40}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{Example: Wartime civilian deaths}{41}{Example: Wartime civilian deaths}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{1}{41/41}{}{0}}
+\headcommand {\slideentry {4}{0}{6}{41/41}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {41}{41}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{2}{42/42}{}{0}}
+\headcommand {\beamer@sectionpages {26}{41}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {26}{41}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{Example: Wartime civilian deaths}{42}{Example: Wartime civilian deaths}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{1}{42/42}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@partpages {1}{42}}
-\headcommand {\beamer@subsectionpages {41}{42}}
-\headcommand {\beamer@sectionpages {41}{42}}
-\headcommand {\beamer@documentpages {42}}
-\headcommand {\gdef \inserttotalframenumber {25}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{2}{43/43}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {43}{43}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {42}{43}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {42}{43}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {6}{Paper discussion}{44}{Paper discussion}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{1}{44/44}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {44}{44}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{45/45}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@partpages {1}{45}}
+\headcommand {\beamer@subsectionpages {44}{45}}
+\headcommand {\beamer@sectionpages {44}{45}}
+\headcommand {\beamer@documentpages {45}}
+\headcommand {\gdef \inserttotalframenumber {28}}

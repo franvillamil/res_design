@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.12)  15 SEP 2023 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.12)  15 SEP 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1337,7 +1337,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [6
 
 ]
-<img/umu_erasmus.png, id=79, 600.2425pt x 913.4125pt>
+<img/umu_erasmus.png, id=85, 600.2425pt x 913.4125pt>
 File: img/umu_erasmus.png Graphic file (type png)
 <use img/umu_erasmus.png>
 Package pdftex.def Info: img/umu_erasmus.png  used on input line 88.
@@ -1455,7 +1455,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [22
 
 ]
-<img/Minard.png, id=175, 1447.5681pt x 690.1785pt>
+<img/Minard.png, id=183, 1447.5681pt x 690.1785pt>
 File: img/Minard.png Graphic file (type png)
 <use img/Minard.png>
 Package pdftex.def Info: img/Minard.png  used on input line 245.
@@ -1570,18 +1570,18 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [37
 
 ]
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1597,18 +1597,18 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [38
 
 ]
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1624,18 +1624,18 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [39
 
 ]
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./basics_quant_data.tex:352: Missing $ inserted.
+./basics_quant_data.tex:351: Missing $ inserted.
 <inserted text> 
                 $
-l.352 \end{frame}
+l.351 \end{frame}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1650,14 +1650,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [40
 
-] (./basics_quant_data.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [41
 
-]
+] (./basics_quant_data.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1665,6 +1665,28 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [42
 
 ]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
+
+] (./basics_quant_data.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[44
+
+]
+<img/mullercrepon.png, id=316, 525.965pt x 511.9125pt>
+File: img/mullercrepon.png Graphic file (type png)
+<use img/mullercrepon.png>
+Package pdftex.def Info: img/mullercrepon.png  used on input line 396.
+(pdftex.def)             Requested size: 280.64612pt x 273.14795pt.
+ [45
+
+ <./img/mullercrepon.png>]
 \tf@nav=\write7
 \openout7 = `basics_quant_data.nav'.
 
@@ -1676,24 +1698,24 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
  (./basics_quant_data.aux)
 Package rerunfilecheck Info: File `basics_quant_data.out' has not changed.
-(rerunfilecheck)             Checksum: 6A955692012430FEF5630A49522FC4BE;963.
+(rerunfilecheck)             Checksum: 5EDBE98BED4C0B1BFED3E804ABAD01C5;1089.
 Package logreq Info: Writing requests to 'basics_quant_data.run.xml'.
 \openout1 = `basics_quant_data.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32403 strings out of 478994
- 625354 string characters out of 5858184
- 1334194 words of memory out of 5000000
- 49126 multiletter control sequences out of 15000+600000
+ 32489 strings out of 478994
+ 627232 string characters out of 5858184
+ 1334242 words of memory out of 5000000
+ 49202 multiletter control sequences out of 15000+600000
  418238 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,1142b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on basics_quant_data.pdf (42 pages, 1330646 bytes).
+Output written on basics_quant_data.pdf (45 pages, 1392514 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 377 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
