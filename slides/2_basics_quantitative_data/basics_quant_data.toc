@@ -8,4 +8,4 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {4}{Describing variables and relationships}{26}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Example: Wartime civilian deaths}{27}{0}{5}
+\beamer@sectionintoc {5}{Example: Wartime civilian deaths}{41}{0}{5}
