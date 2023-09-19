@@ -41,7 +41,7 @@
 \centering
 
 \begin{itemize}
-  \item Research $\eq$ answering questions
+  \item Research $=$ answering questions
   \item Re-cap on research types
   \begin{itemize}
     \item[1.] \textbf{Normative} vs. \textbf{positive} research
@@ -130,16 +130,17 @@
 \begin{itemize}
   \item[1.] Consider potential results of the analyses
   \begin{itemize}
-    \item if you found X, does that answer the question?
+    \item if you found X, does that answer the question? causally?
     \item example: are kids who play videogames often more aggresive?
     \item does that inform a theory on the aggresiveness effect of VGs?
+    \item (you can even try to do a better RQ without causal ID)
   \end{itemize}
-  \item[2.] Is it feasible?
+  \item<2->[2.] Is it feasible?
   \begin{itemize}
     \item do you have the data? is it possible to do it? (e.g. re-offenders)
     \item also: is there any design or strategy to answer it?
   \end{itemize}
-  \item[3.] Keeping it simple and narrow
+  \item<3->[3.] Keeping it simple and narrow
   \begin{itemize}
     \item what are the causes of economic underdevelopment? vs. does exposure to natural disasters hinders economic development?
   \end{itemize}
@@ -435,11 +436,114 @@
 \frametitle{Concepts}
 \centering
 
+\begin{itemize}
+  \item What are \textbf{concepts}?
+  \item No need to get into epistemological discussions, but basically concepts are the \textbf{building blocks of analytical arguments}
+  \item So part of the theoretical framework
+  \item[]
+  \item<2-> Some times they are a no brainer (income), but in many cases we have to think about them
+  \begin{itemize}
+    \item \textit{Household} income? What's considered a household?
+    \item More problematic: Ideology? Democracy?
+  \end{itemize}
+  \item<3-> Also minor point: \textit{concept} $\neq$ \textit{term}
+  \begin{itemize}
+    \item Think about the labels we use to refer to some particular concept, e.g. authoritarian regime (i.e. dictatorship), rationality, etc
+  \end{itemize}
+\end{itemize}
 
 
 \end{frame}
 % ----------------------------------------------------
 
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Concepts types}
+\centering
+
+\begin{itemize}
+  \item No fixed categories, but some people talk of:
+  \item[1.] \textbf{Rule-based} (definition)
+  \begin{itemize}
+    \item e.g. what are the rules we could use to define a household?
+  \end{itemize}
+  \item[2.] \textbf{Ideal types} (or family resemblance?)
+  \begin{itemize}
+    \item How do household look like? Can we intuitively identify them?
+  \end{itemize}
+  \item Rather that two exclusive types of concepts, they are two ways to think about them which are usually useful in improving concepts
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Operationalization}
+\centering
+
+\begin{itemize}
+  \item To translate abstract concepts into concrete stuff we can observe and potentially measure
+  \item Operationalize $\neq$ measure
+  \begin{itemize}
+    \item The fact that you can think of a concept in concrete terms does not mean you can always measure it easily
+    \item Remember the algorithm that models rate of re-offenders
+    \item Ideology of Twitter users? easy to op, hard to measure \textbf{(*)}
+  \end{itemize}
+  \item<2-> More like thinking of real-world attributes that map the conceptual dimensions we think about
+  \begin{itemize}
+    \item \textit{concept}: war intensity; \textit{operationalization}: number of battle deaths
+  \end{itemize}
+  \item<2-> the \textbf{Botswana example} on defining/operationalizing democracies
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Importance}
+\centering
+
+\begin{itemize}
+  \item Might seem like something too abstract to care about (especially for computational social science), but it is actually not
+  \item A \textbf{huge} part of good quantiative work relies on improving current concepts and their operationalization (which often leads to new ways of measuring them)
+  \item Classic examples with theoretical importance (e.g. Putnam's \textit{social capital}), but also today's paper (`Roads to rule') is a good example of this
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example}
+\centering
+
+\begin{itemize}
+  \item Say we have a question about some $x$ cause of civil war outbreak
+  \item That's two concepts we are actually talking about:
+  \item[1.] \textbf{Civil war}
+  \item[2.] \textbf{Outbreak}
+  \item How could we define them? And operationalize them?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Another example of a contentious concept}
+\centering
+
+\begin{itemize}
+  \item What is \textbf{populism}? How can we operationalize it?
+  \begin{itemize}
+    \item e.g. how could we code a list of \textit{populist} political parties? or leaders?
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
 
 \section{Measurement}
 
@@ -488,7 +592,70 @@
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{(A few strategies to measure stuff not directly observable)}
+\centering
+
+\begin{itemize}
+  \item[] (Example: we want to measure the ideological or policy positions of political parties)
+  \item \textbf{Expert surveys}
+  \begin{itemize}
+    \item You send questionnaires to experts who then reply, aggregate using average or similar
+  \end{itemize}
+  \item \textbf{Coding written texts}
+  \begin{itemize}
+    \item Manifesto project, but also others based on NLP
+  \end{itemize}
+  \item \textbf{Observing roll call voting}
+  \begin{itemize}
+    \item Voteview project
+  \end{itemize}
+  \item[]
+  \item<2-> All these point to slightly different concepts or operationalizations
+  \item<3-> We'll see a different strategy based on \textit{latent variables} in a moment
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Measuring the right stuff: Example}
+\centering
+
+\begin{itemize}
+  \item You are doing research on whether discrimination of minorities has a negative effect on overall economic performance of a country
+  \item You find a dataset that lists all minorities in a given country and gives them a yearly score of discrimination from 0 to 10
+  \begin{itemize}
+    \item In the codebook says that discrimination is conceptualized as `unequal access to state power, which ranges from actual, active discrimination (including mass violence perpetrated against members of the minority group) to lack of access to key political positions in the central government`
+  \end{itemize}
+  \item You also learn that the dataset was coded through \textbf{expert surveys}, sending a questionnaire to 2--3 researchers from each country
+  \item \textbf{What do you think?}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Measuring the right stuff: Example}
+\centering
+
+\begin{itemize}
+  \item Now imagine you use the same dataset to analyze whether more extreme forms of discrimination make violence against minorities more likely
+  \begin{itemize}
+    \item You take the violence data from another dataset that e.g. codes actual violence events from newspapers
+  \end{itemize}
+  \item You find a \textit{positive relationship} in the results
+  \item Thoughts?
+  \item<2-> Another issue with expert surveys: within vs between comparisons
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Measuring the right stuff: Another example}
 \centering
 
 {\color{red}{\textbf{EXAMPLE FROM THE DEMOCRATIC BACKSLIDING LIT?}}}
@@ -819,7 +986,7 @@ e.g. think about the effect of income on X, in a super unequal society vs one in
 \centering
 
 \begin{itemize}
-  \item<1-> Last example: Is there a causal relationship \textit{age} \rightarrow \textit{size}?
+  \item<1-> Last example: Is there a causal relationship \textit{age} $\rightarrow$ \textit{size}?
   \item<2-> What if the variable you want to guess is \textbf{the time of the day}, and someone tells you that she just heard the rooster crow? Causal?
   \item[]
   \item<3-> Why are non-causal descriptive relationships \textbf{useful}?
