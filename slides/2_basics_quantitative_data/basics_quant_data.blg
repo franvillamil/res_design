@@ -1,5 +1,5 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
-[1] Config.pm:307> INFO - Logfile is 'basics_quant_data.blg'
-[279] biber-darwin:322> INFO - === Mon Sep 18, 2023, 20:40:17
-[308] Biber.pm:415> INFO - Reading 'basics_quant_data.bcf'
-[519] Utils.pm:304> WARN - No data sources defined!
+[0] Config.pm:307> INFO - Logfile is 'basics_quant_data.blg'
+[201] biber-darwin:322> INFO - === Tue Sep 19, 2023, 13:07:15
+[227] Biber.pm:415> INFO - Reading 'basics_quant_data.bcf'
+[351] Utils.pm:304> WARN - No data sources defined!

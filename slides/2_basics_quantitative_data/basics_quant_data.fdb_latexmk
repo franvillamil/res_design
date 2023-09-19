@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber basics_quant_data"] 1695062413 "basics_quant_data.bcf" "basics_quant_data.bbl" "basics_quant_data" 1695062475
-  "basics_quant_data.bcf" 1695062460 101205 b36ea516b5358c11d04df290eeec68b1 "pdflatex"
+["biber basics_quant_data"] 1695121632 "basics_quant_data.bcf" "basics_quant_data.bbl" "basics_quant_data" 1695121737
+  "basics_quant_data.bcf" 1695121648 101205 b36ea516b5358c11d04df290eeec68b1 "pdflatex"
   (generated)
-  "basics_quant_data.blg"
   "basics_quant_data.bbl"
-["pdflatex"] 1695062439 "basics_quant_data.tex" "basics_quant_data.pdf" "basics_quant_data" 1695062475
+  "basics_quant_data.blg"
+["pdflatex"] 1695121647 "basics_quant_data.tex" "basics_quant_data.pdf" "basics_quant_data" 1695121737
   "../beamer_preamble.tex" 1694687168 8195 a00686c4686d182a5a9dc5fe917babbe ""
   "../img/Minard.png" 1661424511 687027 57db2afbec07235c26d730371a7835b2 ""
   "../img/acumuladaincidencia31marzo.jpeg" 1631719907 37347 fef278932cb8492bef638995f2d39ed3 ""
@@ -284,20 +284,20 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1592742590 2432459 c0e669bcb55fe236fcc6a81f8022d78b ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "basics_quant_data.aux" 1695062460 26651 5470397ce7995b66c70a66d5dd44cb05 "pdflatex"
-  "basics_quant_data.bbl" 1695062417 0 d41d8cd98f00b204e9800998ecf8427e "biber basics_quant_data"
-  "basics_quant_data.nav" 1695062460 17311 e093b7a32eddc4b4d19595544fbe8a74 "pdflatex"
-  "basics_quant_data.out" 1695062460 414 ce6c8860277adff0449dedd65c49fa3d "pdflatex"
-  "basics_quant_data.run.xml" 1695062460 2355 be9fd2085681eb048e861ef95e749e18 "pdflatex"
+  "basics_quant_data.aux" 1695121657 26651 5470397ce7995b66c70a66d5dd44cb05 "pdflatex"
+  "basics_quant_data.bbl" 1695121635 0 d41d8cd98f00b204e9800998ecf8427e "biber basics_quant_data"
+  "basics_quant_data.nav" 1695121657 17311 e093b7a32eddc4b4d19595544fbe8a74 "pdflatex"
+  "basics_quant_data.out" 1695121657 414 ce6c8860277adff0449dedd65c49fa3d "pdflatex"
+  "basics_quant_data.run.xml" 1695121657 2355 be9fd2085681eb048e861ef95e749e18 "pdflatex"
   "basics_quant_data.tex" 1695062275 43739 38175bda43984ff2f2c0e50b2710249f ""
-  "basics_quant_data.toc" 1695062460 779 643c7a37d29745d16a1e9deefb4aa528 "pdflatex"
+  "basics_quant_data.toc" 1695121657 779 643c7a37d29745d16a1e9deefb4aa528 "pdflatex"
   (generated)
-  "basics_quant_data.run.xml"
+  "basics_quant_data.toc"
+  "basics_quant_data.bcf"
   "basics_quant_data.out"
   "basics_quant_data.aux"
   "basics_quant_data.snm"
-  "basics_quant_data.log"
-  "basics_quant_data.toc"
   "basics_quant_data.pdf"
   "basics_quant_data.nav"
-  "basics_quant_data.bcf"
+  "basics_quant_data.run.xml"
+  "basics_quant_data.log"
