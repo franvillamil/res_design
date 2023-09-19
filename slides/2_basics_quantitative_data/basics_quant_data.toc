@@ -6,10 +6,10 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{Measurement}{50}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Describing variables and relationships}{80}{0}{4}
+\beamer@sectionintoc {4}{Description}{97}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Prediction}{121}{0}{5}
+\beamer@sectionintoc {5}{Prediction}{137}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Example: Wartime civilian deaths}{131}{0}{6}
+\beamer@sectionintoc {6}{Example: Wartime civilian deaths}{147}{0}{6}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {7}{Paper discussion}{133}{0}{7}
+\beamer@sectionintoc {7}{Paper discussion}{149}{0}{7}

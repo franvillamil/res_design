@@ -1,10 +1,8 @@
-% TODO
-- Democratic backsliding example
-- twitter latent ideology example
-- examples for MAR/MCAR/...
-- describing variable - expand
-- do almost everything about relationships
-
+% % TODO
+% - twitter latent ideology example
+% - examples for MAR/MCAR/...
+% - describing variable - expand
+% - do almost everything about relationships
 
 \documentclass[aspectratio=43]{beamer}
 % \documentclass[aspectratio=169]{beamer}
@@ -666,7 +664,146 @@
 \frametitle{Measuring the right stuff: Another example}
 \centering
 
-{\color{red}{\textbf{EXAMPLE FROM THE DEMOCRATIC BACKSLIDING LIT?}}}
+\begin{itemize}
+  \item Recent debate on \textbf{democratic backsliding}
+  \item Problem: how do we measure democracy?
+  \item Available data: many international datasets on democracy rely on subjetive \textbf{expert judgement}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{EPR example? (https://icr.ethz.ch/data/epr/)}
+\centering
+
+\includegraphics[width = \textwidth]{../img/epr1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{EPR definitions}
+\centering
+
+{\small
+\begin{itemize}
+  \item \textbf{We define ethnicity} as a subjectively experienced sense of commonality based on a belief in common ancestry and shared culture. Different markers may be used to indicate such shared ancestry and culture: common language, similar phenotypical features, adherence to the same faith, and so on. \textbf{Our definition of ethnicity thus includes ethnolinguistic, ethnoreligious, and ethnosomatic (or “racial”) groups}, but not tribes and clans that conceive of ancestry in genealogical terms, nor regions that do not define commonality on the basis of shared ancestry.
+
+  \item \textbf{An ethnic group is politically relevant if} either at least one significant political actor claims to represent the interests of that group in the national political arena or if group members are systematically and intentionally discriminated against in the domain of public politics.
+\end{itemize}
+}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{EPR definitions}
+\centering
+
+{\scriptsize
+\begin{itemize}
+\setlength\itemsep{0pt}
+  \item \textbf{Monopoly}: Elite members hold monopoly power in the executive to the exclusion of members of all other ethnic groups.
+  \item \textbf{Dominance}: ... dominant power in the executive but ... some limited inclusion of “token” members of other groups
+  \item \textbf{Senior Partner}: Representatives of the group participate as senior partners in a formal or informal power-sharing arrangement ...(any arrangement that divides executive power among leaders who claim to represent particular ethnic groups and who have real influence on political decision making)
+  \item \textbf{Junior Partner}: ... as junior partners in government.
+  \item \textbf{Powerless}: Elite representatives hold no political power (or do not have influence on decision making) at the national level of executive power - although without being explicitly discriminated against.
+  \item \textbf{Discrimination}: Group members are subjected to active, intentional, and targeted discrimination (formal or informal) by the state, with the intent of excluding them from political power (but not from socio-economic sphere).
+  \item \textbf{Self-exclusion}: groups that have excluded themselves from central state power, in the sense that they control a particular territory of the state which they have declared independent
+\end{itemize}
+}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{EPR in Spain?}
+\centering
+
+\begin{itemize}
+  \item How would you code Spain? (Or your own country, in case it's multi-ethnic)
+  \item Two main things?
+  \item[1.] How many \textit{politically relevant} ethnic groups?
+  \item[2.] Political status by period?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/epr2}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Democratic backsliding}
+\centering
+
+\begin{itemize}
+  \item `Objective' and `subjective' operationalization \& measurement
+  \item `Objective' measures usually rely on a \textit{minimalist} conceptualization of democracy
+  \begin{itemize}
+    \item e.g. celebration of contested elections
+  \end{itemize}
+  \item `Subjective' measures tap into \textit{maximalist} definitions of democracy that incorporate more dimensions
+  \begin{itemize}
+    \item regular, contested elections; but also rule of law, participation, media, etc
+  \end{itemize}
+  \item Problem: Autocrats are usually pretty skillful
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{The case for objective measures}
+\centering
+
+\begin{itemize}
+  \item One example from the ACLP (Alvarez, Cheibub, Limongi, Przeworski) Democracy and Dictatorship Dataset
+  \item Coding democracy based on four objective, observable rules:
+  \item[1.] {\small The chief executive must be chosen by popular election or by a body that was itself popularly elected.}
+  \item[2.] {\small The legislature must be popularly elected.}
+  \item[3.] {\small There must be more than one party competing in the elections.}
+  \item[4.] {\small An alternation in power under electoral rules identical to the ones that brought the incumbent to office must have taken place.}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/democratic_backsliding}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{One view on this (by V-Dem people)}
+\centering
+
+\begin{itemize}
+  \item Even if using expert surveys, you can take some measures
+  \begin{itemize}
+    \item Aim for \textit{replicability}
+    \item Incorporate measures of uncertainty
+    \item Build it differently: e.g. incorporate different dimensions, use an ordinal scale, aggregate differently, etc
+  \end{itemize}
+  \item `Objective measures' are not that objective
+  \begin{itemize}
+    \item Botswana example, and systematic downward bias against young democracies with economic growth
+    \item e.g. how do you detect fraud? election forensics methods (based on distribution) can be incorporated by autocrats in later elections
+  \end{itemize}
+  \item[]
+  \item {\small To know more: Knutsen \textit{et al.} `Conceptual and Measurement Issues in Assessing Democratic Backsliding.' V-Dem Working Paper, May 2023.}
+  \begin{itemize}
+    \item \url{v-dem.net/media/publications/wp_140.pdf}
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
@@ -712,9 +849,50 @@
 \frametitle{Latent variables}
 \centering
 
-{\color{red}{EXAMPLE TWITTER LATENT IDEOLOGY}}
+\begin{itemize}
+  \item Let's look at one example: imagine you want to do research on whether left-wing or right-wing people tweet differently (or some other outcome, e.g. echo chambers idea)
+  \item It's easy to get data on the outcome variable (Tweet content, frequency, ...)
+  \begin{itemize}
+    \item if you don't know how now, you'll learn in the spring
+  \end{itemize}
+  \item But \textbf{how do you code ideology?}
+  \begin{itemize}
+    \item<2-> Some people have done it focusing only on a subset, e.g. politicians, for which you have information (problem of selection)
+    \item<3-> Of even some others have linked survey data to Twitter activity, asking for consent (problem of cost, non-response)
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/barbera_tw1}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/barbera_tw2}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Validating measure}
+\centering
+
+\includegraphics[width = \textwidth]{../img/barbera_tw3}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/barbera_tw4}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/barbera_etal1}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/barbera_etal2}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
@@ -951,19 +1129,39 @@
 \frametitle{Describing variables}
 \centering
 
-main idea: variable distribution (of values)
+\begin{itemize}
+  \item Main idea: you are describing the variable distribution (i.e. how the frequency of values looks like)
+  \item You probably know this from basic statistics
+  \begin{itemize}
+    \item In practice, the measures of distribution do not matter so much
+  \end{itemize}
+  \item But one important thing: we are talking about \textbf{real-world observations}, so before you do anything (analyses, etc), do look at them
+  \begin{itemize}
+    \item At least, \textbf{plot the main variables}
+    \item Is it coherent with the \textbf{theoretical} or \textbf{expected distribution}?
+  \end{itemize}
+\end{itemize}
 
-you probably know this because of basic statistics. it doesn't matter so much
+\end{frame}
+% ----------------------------------------------------
 
-kurtosis, normality, blah blah
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Describing variables}
+\centering
 
-but one thing though: values are real-world observations. do \textbf{plot} it, and make sure it's coherent with the \textbf{theoretical} or \textbf{expected distribution}
-
-maybe also important: mean +/- SD, or 25/75 percentiles. for effect sizes
-
-in a normal distribution, there not much to say. but e.g. if an independent variable is a bimodal distribution, does that say something about the causal mechanism?
-
-e.g. think about the effect of income on X, in a super unequal society vs one in which is normally distributed
+\begin{itemize}
+  \item Also, sometimes the distribution is important to think about actual effect sizes, so it's good to summarize variables {\footnotesize (mean, SD, IQR...)}
+  \begin{itemize}
+    \item Maybe this makes sense if you've learn logistic regression?
+    \item We'll talk more tomorrow about the concept of average effect in causality
+  \end{itemize}
+  \item In a normal distribution, there's probably not much to say
+  \item But what if a key independent variable has a bimodal distribution? What does this say about the \textbf{causal mechanism?}
+  \begin{itemize}
+    \item e.g. think about the effect of income on X in two societies: one is extremely unequal and the other is normally distributed
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1003,17 +1201,17 @@ e.g. think about the effect of income on X, in a super unequal society vs one in
 \end{frame}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Describing relationships}
-\centering
-
-conditional distributions
-conditional means
-conditional conditional means (controlling)
-
-\end{frame}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Describing relationships}
+% \centering
+%
+% conditional distributions
+% conditional means
+% conditional conditional means (controlling)
+%
+% \end{frame}
+% % ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1056,18 +1254,6 @@ conditional conditional means (controlling)
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Univariate description?}
-\centering
-
-\includegraphics[width = \textwidth]{../img/vix-volatility-index-historical-chart}
-
-VIX Volatility Index chart
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
 \frametitle{Bivariate relationships}
 \centering
 
@@ -1083,7 +1269,7 @@ VIX Volatility Index chart
 \frametitle{Bivariate relationship}
 \centering
 
-\includegraphics[width = \textwidth]{../img/scatter_GDP_mort}
+\includegraphics[width = 0.8\textwidth]{../img/scatter_GDP_mort}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1113,7 +1299,7 @@ VIX Volatility Index chart
 \frametitle{How many variables? Unit?}
 \centering
 
-\includegraphics[width = \textwidth]{../img/emissions}
+\includegraphics[width = 0.7\textwidth]{../img/emissions}
 
 \end{frame}
 % ----------------------------------------------------
