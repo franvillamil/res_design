@@ -1,5 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'causality.blg'
-[58] biber-darwin:340> INFO - === Fri Sep 22, 2023, 13:10:58
-[70] Biber.pm:415> INFO - Reading 'causality.bcf'
-[148] Utils.pm:395> WARN - No data sources defined!

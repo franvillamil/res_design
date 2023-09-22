@@ -1,5 +1,0 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {1}{Prediction and explanation}{3}{0}{1}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Explanation}{16}{0}{2}
