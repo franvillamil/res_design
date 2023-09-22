@@ -6,7 +6,7 @@
 \author[]{Francisco Villamil}
 \date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2023}
 
-\input{beamer_preamble.tex}
+\input{../beamer_preamble.tex}
 
 \begin{document}
 % ====================================================
@@ -28,6 +28,635 @@ Missing not at random (MNAR)
 
 \end{frame}
 % ----------------------------------------------------
+
+\section{Prediction and explanation}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Explanatory questions and data}
+\centering
+
+\begin{itemize}
+  \item Let's we want to know what's going on between two things (the process or mechanism between two variables)
+  \item Data always comes from somewhere
+  \item So when we look at or analyze data, we try to uncover the \textit{data generating process}
+  \begin{itemize}
+    \item There could be several mechanisms generating the same data (variable), or they might vary over time
+  \end{itemize}
+  \item (A model is actually our simplified guess of that process)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Data generating process}
+\centering
+
+\begin{itemize}
+  \item[-] How does the data look like, and what's the data generating process in...
+  \item[]
+  \item Flipping a coin?
+  \item Choosing Mahou instead of another beer brand?
+  \item Going on Erasmus and getting a job?
+  \item[]
+  \item It's kind of like the \textit{causal model} that creates the outcomes, but thinking about data
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Data generating process}
+% \centering
+%
+% \includegraphics[width = \textwidth]{../img/acumuladaincidencia31marzo}
+%
+% \begin{itemize}[<+->]
+%   \item What the generating process?
+%   \item How many variable are involved in generating this outcome?
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+%
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Thinking about variables and processes/mechanisms}
+% \centering
+%
+% \begin{itemize}
+%   \item Think we explain or explain with: variables
+%   \item Relationship between them: process
+%   \item The main idea is that if we compare different combinations of their values we are going to discover something about the process
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+%
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Data generating process}
+% \centering
+%
+% \includegraphics[width = \textwidth]{../img/acumuladaincidencia31marzo}
+%
+% \begin{itemize}[<+->]
+%   \item How could we test different hypotheses? (schools, bars, weather, etc)
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+%
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{DGP and RQs}
+% \centering
+%
+% \begin{itemize}
+%   \item Again, we want to state the research question as close as possible to that generating process
+%   \item[]
+%   \begin{itemize}
+%     \item What explains Covid incidence in Madrid?
+%     \item What explains Covid incidence in Madrid over time between June 2020 and June 2021
+%     \item Do school openings increase Covid incidence in Madrid?
+%     \item School openings and Covid incidence evolution in Madrid
+%   \end{itemize}
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Example}
+% \centering
+%
+% \includegraphics[width = 0.8\textwidth]{../img/shipman}
+%
+% \begin{itemize}
+%   \item Different generating processes? If so, what?
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\begin{itemize}
+  \item<1-> What is prediction?
+  \item[]<2->
+  \item[]<2-> The two concepts of prediction:
+  \item<2-> Predicting another variable
+  \item<2-> Predicting the future (or out of sample prediction)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\includegraphics[width = \textwidth]{../img/spotify}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\includegraphics[width = \textwidth]{../img/target_pregnancy}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\includegraphics[width = \textwidth]{../img/blumenstock}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\includegraphics[width = \textwidth]{../img/blumenstock2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\includegraphics[width = \textwidth]{../img/blumenstock3}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction}
+\centering
+
+\begin{itemize}[<+->]
+  \item Causality and prediction, is it the same?
+  \item The importance of \textbf{counterfactuals} (more on this later)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Explanation}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{\textit{Explaining} relationships}
+\centering
+
+\begin{itemize}[<+->]
+  \item Key thing: we want to know whether $X$ actually \textit{causes} $Y$
+  \begin{itemize}
+    \item I.e., we want to do \textit{causal inference}
+  \end{itemize}
+  \item (\textbf{Note} that this does not mean that $X$ is the only cause of $Y$, but that \textbf{changing $X$ alters $Y$})
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{\textit{Explaining} relationships}
+\centering
+
+\begin{itemize}[<+->]
+  \item How could we observe causal relationships? Repeating history
+  \item The `fundamental problem of causal inference' is that we cannot
+  \begin{itemize}
+    \item In other words, that for every unit of observation, we can only observe \textbf{either} $Y(X=0)$ \textbf{or} $Y(X=1)$
+  \end{itemize}
+  \item If we observe $Y(X=1)$, causal inference essentially means trying to find as good an approximation to $Y(X=0)$ as we can find
+  \begin{itemize}
+    \item i.e., we want to find something that is valid as a \textit{counterfactual}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+\begin{itemize}[<+->]
+  \item Also called Neyman–Rubin causal model
+  \item An effect is the difference between the \textit{actual world} and an \textit{alternative reality} (counterfactual)
+  \begin{itemize}
+    \item Causal effect of $X$, is $E(Y|X = 1)$ - $E(Y|X = 0)$
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+\includegraphics[width = 1\textwidth]{../img/tabaco}
+
+\vspace{10pt}
+
+What is the effect of smoking on life expectancy?
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+% $E(LExp_{i}|A_{i} = 71, G_{i} = Male, S_{i}=1, E_{i}=0, RM_{i}=1, MC_{i}=1)$
+
+\begin{minipage}{0.7\textwidth}\centering
+  \begin{itemize}
+    \item<1-> Let's take Gary, a man who smokes, doesn't exercise, but is vegetarian. We can wait and see how long he lives:
+    \item<1->[] {\small $E(LExp|S=1, G=Male, E=0, V=1)$}
+    \item<2-> The Q is, \textbf{what is the causal effect of smoking} on Gary?
+    \item<3-> To know that, we need to estimate the life expectancy of an alternative Gary that is \textit{exactly} the same except for the smoking:
+    \item<3->[] {\small $E(LExp|S=0, G=Male, E=0, V=1)$}
+    \item<4-> The problem is that the alternative Gary is \textbf{unobservable}, that is, we will always have a missing data problem
+  \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}\centering
+\includegraphics[width = 0.8\textwidth]{../img/smoking_man}\\Gary
+\end{minipage}
+
+
+\end{frame}
+% ----------------------------------------------------
+
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+\begin{itemize}
+  \item<1-> That would be for Gary. What about the `general' effect of smoking?
+  \item<2-> Well, we need to find an alternative for every person (smoking and non-smoking), and just calculate the difference between the alternative and the reality:
+  \item<2->[] $E[LifeExp_{i}^{1}] - E[LifeExp_{i}^{0}]$
+  \item<2->[] which would be the Average Treatment Effect (or ATE)
+  \item<3-> Problem is we have missing data: we don't have $E[LifeExp_{i}^{1}]$ for non-smokers, and we don't have $E[LifeExp_{i}^{0}]$ for smokers
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+\begin{itemize}
+  \item<1-> Same goes with other quantities of interest we'll see:
+  \item<2-> \textbf{ATT}, or average treatment effect on the treated:
+  \item[]<2-> $E[Y_{i}^{1}|D_{i} = 1] - E[Y_{i}^{0}|D_{i} = 1]$
+  \item[]<2-> {\small (effect of smoking among smokers)}
+  \item[]<3->
+  \item<3-> Or the \textbf{ATC} (or ATU), or average treatment effect on the untreated:
+  \item[]<3-> $E[Y_{i}^{1}|D_{i} = 0] - E[Y_{i}^{0}|D_{i} = 0]$
+  \item[]<3-> {\small (effect of smoking among non-smokers)}
+  \item[]<4->
+  \item<4-> ($ATT$ can be different from $ATC$ when these two groups of units differ in characteristics, and kind of matters as well when estimating them)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes framework}
+\centering
+
+\begin{itemize}
+  \item<1-> `No causation without manipulation'
+  \item<1-> Model initially developed for \textit{experimental data}
+  \item<2-> Randomized experiments are the gold-standard in approximating the alternative reality (counterfactual)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Experimental design}
+\centering
+
+\begin{itemize}[<+->]
+  \item[] Experiments also have their problems, e.g.:
+  \item Non-perfect randomization (esp. if block-r)
+  \item SUTVA (or stable unit treatment value assumption)
+  \item Attrition
+  \item Treatment compliance (estimating the intent-to-treat, or ITT)
+  \item etc
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{So how to we approximate $Y^{0}$?}
+\centering
+
+\begin{itemize}[<+->]
+  \item Experiments are fine, but often not possible
+  \item Using \textbf{observational data}, we need to `build' a counterfactual. How?
+  \item Basic idea: we build a causal model that explains the data generating process, and use that model to detect and correct biases in our causal inference
+  \item[] (e.g., to know what we should control for)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Example}
+\centering
+
+\begin{itemize}
+\item Let's say we want to know whether a cleaner environment makes people happier
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+\centering
+
+\includegraphics[width = 0.75\textwidth]{../img/happiness_pollution}
+
+\end{frame}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example}
+\centering
+
+\begin{itemize}
+  \item Remember that out problem (the `fundamental problem of causal inference` etc) is that we can observe e.g. Pakistan, where the level of pollution (measured as death date) is 46, and 58\% of the people say they're happy
+  \item But \textbf{we cannot observe} how many people say they are happy in an \textbf{alternative Pakistan} where the pollution death date is 15
+  \item So to approximate this, we'll build a causal model to know what we should be controlling for
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Our causal model}
+\centering
+
+\begin{tikzpicture}[every text node part/.style={align=center}, scale = 0.75]
+
+% Process
+
+\node (ep) at (0,0){Cleaner environment};
+\node (h) at (7,0){Happiness};
+\only<1>{\draw[->] (ep) -- (h);}
+\only<1>\node[color=white] (m) at (3.5,3){Wealth};
+\only<2->\node (m) at (3.5,3){Wealth};
+\only<4>\node (z) at (6,2.75){Z};
+\only<2>\draw[->] (m) -- (h);
+\only<2-4>\draw[->] (m) -- (ep);
+\only<2>{\draw[->, solid] (ep) -- (h);}
+\only<3->{\draw[->] (ep) -- (h);}
+\only<4>\draw[->] (m) -- (z);
+\only<4>\draw[->] (z) -- (h);
+\only<5>\draw[->] (m) -- (3.5, 0);
+
+\end{tikzpicture}
+
+\vspace{20pt}
+
+\begin{itemize}
+  \only<1>{\item This is our initial causal model: having a cleaner environment makes people happier (because they like looking into a blue sky without smog), and that's it. We do not have to control for anything nor do anything else.}
+  \only<2>{\item Wait, but maybe it's about money, isn't it? Actually, wealthier countries tend to have cleaner environments and, at the same time, money causes happiness. \textbf{We need to control for wealth.}}
+  \only<3>{\item Or perhaps is not that money increases happiness \textit{per se}, but that it does so through other \textbf{mediators}: wealth allows countries to focus on environment, which increases happiness. \textbf{Again, no need to control.} As long as this is the \textbf{only} mediator.}
+  \only<4>{\item We are happy with that model, but we're still missing something. Say we believe that money does not have any direct causal effect, but it does causes some other things (labour conditions, cultural offer, ... let's call them $Z$) and these, in turn, have an effect on happiness. \textbf{We need to control for wealth and all $Z$.}}
+  \only<5>{\item (Another thing would be if money \textbf{moderates} the relationship between environmental policies and happiness: spending resources to take care of our environment makes you happier only if you have enough money -- this is an special case, we could talk about heterogenous effects)}
+\end{itemize}
+
+\end{frame}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Basics of causal inference}
+\centering
+
+\begin{itemize}[<+->]
+  \item So to come up with an strategy, we need to understand what's going on in terms of the data generating process
+  \begin{itemize}
+    \item This applies from the most basic strategy (add controls) to the more complicated ones (e.g. evaluating DiD or RDD)
+  \end{itemize}
+  \item Once we have that, we can \textbf{identify} an effect (in other words: isolating the causal variation from other sources of variation we are not interested in)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Causal models, mechanisms, and DAGs}
+\centering
+
+\begin{itemize}
+  \item We will use Directed Acyclic Graphs (DAG), or causal diagrams
+  \item These are basically a graph where we link \textbf{variables} (nodes) with \textbf{causal effects} (arrows)
+  \item[] Couple things:
+  \item Only one-directional causality (\textit{acyclic})
+  \begin{itemize}
+    \item if you have feedback cycles, you'd have to write multiple nodes for $t_{1}$, $t_{2}$
+  \end{itemize}
+  \item Sometimes: solid lines $=$ observed, dashed $=$ unobserved ($U$)
+  \item Treatment usually written as $D$ (and $Y$ the outcome)
+  \item Combine variables (usually $B$ for background, or $U$ for unknown)
+  \item No arrow means \textit{no effect}, explicitly
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\begin{frame}
+\frametitle{This is a DAG}
+\centering
+
+\begin{tikzpicture}[every text node part/.style={align=center}, scale = 0.75]
+
+\node (ep) at (0,0){Cleaner environment};
+\node (h) at (7,0){Happiness};
+\node (z) at (6,2.75){U};
+\node (m) at (3.5,3){Wealth};
+\draw[->] (m) -- (ep);
+\draw[->, dashed] (m) -- (z);
+\draw[->, dashed] (z) -- (h);
+\draw[->] (ep) -- (h);
+
+\end{tikzpicture}
+
+\end{frame}
+
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{This is another DAG}
+\centering
+
+\includegraphics[width = 0.6\textwidth]{../img/dag_earnings}
+
+\vspace{15pt}
+
+\begin{itemize}\footnotesize
+  \item Y = earnings (outcome)
+  \item D = college education (treatment)
+  \item PE = parental education
+  \item I = family income
+  \item B = unobserved background factors (intelligence, abilities, home, etc)
+\end{itemize}
+
+
+
+{\tiny from \url{https://mixtape.scunning.com/03-directed_acyclical_graphs}}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Causal models, mechanisms, and DAGs}
+\centering
+
+\begin{itemize}
+  \item[] We will use DAGs or similar, for mainly two things related to causal inference:
+  \item Drawing up the \textbf{mechanism} that explains the outcome
+  \item Come up with the strategy we need to \textbf{identify} the causal effect
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\begin{frame}
+\frametitle{Mechanisms}
+\centering
+
+\begin{itemize}
+\item A mechanism is a type of causal explanation that specifies \textbf{why} and \textbf{how} something happened
+\item Not exactly the same as a causal model, but very interrelated (not all intermediate steps are relevant for causal inference, but they do work as an additional check)
+\item[]
+\item Example: we know the flu gives us fever, but why?
+\begin{itemize}
+\item Correlation: flu infection and fever go together
+\item Causation: flu infection \textit{causes} fever
+\item Mechanism: the immune system detects the infection and reacts by increasing the body temperature
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Mediation and moderation}
+\centering
+
+\begin{itemize}
+\item We usually find more than one variable present in a mechanism
+\item Two typical variables: mediator and moderator
+\item Mediation: a third variable explains the causal relationship between two variables (e.g. flu infection $>$ immune reaction $>$ fever)
+\item Moderation: a third variable changes the effect of one variable on another (e.g. how age changes the immune reaction)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example: income inequalities}
+\centering
+
+
+\begin{tikzpicture}[every text node part/.style={align=center}, scale = 0.75]
+
+% Process
+
+\node (pe) at (0,0){Parents' education};
+\node (i) at (7,0){Income (children)};
+\only<1>{\node[color=white] (e) at (5,2.5){Children's education};}
+\only<1>{\draw[->] (pe) -- (i);}
+
+\only<2->{\node (e) at (6,2.5){Children's education};}
+\only<2>{\draw[->] (pe) -- (e);}
+\only<2->{\draw[->] (e) -- (i);}
+\only<2->{\draw[->, dashed] (pe) -- (i);}
+
+\only<3->{\node (fi) at (1,2.5){Family income};}
+\only<3->{\draw[->] (pe) -- (fi);}
+\only<3->{\draw[->] (fi) -- (e);}
+
+\end{tikzpicture}
+
+\vspace{20pt}
+
+\begin{itemize}
+  \only<1>{\item Say we want to explain income inequality, and we find that people whose parents went to university earn, on average, more. This would be the basic causal model.}
+  \only<2>{\item But \textit{why} it is so? Someone comes and says: ``It's because parents with higher education are more likely to send their children to university and help them get through.''}
+  \only<3>{\item And then someone comes and says: ``It's not only that, it's money. Parents with higher education are richer and are able to send their kids to private schools and universities.''}
+\end{itemize}
+
+\vspace{20pt}
+
+{\footnotesize (\textit{Note:} in this case I use solid lines for direct effects and dashed lines for indirect effects, kind of)}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{DAGs and mechanisms}
+\centering
+
+\begin{itemize}[<+->]
+\item We can draw the process we're trying to study
+\item Main idea: focus on the \textit{data generating process}
+  \begin{itemize}
+  \item What had to happen for kids with university-degree parents to get richer?
+  \item In other words, what mechanisms were in play behind what we see in the data?
+  \end{itemize}
+\item This matters when choosing our empirical strategy:
+  \begin{itemize}
+  \item Main identification strategy
+  \item Additional checks or implications (testing the mechanism, heterogenous effects, etc)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
 
 
 %\appendix

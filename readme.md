@@ -11,5 +11,5 @@
 - [1. Introduction to Research Design](./slides/1_introduction/introduction.pdf)
 - [2. Elements of quantitative data](./slides/2_basics_quantitative_data/basics_quant_data.pdf)
 - [3. Causality and experiments](./slides/3_causality_and_experiments/causality.pdf)
-- [4. Methods of causal inference](./slides/4_causal_inference_methods/causal_inference.pdf)
-- [5. Advanced topics and overview](./slides/5_advanced_topics/advanced.pdf)
+- 4. Methods of causal inference <!-- ](./slides/4_causal_inference_methods/causal_inference.pdf) -->
+- 5. Advanced topics and overview <!-- ](./slides/5_advanced_topics/advanced.pdf) -->
