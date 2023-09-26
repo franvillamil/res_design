@@ -63,12 +63,31 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{About prediction}
+\frametitle{Prediction and explanation}
 \centering
 
 \begin{itemize}
-  \item<1-> What is prediction?
-  \item[]<2->
+  \item Often the gold standards of empirical science
+  \item Not the same
+  \begin{itemize}
+    \item Being able to predict does \textbf{not} mean you are explaining something
+    \item Knowing the exact causal effect of $x$ on $y$ does \textbf{not} mean you are able to predict $y$
+    \item Having a complete causal model would allow for prediction given perfect measurement, but that's impossible in the social sciences
+    \begin{itemize}
+      \item[] (and pretty much any other complex system, think about weather forecasting and problems of non-linear and complex models, computing power limitations, absence of data, measurement error...)
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{About prediction (in the social sciences)}
+\centering
+
+\begin{itemize}
   \item[]<2-> The two concepts of prediction:
   \item<2-> Predicting another variable
   \item<2-> Predicting the future (or out of sample prediction)
@@ -129,20 +148,7 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{About prediction}
-\centering
-
-\begin{itemize}[<+->]
-  \item Causality and prediction, is it the same?
-  \item The importance of \textbf{counterfactuals} (more on this later)
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Background: explanatory questions and data}
+\frametitle{About explanation}
 \centering
 
 \begin{itemize}
@@ -151,8 +157,9 @@
   \item<2-> Example:
   \begin{itemize}
     \item What is the process generating the data that Spotify receives about your music tastes (i.e. song choice)?
-    \item<3-> When we try to predict it the way Spotify does, are we using data to uncover the data generating process?
+    \item<3-> So if we ask how weather \textit{impacts} song choice, we are asking about the explanation of song choice, and we want to use data to learn this bit about the data generating process
   \end{itemize}
+  \item To do that, we need to learn about the concept of \BGyellow{causation}
 \end{itemize}
 
 \end{frame}
@@ -257,15 +264,25 @@
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Alternatives/references}
+\centering
+
+\includegraphics[width = 0.45\textwidth]{../img/the_book_of_why}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{\textit{Explaining} relationships}
 \centering
 
-\begin{itemize}[<+->]
+\begin{itemize}
   \item Key thing: we want to know whether $X$ actually \textit{causes} $Y$
   \begin{itemize}
     \item I.e., we want to do \textit{causal inference}
   \end{itemize}
-  \item (\textbf{Note} that this does not mean that $X$ is the only cause of $Y$, but that \textbf{changing $X$ alters $Y$})
+  \item \textbf{Note} that this does not mean that $X$ is the only cause of $Y$, but that \textbf{changing $X$ alters $Y$}
 \end{itemize}
 
 \end{frame}
@@ -276,13 +293,13 @@
 \frametitle{\textit{Explaining} relationships}
 \centering
 
-\begin{itemize}[<+->]
+\begin{itemize}
   \item How could we observe causal relationships? Repeating history
-  \item The `fundamental problem of causal inference' is that we cannot
+  \item<2-> The `fundamental problem of causal inference' is that we cannot
   \begin{itemize}
     \item In other words, that for every unit of observation, we can only observe \textbf{either} $Y(X=0)$ \textbf{or} $Y(X=1)$
   \end{itemize}
-  \item If we observe $Y(X=1)$, causal inference essentially means trying to find as good an approximation to $Y(X=0)$ as we can find
+  \item<3-> If we observe $Y(X=1)$, causal inference essentially means trying to find as good an approximation to $Y(X=0)$ as we can find
   \begin{itemize}
     \item i.e., we want to find something that is valid as a \textit{counterfactual}
   \end{itemize}
@@ -296,7 +313,7 @@
 \frametitle{Potential outcomes framework}
 \centering
 
-\begin{itemize}[<+->]
+\begin{itemize}
   \item Also called Neyman–Rubin causal model
   \item An effect is the difference between the \textit{actual world} and an \textit{alternative reality} (counterfactual)
   \begin{itemize}
@@ -329,13 +346,13 @@ What is the effect of smoking on life expectancy?
 % $E(LExp_{i}|A_{i} = 71, G_{i} = Male, S_{i}=1, E_{i}=0, RM_{i}=1, MC_{i}=1)$
 
 \begin{minipage}{0.7\textwidth}\centering
-  \begin{itemize}
-    \item<1-> Let's take Gary, a man who smokes, doesn't exercise, but is vegetarian. We can wait and see how long he lives:
+  \begin{itemize}\linespread{2}
+    \item<1-> Gary: smoker, doesn't exercise, but is vegetarian. We can wait and see how long he lives:
     \item<1->[] {\small $E(LExp|S=1, G=Male, E=0, V=1)$}
     \item<2-> The Q is, \textbf{what is the causal effect of smoking} on Gary?
-    \item<3-> To know that, we need to estimate the life expectancy of an alternative Gary that is \textit{exactly} the same except for the smoking:
+    \item<3-> To know that, we need to estimate the life expectancy of an alternative Gary that is \textit{exactly the same except} for the smoking:
     \item<3->[] {\small $E(LExp|S=0, G=Male, E=0, V=1)$}
-    \item<4-> The problem is that the alternative Gary is unobservable: we have a \textbf{missing data problem}
+    \item<4-> The problem is that the alternative Gary is unobservable: \textbf{missing data problem}
   \end{itemize}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}\centering
@@ -353,11 +370,11 @@ What is the effect of smoking on life expectancy?
 \centering
 
 \begin{itemize}
-  \item<1-> That would be for Gary. What about the `general' effect of smoking?
-  \item<2-> Well, we need to find an alternative for every person (smoking and non-smoking), and just calculate the difference between the alternative and the reality:
-  \item<2->[] $E[LifeExp_{i}^{1}] - E[LifeExp_{i}^{0}]$
-  \item<2->[] which would be the \textbf{Average Treatment Effect} (or \textbf{ATE})
-  \item<3-> Problem is we have missing data: we don't have $E[LifeExp_{i}^{1}]$ for non-smokers, and we don't have $E[LifeExp_{i}^{0}]$ for smokers
+  \item That would be for Gary. What about the \textbf{`general' effect of smoking}?
+  \item We'd need to find an alternative for every person (smoking and non-smoking), and just calculate the difference between the alternative and the reality:
+  \item[] $E[LifeExp_{i}^{1}] - E[LifeExp_{i}^{0}]$
+  \item[] which would be the \textbf{Average Treatment Effect} (or \textbf{ATE})
+  \item<2-> Problem is we have missing data: we don't have $E[LifeExp_{i}^{1}]$ for non-smokers, and we don't have $E[LifeExp_{i}^{0}]$ for smokers
 \end{itemize}
 
 \end{frame}
@@ -377,7 +394,7 @@ What is the effect of smoking on life expectancy?
   \item[]<3-> $E[Y_{i}^{1}|D_{i} = 0] - E[Y_{i}^{0}|D_{i} = 0]$
   \item[]<3-> {\small (effect of smoking among non-smokers)}
   \item[]<4->
-  \item<4-> When is $ATT \neq ATC$?
+  \item<4-> When is $ATT \neq ATC$? {\footnotesize (Non-linearity)}
 \end{itemize}
 
 \end{frame}
@@ -392,31 +409,37 @@ What is the effect of smoking on life expectancy?
 
 \begin{itemize}
   \item \textbf{So how do we solve this missing data problem?}
+  \item Intervening in treatment assignment through randomization
   \item[]
-  \item<2-> `No causation without manipulation'
-  \item<3-> Model initially developed for \textit{experimental data}: randomized controlled trials are the gold-standard in approximating the alternative reality (counterfactual)
+  \item `No causation without manipulation' (Rubin)
+  \item Potential outcomes framework initially developed for \textit{experimental data}: randomized controlled trials are the gold-standard in approximating the alternative reality (counterfactual)
+  \item But there are problems:
+  \begin{itemize}
+    \item issues in experimental design (next)
+    \item more importantly: not all experiments are feasible or ethical
+  \end{itemize}
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Issues in experimental designs}
-\centering
-
-\begin{itemize}
-  \item[] Experiments also have their problems, e.g.:
-  \item Non-perfect randomization (esp. if block-r)
-  \item SUTVA (or stable unit treatment value assumption)
-  \item Attrition
-  \item Treatment compliance (estimating the intent-to-treat, or ITT)
-  \item External validity
-  \item etc
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Issues in experimental designs}
+% \centering
+%
+% \begin{itemize}
+%   \item[] Experiments also have their problems, e.g.:
+%   \item Non-perfect randomization (esp. if block-r)
+%   \item SUTVA (or stable unit treatment value assumption)
+%   \item Attrition
+%   \item Treatment compliance (estimating the intent-to-treat, or ITT)
+%   \item External validity
+%   \item etc
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1376,6 +1399,48 @@ cor(df$whiskey_resid, df$risk_resid)
 \end{frame}
 % ----------------------------------------------------
 
+\section{Paper discussion and next week}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Guess et al. (2023)}
+\centering
+
+\includegraphics[width = \textwidth]{../img/guess2023}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Next week (Oct 3)}
+\centering
+
+\includegraphics[width = \textwidth]{../img/villamilbalcells}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Next week (Oct 3)}
+\centering
+
+\begin{itemize}
+  \item Think about the overall question (``Do TJ policies cause backlash?'') and about how much we can learn
+  \begin{itemize}
+    \item Identification strategy?
+    \item Treatment validity?
+    \item Outcome?
+    \item Generalizing results? (across time and space)
+    \item Measurement, theory-empirics link, ...
+    \item[]
+    \item[] (check Appendix!)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
 
 %\appendix
 %\renewcommand{\theframenumber}{A\arabic{framenumber}}
