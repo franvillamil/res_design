@@ -409,11 +409,13 @@ What is the effect of smoking on life expectancy?
 
 \begin{itemize}
   \item \textbf{So how do we solve this missing data problem?}
-  \item Intervening in treatment assignment through randomization
+  \begin{itemize}
+    \item intervening in treatment assignment through randomization
+  \end{itemize}
   \item[]
-  \item `No causation without manipulation' (Rubin)
-  \item Potential outcomes framework initially developed for \textit{experimental data}: randomized controlled trials are the gold-standard in approximating the alternative reality (counterfactual)
-  \item But there are problems:
+  \item<2-> `No causation without manipulation' (Rubin)
+  \item<2-> Potential outcomes framework initially developed for \textit{experimental data}: randomized controlled trials are the gold-standard in approximating the alternative reality (counterfactual)
+  \item<2-> But there are also problems or limitations:
   \begin{itemize}
     \item issues in experimental design (next)
     \item more importantly: not all experiments are feasible or ethical
@@ -493,6 +495,27 @@ What is the effect of smoking on life expectancy?
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{External validity}
+\centering
+
+\begin{itemize}
+  \item To what extend can we \textbf{generalize the results of an experiment}?
+  \begin{itemize}
+    \item i.e., how much do we really learn with this experiment?
+  \end{itemize}
+  \item This is a more general issue that we will also discuss with observational-data studies, but perhaps very relevant for experiments because of the setting it usually takes place
+  \item Example: media exposure studies (or Guess \textit{et al} 2023)
+  \begin{itemize}
+    \item \BGyellow{Treatment validity?} Discuss concept of \textbf{bundled treatment}
+    \item \BGyellow{Outcome validity?} survey (hypothetical) questions vs behavioral outcomes, relationship with original Q
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Treatment compliance}
 \centering
 
@@ -501,24 +524,6 @@ What is the effect of smoking on life expectancy?
   \item In clinical trials, e.g. do they take the pill or spit it?
   \item How would this look like in an experiment when you pay (treated) individuals to watch TV or use Facebook?
   \item Concept of \textbf{intention-to-treat} (ITT) analyses and the \textbf{complier average causal effect} or \textbf{local average treatment effect} (LATE)
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{External validity}
-\centering
-
-\begin{itemize}
-  \item To what extend can we \textbf{generalize the results of an experiment}?
-  \item This is a more general issue that we will also discuss with observational-data studies, but perhaps very relevant for experiments because of the setting it usually takes place
-  \item Example: media exposure studies
-  \begin{itemize}
-    \item Treatment validity?
-    \item Outcome validity of survey hypothetical questions? (behavioral outcomes)
-  \end{itemize}
 \end{itemize}
 
 \end{frame}
