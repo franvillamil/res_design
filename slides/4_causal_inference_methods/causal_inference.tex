@@ -6,7 +6,7 @@
 \author[]{Francisco Villamil}
 \date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2023}
 
-\input{beamer_preamble.tex}
+\input{../beamer_preamble.tex}
 
 \begin{document}
 % ====================================================
@@ -17,9 +17,85 @@
 \end{frame}
 % ----------------------------------------------------
 
-%\appendix
-%\renewcommand{\theframenumber}{A\arabic{framenumber}}
-%\renewcommand{\insertframenumber}{A\arabic{framenumber}}
+\section{Intro and overview}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap}
+\centering
+
+\begin{itemize}
+  \item[1.] Problem/topic
+  \item[2.] Stories, arguments about mechanisms
+  \item[3.] Research question
+  \item[4.] Proper theory, concepts and operationalization
+  \item[5.] Measurement, unit of analyses, data sources, etc
+  \item[6.] \BGyellow{Inference strategy}
+  \item[7.] Results \& interpretation
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Methods and causal inference}
+\centering
+
+\begin{itemize}
+  \item Most of the time is \textbf{impossible} to control for all relevant variables (i.e. not able to close all back-door paths)
+  \item So what do we do? We try to find ways to control for unobserved confounding
+  \item One option is to rely on additional controlling techniques
+  \begin{itemize}
+    \item \BGyellow{Matching}: also depends on observables, but parametric advantages, etc (anyway, not a solution for $U$)
+    \item \BGyellow{Fixed effects}: can control for group-level unobservables, and 
+  \end{itemize}
+
+
+
+  \item But there are other methods often related to causal inference, not because they uncover causal relationships, but because they allow you to exploit \BGyellow{`typical' exogenous sources of variation}
+  \item {\small (In H-K's \textit{The Effect}, they're called `template causal diagrams')}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Methods and causal inference}
+\centering
+
+\begin{itemize}
+  \item This is \textit{something} that introduces variation in the treatment that is independent from confounders and you can exploit to analyse (so, like randomization in an experiment). For example:
+  \item[1.] Time
+  \begin{itemize}
+    \item we can exploit changes over time in treated vs control units, e.g. imagine checking effect of good nutrition on a child who is growing anyway
+  \end{itemize}
+  \item[2.] Cut-offs
+  \begin{itemize}
+    \item sometimes something happens just when you cross a cut-off (getting into university, winning an election, a geographical border, being born Jan 1st...)
+  \end{itemize}
+  \item[3.] A third, unrelated variable
+  \begin{itemize}
+    \item you win the lottery, you get a sudden increase in disposable income
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+\section{Re-cap}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+
+
+\end{frame}
+% ----------------------------------------------------
 
 % ====================================================
 \end{document}

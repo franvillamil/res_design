@@ -838,81 +838,6 @@ What is the effect of smoking on life expectancy?
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Off topic: Controlling}
-\centering
-
-\begin{itemize}
-  \item How does alcohol consumption affect health?
-  \item Imagine we take data from a group of people:
-\end{itemize}
-
- \begin{lstlisting}[language=R]
-df = data.frame(
-  # In this group of people, one-third are rich
-  rich = rbinom(500, 1, 0.3)) %>%
-  # Rich people have 3x more money to buy whiskey
-  mutate(whiskey = 3*rich + runif(500, 0, 4)) %>%
-  # Health risk is worse if you drink more whiskey, but rich people have better health overall
-  mutate(risk = -2*rich + .3*whiskey + rnorm(500, 2))
- \end{lstlisting}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Off topic: Controlling}
-\centering
-
-\begin{lstlisting}[language=R]
-cor(df$whiskey, df$risk)
-[1] -0.1150553
-\end{lstlisting}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Off topic: Controlling}
-\centering
-
-\begin{itemize}
-  \item Controlling for \texttt{rich} $\eq$ look at the variation \textbf{not} explained by \texttt{rich}
-  \item i.e., take the group prediction out (mean of whiskey/risk for rich or non-rich)
-\end{itemize}
-
-\begin{lstlisting}[language=R]
-df = df %>%
-  group_by(rich) %>%
-  mutate(whiskey_resid = whiskey - mean(whiskey),
-         risk_resid = risk - mean(risk)) %>%
-  ungroup()
-\end{lstlisting}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Off topic: Controlling}
-\centering
-
-\begin{itemize}
-  \item The \textit{true} model we created:
-  \item[] \texttt{risk = -2 * rich + .3 * whiskey + error}
-\end{itemize}
-
-\begin{lstlisting}[language=R]
-cor(df$whiskey_resid, df$risk_resid)
-[1] 0.3242735
-\end{lstlisting}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
 \begin{frame}
 \frametitle{Front doors and back doors}
 \centering
@@ -1005,13 +930,13 @@ cor(df$whiskey_resid, df$risk_resid)
 \frametitle{Front doors and back doors}
 \centering
 
-\begin{itemize}[<+->]
-  \item \textbf{What if we control for health?}
+\begin{itemize}
+  \item \BGyellow{\textbf{What if we control for health?}}
   \item We would be blocking part of the causal `water flow' from drugs to life expectancy
   \item That's part of the mechanism: imagine that drugs has a direct effect, e.g. higher probability of dying on an accident, and an indirect effect through its effect on health
   \item (Unless you want to calculate the \textit{direct effect})
   \item[]
-  \item So we would have to control for \textbf{U}, which would close all other paths
+  \item<2-> We would have to control for \textbf{U}, which would close all other paths
 \end{itemize}
 
 \end{frame}
@@ -1028,10 +953,85 @@ cor(df$whiskey_resid, df$risk_resid)
   \item \texttt{Drugs < Income > LifeExp}
   \item \texttt{Drugs < U > Income > LifeExp}
   \item \texttt{Drugs < U > Health > LifeExp}
-  \item \texttt{Drugs < U > LifeExp} \textbf{(!)}
+  \item \BGyellow{\texttt{Drugs < U > LifeExp}} \textbf{(!)}
   \item[]
   \item Problem? So?
 \end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Off topic: Controlling}
+\centering
+
+\begin{itemize}
+  \item How does alcohol consumption affect health?
+  \item Imagine we take data from a group of people:
+\end{itemize}
+
+ \begin{lstlisting}[language=R]
+df = data.frame(
+  # In this group of people, one-third are rich
+  rich = rbinom(500, 1, 0.3)) %>%
+  # Rich people have 3x more money to buy whiskey
+  mutate(whiskey = 3*rich + runif(500, 0, 4)) %>%
+  # Health risk is worse if you drink more whiskey, but rich people have better health overall
+  mutate(risk = -2*rich + .3*whiskey + rnorm(500, 2))
+ \end{lstlisting}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Off topic: Controlling}
+\centering
+
+\begin{lstlisting}[language=R]
+cor(df$whiskey, df$risk)
+[1] -0.1150553
+\end{lstlisting}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Off topic: Controlling}
+\centering
+
+\begin{itemize}
+  \item Controlling for \texttt{rich} $\eq$ look at the variation \textbf{not} explained by \texttt{rich}
+  \item i.e., take the group prediction out (mean of whiskey/risk for rich or non-rich)
+\end{itemize}
+
+\begin{lstlisting}[language=R]
+df = df %>%
+  group_by(rich) %>%
+  mutate(whiskey_resid = whiskey - mean(whiskey),
+         risk_resid = risk - mean(risk)) %>%
+  ungroup()
+\end{lstlisting}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Off topic: Controlling}
+\centering
+
+\begin{itemize}
+  \item The \textit{true} model we created:
+  \item[] \texttt{risk = -2 * rich + .3 * whiskey + error}
+\end{itemize}
+
+\begin{lstlisting}[language=R]
+cor(df$whiskey_resid, df$risk_resid)
+[1] 0.3242735
+\end{lstlisting}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1044,20 +1044,22 @@ cor(df$whiskey_resid, df$risk_resid)
 \centering
 
 \begin{itemize}
-  \item Confounding
-  \item Reverse causality
-  \item Bidirectional causation
-  \item Selection bias
-  \item Collider bias
-  \item Post-treatment bias
+  \item \hyperlink{confounding}{Confounding}
+  \item \hyperlink{reverse}{Reverse causality}
+  \item \hyperlink{bidirect}{Bidirectional causation}
+  \item \hyperlink{selectbias}{Selection bias}
+  \item \hyperlink{collider}{Collider bias}
+  \item \hyperlink{ptbias}{Post-treatment bias}
 \end{itemize}
 
 
 \end{frame}
 % ----------------------------------------------------
 
+
+% ----------------------------------------------------
 \begin{frame}
-\frametitle{Confounding}
+\frametitle{Confounding}\label{confounding}
 \centering
 
 \begin{itemize}[<+->]
@@ -1067,26 +1069,29 @@ cor(df$whiskey_resid, df$risk_resid)
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
 
+% ----------------------------------------------------
 \begin{frame}
-\frametitle{Reverse causality}
+\frametitle{Reverse causality}\label{reverse}
 \centering
 
-\begin{itemize}[<+->]
-  \item Many examples where correlations we think imply a particular causal effect might be explained by its reverse: Violent videogames making teenagers violence? Maybe violent teeneagers prefer those games. Drug use causes psychological problems? Maybe psychological problems can also cause drug use. (In many cases it's also two-way causality)
-  \item ``Hospitals make people sick:'' if you collect data on illness development, you might find that people fare worse if they go to the hospital. Obviously, it's a case of reverse causality: being sick causes going to the hospital.
+\begin{itemize}
+  \item Many examples where correlations we think imply a particular causal effect might be explained by its reverse: Violent videogames making teenagers violence? Drug use causes psychological problems?
+  \item ``Hospitals make people sick.'' If you collect data on illness development, you might find that people fare worse if they go to the hospital. Obviously, it's a case of reverse causality: being sick causes going to the hospital.
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
 
-
+% ----------------------------------------------------
 \begin{frame}
-\frametitle{Bidirectional causation}
+\frametitle{Bidirectional causation}\label{bidirect}
 \centering
 
 
 \begin{itemize}
-  \item (endogenous cycles, $\neq$ reverse causality)
+  \item (there are endogenous cycles, \textit{not the same as} reverse causality)
   \item[]
   \item Political values and voting: they way you think makes you vote in a particular way, but the way you vote can also affect the way you think (group influence, cognitive processes, etc)
   \item Can be closely related to selection bias: imagine we go to Madrid Rio and we measure if people doing exercises are more likely to be overweight than those lying around
@@ -1094,6 +1099,7 @@ cor(df$whiskey_resid, df$risk_resid)
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1106,10 +1112,10 @@ cor(df$whiskey_resid, df$risk_resid)
 % ----------------------------------------------------
 
 \begin{frame}
-\frametitle{Selection bias}
+\frametitle{Selection bias}\label{selectbias}
 \centering
 
-\begin{itemize}[<+->]
+\begin{itemize}
   \item Our observations are not representative
   \item Famous example from World War II airplanes
   \item Many examples: advice from successful CEOs, ex-heroin addicts more likely to do sports, etc
@@ -1131,7 +1137,7 @@ cor(df$whiskey_resid, df$risk_resid)
 
 \begin{itemize}
   \item Selection bias in statistics: sampling issue
-  \item Quite different in causality: we're dealing with \textbf{selection into treatment}
+  \item Quite different in causality: we're dealing with \BGyellow{selection into treatment}
   \item Remember example from HIV treatments studies
 \end{itemize}
 
@@ -1140,7 +1146,7 @@ cor(df$whiskey_resid, df$risk_resid)
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Collider bias}
+\frametitle{Collider bias}\label{collider}
 \centering
 
 \begin{tikzpicture}
@@ -1157,34 +1163,37 @@ cor(df$whiskey_resid, df$risk_resid)
 % ----------------------------------------------------
 
 
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Collider bias}
+% \centering
+%
+% \includegraphics[width = 0.7\textwidth]{../img/crazyhot}
+%
+% \end{frame}
+% % ----------------------------------------------------
+
+
 % ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
-\includegraphics[width = 0.7\textwidth]{../img/crazyhot}
-
-\end{frame}
-% ----------------------------------------------------
-
-
 \begin{frame}[fragile]
 \frametitle{Collider bias}
 \centering
 
 \begin{itemize}
-  \item Are good looking people jerks?
-  \item We have 1,000 people, with \textbf{randomly} distributed beauty and niceness
+  \item Are smart people weirdos?
+  \item We have 1,000 people, with \textbf{randomly} distributed intelligence and social skills
 \end{itemize}
 
  \begin{lstlisting}[language=R]
  df = data.frame(
-   niceness = rnorm(1000, mean = 5, sd = 1.5),
-   beauty = rnorm(1000, mean = 5, sd = 1.5))
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))
  \end{lstlisting}
 
 \end{frame}
+% ----------------------------------------------------
 
+% ----------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Collider bias}
 \centering
@@ -1194,13 +1203,14 @@ cor(df$whiskey_resid, df$risk_resid)
 \end{itemize}
 
  \begin{lstlisting}[language=R]
- cor(df$niceness, df$beauty)
- [1] 0.02876464
+ > cor(df$intelligence, df$social_skills)
+ [1] 0.005902188
  \end{lstlisting}
 
 \end{frame}
+% ----------------------------------------------------
 
-
+% ----------------------------------------------------
 \begin{frame}
 \frametitle{Collider bias}
 \centering
@@ -1208,32 +1218,36 @@ cor(df$whiskey_resid, df$risk_resid)
 \includegraphics[width = 0.4\textwidth]{../img/collider_m1}
 
 \end{frame}
+% ----------------------------------------------------
 
+% ----------------------------------------------------
 \begin{frame}
 \frametitle{Collider bias}
 \centering
 
 \begin{itemize}
-  \item Now imagine that we have another variable, the probability of being married, which is we will say is caused by both niceness and beauty:
+  \item Now imagine that we have another variable, the probability of being hired in a company, which is we will say is caused by both intelligence and social skills:
 \end{itemize}
 
 \begin{tikzpicture}
 % nodes %
-\node (Y) at (2,0){Niceness};
-\node (D) at (-2,0){Beauty};
-\node (U) at (0,3){Married};
+\node (Y) at (2,0){Social skills};
+\node (D) at (-2,0){Intelligence};
+\node (U) at (0,3){Hired};
 \draw[->] (D) -- (Y);
 \draw[<-] (U) -- (D);
 \draw[<-] (U) -- (Y);
 \end{tikzpicture}
 
 %\begin{lstlisting}[language=R]
-%df = df %>%
-%  mutate(married = 1.5 * niceness + 3 * beauty) %>%
-%  mutate(married = married / max(married))
+% df = df %>%
+%  mutate(hired = 1.5 * intelligence + 3 * social_skills) %>%
+%  mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0)) %>%
+%  mutate(hired = hired / max(hired))
 %\end{lstlisting}
 
 \end{frame}
+% ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1241,6 +1255,11 @@ cor(df$whiskey_resid, df$risk_resid)
 \centering
 
 \includegraphics[width = 0.6\textwidth]{../img/collider_m2}
+
+% ml = list(
+%   "Model 1" = lm(social_skills ~ intelligence, data = df),
+%   "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))
+% msummary(ml, estimate = "{estimate}{stars}")
 
 \end{frame}
 % ----------------------------------------------------
@@ -1331,7 +1350,7 @@ cor(df$whiskey_resid, df$risk_resid)
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Post-treatment bias (collider again)}
+\frametitle{Post-treatment bias (collider again)}\label{ptbias}
 \centering
 
 \begin{itemize}[<+->]
@@ -1344,7 +1363,7 @@ cor(df$whiskey_resid, df$risk_resid)
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Post-treatment bias (collider again)}
+\frametitle{Nice try, but...}
 \centering
 
 \begin{tikzpicture}
@@ -1352,29 +1371,11 @@ cor(df$whiskey_resid, df$risk_resid)
 \node (Y) at (2,0){Support (postwar)};
 \node (D) at (-2,0){Violence (war)};
 \node (Z) at (0,3){Postwar economic growth};
-\draw[->] (D) -- (Y);
+\node (U) at (3,2.5){\BGyellow{U}};
+\draw[->, red] (D) -- (Y);
 \draw[<-] (Z) -- (D);
 \draw[->] (Z) -- (Y);
-\end{tikzpicture}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Post-treatment bias (collider again)}
-\centering
-
-\begin{tikzpicture}
-% nodes %
-\node (Y) at (2,0){Support (postwar)};
-\node (D) at (-2,0){Violence (war)};
-\node (Z) at (0,3){Postwar economic growth};
-\node (U) at (3,2.5){U};
-\draw[->] (D) -- (Y);
-\draw[<-] (Z) -- (D);
-\draw[->] (Z) -- (Y);
-\draw[->, dashed] (U) -- (Z);
+\draw[->, dashed, red] (U) -- (Z);
 \draw[->, dashed] (U) -- (Y);
 \end{tikzpicture}
 
@@ -1383,17 +1384,17 @@ cor(df$whiskey_resid, df$risk_resid)
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Recap: what should not be controlled for}
+\frametitle{Recap: what should \BGyellow{not} be controlled for}
 \centering
 
 \begin{itemize}
-  \item[1.] Front-door paths
+  \item[1.] \BGyellow{Front-door paths}
   \begin{itemize}
     \item Blocking some of the effect through a mediator variable
     \item (There are almost always mediator variables, so you could potentially just eliminate all the effect you're trying to identify)
   \end{itemize}
   \item[]
-  \item[2.] Collider bias
+  \item[2.] \BGyellow{Collider bias}
   \begin{itemize}
     \item Opens a new, uncontrolled-for path
     \item Sometimes you might be inadvertently controlling for a collider because of \textit{selection} issues
