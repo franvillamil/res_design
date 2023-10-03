@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber causal_inference"] 1696324540 "causal_inference.bcf" "causal_inference.bbl" "causal_inference" 1696325525
-  "causal_inference.bcf" 1696325508 101205 b36ea516b5358c11d04df290eeec68b1 "pdflatex"
+["biber causal_inference"] 1696324540 "causal_inference.bcf" "causal_inference.bbl" "causal_inference" 1696327211
+  "causal_inference.bcf" 1696327210 101205 b36ea516b5358c11d04df290eeec68b1 "pdflatex"
   (generated)
-  "causal_inference.bbl"
   "causal_inference.blg"
-["pdflatex"] 1696325501 "causal_inference.tex" "causal_inference.pdf" "causal_inference" 1696325525
+  "causal_inference.bbl"
+["pdflatex"] 1696327198 "causal_inference.tex" "causal_inference.pdf" "causal_inference" 1696327211
   "../beamer_preamble.tex" 1695846992 8195 a00686c4686d182a5a9dc5fe917babbe ""
   "../img/carl1.png" 1695846992 215007 019a28f1c908c128e33402779e121d8e ""
   "../img/carl10.png" 1695846992 698993 0a00333b52a6adffcb7130d5df89cc48 ""
@@ -323,20 +323,20 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1592742590 2432459 c0e669bcb55fe236fcc6a81f8022d78b ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "causal_inference.aux" 1696325508 27911 8f0bddd0262d878674d83c651f6d92a7 "pdflatex"
+  "causal_inference.aux" 1696327210 30279 25bb3b0cf09dbff72b7502a6f170c79c "pdflatex"
   "causal_inference.bbl" 1696324541 0 d41d8cd98f00b204e9800998ecf8427e "biber causal_inference"
-  "causal_inference.nav" 1696325508 18454 74c307f4e1c23150f48c48fabb845da3 "pdflatex"
-  "causal_inference.out" 1696325508 583 6a4399f050abf460bd49a3ea6103b0ab "pdflatex"
-  "causal_inference.run.xml" 1696325508 2348 24258d0a36b9f094f3bc7a835cc51010 "pdflatex"
-  "causal_inference.tex" 1696325492 39414 56b1352fc32b31cd65b0232a0a37ae0a ""
-  "causal_inference.toc" 1696325508 974 3fc759880d3f1417b325cba56f22eb01 "pdflatex"
+  "causal_inference.nav" 1696327210 20122 08a36d1af46ffdd189d88992aa8c642d "pdflatex"
+  "causal_inference.out" 1696327210 583 d6062a4d2f1c6e3085f72e53b428fd84 "pdflatex"
+  "causal_inference.run.xml" 1696327210 2348 24258d0a36b9f094f3bc7a835cc51010 "pdflatex"
+  "causal_inference.tex" 1696327187 41263 b66371dccebcb7ba54a0bf950100a3be ""
+  "causal_inference.toc" 1696327210 974 0944ba722cfcfe96d2c88f9f02e9f434 "pdflatex"
   (generated)
-  "causal_inference.run.xml"
   "causal_inference.aux"
-  "causal_inference.pdf"
-  "causal_inference.snm"
   "causal_inference.bcf"
+  "causal_inference.run.xml"
+  "causal_inference.log"
+  "causal_inference.pdf"
+  "causal_inference.out"
   "causal_inference.nav"
   "causal_inference.toc"
-  "causal_inference.out"
-  "causal_inference.log"
+  "causal_inference.snm"

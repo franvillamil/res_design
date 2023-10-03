@@ -4,16 +4,16 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Methods in brief}{11}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Re-cap and essay guidelines}{20}{0}{3}
+\beamer@sectionintoc {3}{Re-cap and essay guidelines}{30}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Causal methods in detail}{22}{0}{4}
+\beamer@sectionintoc {4}{Causal methods in detail}{32}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Controlling and matching}{23}{0}{4}
+\beamer@subsectionintoc {4}{1}{Controlling and matching}{33}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{2}{Fixed effects}{40}{0}{4}
+\beamer@subsectionintoc {4}{2}{Fixed effects}{50}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{3}{Difference-in-differences}{56}{0}{4}
+\beamer@subsectionintoc {4}{3}{Difference-in-differences}{66}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{4}{Regression discontinuity}{73}{0}{4}
+\beamer@subsectionintoc {4}{4}{Regression discontinuity}{83}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{5}{Instrumental variables}{86}{0}{4}
+\beamer@subsectionintoc {4}{5}{Instrumental variables}{96}{0}{4}
