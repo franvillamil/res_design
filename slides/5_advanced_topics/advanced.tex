@@ -19,6 +19,40 @@
 \end{frame}
 % ----------------------------------------------------
 
+\section{Review}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Questions \& review}
+\centering
+
+\begin{itemize}
+  \item Questions?
+  \item<2-> Take away from workshop:
+  \begin{itemize}
+    \item \BGyellow{Need to think in a \textbf{broader} way}
+    \item Do not stay fixated on a method
+    \item There's never a single solution/strategy
+  \end{itemize}
+  \item<3-> Key thing I'd like you to take from this course:
+  \item<3->[] learn how to \BGyellow{\textbf{plan}}, execution will come later
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\subsection*{Unit of analysis}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Unit of analysis}
+\centering
+
+
+
+\end{frame}
+% ----------------------------------------------------
+
 \section{Generalizing results}
 
 % ----------------------------------------------------
@@ -29,18 +63,120 @@
 \begin{itemize}
   \item The \BGyellow{Credibility Revolution} in social sciences
   \item What are we really learning?
-  \item References:
+  \item<2-> Importance of meta-scientific knowledge
   \begin{itemize}
-    \item Egami and Hartman (2023) \href{https://doi.org/10.1017/S0003055422000880}{Elements of External Validity: Framework, Design, and Analysis}. \textit{APSR} 117(3): 1070--1088.
-    \item Munger (2023) \href{https://doi.org/10.1177/20531680231187271}{Temporal validity as meta-science}. \textit{Res\&Pol} 10(3).
-    \begin{itemize}
-      \item See also this post: \href{https://kevinmunger.substack.com/p/generalizing-knowledge-of-twitter}{Generalizing Knowledge of Twitter to ``X''}.
-    \end{itemize}
-    \item Esterling, Brady, \& Schwitzgebel (2023) \href{https://osf.io/2s8w5/}{The Necessity of Construct and External Validity for Generalized Causal Claims: A Critical Review of the Literature on Quantitative Causal Inference}. Preprint.
+    \item[1.] Robustness of results and incremental science ($\rightarrow$ meta-analyses)
+    \item[2.] Generalization of results ($\rightarrow$ construct and external validity)
   \end{itemize}
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{An example of a meta-analysis}
+\centering
+
+\begin{itemize}
+  \item Effect of commodity prices on conflict?
+  \item What's the \BGyellow{causal inference problem} here?
+  \item<2-> But there are options to solve this, right?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{An example of a meta-analysis}
+\centering
+
+\includegraphics[width = \textwidth]{../img/blair_apsr}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{An example of a meta-analysis}
+\centering
+
+\begin{itemize}
+  \item[1.] Literature review $\rightarrow$ 3,300 records
+  \item<2->[2.] Look for similar research designs and topics:
+  \begin{itemize}
+    \item[] ``the 46 included studies (102 estimates) quantitatively analyze the effect of plausibly exogenous variation in world commodity prices on armed civil conflict by using a generalized difference-in-difference design with unit and time fixed effects''
+  \end{itemize}
+  \item<3->[3.] Make studies comparable $\rightarrow$ standardize coefficients
+  \item<4->[4.] Perform meta-analysis method
+  \begin{itemize}
+    \item[] fixed-effects meta-analysis model \& random effects m-a model
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Theoretical background on natural resources}
+\centering
+
+\begin{itemize}
+  \item[H1:] NR are the `prize' to be won by fighting (+)
+  \item[H2:] Higher prices change opportunity cost (- for labor-intensive, + for capital-intensive)
+  \item[H3:] Lootable NR can be captured by fighting (+)
+\end{itemize}
+
+\includegraphics[width = \textwidth]{../img/blair_apsr2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Meta-analysis findings}
+\centering
+
+\begin{itemize}
+  \item \textbf{Pooling studies} across commodity types: no effect
+  \item<2-> But when \textbf{disaggregating by commodity type}: effects coherent with theoretical predictions
+  \begin{itemize}
+    \item<3-> price increases for \textbf{agricultural commodities} \BGyellow{reduce} the likelihood of armed conflict (labor-intensive commodities and opportunity cost)
+    \item<4-> price increases for \textbf{oil and gas} \BGyellow{increase} likelihood of conflict (capital-intensive commodity and returns to fighting)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Meta-analysis findings}
+\centering
+
+\includegraphics[width = \textwidth]{../img/blair_apsr3}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Learning about gaps}
+\centering
+
+\begin{itemize}
+  \item A meta-analysis can be used to identify \BGyellow{gaps}, e.g.
+  \item[1.] \textbf{Spatial or temporal validity}: where and when do findings come from?
+  \item[2.] \textbf{Publication bias}: are only positive findings being published?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/blair_apsr4}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
@@ -53,10 +189,59 @@
   \begin{itemize}
     \item is the treatment doing what we theoretically expect it to? and are we measuring the outcome correctly?
   \end{itemize}
+  \item[]
   \item \BGyellow{External validity}: would we get the same results if we replicate this in another context?
   \begin{itemize}
     \item especially: temporal and spatial validity
   \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Construct validity}
+\centering
+
+\begin{itemize}
+  \item This is about \textit{mislabeling} the cause or outcome of a study
+  \item We say we are analyzing the effect of $X$ on $Y$, but are we really measuring that?
+  \item[]
+  \item<2->[1.] Construct validity of the \BGyellow{cause}: bundled treatments, exclusion restriction (assigment only affects through treatment), SUTVA, etc
+  \item<2->[2.] Construct validity of the \BGyellow{outcome}: similar, making sure the empirical measure mirrors the theoretical construct
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{External validity}
+\centering
+
+\begin{itemize}
+  \item This is about understanding the \textit{conditions} under which $X$ affects $Y$
+  \begin{itemize}
+    \item[] (it is very unlikely that the effect takes place under universal conditions)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{References on external validity}
+\centering
+
+\begin{itemize}
+  \item Egami and Hartman (2023) \href{https://doi.org/10.1017/S0003055422000880}{Elements of External Validity: Framework, Design, and Analysis}. \textit{APSR} 117(3): 1070--1088.
+  \item Munger (2023) \href{https://doi.org/10.1177/20531680231187271}{Temporal validity as meta-science}. \textit{Res\&Pol} 10(3).
+  \begin{itemize}
+    \item See also this post: \href{https://kevinmunger.substack.com/p/generalizing-knowledge-of-twitter}{Generalizing Knowledge of Twitter to ``X''}.
+  \end{itemize}
+  \item Esterling, Brady, \& Schwitzgebel (2023) \href{https://osf.io/2s8w5/}{The Necessity of Construct and External Validity for Generalized Causal Claims: A Critical Review of the Literature on Quantitative Causal Inference}. Preprint.
 \end{itemize}
 
 \end{frame}
@@ -112,10 +297,93 @@
 \end{frame}
 % ----------------------------------------------------
 
-\section{Causal methods in detail}
+\section{Extra: Bartik instruments}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Bartik instruments}
+\centering
 
 
-\subsection{Controlling and matching}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Extra: Synthetic control methods}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Synthetic control methods}
+\centering
+
+\begin{itemize}
+  \item Imagine combining diff-in-diff with matching
+  \begin{itemize}
+    \item treatments goes into effect at one time, and only affects one group
+    \item you can use pre-T data to make control and treated comparable
+    \item you estimate effect from post-T divergence
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Original study}
+\centering
+
+\includegraphics[width = \textwidth]{../img/abadie2003}
+
+\textit{American Economic Review, 2003}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Original study}
+\centering
+
+\includegraphics[width = \textwidth]{../img/abadie2003b}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Reference example}
+\centering
+
+\begin{itemize}
+  \item A Abadie, A Diamond & J Hainmueller (2010) \href{https://web.stanford.edu/~jhain/Paper/JASA2010.pdf}{Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California's Tobacco Control Program.} \textit{Journal of the American Statistical Association.}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Questions}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Questions about final essay}
+\centering
+
+\begin{itemize}
+  \item Review something?
+  \item Format and guidelines
+  \item Group vs individual essays
+  \item Logistics: deadline, where to submit
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+\section{Causal methods again, in detail}
+
+
+\subsection*{Controlling and matching}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -262,7 +530,7 @@
   \end{itemize}
 \end{itemize}
 
-\uncover<4->{\includegraphics[width = \textwidth]{../img/matching_dag_ps}}
+\uncover<4->{\includegraphics[width = .85\textwidth]{../img/matching_dag_ps}}
 
 \end{frame}
 % ----------------------------------------------------
@@ -301,7 +569,7 @@
 \end{frame}
 % ----------------------------------------------------
 
-\subsection{Fixed effects}
+\subsection*{Fixed effects}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -498,7 +766,7 @@ Our true causal model
 \end{frame}
 % ----------------------------------------------------
 
-\subsection{Difference-in-differences}
+\subsection*{Difference-in-differences}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -783,7 +1051,7 @@ Our true causal model
 \end{frame}
 % ----------------------------------------------------
 
-\subsection{Regression discontinuity}
+\subsection*{Regression discontinuity}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -989,7 +1257,7 @@ Our true causal model
 \end{frame}
 % ----------------------------------------------------
 
-\subsection{Instrumental variables}
+\subsection*{Instrumental variables}
 
 % ----------------------------------------------------
 \begin{frame}

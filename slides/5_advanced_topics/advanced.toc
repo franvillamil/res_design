@@ -1,19 +1,17 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {1}{Generalizing results}{2}{0}{1}
+\beamer@sectionintoc {1}{Review}{2}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Robustness and inference tests}{5}{0}{2}
+\beamer@sectionintoc {2}{Generalizing results}{7}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Mechanism test and additional implications}{8}{0}{3}
+\beamer@sectionintoc {3}{Robustness and inference tests}{30}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Causal methods in detail}{11}{0}{4}
+\beamer@sectionintoc {4}{Mechanism test and additional implications}{33}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Controlling and matching}{12}{0}{4}
+\beamer@sectionintoc {5}{Extra: Bartik instruments}{36}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{2}{Fixed effects}{29}{0}{4}
+\beamer@sectionintoc {6}{Extra: Synthetic control methods}{38}{0}{6}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{3}{Difference-in-differences}{45}{0}{4}
+\beamer@sectionintoc {7}{Questions}{43}{0}{7}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{4}{Regression discontinuity}{62}{0}{4}
-\defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{5}{Instrumental variables}{75}{0}{4}
+\beamer@sectionintoc {8}{Causal methods again, in detail}{45}{0}{8}

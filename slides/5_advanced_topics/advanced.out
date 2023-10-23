@@ -1,9 +1,14 @@
-\BOOKMARK [2][]{Outline0.1}{Generalizing results}{}% 1
-\BOOKMARK [2][]{Outline0.2}{Robustness and inference tests}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Mechanism test and additional implications}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Causal methods in detail}{}% 4
-\BOOKMARK [3][]{Outline0.4.1.12}{Controlling and matching}{Outline0.4}% 5
-\BOOKMARK [3][]{Outline0.4.2.29}{Fixed effects}{Outline0.4}% 6
-\BOOKMARK [3][]{Outline0.4.3.45}{Difference-in-differences}{Outline0.4}% 7
-\BOOKMARK [3][]{Outline0.4.4.62}{Regression discontinuity}{Outline0.4}% 8
-\BOOKMARK [3][]{Outline0.4.5.75}{Instrumental variables}{Outline0.4}% 9
+\BOOKMARK [2][]{Outline0.1}{Review}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.6}{Unit of analysis}{Outline0.1}% 2
+\BOOKMARK [2][]{Outline0.2}{Generalizing results}{}% 3
+\BOOKMARK [2][]{Outline0.3}{Robustness and inference tests}{}% 4
+\BOOKMARK [2][]{Outline0.4}{Mechanism test and additional implications}{}% 5
+\BOOKMARK [2][]{Outline0.5}{Extra: Bartik instruments}{}% 6
+\BOOKMARK [2][]{Outline0.6}{Extra: Synthetic control methods}{}% 7
+\BOOKMARK [2][]{Outline0.7}{Questions}{}% 8
+\BOOKMARK [2][]{Outline0.8}{Causal methods again, in detail}{}% 9
+\BOOKMARK [3][]{Outline0.8.1.46}{Controlling and matching}{Outline0.8}% 10
+\BOOKMARK [3][]{Outline0.8.2.63}{Fixed effects}{Outline0.8}% 11
+\BOOKMARK [3][]{Outline0.8.3.79}{Difference-in-differences}{Outline0.8}% 12
+\BOOKMARK [3][]{Outline0.8.4.96}{Regression discontinuity}{Outline0.8}% 13
+\BOOKMARK [3][]{Outline0.8.5.109}{Instrumental variables}{Outline0.8}% 14
