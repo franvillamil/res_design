@@ -445,6 +445,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/sansmathaccent/mathker
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT ../img/electoral_data_excel.jpg
+INPUT ../img/electoral_data_excel.jpg
+INPUT ../img/electoral_data_excel.jpg
 INPUT ../img/covid_vote.png
 INPUT ../img/covid_vote.png
 INPUT ../img/covid_vote.png
@@ -457,7 +460,6 @@ INPUT ../img/emissions.png
 INPUT ../img/Minard.png
 INPUT ../img/Minard.png
 INPUT ../img/Minard.png
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
 INPUT advanced.toc
 INPUT advanced.toc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
@@ -476,11 +478,15 @@ INPUT ../img/blair_apsr3.jpg
 INPUT ../img/blair_apsr4.jpg
 INPUT ../img/blair_apsr4.jpg
 INPUT ../img/blair_apsr4.jpg
+INPUT ../img/egami_hartman.jpg
+INPUT ../img/egami_hartman.jpg
+INPUT ../img/egami_hartman.jpg
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmssi12.tfm
+INPUT advanced.toc
+INPUT advanced.toc
 INPUT advanced.toc
 INPUT advanced.toc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
-INPUT advanced.toc
-INPUT advanced.toc
 INPUT advanced.toc
 INPUT advanced.toc
 INPUT advanced.toc
@@ -679,9 +685,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

@@ -80,9 +80,15 @@
   \begin{itemize}
     \item Examples: democratic peace, trade flows
   \end{itemize}
+  \item[]
+  \item<2-> How many variables and what's the unit of analyses in the next dataset?
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/electoral_data_excel}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
@@ -90,7 +96,7 @@
 \frametitle{How many variables? Unit of analysis?}
 \centering
 
-\includegraphics[width = \textwidth]{../img/covid_vote}
+\includegraphics[width = 0.9\textwidth]{../img/covid_vote}
 
 \end{frame}
 % ----------------------------------------------------
@@ -110,31 +116,14 @@
 \frametitle{How many variables? Unit of analysis?}
 \centering
 
-\includegraphics[width = 0.7\textwidth]{../img/emissions}
+\includegraphics[width = 0.65\textwidth]{../img/emissions}
 
 \end{frame}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\begin{frame}
-\frametitle{A difficult example}
-\centering
-
-\includegraphics[width = \textwidth]{../img/Minard}
-
-\vspace{10pt}
-
-\begin{itemize}\footnotesize
-  \item How many variables and what's the unit of observation?
-  \begin{itemize}
-    \item[Extra:] What's the causal argument being told here?
-    \item[] Could we test it with the data we have?
-  \end{itemize}
-\end{itemize}
-
-\end{frame}
+\imageframe{../img/Minard}
 % ----------------------------------------------------
-
 
 \section{Generalizing results}
 
@@ -148,27 +137,18 @@
   \begin{itemize}
     \item Internally valid studies, context-specific
     \item Accumulating generalizable knowledge by repetition
+    \item `Valid' studies and synthesis studies
     \item Practice-oriented, Esther Duflo: `The Economist as Plumber'
   \end{itemize}
-  \item What are we really learning?
-  \item<2-> What if we want to \textit{predict the future}?
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Generalizing results}
-\centering
-
-\begin{itemize}
-  \item Importance of meta-scientific knowledge
+  \item What are we really learning? \uncover<2->{How much \textit{knowledge} we gain?}
+  \item[]
+  \item<3-> Importance of meta-scientific knowledge
   \begin{itemize}
     \item[1.] Robustness of results and incremental science ($\rightarrow$ meta-analyses)
     \item[2.] Generalization of results ($\rightarrow$ construct and external validity)
   \end{itemize}
 \end{itemize}
+
 
 \end{frame}
 % ----------------------------------------------------
@@ -179,7 +159,7 @@
 \centering
 
 \begin{itemize}
-  \item Effect of commodity prices on conflict?
+  \item Effect of commodity prices on conflict
   \item What's the \BGyellow{causal inference problem} here?
   \item<2-> But there are options to solve this, right?
 \end{itemize}
@@ -322,7 +302,7 @@
   \item We say we are analyzing the effect of $X$ on $Y$, but are we really measuring that?
   \item[]
   \item<2->[1.] Construct validity of the \BGyellow{cause}: bundled treatments, exclusion restriction (assigment only affects through treatment), SUTVA, etc
-  \item<2->[2.] Construct validity of the \BGyellow{outcome}: similar, making sure the empirical measure mirrors the theoretical construct
+  \item<3->[2.] Construct validity of the \BGyellow{outcome}: similar, making sure the empirical measure mirrors the theoretical construct
 \end{itemize}
 
 \end{frame}
@@ -330,14 +310,48 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{External validity}
+\frametitle{External validity (Egami and Hartman 2023)}
 \centering
 
 \begin{itemize}
-  \item This is about understanding the \textit{conditions} under which $X$ affects $Y$
+  \item This is about understanding the \textit{conditions} under which $X \rightarrow Y$
+  \item[] {\small (it is very unlikely that the effect takes place under universal conditions)}
+  \item<2-> `Effect-generalization' and the softer `sign-generalization'
+  \item[]
+  \item<3-> Different types of external validity:
   \begin{itemize}
-    \item[] (it is very unlikely that the effect takes place under universal conditions)
+    \item Populations ($X$-validity)
+    \item Treatments ($T$-validity)
+    \item Outcomes ($Y$-validity)
+    \item Contexts and settings ($C$-validity)
   \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/egami_hartman}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{The special case of \textit{temporal validity}? (Munger 2023)}
+\centering
+
+\begin{itemize}
+  \item Blind spot in incremental-knowledge model of causal empiricism
+  \item<2-> One of the goals of social science: prediction (in order to \textit{act})
+  \item<3-> Problem of \BGyellow{knowledge decay}: dependent on rate of change $r$
+  \begin{itemize}
+    \item ``All of the knowledge contained in published papers comes from the past, and all action is in the future''
+  \end{itemize}
+  \item<4-> The problem is that, depending on the topic or realm of study, $r$ might be too large
+  \item<5-> Existing approaches use the idea of treatment $\times$ covariate space to know where and to what extent we can generalize, but under certain conditions, the problem is that that space \textit{changes or expands}
+  \begin{itemize}
+    \item Example of studies on dissent and the Arab Spring \& importance of smartphones
+  \end{itemize}
+  \item<6-> How do we solve this? Importance of \BGyellow{qualitative studies and theory}
 \end{itemize}
 
 \end{frame}
@@ -356,6 +370,28 @@
   \end{itemize}
   \item Esterling, Brady, \& Schwitzgebel (2023) \href{https://osf.io/2s8w5/}{The Necessity of Construct and External Validity for Generalized Causal Claims: A Critical Review of the Literature on Quantitative Causal Inference}. Preprint.
 \end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Mechanism test and additional implications}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Testing the mechanism}
+\centering
+
+
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Additional implications of the theory}
+\centering
+
+
 
 \end{frame}
 % ----------------------------------------------------
@@ -384,28 +420,6 @@
     \item AC Eggers, G Tuñón, A Dafoe (2023) \href{https://doi.org/10.1111/ajps.12818}{Placebo Tests for Causal Inference}. \textit{American Journal of Political Science}, published online.
   \end{itemize}
 \end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-\section{Mechanism test and additional implications}
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Testing the mechanism}
-\centering
-
-
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Additional implications of the theory}
-\centering
-
-
 
 \end{frame}
 % ----------------------------------------------------
