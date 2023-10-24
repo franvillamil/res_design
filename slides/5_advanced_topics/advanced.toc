@@ -2,16 +2,16 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{Review}{2}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Generalizing results}{7}{0}{2}
+\beamer@sectionintoc {2}{Generalizing results}{17}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Robustness and inference tests}{30}{0}{3}
+\beamer@sectionintoc {3}{Robustness and inference tests}{42}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Mechanism test and additional implications}{33}{0}{4}
+\beamer@sectionintoc {4}{Mechanism test and additional implications}{45}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Extra: Bartik instruments}{36}{0}{5}
+\beamer@sectionintoc {5}{Extra: Bartik instruments}{48}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Extra: Synthetic control methods}{38}{0}{6}
+\beamer@sectionintoc {6}{Extra: Synthetic control methods}{50}{0}{6}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {7}{Questions}{43}{0}{7}
+\beamer@sectionintoc {7}{Questions}{55}{0}{7}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {8}{Causal methods again, in detail}{45}{0}{8}
+\beamer@sectionintoc {8}{Causal methods again, in detail}{57}{0}{8}
