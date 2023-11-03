@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Materials for Research Design for the Social Sciences
+## Research Design for the Social Sciences
 
 **(MA in Computational Social Science, UC3M)**
 
