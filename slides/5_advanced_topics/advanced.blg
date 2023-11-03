@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'advanced.blg'
-[138] biber-darwin:322> INFO - === Tue Oct  3, 2023, 10:45:59
-[157] Biber.pm:415> INFO - Reading 'advanced.bcf'
-[262] Utils.pm:304> WARN - No data sources defined!
