@@ -4,7 +4,7 @@
 % Title --------------------------------------------
 \title[Lecture 2: Elements of quantitative research]{\Large Elements of quantitative research}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2023}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
 
 \input{../beamer_preamble.tex}
 
@@ -320,7 +320,7 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Why bother with theory?}
+\frametitle{Why bother about theory?}
 \centering
 
 \begin{itemize}
@@ -393,7 +393,7 @@
   \begin{itemize}
     \item flu $>$ \textit{immune system detects infection} $>$ $\Delta$ \textit{body temp} $>$ fever
   \end{itemize}
-  \item<3-> Good think about mechanisms is that we can try to test them
+  \item<3-> Good thing about mechanisms is that we can try to test them
 \end{itemize}
 
 \end{frame}
@@ -540,6 +540,8 @@
   \begin{itemize}
     \item e.g. how could we code a list of \textit{populist} political parties? or leaders?
   \end{itemize}
+  \item[]
+  \item[] (re: moving concepts up and down different levels of analysis)
 \end{itemize}
 
 \end{frame}
@@ -557,18 +559,29 @@
   \begin{itemize}
     \item Careful with the use of proxies
   \end{itemize}
-  \item[2.] Choosing the right unit of analysis
-  \begin{itemize}
-    \item Depends on the theory
-  \end{itemize}
-  \item[3.] Keep in mind what units you're not observing
+  \item[2.] Keep in mind what units you're not observing
   \begin{itemize}
     \item Missing data, sampling bias
+  \end{itemize}
+  \item[3.] Choosing the right unit of analysis
+  \begin{itemize}
+    \item Depends on the theory
   \end{itemize}
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Measurement issue \#1}
+\centering
+
+Measuring the \BGyellow{right stuff}
+
+\end{frame}
+% ----------------------------------------------------
+  
 
 % ----------------------------------------------------
 \begin{frame}
@@ -596,22 +609,22 @@
 \centering
 
 \begin{itemize}
-  \item[] (Example: we want to measure the ideological or policy positions of political parties)
-  \item \textbf{Expert surveys}
+  \item<2->[] \textit{Example}: we want to measure the ideological or policy positions of political parties
+  \item<3-> \textbf{Expert surveys}
   \begin{itemize}
     \item You send questionnaires to experts who then reply, aggregate using average or similar
   \end{itemize}
-  \item \textbf{Coding written texts}
+  \item<4-> \textbf{Coding written texts}
   \begin{itemize}
     \item Manifesto project, but also others based on NLP
   \end{itemize}
-  \item \textbf{Observing roll call voting}
+  \item<5-> \textbf{Observing roll call voting}
   \begin{itemize}
     \item Voteview project
   \end{itemize}
   \item[]
-  \item<2-> All these point to slightly different concepts or operationalizations
-  \item<3-> We'll see a different strategy based on \textit{latent variables} in a moment
+  \item<5-> All these point to slightly different concepts or operationalizations
+  \item<5-> We'll see a different strategy based on \textit{latent variables} in a moment
 \end{itemize}
 
 \end{frame}
@@ -624,12 +637,12 @@
 
 \begin{itemize}
   \item You are doing research on whether discrimination of minorities has a negative effect on overall economic performance of a country
-  \item You find a dataset that lists all minorities in a given country and gives them a yearly score of discrimination from 0 to 10
+  \item<2-> You find a dataset that lists all minorities in a given country and gives them a yearly score of discrimination from 0 to 10
   \begin{itemize}
     \item In the codebook says that discrimination is conceptualized as `unequal access to state power, which ranges from actual, active discrimination (including mass violence perpetrated against members of the minority group) to lack of access to key political positions in the central government`
   \end{itemize}
-  \item You also learn that the dataset was coded through \textbf{expert surveys}, sending a questionnaire to 2--3 researchers from each country
-  \item \textbf{What do you think?}
+  \item<3-> You also learn that the dataset was coded through \textbf{expert surveys}, sending a questionnaire to 2--3 researchers from each country
+  \item<4-> \textbf{What do you think?}
 \end{itemize}
 
 \end{frame}
@@ -647,7 +660,8 @@
   \end{itemize}
   \item You find a \textit{positive relationship} in the results
   \item Thoughts?
-  \item<2-> Another issue with expert surveys: within vs between comparisons
+  \item<2-> (Go back to previous definition)
+  \item<3-> Another issue: difference depending on whether you do \textit{within vs between comparisons}
 \end{itemize}
 
 \end{frame}
@@ -665,6 +679,14 @@
 \end{itemize}
 
 \end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/little_meng}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/economist_backsliding}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
@@ -748,7 +770,7 @@
   \begin{itemize}
     \item regular, contested elections; but also rule of law, participation, media, etc
   \end{itemize}
-  \item Problem: Autocrats are usually pretty skillful
+  \item Problem: Autocrats are usually pretty creative
 \end{itemize}
 
 \end{frame}
@@ -891,6 +913,16 @@
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Measurement issue \#2}
+\centering
+
+What units are you \BGyellow{not} measuring?
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Beyond our observations: missing data}
 \centering
 
@@ -948,6 +980,16 @@
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Measurement issue \#3}
+\centering
+
+At \BGyellow{which level} should we measure?
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Unit of analyses}
 \centering
 
@@ -959,6 +1001,9 @@
     \item<2-> e.g. individual-level data and household income
   \end{itemize}
   \item<3-> Most important thing: we need to \textbf{choose the right unit of analyses} depending on the theory (and mechanism) we are testing
+  \begin{itemize}
+    \item Getting the variation that matters (example of online bookings?)
+  \end{itemize}
 \end{itemize}
 
 
