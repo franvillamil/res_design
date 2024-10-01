@@ -1,7 +1,7 @@
 \beamer@sectionintoc {1}{Intro to explanation}{2}{0}{1}
 \beamer@sectionintoc {2}{Potential outcomes framework}{13}{0}{2}
-\beamer@sectionintoc {3}{Experiments}{40}{0}{3}
-\beamer@sectionintoc {4}{Causal models and diagrams}{48}{0}{4}
-\beamer@sectionintoc {5}{Back doors and front doors}{86}{0}{5}
-\beamer@sectionintoc {6}{Usual suspects}{105}{0}{6}
-\beamer@sectionintoc {7}{Paper discussion and next week}{132}{0}{7}
+\beamer@sectionintoc {3}{Experiments}{41}{0}{3}
+\beamer@sectionintoc {4}{Causal models and diagrams}{49}{0}{4}
+\beamer@sectionintoc {5}{Back doors and front doors}{87}{0}{5}
+\beamer@sectionintoc {6}{Usual suspects}{106}{0}{6}
+\beamer@sectionintoc {7}{Paper discussion and next week}{133}{0}{7}

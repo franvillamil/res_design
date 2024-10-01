@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  1 OCT 2024 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  1 OCT 2024 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1862,11 +1862,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 File: ../img/po_regression.png Graphic file (type png)
 <use ../img/po_regression.png>
 Package pdftex.def Info: ../img/po_regression.png  used on input line 518.
-(pdftex.def)             Requested size: 324.19536pt x 442.65741pt.
-
-Overfull \vbox (219.26675pt too high) detected at line 518
- []
-
+(pdftex.def)             Requested size: 162.09767pt x 221.31674pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -1874,14 +1870,20 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [39
 
- <../img/po_regression.png>] (./causality.toc)
+ <../img/po_regression.png>]
+<../img/ate_att.png, id=304, 838.13126pt x 431.6125pt>
+File: ../img/ate_att.png Graphic file (type png)
+<use ../img/ate_att.png>
+Package pdftex.def Info: ../img/ate_att.png  used on input line 531.
+(pdftex.def)             Requested size: 324.19536pt x 166.94516pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [40
 
-]
+ <../img/ate_att.png>] (./causality.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1930,14 +1932,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [47
 
-] (./causality.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [48
 
-]
+] (./causality.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1973,10 +1975,17 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [53
 
 ]
-<../img/happiness_pollution.pdf, id=390, 361.35pt x 361.35pt>
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[54
+
+]
+<../img/happiness_pollution.pdf, id=398, 361.35pt x 361.35pt>
 File: ../img/happiness_pollution.pdf Graphic file (type pdf)
 <use ../img/happiness_pollution.pdf>
-Package pdftex.def Info: ../img/happiness_pollution.pdf  used on input line 695
+Package pdftex.def Info: ../img/happiness_pollution.pdf  used on input line 706
 .
 (pdftex.def)             Requested size: 210.72499pt x 210.72449pt.
 
@@ -1984,14 +1993,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[54
+[55
 
  <../img/happiness_pollution.pdf>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[55
+[56
 
 ]
 Missing character: There is no ( in font nullfont!
@@ -2054,104 +2063,6 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
-[56
-
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no W in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no Z in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no [ in font nullfont!
 Missing character: There is no - in font nullfont!
@@ -2261,19 +2172,6 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no ( in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no > in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no ( in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2347,6 +2245,117 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no ; in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[59
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
 Missing character: There is no [ in font nullfont!
 Missing character: There is no - in font nullfont!
 Missing character: There is no > in font nullfont!
@@ -2382,7 +2391,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[59
+[60
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -2490,13 +2499,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[60
-
-]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
 [61
 
 ]
@@ -2570,26 +2572,26 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [71
 
 ]
-<../img/dag_earnings.png, id=494, 134.1813pt x 65.043pt>
-File: ../img/dag_earnings.png Graphic file (type png)
-<use ../img/dag_earnings.png>
-Package pdftex.def Info: ../img/dag_earnings.png  used on input line 827.
-(pdftex.def)             Requested size: 194.51918pt x 94.29701pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [72
 
- <../img/dag_earnings.png>]
+]
+<../img/dag_earnings.png, id=502, 134.1813pt x 65.043pt>
+File: ../img/dag_earnings.png Graphic file (type png)
+<use ../img/dag_earnings.png>
+Package pdftex.def Info: ../img/dag_earnings.png  used on input line 838.
+(pdftex.def)             Requested size: 194.51918pt x 94.29701pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [73
 
-]
+ <../img/dag_earnings.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2673,14 +2675,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [85
 
-] (./causality.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [86
 
-]
+] (./causality.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2716,26 +2718,26 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [91
 
 ]
-<../img/drugs_dag1.png, id=610, 626.34pt x 389.455pt>
-File: ../img/drugs_dag1.png Graphic file (type png)
-<use ../img/drugs_dag1.png>
-Package pdftex.def Info: ../img/drugs_dag1.png  used on input line 967.
-(pdftex.def)             Requested size: 324.19536pt x 201.59071pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [92
 
- <../img/drugs_dag1.png>]
+]
+<../img/drugs_dag1.png, id=618, 626.34pt x 389.455pt>
+File: ../img/drugs_dag1.png Graphic file (type png)
+<use ../img/drugs_dag1.png>
+Package pdftex.def Info: ../img/drugs_dag1.png  used on input line 978.
+(pdftex.def)             Requested size: 324.19536pt x 201.59071pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [93
 
-]
+ <../img/drugs_dag1.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2750,26 +2752,26 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [95
 
 ]
-<../img/drugs_dag2.png, id=632, 618.31pt x 359.3425pt>
-File: ../img/drugs_dag2.png Graphic file (type png)
-<use ../img/drugs_dag2.png>
-Package pdftex.def Info: ../img/drugs_dag2.png  used on input line 1028.
-(pdftex.def)             Requested size: 324.19536pt x 188.41637pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [96
 
- <../img/drugs_dag2.png>]
+]
+<../img/drugs_dag2.png, id=640, 618.31pt x 359.3425pt>
+File: ../img/drugs_dag2.png Graphic file (type png)
+<use ../img/drugs_dag2.png>
+Package pdftex.def Info: ../img/drugs_dag2.png  used on input line 1039.
+(pdftex.def)             Requested size: 324.19536pt x 188.41637pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [97
 
-]
+ <../img/drugs_dag2.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2791,6 +2793,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [100
 
 ]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[101
+
+]
 \openout4 = `causality.vrb'.
 
  (./causality.vrb
@@ -2810,7 +2819,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[101
+[102
 
 ]
 \openout4 = `causality.vrb'.
@@ -2832,7 +2841,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[102
+[103
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 \openout4 = `causality.vrb'.
@@ -2842,7 +2851,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[103
+[104
 
 ]
 \openout4 = `causality.vrb'.
@@ -2852,16 +2861,9 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[104
-
-] (./causality.toc)
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
 [105
 
-]
+] (./causality.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2904,10 +2906,17 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [111
 
 ]
-<../img/Survivorship-bias.png, id=738, 1027.84pt x 765.86125pt>
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[112
+
+]
+<../img/Survivorship-bias.png, id=746, 1027.84pt x 765.86125pt>
 File: ../img/Survivorship-bias.png Graphic file (type png)
 <use ../img/Survivorship-bias.png>
-Package pdftex.def Info: ../img/Survivorship-bias.png  used on input line 1231.
+Package pdftex.def Info: ../img/Survivorship-bias.png  used on input line 1242.
 
 (pdftex.def)             Requested size: 259.35727pt x 193.2528pt.
 
@@ -2915,16 +2924,9 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[112
-
- <../img/Survivorship-bias.png>]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
 [113
 
-]
+ <../img/Survivorship-bias.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2939,9 +2941,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [115
 
 ]
-\openout4 = `causality.vrb'.
-
- (./causality.vrb)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2959,48 +2958,41 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [117
 
 ]
-<../img/collider_m1.png, id=770, 501.875pt x 576.1525pt>
-File: ../img/collider_m1.png Graphic file (type png)
-<use ../img/collider_m1.png>
-Package pdftex.def Info: ../img/collider_m1.png  used on input line 1340.
-(pdftex.def)             Requested size: 129.67616pt x 148.86423pt.
+\openout4 = `causality.vrb'.
 
+ (./causality.vrb)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [118
 
- <../img/collider_m1.png>]
+]
+<../img/collider_m1.png, id=778, 501.875pt x 576.1525pt>
+File: ../img/collider_m1.png Graphic file (type png)
+<use ../img/collider_m1.png>
+Package pdftex.def Info: ../img/collider_m1.png  used on input line 1351.
+(pdftex.def)             Requested size: 129.67616pt x 148.86423pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [119
 
-]
-<../img/collider_m2.png, id=782, 735.74875pt x 806.01125pt>
-File: ../img/collider_m2.png Graphic file (type png)
-<use ../img/collider_m2.png>
-Package pdftex.def Info: ../img/collider_m2.png  used on input line 1384.
-(pdftex.def)             Requested size: 194.51918pt x 213.0877pt.
-
+ <../img/collider_m1.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [120
 
- <../img/collider_m2.png>]
-<../img/collider1.pdf, id=789, 361.35pt x 361.35pt>
-File: ../img/collider1.pdf Graphic file (type pdf)
-<use ../img/collider1.pdf>
-Package pdftex.def Info: ../img/collider1.pdf  used on input line 1394.
-(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
-
-Overfull \vbox (3.54427pt too high) detected at line 1394
- []
-
+]
+<../img/collider_m2.png, id=790, 735.74875pt x 806.01125pt>
+File: ../img/collider_m2.png Graphic file (type png)
+<use ../img/collider_m2.png>
+Package pdftex.def Info: ../img/collider_m2.png  used on input line 1395.
+(pdftex.def)             Requested size: 194.51918pt x 213.0877pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -3008,14 +3000,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [121
 
- <../img/collider1.pdf>]
-<../img/collider2.pdf, id=802, 361.35pt x 361.35pt>
-File: ../img/collider2.pdf Graphic file (type pdf)
-<use ../img/collider2.pdf>
-Package pdftex.def Info: ../img/collider2.pdf  used on input line 1404.
+ <../img/collider_m2.png>]
+<../img/collider1.pdf, id=798, 361.35pt x 361.35pt>
+File: ../img/collider1.pdf Graphic file (type pdf)
+<use ../img/collider1.pdf>
+Package pdftex.def Info: ../img/collider1.pdf  used on input line 1405.
 (pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
 
-Overfull \vbox (3.54427pt too high) detected at line 1404
+Overfull \vbox (3.54427pt too high) detected at line 1405
  []
 
 
@@ -3025,14 +3017,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [122
 
- <../img/collider2.pdf>]
-<../img/collider3.pdf, id=817, 361.35pt x 361.35pt>
-File: ../img/collider3.pdf Graphic file (type pdf)
-<use ../img/collider3.pdf>
-Package pdftex.def Info: ../img/collider3.pdf  used on input line 1414.
+ <../img/collider1.pdf>]
+<../img/collider2.pdf, id=810, 361.35pt x 361.35pt>
+File: ../img/collider2.pdf Graphic file (type pdf)
+<use ../img/collider2.pdf>
+Package pdftex.def Info: ../img/collider2.pdf  used on input line 1415.
 (pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
 
-Overfull \vbox (3.54427pt too high) detected at line 1414
+Overfull \vbox (3.54427pt too high) detected at line 1415
  []
 
 
@@ -3042,14 +3034,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [123
 
- <../img/collider3.pdf>]
-<../img/collider4.pdf, id=829, 361.35pt x 361.35pt>
-File: ../img/collider4.pdf Graphic file (type pdf)
-<use ../img/collider4.pdf>
-Package pdftex.def Info: ../img/collider4.pdf  used on input line 1424.
+ <../img/collider2.pdf>]
+<../img/collider3.pdf, id=825, 361.35pt x 361.35pt>
+File: ../img/collider3.pdf Graphic file (type pdf)
+<use ../img/collider3.pdf>
+Package pdftex.def Info: ../img/collider3.pdf  used on input line 1425.
 (pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
 
-Overfull \vbox (3.54427pt too high) detected at line 1424
+Overfull \vbox (3.54427pt too high) detected at line 1425
  []
 
 
@@ -3059,34 +3051,44 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [124
 
- <../img/collider4.pdf>]
+ <../img/collider3.pdf>]
+<../img/collider4.pdf, id=838, 361.35pt x 361.35pt>
+File: ../img/collider4.pdf Graphic file (type pdf)
+<use ../img/collider4.pdf>
+Package pdftex.def Info: ../img/collider4.pdf  used on input line 1435.
+(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
+
+Overfull \vbox (3.54427pt too high) detected at line 1435
+ []
+
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [125
 
-]
-<../img/obesity_paradox.jpg, id=850, 334.24875pt x 500.87125pt>
-File: ../img/obesity_paradox.jpg Graphic file (type jpg)
-<use ../img/obesity_paradox.jpg>
-Package pdftex.def Info: ../img/obesity_paradox.jpg  used on input line 1455.
-(pdftex.def)             Requested size: 131.29733pt x 196.75288pt.
-
+ <../img/collider4.pdf>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [126
 
- <../img/obesity_paradox.jpg>]
+]
+<../img/obesity_paradox.jpg, id=858, 334.24875pt x 500.87125pt>
+File: ../img/obesity_paradox.jpg Graphic file (type jpg)
+<use ../img/obesity_paradox.jpg>
+Package pdftex.def Info: ../img/obesity_paradox.jpg  used on input line 1466.
+(pdftex.def)             Requested size: 131.29733pt x 196.75288pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [127
 
-]
+ <../img/obesity_paradox.jpg>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -3114,36 +3116,30 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [131
 
-] (./causality.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [132
 
-]
-<../img/guess2023.jpg, id=894, 1682.285pt x 1214.5375pt>
-File: ../img/guess2023.jpg Graphic file (type jpg)
-<use ../img/guess2023.jpg>
-Package pdftex.def Info: ../img/guess2023.jpg  used on input line 1537.
-(pdftex.def)             Requested size: 324.19536pt x 234.04474pt.
-
-Overfull \vbox (10.65408pt too high) detected at line 1537
- []
-
-
+] (./causality.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [133
 
- <../img/guess2023.jpg>]
-<../img/villamilbalcells.jpg, id=901, 1758.57pt x 1214.5375pt>
-File: ../img/villamilbalcells.jpg Graphic file (type jpg)
-<use ../img/villamilbalcells.jpg>
-Package pdftex.def Info: ../img/villamilbalcells.jpg  used on input line 1547.
-(pdftex.def)             Requested size: 324.19536pt x 223.88902pt.
+]
+<../img/guess2023.jpg, id=903, 1682.285pt x 1214.5375pt>
+File: ../img/guess2023.jpg Graphic file (type jpg)
+<use ../img/guess2023.jpg>
+Package pdftex.def Info: ../img/guess2023.jpg  used on input line 1548.
+(pdftex.def)             Requested size: 324.19536pt x 234.04474pt.
+
+Overfull \vbox (10.65408pt too high) detected at line 1548
+ []
+
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -3151,12 +3147,25 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [134
 
- <../img/villamilbalcells.jpg>]
+ <../img/guess2023.jpg>]
+<../img/villamilbalcells.jpg, id=909, 1758.57pt x 1214.5375pt>
+File: ../img/villamilbalcells.jpg Graphic file (type jpg)
+<use ../img/villamilbalcells.jpg>
+Package pdftex.def Info: ../img/villamilbalcells.jpg  used on input line 1558.
+(pdftex.def)             Requested size: 324.19536pt x 223.88902pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [135
+
+ <../img/villamilbalcells.jpg>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[136
 
 ]
 \tf@nav=\write7
@@ -3179,10 +3188,10 @@ Package logreq Info: Writing requests to 'causality.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37993 strings out of 476025
- 749666 string characters out of 5790017
+ 38008 strings out of 476025
+ 749943 string characters out of 5790017
  1966388 words of memory out of 5000000
- 57417 multiletter control sequences out of 15000+600000
+ 57429 multiletter control sequences out of 15000+600000
  528203 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1134b,1998s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3201,10 +3210,10 @@ ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on causality.pdf (135 pages, 4436548 bytes).
+Output written on causality.pdf (136 pages, 4526811 bytes).
 PDF statistics:
- 1047 PDF objects out of 1200 (max. 8388607)
- 813 compressed objects within 9 object streams
- 284 named destinations out of 1000 (max. 500000)
- 244 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1055 PDF objects out of 1200 (max. 8388607)
+ 818 compressed objects within 9 object streams
+ 286 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

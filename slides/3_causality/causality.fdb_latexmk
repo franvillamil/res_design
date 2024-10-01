@@ -1,13 +1,14 @@
 # Fdb version 4
-["biber causality"] 1727790231 "causality.bcf" "causality.bbl" "causality" 1727791383 0
-  "causality.bcf" 1727791383 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
+["biber causality"] 1727790231 "causality.bcf" "causality.bbl" "causality" 1727792887 0
+  "causality.bcf" 1727792887 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
   (generated)
   "causality.bbl"
   "causality.blg"
   (rewritten before read)
-["pdflatex"] 1727791378 "causality.tex" "causality.pdf" "causality" 1727791383 0
+["pdflatex"] 1727792882 "causality.tex" "causality.pdf" "causality" 1727792887 0
   "../beamer_preamble.tex" 1726589189 8181 7680845884e2bb79f3d7eb98acbf2652 ""
   "../img/Survivorship-bias.png" 1695886627 106255 77f7e3177627652aad6cb5ead22cd9b7 ""
+  "../img/ate_att.png" 1727792723 158841 77e015c393889ee9cf156bdb2ee08748 ""
   "../img/blumenstock.png" 1695886627 223061 741213af651cdfb97bd7ebcab38561d8 ""
   "../img/blumenstock2.png" 1695886627 662538 1690ebebe61bc58a733122c96b438b6b ""
   "../img/blumenstock3.png" 1695886627 1127557 4cb5e9b5bf2dc4d33826667b7cdcc4ba ""
@@ -24,7 +25,7 @@
   "../img/happiness_pollution.pdf" 1695886627 8441 a74d5972a596f0a9d390d599fd2de911 ""
   "../img/obesity_paradox.jpg" 1695886627 25761 fafe806a625a9e57fa43e17d2217d3b9 ""
   "../img/po_data.png" 1727791065 141909 b5788ac55647abb268f003418591475b ""
-  "../img/po_regression.png" 1727791043 142737 a5665b20c0fedf42d2766257478a8a08 ""
+  "../img/po_regression.png" 1727792877 134616 716853f2e0fb1bd44e938b684d176227 ""
   "../img/po_table.png" 1727790073 144163 1c3333611cd70a282538da5d2a5425e7 ""
   "../img/po_table2.png" 1727790429 142053 78cba0ec89f1781e4a1539ab9623c9fa ""
   "../img/po_table_ate.png" 1727790544 138113 2f6475e5fd4ccbe3487a0d864bb81dc1 ""
@@ -313,14 +314,14 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705144455 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705144389 7883460 1550c7dc5e1a65f25c597afed28e1262 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "causality.aux" 1727791382 15772 950e858eed31f0587762185f8731e926 "pdflatex"
+  "causality.aux" 1727792887 15903 215d59c238ca8522b95c604a9b7d6cd6 "pdflatex"
   "causality.bbl" 1727790233 0 d41d8cd98f00b204e9800998ecf8427e "biber causality"
-  "causality.nav" 1727791383 10097 59e4080dc2d6483ee7492059a27eb088 "pdflatex"
-  "causality.out" 1727791382 1124 3c9aa9c47b2ec8b69ad121498692923f "pdflatex"
-  "causality.run.xml" 1727791383 2299 6e2cf5caa53f1a5429b9d8d314db8b1b "pdflatex"
-  "causality.tex" 1727791368 50437 a9f4e991b8434e08ac8650fc4a3e6de5 ""
-  "causality.toc" 1727791383 415 afb996612395a8cf4d29ee594a4750be "pdflatex"
-  "causality.vrb" 1727791382 203 bbb3310520acf84f36fcd6eec33514b4 "pdflatex"
+  "causality.nav" 1727792887 10192 e3159f19a764cf3eccd0296c7157f114 "pdflatex"
+  "causality.out" 1727792887 1124 3c9aa9c47b2ec8b69ad121498692923f "pdflatex"
+  "causality.run.xml" 1727792887 2299 6e2cf5caa53f1a5429b9d8d314db8b1b "pdflatex"
+  "causality.tex" 1727792843 50860 42dfbfa5b72695df5c76c6095794e094 ""
+  "causality.toc" 1727792887 415 f846e94be744d55615f56e97201e135e "pdflatex"
+  "causality.vrb" 1727792886 203 bbb3310520acf84f36fcd6eec33514b4 "pdflatex"
   (generated)
   "causality.aux"
   "causality.bcf"
