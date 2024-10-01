@@ -1,0 +1,12 @@
+\frametitle{Collider bias}
+\centering
+
+\begin{itemize}
+  \item No correlation
+\end{itemize}
+
+ \begin{lstlisting}[language=R]
+ > cor(df$intelligence, df$social_skills)
+ [1] 0.005902188
+ \end{lstlisting}
+

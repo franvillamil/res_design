@@ -1,10 +1,13 @@
+% REFS
+% https://www.andrewheiss.com/blog/2024/03/21/demystifying-ate-att-atu/#average-treatment-effect-on-the-untreated-atu
+
 \documentclass[aspectratio=43]{beamer}
 % \documentclass[aspectratio=169]{beamer}
 
 % Title --------------------------------------------
 \title[Lecture 3: Causality]{\Large Causality}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2023}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
 
 \input{../beamer_preamble.tex}
 
@@ -88,9 +91,9 @@
 \centering
 
 \begin{itemize}
-  \item[]<2-> The two concepts of prediction:
-  \item<2-> Predicting another variable
-  \item<2-> Predicting the future (or out of sample prediction)
+  \item[] The two concepts of prediction:
+  \item Predicting another variable ($\approx$ proxies)
+  \item Out of sample prediction (`predicting the future')
 \end{itemize}
 
 \end{frame}
@@ -264,10 +267,24 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Alternatives/references}
+\frametitle{Potential outcomes vs causal models/DAGs}
 \centering
 
 \includegraphics[width = 0.45\textwidth]{../img/the_book_of_why}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes vs causal models/DAGs}
+\centering
+
+\begin{itemize}
+  \item Potential outcomes more present in economics, linked to experiments, causal estimands
+  \item Causal models and DAGs more popular in epidemiology, linked to observational data, increasingly popular in social sciences
+\end{itemize}
+
 
 \end{frame}
 % ----------------------------------------------------
@@ -352,7 +369,7 @@ What is the effect of smoking on life expectancy?
     \item<2-> The Q is, \textbf{what is the causal effect of smoking} on Gary?
     \item<3-> To know that, we need to estimate the life expectancy of an alternative Gary that is \textit{exactly the same except} for the smoking:
     \item<3->[] {\small $E(LExp|S=0, G=Male, E=0, V=1)$}
-    \item<4-> The problem is that the alternative Gary is unobservable: \textbf{missing data problem}
+    \item<4-> The problem is that the alternative Gary is unobservable: \BGyellow{\textbf{missing data problem}}
   \end{itemize}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}\centering
@@ -394,11 +411,114 @@ What is the effect of smoking on life expectancy?
   \item[]<3-> $E[Y_{i}^{1}|D_{i} = 0] - E[Y_{i}^{0}|D_{i} = 0]$
   \item[]<3-> {\small (effect of smoking among non-smokers)}
   \item[]<4->
-  \item<4-> When is $ATT \neq ATC$? {\footnotesize (Non-linearity)}
+  \item<4-> When is $ATT \neq ATC$? {\footnotesize (Non-linearity, sampling bias)}
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = \textwidth]{../img/po_table}
+
+\href{https://www.andrewheiss.com/blog/2024/03/21/demystifying-ate-att-atu/}{\footnotesize https://www.andrewheiss.com/blog/2024/03/21/demystifying-ate-att-atu/}
+  
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = \textwidth]{../img/po_table2}
+
+\href{https://www.andrewheiss.com/blog/2024/03/21/demystifying-ate-att-atu/}{\footnotesize https://www.andrewheiss.com/blog/2024/03/21/demystifying-ate-att-atu/}
+  
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = 0.95\textwidth]{../img/po_table_ate}
+
+$ATE = mean(20, 5, 5, 10, 5, 0, -10, 5) = 5$
+  
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = 0.95\textwidth]{../img/po_table_att}
+
+$ATT = mean(20, 5, 5, 5) = 8.75$
+  
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = 0.95\textwidth]{../img/po_table_atu}
+
+$ATU = mean(10, 0, -10, 5) = 1.25$
+  
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\begin{itemize}
+  \item $weighted mean of ATT and ATU = ATE$
+  \item But we \BGyellow{don't have both} $Y_{0}$ and $Y_{1}$
+  \item Two ways of looking into this observationally
+  \begin{itemize}
+    \item (assuming \textbf{age} as the \BGyellow{only} confounder)
+  \end{itemize}
+  
+\end{itemize}
+
+  
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = \textwidth]{../img/po_data}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{PO example}
+\centering
+
+\includegraphics[width = \textwidth]{../img/po_regression}
+
+\end{frame}
+% ----------------------------------------------------
+  
+
 
 \section{Experiments}
 
@@ -1003,7 +1123,7 @@ cor(df$whiskey, df$risk)
 \centering
 
 \begin{itemize}
-  \item Controlling for \texttt{rich} $\eq$ look at the variation \textbf{not} explained by \texttt{rich}
+  \item Controlling for \texttt{rich} $=$ look at the variation \textbf{not} explained by \texttt{rich}
   \item i.e., take the group prediction out (mean of whiskey/risk for rich or non-rich)
 \end{itemize}
 

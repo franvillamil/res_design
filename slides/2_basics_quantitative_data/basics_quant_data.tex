@@ -831,13 +831,18 @@ Measuring the \BGyellow{right stuff}
 
 \begin{itemize}
   \item A \textbf{proxy variable} is a variable that we use to substitute another variable we cannot observe or measure
-  \item This is a matter of creativity, but the important thing is to think about \textbf{potential biases}
-  \item A real example:
+  \item This is a matter of creativity, but the important thing is to think about \textbf{potential biases}. Think about these examples:
   \begin{itemize}
-    \item Trying to know if leftist/Basque nationalist priests during Francoist Spain had an effect on later terrorism
-    \item First problem (among many): how do you measure the ideology of these people?
-    \item Using the 1963 letter to the Vatican
+    \item<2-> Economic development and nightlight emissions
+    \item<3-> ...or at the individual level, by having a TV
+    \item<4-> Migration (in early 20thC Spain) proxied by excess male in censuses
+    \item<5-> Effect of listening to the radio, proxied by transport mode (car)
+    \item<6-> Clerics and radicalism: Basque nationalist priests (1963 letter)
+    % \item Trying to know if leftist/Basque nationalist priests during Francoist Spain had an effect on later terrorism
+    % \item First problem (among many): how do you measure the ideology of these people?
+    % \item Using the 1963 letter to the Vatican
   \end{itemize}
+  \item<7-> Logic not so different from instrumental variables design
 \end{itemize}
 
 \end{frame}
@@ -853,8 +858,8 @@ Measuring the \BGyellow{right stuff}
   \begin{itemize}
     \item (or very expensive / unfeasible to do so)
   \end{itemize}
-  \item Another option is to create the variable out of other observables
-  \item This is sometimes called \textbf{latent variables}
+  \item Another option is to create the variable out of \textit{several other} observables
+  \item This is sometimes called \textbf{latent variable approach}
 \end{itemize}
 
 \end{frame}
@@ -931,7 +936,6 @@ What units are you \BGyellow{not} measuring?
   \begin{itemize}
     \item often more important that it looks, important to understand if it's biasing our analyses
   \end{itemize}
-  \item[] Three types:
   \item<2->[1.] Missing \textbf{completely at random}
   \begin{itemize}
     \item No problem, random observations are missing
@@ -945,8 +949,7 @@ What units are you \BGyellow{not} measuring?
   \begin{itemize}
     \item The variable that explains `missingness' is key to our question
   \end{itemize}
-  \item[]
-  \item<4-> {\small Example: smoking status missing, gender (MAR), emergency (MNAR)}
+  \item<4-> {\small Example: you ask about smoking status when patients check in a hospital. Missing data by gender (MAR), emergency (MNAR)}
 \end{itemize}
 
 % {\color{red}{\textbf{EXAMPLES? WITH DAGS?}}}
@@ -960,14 +963,14 @@ What units are you \BGyellow{not} measuring?
 \centering
 
 \begin{itemize}
-  \item \textbf{Sampling bias} could be thought of as missing data or, rather, as a controlling variable we'll indirectly including
+  \item \textbf{Sampling bias} could be thought of as missing data or, rather, as a controlling variable we're indirectly including
   \item Easy case: we're dealing with a pre-designed sample that might have some biases
   \begin{itemize}
     \item Online survey and +65
   \end{itemize}
   \item<2-> More easy to miss: there is an `invisible variable' determining which observations we have or not
   \begin{itemize}
-    \item e.g. when using Twitter data,
+    \item e.g. social media consent-based experiment
   \end{itemize}
   \item<2-> We'll talk more about how this affects inference
   \begin{itemize}
@@ -1419,10 +1422,22 @@ At \BGyellow{which level} should we measure?
 \frametitle{Practical example}
 \centering
 
+\includegraphics[width = \textwidth]{../img/bucha}
+  
+
+\end{frame}
+% ----------------------------------------------------
+  
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Practical example}
+\centering
+
 \begin{itemize}
   \item You want to test an argument about \textbf{wartime civilian deaths:}
   \begin{itemize}
-    \item The intuition you have is that civilians will be more likely to be treated well (and not killed) by rebel groups during civil wars when they need their resources (e.g. labor) to survive
+    \item The intuition you have is that civilians will be more likely to be treated well (and not killed) by armed groups during civil wars when they need their resources (e.g. labor) to survive
   \end{itemize}
   \item[]
   \item Clean up the theory, decide on the main concepts

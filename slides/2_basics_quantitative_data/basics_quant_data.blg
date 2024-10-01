@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'basics_quant_data.blg'
+[26] biber-darwin:340> INFO - === Tue Oct  1, 2024, 14:38:22
+[33] Biber.pm:419> INFO - Reading 'basics_quant_data.bcf'

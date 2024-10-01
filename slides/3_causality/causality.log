@@ -1,0 +1,3210 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  1 OCT 2024 16:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**causality.tex
+(./causality.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2023/02/20 v3.69 A class for typesetting presentations
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count185
+)
+\beamer@tempbox=\box51
+\beamer@tempcount=\count186
+\c@beamerpauses=\count187
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count188
+\beamer@minimum=\count189
+\beamer@decode@box=\box52
+)
+\beamer@commentbox=\box53
+\beamer@modecount=\count190
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+\headdp=\dimen140
+\footheight=\dimen141
+\sidebarheight=\dimen142
+\beamer@tempdim=\dimen143
+\beamer@finalheight=\dimen144
+\beamer@animht=\dimen145
+\beamer@animdp=\dimen146
+\beamer@animwd=\dimen147
+\beamer@leftmargin=\dimen148
+\beamer@rightmargin=\dimen149
+\beamer@leftsidebar=\dimen150
+\beamer@rightsidebar=\dimen151
+\beamer@boxsize=\dimen152
+\beamer@vboxoffset=\dimen153
+\beamer@descdefault=\dimen154
+\beamer@descriptionwidth=\dimen155
+\beamer@lastskip=\skip48
+\beamer@areabox=\box54
+\beamer@animcurrent=\box55
+\beamer@animshowbox=\box56
+\beamer@sectionbox=\box57
+\beamer@logobox=\box58
+\beamer@linebox=\box59
+\beamer@sectioncount=\count191
+\beamer@subsubsectionmax=\count192
+\beamer@subsectionmax=\count193
+\beamer@sectionmax=\count194
+\beamer@totalheads=\count195
+\beamer@headcounter=\count196
+\beamer@partstartpage=\count197
+\beamer@sectionstartpage=\count198
+\beamer@subsectionstartpage=\count199
+\beamer@animationtempa=\count266
+\beamer@animationtempb=\count267
+\beamer@xpos=\count268
+\beamer@ypos=\count269
+\beamer@ypos@offset=\count270
+\beamer@showpartnumber=\count271
+\beamer@currentsubsection=\count272
+\beamer@coveringdepth=\count273
+\beamer@sectionadjust=\count274
+\beamer@toclastsection=\count275
+\beamer@tocsectionnumber=\count276
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+))
+\beamer@paperwidth=\skip49
+\beamer@paperheight=\skip50
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count277
+\Gm@cntv=\count278
+\c@Gm@tempcnt=\count279
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box60
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks21
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgf@x=\dimen166
+\pgf@xa=\dimen167
+\pgf@xb=\dimen168
+\pgf@xc=\dimen169
+\pgf@y=\dimen170
+\pgf@ya=\dimen171
+\pgf@yb=\dimen172
+\pgf@yc=\dimen173
+\c@pgf@counta=\count280
+\c@pgf@countb=\count281
+\c@pgf@countc=\count282
+\c@pgf@countd=\count283
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen174
+\pgfmath@count=\count284
+\pgfmath@box=\box61
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count285
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count286
+\c@pgf@countb=\count287
+\c@pgf@countc=\count288
+\c@pgf@countd=\count289
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count290
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count291
+\pgfsyssoftpath@bigbuffer@items=\count292
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count293
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen261
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen265
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count294
+\pgf@shadingcount=\count295
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box65
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count296
+\XC@countmixins=\count297
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count298
+)
+\@linkdim=\dimen267
+\Hy@linkcounter=\count299
+\Hy@pagecounter=\count300
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count301
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4060.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4060.
+Package hyperref Info: Option `implicit' set `false' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count302
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen268
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count303
+\Field@Width=\dimen269
+\Fld@charsize=\dimen270
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+\Hy@abspage=\count304
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count305
+\c@bookmark@seq@number=\count306
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2020/01/31
+(/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
+)))))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count307
+\beamer@lastskipcover=\skip51
+\beamer@trivlistdepth=\count308
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count309
+\c@part=\count310
+\c@section=\count311
+\c@subsection=\count312
+\c@subsubsection=\count313
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box66
+\beamer@frametitlebox=\box67
+\beamer@zoombox=\box68
+\beamer@zoomcount=\count314
+\beamer@zoomframecount=\count315
+\beamer@frametextheight=\dimen271
+\c@subsectionslide=\count316
+\beamer@frametopskip=\skip52
+\beamer@framebottomskip=\skip53
+\beamer@frametopskipautobreak=\skip54
+\beamer@framebottomskipautobreak=\skip55
+\beamer@envbody=\toks29
+\framewidth=\dimen272
+\c@framenumber=\count317
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box69
+\beamer@autobreakcount=\count318
+\beamer@autobreaklastheight=\dimen273
+\beamer@frametitletoks=\toks30
+\beamer@framesubtitletoks=\toks31
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty
+\beamer@footins=\box70
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box71
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+\beamer@sbttoks=\toks32
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box72
+\bmb@colorbox=\box73
+\bmb@boxwidth=\dimen274
+\bmb@boxheight=\dimen275
+\bmb@prevheight=\dimen276
+\bmb@temp=\dimen277
+\bmb@dima=\dimen278
+\bmb@dimb=\dimen279
+\bmb@prevheight=\dimen280
+)
+\beamer@blockheadheight=\dimen281
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks33
+)
+\beamer@bibiconwidth=\skip56
+\c@figure=\count319
+\c@table=\count320
+\abovecaptionskip=\skip57
+\belowcaptionskip=\skip58
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex)
+\beamer@section@min@dim=\dimen282
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip59
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen283
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen284
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count321
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count322
+\leftroot@=\count323
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count324
+\DOTSCASE@=\count325
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box74
+\strutbox@=\box75
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen285
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count326
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count327
+\dotsspace@=\muskip17
+\c@parentequation=\count328
+\dspbrk@lvl=\count329
+\tag@help=\toks35
+\row@=\count330
+\column@=\count331
+\maxfields@=\count332
+\andhelp@=\toks36
+\eqnshift@=\dimen286
+\alignsep@=\dimen287
+\tagshift@=\dimen288
+\tagwidth@=\dimen289
+\totwidth@=\dimen290
+\lineht@=\dimen291
+\@envbody=\toks37
+\multlinegap=\skip60
+\multlinetaggap=\skip61
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks39
+\thm@bodyfont=\toks40
+\thm@headfont=\toks41
+\thm@notefont=\toks42
+\thm@headpunct=\toks43
+\thm@preskip=\skip62
+\thm@postskip=\skip63
+\thm@headsep=\skip64
+\dth@everypar=\toks44
+)
+\c@theorem=\count333
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y
+\beamer@dima=\dimen292
+\beamer@dimb=\dimen293
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (../beamer_preamble.tex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumb
+erbeamer.sty)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 161.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count334
+\mult@box=\box76
+\multicol@leftmargin=\dimen294
+\c@unbalance=\count335
+\c@collectmore=\count336
+\doublecol@number=\count337
+\multicoltolerance=\count338
+\multicolpretolerance=\count339
+\full@width=\dimen295
+\page@free=\dimen296
+\premulticols=\dimen297
+\postmulticols=\dimen298
+\multicolsep=\skip65
+\multicolbaselineskip=\skip66
+\partial@page=\box77
+\last@line=\box78
+\maxbalancingoverflow=\dimen299
+\mult@rightbox=\box79
+\mult@grightbox=\box80
+\mult@firstbox=\box81
+\mult@gfirstbox=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\c@minrows=\count340
+\c@columnbadness=\count341
+\c@finalcolumnbadness=\count342
+\last@try=\dimen300
+\multicolovershoot=\dimen301
+\multicolundershoot=\dimen302
+\mult@nat@firstbox=\box119
+\colbreak@box=\box120
+\mc@col@check@num=\count343
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count344
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count345
+\c@listtotal=\count346
+\c@listcount=\count347
+\c@liststart=\count348
+\c@liststop=\count349
+\c@citecount=\count350
+\c@citetotal=\count351
+\c@multicitecount=\count352
+\c@multicitetotal=\count353
+\c@instcount=\count354
+\c@maxnames=\count355
+\c@minnames=\count356
+\c@maxitems=\count357
+\c@minitems=\count358
+\c@citecounter=\count359
+\c@maxcitecounter=\count360
+\c@savedcitecounter=\count361
+\c@uniquelist=\count362
+\c@uniquename=\count363
+\c@refsection=\count364
+\c@refsegment=\count365
+\c@maxextratitle=\count366
+\c@maxextratitleyear=\count367
+\c@maxextraname=\count368
+\c@maxextradate=\count369
+\c@maxextraalpha=\count370
+\c@abbrvpenalty=\count371
+\c@highnamepenalty=\count372
+\c@lownamepenalty=\count373
+\c@maxparens=\count374
+\c@parenlevel=\count375
+\blx@tempcnta=\count376
+\blx@tempcntb=\count377
+\blx@tempcntc=\count378
+\c@blx@maxsection=\count379
+\blx@maxsegment@0=\count380
+\blx@notetype=\count381
+\blx@parenlevel@text=\count382
+\blx@parenlevel@foot=\count383
+\blx@sectionciteorder@0=\count384
+\blx@sectionciteorderinternal@0=\count385
+\blx@entrysetcounter=\count386
+\blx@biblioinstance=\count387
+\labelnumberwidth=\skip67
+\labelalphawidth=\skip68
+\biblabelsep=\skip69
+\bibitemsep=\skip70
+\bibnamesep=\skip71
+\bibinitsep=\skip72
+\bibparsep=\skip73
+\bibhang=\skip74
+\blx@bcfin=\read3
+\blx@bcfout=\write5
+\blx@langwohyphens=\language87
+\c@mincomprange=\count388
+\c@maxcomprange=\count389
+\c@mincompwidth=\count390
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count391
+\c@savedafterword=\count392
+\c@annotator=\count393
+\c@savedannotator=\count394
+\c@author=\count395
+\c@savedauthor=\count396
+\c@bookauthor=\count397
+\c@savedbookauthor=\count398
+\c@commentator=\count399
+\c@savedcommentator=\count400
+\c@editor=\count401
+\c@savededitor=\count402
+\c@editora=\count403
+\c@savededitora=\count404
+\c@editorb=\count405
+\c@savededitorb=\count406
+\c@editorc=\count407
+\c@savededitorc=\count408
+\c@foreword=\count409
+\c@savedforeword=\count410
+\c@holder=\count411
+\c@savedholder=\count412
+\c@introduction=\count413
+\c@savedintroduction=\count414
+\c@namea=\count415
+\c@savednamea=\count416
+\c@nameb=\count417
+\c@savednameb=\count418
+\c@namec=\count419
+\c@savednamec=\count420
+\c@translator=\count421
+\c@savedtranslator=\count422
+\c@shortauthor=\count423
+\c@savedshortauthor=\count424
+\c@shorteditor=\count425
+\c@savedshorteditor=\count426
+\c@labelname=\count427
+\c@savedlabelname=\count428
+\c@institution=\count429
+\c@savedinstitution=\count430
+\c@lista=\count431
+\c@savedlista=\count432
+\c@listb=\count433
+\c@savedlistb=\count434
+\c@listc=\count435
+\c@savedlistc=\count436
+\c@listd=\count437
+\c@savedlistd=\count438
+\c@liste=\count439
+\c@savedliste=\count440
+\c@listf=\count441
+\c@savedlistf=\count442
+\c@location=\count443
+\c@savedlocation=\count444
+\c@organization=\count445
+\c@savedorganization=\count446
+\c@origlocation=\count447
+\c@savedoriglocation=\count448
+\c@origpublisher=\count449
+\c@savedorigpublisher=\count450
+\c@publisher=\count451
+\c@savedpublisher=\count452
+\c@language=\count453
+\c@savedlanguage=\count454
+\c@origlanguage=\count455
+\c@savedoriglanguage=\count456
+\c@pageref=\count457
+\c@savedpageref=\count458
+\shorthandwidth=\skip75
+\shortjournalwidth=\skip76
+\shortserieswidth=\skip77
+\shorttitlewidth=\skip78
+\shortauthorwidth=\skip79
+\shorteditorwidth=\skip80
+\locallabelnumberwidth=\skip81
+\locallabelalphawidth=\skip82
+\localshorthandwidth=\skip83
+\localshortjournalwidth=\skip84
+\localshortserieswidth=\skip85
+\localshorttitlewidth=\skip86
+\localshortauthorwidth=\skip87
+\localshorteditorwidth=\skip88
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count459
+\c@textcitetotal=\count460
+\c@textcitemaxnames=\count461
+\c@biburlbigbreakpenalty=\count462
+\c@biburlbreakpenalty=\count463
+\c@biburlnumpenalty=\count464
+\c@biburlucpenalty=\count465
+\c@biburllcpenalty=\count466
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count467
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count468
+\c@bbx:relatedtotal=\count469
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count470
+\l__pdf_internal_box=\box121
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2023-02-22 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count471
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box122
+)
+\tc@llx=\dimen303
+\tc@lly=\dimen304
+\tc@urx=\dimen305
+\tc@ury=\dimen306
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen307
+\adjbox@Height=\dimen308
+\adjbox@Depth=\dimen309
+\adjbox@Totalheight=\dimen310
+\adjbox@pwidth=\dimen311
+\adjbox@pheight=\dimen312
+\adjbox@pdepth=\dimen313
+\adjbox@ptotalheight=\dimen314
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count472
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box123
+\sift@deathcycles=\count473
+\@vwid@loff=\dimen315
+\@vwid@roff=\dimen316
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen317
+\ar@mcellbox=\box124
+\extrarowheight=\dimen318
+\NC@list=\toks47
+\extratabsurround=\skip89
+\backup@length=\skip90
+\ar@cellbox=\box125
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box126
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen319
+\lightrulewidth=\dimen320
+\cmidrulewidth=\dimen321
+\belowrulesep=\dimen322
+\belowbottomsep=\dimen323
+\aboverulesep=\dimen324
+\abovetopsep=\dimen325
+\cmidrulesep=\dimen326
+\cmidrulekern=\dimen327
+\defaultaddspace=\dimen328
+\@cmidla=\count474
+\@cmidlb=\count475
+\@aboverulesep=\dimen329
+\@belowrulesep=\dimen330
+\@thisruleclass=\count476
+\@lastruleclass=\count477
+\@thisrulewidth=\dimen331
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen332
+\TX@old@table=\dimen333
+\TX@old@col=\dimen334
+\TX@target=\dimen335
+\TX@delta=\dimen336
+\TX@cols=\count478
+\TX@ftn=\toks48
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip91
+\subfigcapskip=\skip92
+\subfigcaptopadj=\dimen337
+\subfigbottomskip=\skip93
+\subfigcapmargin=\dimen338
+\subfiglabelskip=\skip94
+\c@subfigure=\count479
+\c@lofdepth=\count480
+\c@subtable=\count481
+\c@lotdepth=\count482
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip95
+\subfig@bottom=\skip96
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hf-tikz/hf-tikz.sty
+Package: hf-tikz 2014/07/25 v0.3a A simple way to highlight formulas and formul
+a parts.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box127
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen339
+\pgf@nodesepend=\dimen340
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen341
+\pgffor@skip=\dimen342
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count483
+\pgfplotmarksize=\dimen343
+)
+\tikz@lastx=\dimen344
+\tikz@lasty=\dimen345
+\tikz@lastxsaved=\dimen346
+\tikz@lastysaved=\dimen347
+\tikz@lastmovetox=\dimen348
+\tikz@lastmovetoy=\dimen349
+\tikzleveldistance=\dimen350
+\tikzsiblingdistance=\dimen351
+\tikz@figbox=\box128
+\tikz@figbox@bg=\box129
+\tikz@tempbox=\box130
+\tikz@tempbox@bg=\box131
+\tikztreelevel=\count484
+\tikznumberofchildren=\count485
+\tikznumberofcurrentchild=\count486
+\tikz@fig@count=\count487
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count488
+\pgfmatrixcurrentcolumn=\count489
+\pgf@matrix@numberofcolumns=\count490
+)
+\tikz@expandcount=\count491
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshadings.code.tex
+File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryshading
+s.code.tex
+File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+\c@jumping=\count492
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/graphs/tikzlibrarygraphs.code.tex
+File: tikzlibrarygraphs.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@auto@number=\count493
+\tikz@qnode@count=\count494
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count495
+\lst@gtempboxa=\box132
+\lst@token=\toks51
+\lst@length=\count496
+\lst@currlwidth=\dimen352
+\lst@column=\count497
+\lst@pos=\count498
+\lst@lostspace=\dimen353
+\lst@width=\dimen354
+\lst@newlines=\count499
+\lst@lineno=\count500
+\lst@maxwidth=\dimen355
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count501
+\lst@skipnumbers=\count502
+\lst@framebox=\box133
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+\@quotelevel=\count503
+\@quotereset=\count504
+
+(./causality.aux)
+\openout1 = `causality.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(25.0pt, 324.19536pt, 15.0pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=324.19536pt
+* \textheight=244.6939pt
+* \oddsidemargin=-47.26999pt
+* \evensidemargin=-47.26999pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count505
+\scratchdimen=\dimen356
+\scratchbox=\box134
+\nofMPsegments=\count506
+\nofMParguments=\count507
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count508
+\MPscratchDim=\dimen357
+\MPnumerator=\count509
+\makeMPintoPDFobject=\count510
+\everyMPtoPDFconversion=\toks53
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 44.
+
+(./causality.out) (./causality.out)
+\@outlinefile=\write6
+\openout6 = `causality.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 44.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 44.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 44.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 44.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 44.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 44.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 44.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 4
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 4
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
+ut line 44.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `causality.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'causality.bbl' found.
+
+(./causality.bbl)
+Package biblatex Info: Reference section=0 on input line 44.
+Package biblatex Info: Reference segment=0 on input line 44.
+\c@lstlisting=\count511
+ (./causality.nav)
+Overfull \hbox (2.12503pt too wide) in paragraph at lines 44--44
+[][]  
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[2
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 85.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[3
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[4
+
+]
+<../img/spotify.png, id=82, 963.6pt x 367.87437pt>
+File: ../img/spotify.png Graphic file (type png)
+<use ../img/spotify.png>
+Package pdftex.def Info: ../img/spotify.png  used on input line 109.
+(pdftex.def)             Requested size: 324.19536pt x 123.76772pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[5
+
+ <../img/spotify.png>]
+<../img/target_pregnancy.png, id=90, 651.43375pt x 276.03125pt>
+File: ../img/target_pregnancy.png Graphic file (type png)
+<use ../img/target_pregnancy.png>
+Package pdftex.def Info: ../img/target_pregnancy.png  used on input line 119.
+(pdftex.def)             Requested size: 324.19536pt x 137.37506pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[6
+
+ <../img/target_pregnancy.png>]
+<../img/blumenstock.png, id=97, 668.4975pt x 407.5225pt>
+File: ../img/blumenstock.png Graphic file (type png)
+<use ../img/blumenstock.png>
+Package pdftex.def Info: ../img/blumenstock.png  used on input line 129.
+(pdftex.def)             Requested size: 324.19536pt x 197.63573pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[7
+
+ <../img/blumenstock.png>]
+<../img/blumenstock2.png, id=105, 704.6325pt x 421.575pt>
+File: ../img/blumenstock2.png Graphic file (type png)
+<use ../img/blumenstock2.png>
+Package pdftex.def Info: ../img/blumenstock2.png  used on input line 139.
+(pdftex.def)             Requested size: 324.19536pt x 193.95901pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[8
+
+ <../img/blumenstock2.png>]
+<../img/blumenstock3.png, id=112, 706.64pt x 467.7475pt>
+File: ../img/blumenstock3.png Graphic file (type png)
+<use ../img/blumenstock3.png>
+Package pdftex.def Info: ../img/blumenstock3.png  used on input line 149.
+(pdftex.def)             Requested size: 324.19536pt x 214.59547pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[9
+
+ <../img/blumenstock3.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[10
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[11
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[12
+
+] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[13
+
+]
+<../img/the_book_of_why.jpg, id=147, 650.43pt x 1003.75pt>
+File: ../img/the_book_of_why.jpg Graphic file (type jpg)
+<use ../img/the_book_of_why.jpg>
+Package pdftex.def Info: ../img/the_book_of_why.jpg  used on input line 275.
+(pdftex.def)             Requested size: 145.88692pt x 225.12947pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[14
+
+ <../img/the_book_of_why.jpg>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[15
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[16
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[17
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[18
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[19
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[20
+
+]
+<../img/tabaco.jpeg, id=186, 642.4pt x 361.35pt>
+File: ../img/tabaco.jpeg Graphic file (type jpg)
+<use ../img/tabaco.jpeg>
+Package pdftex.def Info: ../img/tabaco.jpeg  used on input line 355.
+(pdftex.def)             Requested size: 324.19536pt x 182.36176pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[21
+
+ <../img/tabaco.jpeg>]
+<../img/smoking_man.jpeg, id=192, 180.675pt x 240.6591pt>
+File: ../img/smoking_man.jpeg Graphic file (type jpg)
+<use ../img/smoking_man.jpeg>
+Package pdftex.def Info: ../img/smoking_man.jpeg  used on input line 380.
+(pdftex.def)             Requested size: 77.80795pt x 103.6393pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[22
+
+ <../img/smoking_man.jpeg>]
+File: ../img/smoking_man.jpeg Graphic file (type jpg)
+<use ../img/smoking_man.jpeg>
+Package pdftex.def Info: ../img/smoking_man.jpeg  used on input line 380.
+(pdftex.def)             Requested size: 77.80795pt x 103.6393pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[23
+
+]
+File: ../img/smoking_man.jpeg Graphic file (type jpg)
+<use ../img/smoking_man.jpeg>
+Package pdftex.def Info: ../img/smoking_man.jpeg  used on input line 380.
+(pdftex.def)             Requested size: 77.80795pt x 103.6393pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[24
+
+]
+File: ../img/smoking_man.jpeg Graphic file (type jpg)
+<use ../img/smoking_man.jpeg>
+Package pdftex.def Info: ../img/smoking_man.jpeg  used on input line 380.
+(pdftex.def)             Requested size: 77.80795pt x 103.6393pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[25
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[26
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[27
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[28
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[29
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[30
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[31
+
+]
+<../img/po_table.png, id=247, 823.075pt x 533.995pt>
+File: ../img/po_table.png Graphic file (type png)
+<use ../img/po_table.png>
+Package pdftex.def Info: ../img/po_table.png  used on input line 430.
+(pdftex.def)             Requested size: 324.19536pt x 210.32683pt.
+
+Overfull \vbox (5.50613pt too high) detected at line 430
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[32
+
+ <../img/po_table.png>]
+<../img/po_table2.png, id=255, 823.075pt x 533.995pt>
+File: ../img/po_table2.png Graphic file (type png)
+<use ../img/po_table2.png>
+Package pdftex.def Info: ../img/po_table2.png  used on input line 443.
+(pdftex.def)             Requested size: 324.19536pt x 210.32683pt.
+
+Overfull \vbox (5.50613pt too high) detected at line 443
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[33
+
+ <../img/po_table2.png>]
+<../img/po_table_ate.png, id=263, 823.075pt x 533.995pt>
+File: ../img/po_table_ate.png Graphic file (type png)
+<use ../img/po_table_ate.png>
+Package pdftex.def Info: ../img/po_table_ate.png  used on input line 455.
+(pdftex.def)             Requested size: 307.98459pt x 199.81578pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[34
+
+ <../img/po_table_ate.png>]
+<../img/po_table_att.png, id=270, 823.075pt x 533.995pt>
+File: ../img/po_table_att.png Graphic file (type png)
+<use ../img/po_table_att.png>
+Package pdftex.def Info: ../img/po_table_att.png  used on input line 467.
+(pdftex.def)             Requested size: 307.98459pt x 199.81578pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[35
+
+ <../img/po_table_att.png>]
+<../img/po_table_atu.png, id=277, 823.075pt x 533.995pt>
+File: ../img/po_table_atu.png Graphic file (type png)
+<use ../img/po_table_atu.png>
+Package pdftex.def Info: ../img/po_table_atu.png  used on input line 479.
+(pdftex.def)             Requested size: 307.98459pt x 199.81578pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[36
+
+ <../img/po_table_atu.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[37
+
+]
+<../img/po_data.png, id=290, 1001.7425pt x 287.0725pt>
+File: ../img/po_data.png Graphic file (type png)
+<use ../img/po_data.png>
+Package pdftex.def Info: ../img/po_data.png  used on input line 508.
+(pdftex.def)             Requested size: 324.19536pt x 92.9076pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[38
+
+ <../img/po_data.png>]
+<../img/po_regression.png, id=297, 574.145pt x 783.92876pt>
+File: ../img/po_regression.png Graphic file (type png)
+<use ../img/po_regression.png>
+Package pdftex.def Info: ../img/po_regression.png  used on input line 518.
+(pdftex.def)             Requested size: 324.19536pt x 442.65741pt.
+
+Overfull \vbox (219.26675pt too high) detected at line 518
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[39
+
+ <../img/po_regression.png>] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[40
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[41
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[42
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[43
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[44
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[45
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[46
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[47
+
+] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[48
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[49
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[50
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[51
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[52
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[53
+
+]
+<../img/happiness_pollution.pdf, id=390, 361.35pt x 361.35pt>
+File: ../img/happiness_pollution.pdf Graphic file (type pdf)
+<use ../img/happiness_pollution.pdf>
+Package pdftex.def Info: ../img/happiness_pollution.pdf  used on input line 695
+.
+(pdftex.def)             Requested size: 210.72499pt x 210.72449pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[54
+
+ <../img/happiness_pollution.pdf>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[55
+
+]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[56
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[57
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[58
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[59
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[60
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[61
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[62
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[63
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[64
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[65
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[66
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[67
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[68
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[69
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[70
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[71
+
+]
+<../img/dag_earnings.png, id=494, 134.1813pt x 65.043pt>
+File: ../img/dag_earnings.png Graphic file (type png)
+<use ../img/dag_earnings.png>
+Package pdftex.def Info: ../img/dag_earnings.png  used on input line 827.
+(pdftex.def)             Requested size: 194.51918pt x 94.29701pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[72
+
+ <../img/dag_earnings.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[73
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[74
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[75
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[76
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[77
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[78
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[79
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[80
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[81
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[82
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[83
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[84
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[85
+
+] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[86
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[87
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[88
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[89
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[90
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[91
+
+]
+<../img/drugs_dag1.png, id=610, 626.34pt x 389.455pt>
+File: ../img/drugs_dag1.png Graphic file (type png)
+<use ../img/drugs_dag1.png>
+Package pdftex.def Info: ../img/drugs_dag1.png  used on input line 967.
+(pdftex.def)             Requested size: 324.19536pt x 201.59071pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[92
+
+ <../img/drugs_dag1.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[93
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[94
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[95
+
+]
+<../img/drugs_dag2.png, id=632, 618.31pt x 359.3425pt>
+File: ../img/drugs_dag2.png Graphic file (type png)
+<use ../img/drugs_dag2.png>
+Package pdftex.def Info: ../img/drugs_dag2.png  used on input line 1028.
+(pdftex.def)             Requested size: 324.19536pt x 188.41637pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[96
+
+ <../img/drugs_dag2.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[97
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[98
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[99
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[100
+
+]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 10.
+)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[101
+
+]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+5.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `TS1/cmtt/bx/n' undefined
+(Font)              using `TS1/cmtt/m/n' instead
+(Font)              for symbol `textdollar' on input line 5.
+
+)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[102
+
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[103
+
+]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[104
+
+] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[105
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[106
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[107
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[108
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[109
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[110
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[111
+
+]
+<../img/Survivorship-bias.png, id=738, 1027.84pt x 765.86125pt>
+File: ../img/Survivorship-bias.png Graphic file (type png)
+<use ../img/Survivorship-bias.png>
+Package pdftex.def Info: ../img/Survivorship-bias.png  used on input line 1231.
+
+(pdftex.def)             Requested size: 259.35727pt x 193.2528pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[112
+
+ <../img/Survivorship-bias.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[113
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[114
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[115
+
+]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[116
+
+]
+\openout4 = `causality.vrb'.
+
+ (./causality.vrb)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[117
+
+]
+<../img/collider_m1.png, id=770, 501.875pt x 576.1525pt>
+File: ../img/collider_m1.png Graphic file (type png)
+<use ../img/collider_m1.png>
+Package pdftex.def Info: ../img/collider_m1.png  used on input line 1340.
+(pdftex.def)             Requested size: 129.67616pt x 148.86423pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[118
+
+ <../img/collider_m1.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[119
+
+]
+<../img/collider_m2.png, id=782, 735.74875pt x 806.01125pt>
+File: ../img/collider_m2.png Graphic file (type png)
+<use ../img/collider_m2.png>
+Package pdftex.def Info: ../img/collider_m2.png  used on input line 1384.
+(pdftex.def)             Requested size: 194.51918pt x 213.0877pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[120
+
+ <../img/collider_m2.png>]
+<../img/collider1.pdf, id=789, 361.35pt x 361.35pt>
+File: ../img/collider1.pdf Graphic file (type pdf)
+<use ../img/collider1.pdf>
+Package pdftex.def Info: ../img/collider1.pdf  used on input line 1394.
+(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
+
+Overfull \vbox (3.54427pt too high) detected at line 1394
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[121
+
+ <../img/collider1.pdf>]
+<../img/collider2.pdf, id=802, 361.35pt x 361.35pt>
+File: ../img/collider2.pdf Graphic file (type pdf)
+<use ../img/collider2.pdf>
+Package pdftex.def Info: ../img/collider2.pdf  used on input line 1404.
+(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
+
+Overfull \vbox (3.54427pt too high) detected at line 1404
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[122
+
+ <../img/collider2.pdf>]
+<../img/collider3.pdf, id=817, 361.35pt x 361.35pt>
+File: ../img/collider3.pdf Graphic file (type pdf)
+<use ../img/collider3.pdf>
+Package pdftex.def Info: ../img/collider3.pdf  used on input line 1414.
+(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
+
+Overfull \vbox (3.54427pt too high) detected at line 1414
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[123
+
+ <../img/collider3.pdf>]
+<../img/collider4.pdf, id=829, 361.35pt x 361.35pt>
+File: ../img/collider4.pdf Graphic file (type pdf)
+<use ../img/collider4.pdf>
+Package pdftex.def Info: ../img/collider4.pdf  used on input line 1424.
+(pdftex.def)             Requested size: 226.93576pt x 226.93492pt.
+
+Overfull \vbox (3.54427pt too high) detected at line 1424
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[124
+
+ <../img/collider4.pdf>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[125
+
+]
+<../img/obesity_paradox.jpg, id=850, 334.24875pt x 500.87125pt>
+File: ../img/obesity_paradox.jpg Graphic file (type jpg)
+<use ../img/obesity_paradox.jpg>
+Package pdftex.def Info: ../img/obesity_paradox.jpg  used on input line 1455.
+(pdftex.def)             Requested size: 131.29733pt x 196.75288pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[126
+
+ <../img/obesity_paradox.jpg>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[127
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[128
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[129
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[130
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[131
+
+] (./causality.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[132
+
+]
+<../img/guess2023.jpg, id=894, 1682.285pt x 1214.5375pt>
+File: ../img/guess2023.jpg Graphic file (type jpg)
+<use ../img/guess2023.jpg>
+Package pdftex.def Info: ../img/guess2023.jpg  used on input line 1537.
+(pdftex.def)             Requested size: 324.19536pt x 234.04474pt.
+
+Overfull \vbox (10.65408pt too high) detected at line 1537
+ []
+
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[133
+
+ <../img/guess2023.jpg>]
+<../img/villamilbalcells.jpg, id=901, 1758.57pt x 1214.5375pt>
+File: ../img/villamilbalcells.jpg Graphic file (type jpg)
+<use ../img/villamilbalcells.jpg>
+Package pdftex.def Info: ../img/villamilbalcells.jpg  used on input line 1547.
+(pdftex.def)             Requested size: 324.19536pt x 223.88902pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[134
+
+ <../img/villamilbalcells.jpg>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[135
+
+]
+\tf@nav=\write7
+\openout7 = `causality.nav'.
+
+\tf@toc=\write8
+\openout8 = `causality.toc'.
+
+\tf@snm=\write9
+\openout9 = `causality.snm'.
+
+ (./causality.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `causality.out' has not changed.
+(rerunfilecheck)             Checksum: 3C9AA9C47B2EC8B69AD121498692923F;1124.
+Package logreq Info: Writing requests to 'causality.run.xml'.
+\openout1 = `causality.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 37993 strings out of 476025
+ 749666 string characters out of 5790017
+ 1966388 words of memory out of 5000000
+ 57417 multiletter control sequences out of 15000+600000
+ 528203 words of font info for 89 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,15n,122p,1134b,1998s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/
+texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on causality.pdf (135 pages, 4436548 bytes).
+PDF statistics:
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 284 named destinations out of 1000 (max. 500000)
+ 244 words of extra memory for PDF output out of 10000 (max. 10000000)
+
