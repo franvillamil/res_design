@@ -711,9 +711,12 @@ $ATU = mean(10, 0, -10, 5) = 1.25$
 \centering
 
 \begin{itemize}
-  \item Remember that out problem (the `fundamental problem of causal inference` etc) is that we can observe e.g. Pakistan, where the level of pollution (measured as death date) is 46, and 58\% of the people say they're happy
-  \item But \textbf{we cannot observe} how many people say they are happy in an \textbf{alternative Pakistan} where the pollution death date is 15
-  \item So to approximate this, we'll build a causal model to know what we should be controlling for
+  \item Remember that out problem (the `fundamental problem of causal inference` etc) is that we can observe these countries but not their \textbf{alternatives} without treatment (or with different levels of the treatment)
+  \item So to infer causal models we need to \textbf{isolate the variation due to our treatment}, how?
+  \begin{itemize}
+    \item Controlling the non-causal variation
+  \end{itemize}
+  \item To get to this, we need to have a \BGyellow{causal model} to know what's `contaminating' our outcome (so we know what we should be controlling for)
 \end{itemize}
 
 \end{frame}
