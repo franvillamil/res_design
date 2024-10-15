@@ -1,9 +1,4 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{Intro and overview}{2}{0}{1}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Methods in brief}{10}{0}{2}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Paper discussion}{49}{0}{3}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Re-cap and essay guidelines}{51}{0}{4}
+\beamer@sectionintoc {3}{Paper discussion}{58}{0}{3}
+\beamer@sectionintoc {4}{Re-cap and essay guidelines}{60}{0}{4}

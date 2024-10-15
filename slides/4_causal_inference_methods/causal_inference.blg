@@ -1,5 +1,4 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'causal_inference.blg'
-[50] biber-darwin:340> INFO - === Mon Oct  7, 2024, 12:24:18
-[60] Biber.pm:415> INFO - Reading 'causal_inference.bcf'
-[126] Utils.pm:395> WARN - No data sources defined!
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'causal_inference.blg'
+[30] biber-darwin:340> INFO - === Tue Oct 15, 2024, 13:03:19
+[38] Biber.pm:419> INFO - Reading 'causal_inference.bcf'
