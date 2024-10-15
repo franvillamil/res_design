@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  15 OCT 2024 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  15 OCT 2024 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1827,95 +1827,84 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 <../img/staggered1.jpg, id=315, 1844.8925pt x 1844.8925pt>
 File: ../img/staggered1.jpg Graphic file (type jpg)
 <use ../img/staggered1.jpg>
-Package pdftex.def Info: ../img/staggered1.jpg  used on input line 380.
+Package pdftex.def Info: ../img/staggered1.jpg  used on input line 384.
 (pdftex.def)             Requested size: 273.14679pt x 273.14679pt.
  [30
 
  <../img/staggered1.jpg>]
-<../img/staggered2.jpg, id=321, 1844.8925pt x 1844.8925pt>
-File: ../img/staggered2.jpg Graphic file (type jpg)
-<use ../img/staggered2.jpg>
-Package pdftex.def Info: ../img/staggered2.jpg  used on input line 384.
-(pdftex.def)             Requested size: 273.14679pt x 273.14679pt.
- [31
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
 
- <../img/staggered2.jpg>]
-<../img/staggered3.jpg, id=328, 1844.8925pt x 1844.8925pt>
-File: ../img/staggered3.jpg Graphic file (type jpg)
-<use ../img/staggered3.jpg>
-Package pdftex.def Info: ../img/staggered3.jpg  used on input line 388.
+[31
+
+]
+File: ../img/staggered1.jpg Graphic file (type jpg)
+<use ../img/staggered1.jpg>
+Package pdftex.def Info: ../img/staggered1.jpg  used on input line 411.
 (pdftex.def)             Requested size: 273.14679pt x 273.14679pt.
  [32
 
- <../img/staggered3.jpg>]
-<../img/staggered4.png, id=334, 931.48pt x 642.4pt>
-File: ../img/staggered4.png Graphic file (type png)
-<use ../img/staggered4.png>
-Package pdftex.def Info: ../img/staggered4.png  used on input line 392.
-(pdftex.def)             Requested size: 364.18538pt x 251.16234pt.
+]
+<../img/staggered2.jpg, id=333, 1844.8925pt x 1844.8925pt>
+File: ../img/staggered2.jpg Graphic file (type jpg)
+<use ../img/staggered2.jpg>
+Package pdftex.def Info: ../img/staggered2.jpg  used on input line 415.
+(pdftex.def)             Requested size: 273.14679pt x 273.14679pt.
  [33
 
- <../img/staggered4.png>]
-<../img/exhumacion_argentina.png, id=340, 950.55125pt x 769.87625pt>
-File: ../img/exhumacion_argentina.png Graphic file (type png)
-<use ../img/exhumacion_argentina.png>
-Package pdftex.def Info: ../img/exhumacion_argentina.png  used on input line 39
-6.
-(pdftex.def)             Requested size: 337.25224pt x 273.14938pt.
+ <../img/staggered2.jpg>]
+<../img/staggered3.jpg, id=339, 1844.8925pt x 1844.8925pt>
+File: ../img/staggered3.jpg Graphic file (type jpg)
+<use ../img/staggered3.jpg>
+Package pdftex.def Info: ../img/staggered3.jpg  used on input line 419.
+(pdftex.def)             Requested size: 273.14679pt x 273.14679pt.
  [34
 
- <../img/exhumacion_argentina.png>]
-<../img/map_graves.pdf, id=348, 578.16pt x 433.62pt>
-File: ../img/map_graves.pdf Graphic file (type pdf)
-<use ../img/map_graves.pdf>
-Package pdftex.def Info: ../img/map_graves.pdf  used on input line 400.
-(pdftex.def)             Requested size: 364.18979pt x 273.14235pt.
+ <../img/staggered3.jpg>]
+<../img/staggered4.png, id=345, 931.48pt x 642.4pt>
+File: ../img/staggered4.png Graphic file (type png)
+<use ../img/staggered4.png>
+Package pdftex.def Info: ../img/staggered4.png  used on input line 423.
+(pdftex.def)             Requested size: 364.18538pt x 251.16234pt.
  [35
 
+ <../img/staggered4.png>]
+<../img/exhumacion_argentina.png, id=351, 950.55125pt x 769.87625pt>
+File: ../img/exhumacion_argentina.png Graphic file (type png)
+<use ../img/exhumacion_argentina.png>
+Package pdftex.def Info: ../img/exhumacion_argentina.png  used on input line 42
+7.
+(pdftex.def)             Requested size: 337.25224pt x 273.14938pt.
+ [36
+
+ <../img/exhumacion_argentina.png>]
+<../img/map_graves.pdf, id=359, 578.16pt x 433.62pt>
+File: ../img/map_graves.pdf Graphic file (type pdf)
+<use ../img/map_graves.pdf>
+Package pdftex.def Info: ../img/map_graves.pdf  used on input line 431.
+(pdftex.def)             Requested size: 364.18979pt x 273.14235pt.
+ [37
+
  <../img/map_graves.pdf>]
-<../img/map_graves_exhumation.pdf, id=360, 578.16pt x 433.62pt>
+<../img/map_graves_exhumation.pdf, id=372, 578.16pt x 433.62pt>
 File: ../img/map_graves_exhumation.pdf Graphic file (type pdf)
 <use ../img/map_graves_exhumation.pdf>
 Package pdftex.def Info: ../img/map_graves_exhumation.pdf  used on input line 4
-04.
+35.
 (pdftex.def)             Requested size: 364.18979pt x 273.14235pt.
- [36
+ [38
 
  <../img/map_graves_exhumation.pdf>]
-<../img/exhumaciones_navarra.pdf, id=372, 361.35pt x 430.60875pt>
+<../img/exhumaciones_navarra.pdf, id=384, 361.35pt x 430.60875pt>
 File: ../img/exhumaciones_navarra.pdf Graphic file (type pdf)
 <use ../img/exhumaciones_navarra.pdf>
-Package pdftex.def Info: ../img/exhumaciones_navarra.pdf  used on input line 40
-8.
+Package pdftex.def Info: ../img/exhumaciones_navarra.pdf  used on input line 43
+9.
 (pdftex.def)             Requested size: 229.2176pt x 273.15097pt.
- [37
+ [39
 
  <../img/exhumaciones_navarra.pdf>]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
-[38
-
-]
-<../img/rdd_teffect.png, id=389, 720.6925pt x 620.81938pt>
-File: ../img/rdd_teffect.png Graphic file (type png)
-<use ../img/rdd_teffect.png>
-Package pdftex.def Info: ../img/rdd_teffect.png  used on input line 440.
-(pdftex.def)             Requested size: 259.35727pt x 223.40955pt.
-
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
-[39
-
- <../img/rdd_teffect.png>]
-File: ../img/rdd_teffect.png Graphic file (type png)
-<use ../img/rdd_teffect.png>
-Package pdftex.def Info: ../img/rdd_teffect.png  used on input line 450.
-(pdftex.def)             Requested size: 259.35727pt x 223.40955pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1923,11 +1912,11 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [40
 
 ]
-<../img/rdd_dag.png, id=400, 1724.4425pt x 322.20375pt>
-File: ../img/rdd_dag.png Graphic file (type png)
-<use ../img/rdd_dag.png>
-Package pdftex.def Info: ../img/rdd_dag.png  used on input line 470.
-(pdftex.def)             Requested size: 324.19536pt x 60.57037pt.
+<../img/rdd_teffect.png, id=400, 720.6925pt x 620.81938pt>
+File: ../img/rdd_teffect.png Graphic file (type png)
+<use ../img/rdd_teffect.png>
+Package pdftex.def Info: ../img/rdd_teffect.png  used on input line 471.
+(pdftex.def)             Requested size: 259.35727pt x 223.40955pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -1935,16 +1924,11 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [41
 
- <../img/rdd_dag.png>]
-<../img/rdd_procedure.png, id=408, 505.89pt x 361.35pt>
-File: ../img/rdd_procedure.png Graphic file (type png)
-<use ../img/rdd_procedure.png>
-Package pdftex.def Info: ../img/rdd_procedure.png  used on input line 480.
-(pdftex.def)             Requested size: 324.19536pt x 231.57198pt.
-
-Overfull \vbox (8.18132pt too high) detected at line 480
- []
-
+ <../img/rdd_teffect.png>]
+File: ../img/rdd_teffect.png Graphic file (type png)
+<use ../img/rdd_teffect.png>
+Package pdftex.def Info: ../img/rdd_teffect.png  used on input line 481.
+(pdftex.def)             Requested size: 259.35727pt x 223.40955pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -1952,22 +1936,27 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [42
 
- <../img/rdd_procedure.png>]
+]
+<../img/rdd_dag.png, id=411, 1724.4425pt x 322.20375pt>
+File: ../img/rdd_dag.png Graphic file (type png)
+<use ../img/rdd_dag.png>
+Package pdftex.def Info: ../img/rdd_dag.png  used on input line 501.
+(pdftex.def)             Requested size: 324.19536pt x 60.57037pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [43
 
-]
-<../img/marathon_finishing_times.png, id=421, 722.7pt x 502.87875pt>
-File: ../img/marathon_finishing_times.png Graphic file (type png)
-<use ../img/marathon_finishing_times.png>
-Package pdftex.def Info: ../img/marathon_finishing_times.png  used on input lin
-e 507.
-(pdftex.def)             Requested size: 324.19536pt x 225.5874pt.
+ <../img/rdd_dag.png>]
+<../img/rdd_procedure.png, id=420, 505.89pt x 361.35pt>
+File: ../img/rdd_procedure.png Graphic file (type png)
+<use ../img/rdd_procedure.png>
+Package pdftex.def Info: ../img/rdd_procedure.png  used on input line 511.
+(pdftex.def)             Requested size: 324.19536pt x 231.57198pt.
 
-Overfull \vbox (2.19675pt too high) detected at line 507
+Overfull \vbox (8.18132pt too high) detected at line 511
  []
 
 
@@ -1977,7 +1966,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [44
 
- <../img/marathon_finishing_times.png>]
+ <../img/rdd_procedure.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1985,13 +1974,24 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [45
 
 ]
+<../img/marathon_finishing_times.png, id=432, 722.7pt x 502.87875pt>
+File: ../img/marathon_finishing_times.png Graphic file (type png)
+<use ../img/marathon_finishing_times.png>
+Package pdftex.def Info: ../img/marathon_finishing_times.png  used on input lin
+e 538.
+(pdftex.def)             Requested size: 324.19536pt x 225.5874pt.
+
+Overfull \vbox (2.19675pt too high) detected at line 538
+ []
+
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [46
 
-]
+ <../img/marathon_finishing_times.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2027,45 +2027,28 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [51
 
 ]
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 633.
-
-<../img/pollution_dag.jpg, id=469, 919.435pt x 313.17pt>
-File: ../img/pollution_dag.jpg Graphic file (type jpg)
-<use ../img/pollution_dag.jpg>
-Package pdftex.def Info: ../img/pollution_dag.jpg  used on input line 633.
-(pdftex.def)             Requested size: 243.14651pt x 82.81761pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [52
 
- <../img/pollution_dag.jpg>]
-<../img/china_pollution.png, id=477, 666.49pt x 583.17876pt>
-File: ../img/china_pollution.png Graphic file (type png)
-<use ../img/china_pollution.png>
-Package pdftex.def Info: ../img/china_pollution.png  used on input line 643.
-(pdftex.def)             Requested size: 291.77383pt x 255.30914pt.
-
-Overfull \vbox (31.91849pt too high) detected at line 643
- []
-
-
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [53
 
- <../img/china_pollution.png>]
-<../img/china_pollution_dag.png, id=484, 1274.7625pt x 312.16624pt>
-File: ../img/china_pollution_dag.png Graphic file (type png)
-<use ../img/china_pollution_dag.png>
-Package pdftex.def Info: ../img/china_pollution_dag.png  used on input line 663
-.
-(pdftex.def)             Requested size: 324.19536pt x 79.38937pt.
+]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 664.
+
+<../img/pollution_dag.jpg, id=479, 919.435pt x 313.17pt>
+File: ../img/pollution_dag.jpg Graphic file (type jpg)
+<use ../img/pollution_dag.jpg>
+Package pdftex.def Info: ../img/pollution_dag.jpg  used on input line 664.
+(pdftex.def)             Requested size: 243.14651pt x 82.81761pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -2073,12 +2056,16 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [54
 
- <../img/china_pollution_dag.png>]
-File: ../img/china_pollution_dag.png Graphic file (type png)
-<use ../img/china_pollution_dag.png>
-Package pdftex.def Info: ../img/china_pollution_dag.png  used on input line 663
-.
-(pdftex.def)             Requested size: 324.19536pt x 79.38937pt.
+ <../img/pollution_dag.jpg>]
+<../img/china_pollution.png, id=487, 666.49pt x 583.17876pt>
+File: ../img/china_pollution.png Graphic file (type png)
+<use ../img/china_pollution.png>
+Package pdftex.def Info: ../img/china_pollution.png  used on input line 674.
+(pdftex.def)             Requested size: 291.77383pt x 255.30914pt.
+
+Overfull \vbox (31.91849pt too high) detected at line 674
+ []
+
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -2086,21 +2073,34 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [55
 
-]
+ <../img/china_pollution.png>]
+<../img/china_pollution_dag.png, id=495, 1274.7625pt x 312.16624pt>
+File: ../img/china_pollution_dag.png Graphic file (type png)
+<use ../img/china_pollution_dag.png>
+Package pdftex.def Info: ../img/china_pollution_dag.png  used on input line 694
+.
+(pdftex.def)             Requested size: 324.19536pt x 79.38937pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [56
 
-]
+ <../img/china_pollution_dag.png>]
+File: ../img/china_pollution_dag.png Graphic file (type png)
+<use ../img/china_pollution_dag.png>
+Package pdftex.def Info: ../img/china_pollution_dag.png  used on input line 694
+.
+(pdftex.def)             Requested size: 324.19536pt x 79.38937pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [57
 
-] (./causal_inference.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2108,19 +2108,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [58
 
 ]
-<../img/villamilbalcells.jpg, id=515, 1758.57pt x 1214.5375pt>
-File: ../img/villamilbalcells.jpg Graphic file (type jpg)
-<use ../img/villamilbalcells.jpg>
-Package pdftex.def Info: ../img/villamilbalcells.jpg  used on input line 695.
-(pdftex.def)             Requested size: 324.19536pt x 223.88902pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [59
 
- <../img/villamilbalcells.jpg>] (./causal_inference.toc)
+] (./causal_inference.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2128,13 +2122,19 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [60
 
 ]
+<../img/villamilbalcells.jpg, id=525, 1758.57pt x 1214.5375pt>
+File: ../img/villamilbalcells.jpg Graphic file (type jpg)
+<use ../img/villamilbalcells.jpg>
+Package pdftex.def Info: ../img/villamilbalcells.jpg  used on input line 726.
+(pdftex.def)             Requested size: 324.19536pt x 223.88902pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [61
 
-]
+ <../img/villamilbalcells.jpg>] (./causal_inference.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2198,6 +2198,20 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [70
 
 ]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[71
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[72
+
+]
 \tf@nav=\write7
 \openout7 = `causal_inference.nav'.
 
@@ -2215,10 +2229,10 @@ Package logreq Info: Writing requests to 'causal_inference.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34661 strings out of 476025
- 696171 string characters out of 5790017
+ 34671 strings out of 476025
+ 696286 string characters out of 5790017
  1860388 words of memory out of 5000000
- 54275 multiletter control sequences out of 15000+600000
+ 54281 multiletter control sequences out of 15000+600000
  529324 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,122p,1141b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2235,10 +2249,10 @@ local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
 al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on causal_inference.pdf (70 pages, 6313807 bytes).
+Output written on causal_inference.pdf (72 pages, 6317134 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 519 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
  235 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
 \beamer@sectionintoc {1}{Intro and overview}{2}{0}{1}
 \beamer@sectionintoc {2}{Methods in brief}{10}{0}{2}
-\beamer@sectionintoc {3}{Paper discussion}{58}{0}{3}
-\beamer@sectionintoc {4}{Re-cap and essay guidelines}{60}{0}{4}
+\beamer@sectionintoc {3}{Paper discussion}{60}{0}{3}
+\beamer@sectionintoc {4}{Re-cap and essay guidelines}{62}{0}{4}

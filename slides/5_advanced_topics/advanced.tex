@@ -4,7 +4,7 @@
 % Title --------------------------------------------
 \title[Lecture 5: Advanced topics]{\Large Advanced topics \& overview}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2023}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
 
 \input{../beamer_preamble.tex}
 
@@ -261,16 +261,65 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Meta-analyses: another example}
+\frametitle{Funnel plots}
 \centering
 
-https://psycnet.apa.org/record/2025-31872-001
-
-% https://www.christopherjferguson.com/Social%20Media%20Meta.pdf
-
+\begin{itemize}
+  \item Looking for \textbf{publication bias}
+  \begin{itemize}
+    \item are people only submitting/publishing certain results? (so we'd not have the full picture)
+  \end{itemize}
+  \item<2-> \BGyellow{Funnel plot}: scatter plot of reported results
+  \begin{itemize}
+    \item X-axis: Effect size
+    \item Y-axis: Measure of precision (e.g. standard error in inverted scale)
+  \end{itemize}
+  \item<3-> We should see a \textit{pyramid}: less precision at the bottom and more spread-out effect sizes, more precision at the top
+  \item<4-> If there's publication bias, e.g. we won't see points in the bottom right/left (only positive or negative effects are submitted/published)
+\end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/normal-looking-funnel-plot}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/skewed-funnel-plot}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Inverted funnel plots?}
+\centering
+
+\begin{itemize}
+  \item We could observe an inverted funnel plot
+  \item That could be the case e.g. if people don't submit `imprecise' estimates but still can't find the true effect (unaccounted for heterogeneity, as in the natural resources example?)
+  \item
+  % \item {\footnotesize See \href{https://dynamicecology.wordpress.com/2021/05/17/what-the-heck-is-up-with-the-many-ecological-meta-analyses-that-have-inverted-funnel-plots/}{this for an example discussion on ecology}}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\imageframe{../img/inverted-funnel-plot}
+% ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Meta-analyses: another example}
+% \centering
+
+% https://psycnet.apa.org/record/2025-31872-001
+
+% % https://www.christopherjferguson.com/Social%20Media%20Meta.pdf
+
+
+% \end{frame}
+% % ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
@@ -450,17 +499,17 @@ https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204
 \end{frame}
 % ----------------------------------------------------
 
-\section{Extra: Bartik instruments}
+% \section{Extra: Bartik instruments}
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Bartik instruments}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Bartik instruments}
+% \centering
 
 
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
 \section{Extra: Synthetic control methods}
 
@@ -509,7 +558,7 @@ https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204
 \centering
 
 \begin{itemize}
-  \item A Abadie, A Diamond & J Hainmueller (2010) \href{https://web.stanford.edu/~jhain/Paper/JASA2010.pdf}{Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California's Tobacco Control Program.} \textit{Journal of the American Statistical Association.}
+  \item A Abadie, A Diamond \& J Hainmueller (2010) \href{https://web.stanford.edu/~jhain/Paper/JASA2010.pdf}{Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California's Tobacco Control Program.} \textit{Journal of the American Statistical Association.}
 \end{itemize}
 
 \end{frame}

@@ -1731,6 +1731,10 @@ INPUT ../img/staggered1.jpg
 INPUT ../img/staggered1.jpg
 INPUT ../img/staggered1.jpg
 INPUT ../img/staggered1.jpg
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
+INPUT ../img/staggered1.jpg
+INPUT ../img/staggered1.jpg
+INPUT ../img/staggered1.jpg
 INPUT ../img/staggered2.jpg
 INPUT ../img/staggered2.jpg
 INPUT ../img/staggered2.jpg
@@ -1780,7 +1784,6 @@ INPUT ../img/marathon_finishing_times.png
 INPUT ../img/marathon_finishing_times.png
 INPUT ../img/marathon_finishing_times.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm

@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Review}{2}{0}{1}
+\beamer@sectionintoc {2}{Generalizing results}{19}{0}{2}
+\beamer@sectionintoc {3}{Mechanism test and additional implications}{63}{0}{3}
+\beamer@sectionintoc {4}{Robustness and inference tests}{66}{0}{4}
+\beamer@sectionintoc {5}{Extra: Synthetic control methods}{69}{0}{5}
+\beamer@sectionintoc {6}{Questions}{74}{0}{6}
+\beamer@sectionintoc {7}{Causal methods again, in detail}{76}{0}{7}

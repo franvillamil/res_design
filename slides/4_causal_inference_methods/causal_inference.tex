@@ -371,11 +371,42 @@
 \frametitle{DiD and staggered treatments}
 \centering
 
+\begin{itemize}
+  \item Normal DiD works on a before/after setting, where treatment affects all units at the same time
+  \item What if treatment is \textbf{staggered}?
+\end{itemize}
 
 
 \end{frame}
 % ----------------------------------------------------
   
+% ----------------------------------------------------
+\imageframe{../img/staggered1}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{DiD and staggered treatments}
+\centering
+
+\begin{itemize}
+  \item Different strategies to deal with this
+  \item Naive: Two-Way Fixed Effects (TWFE)
+  \begin{itemize}
+    \item Problem when having heterogenous effects over time
+  \end{itemize}
+  \item More recently: DiD estimates under treatment heterogeneity
+  \begin{itemize}
+    \item Goodman-Bacon 2021 {\footnotesize (``Difference-in-Differences with Variation in Treatment Timing'')}
+    \item Callaway and Sant'Anna 2021 {\footnotesize (``Difference-in-Differences with Multiple Time Periods'')}
+    \item Roth et al. 2023 {\footnotesize (``What’s Trending in Difference-in-Differences?'')}
+  \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+% ----------------------------------------------------
+
 % ----------------------------------------------------
 \imageframe{../img/staggered1}
 % ----------------------------------------------------
