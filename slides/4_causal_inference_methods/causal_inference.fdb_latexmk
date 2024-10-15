@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber causal_inference"] 1728990197 "causal_inference.bcf" "causal_inference.bbl" "causal_inference" 1728998619 0
-  "causal_inference.bcf" 1728998619 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
+["biber causal_inference"] 1728990197 "causal_inference.bcf" "causal_inference.bbl" "causal_inference" 1728998934 0
+  "causal_inference.bcf" 1728998934 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
   (generated)
   "causal_inference.bbl"
   "causal_inference.blg"
   (rewritten before read)
-["pdflatex"] 1728998617 "causal_inference.tex" "causal_inference.pdf" "causal_inference" 1728998619 0
+["pdflatex"] 1728998931 "causal_inference.tex" "causal_inference.pdf" "causal_inference" 1728998934 0
   "../beamer_preamble.tex" 1726589189 8181 7680845884e2bb79f3d7eb98acbf2652 ""
   "../img/china_pollution.png" 1698065230 368407 a7e10d25154e8d863b251073df322132 ""
   "../img/china_pollution_dag.png" 1695886627 184411 84a29760cca6e4f49e89b0f086d8538f ""
@@ -305,13 +305,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705144455 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705144389 7883460 1550c7dc5e1a65f25c597afed28e1262 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "causal_inference.aux" 1728998619 10294 25ee0f1d0aa24829db9f6de075b10633 "pdflatex"
+  "causal_inference.aux" 1728998934 10166 2a5e4e4d9066eb0dcdc1b0926f90a4d6 "pdflatex"
   "causal_inference.bbl" 1728990199 0 d41d8cd98f00b204e9800998ecf8427e "biber causal_inference"
-  "causal_inference.nav" 1728998619 6444 f8eab6a1d48ffa302ea9163892eb5dcc "pdflatex"
-  "causal_inference.out" 1728998619 581 e94670391aa64bee229160afb91ee218 "pdflatex"
-  "causal_inference.run.xml" 1728998619 2348 24258d0a36b9f094f3bc7a835cc51010 "pdflatex"
-  "causal_inference.tex" 1728998617 25922 1d997378cf85af7b8f84b195dc5213a5 ""
-  "causal_inference.toc" 1728998619 224 e12d49e2b45529cf92e99a6dcccb33bf "pdflatex"
+  "causal_inference.nav" 1728998934 6352 833433a0f3bef730afcd932271fb6f9b "pdflatex"
+  "causal_inference.out" 1728998934 581 e94670391aa64bee229160afb91ee218 "pdflatex"
+  "causal_inference.run.xml" 1728998934 2348 24258d0a36b9f094f3bc7a835cc51010 "pdflatex"
+  "causal_inference.tex" 1728998927 24378 66157aa1754d94b51d7ceb4d8106beb3 ""
+  "causal_inference.toc" 1728998934 224 e12d49e2b45529cf92e99a6dcccb33bf "pdflatex"
   (generated)
   "causal_inference.aux"
   "causal_inference.bcf"

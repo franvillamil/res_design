@@ -9,6 +9,7 @@
 \input{../beamer_preamble.tex}
 
 \usepackage{amsmath}
+\renewcommand<>{\BGyellow}[1]{\only#2{\beameroriginal{\BGyellow}}{#1}}
 
 \begin{document}
 % ====================================================
@@ -28,7 +29,7 @@
 
 \begin{itemize}
   \item Questions?
-  \item<2-> Take away from workshop:
+  \item<2-> Key points from last year experience: %Take away from workshop:
   \begin{itemize}
     \item \BGyellow{Need to think in a \textbf{broader} way}
     \item Do not stay fixated on a method
@@ -91,39 +92,39 @@
 \imageframe{../img/electoral_data_excel}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{How many variables? Unit of analysis?}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{How many variables? Unit of analysis?}
+% \centering
 
-\includegraphics[width = 0.9\textwidth]{../img/covid_vote}
+% \includegraphics[width = 0.9\textwidth]{../img/covid_vote}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{How many variables? Unit of analysis?}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{How many variables? Unit of analysis?}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/global_inflation_ft}
+% \includegraphics[width = \textwidth]{../img/global_inflation_ft}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{How many variables? Unit of analysis?}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{How many variables? Unit of analysis?}
+% \centering
 
-\includegraphics[width = 0.65\textwidth]{../img/emissions}
+% \includegraphics[width = 0.65\textwidth]{../img/emissions}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\imageframe{../img/Minard}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/Minard}
+% % ----------------------------------------------------
 
 \section{Generalizing results}
 
@@ -1653,6 +1654,72 @@ Our true causal model
 \centering
 
 \includegraphics[width = \textwidth]{../img/carl10}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item Let's walk through a couple examples:
+  \item[1.] Rise of protest movements
+  \item[2.] Violence against civilians and radicalization
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\imageframe{../img/vivienda_protesta}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/us_iraq}
+% ----------------------------------------------------
+  
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item[1.] \BGyellow<1>{Problem/topic}
+    \only<1>{\begin{itemize}
+      \item unique to group, general issue
+    \end{itemize}}
+  \item[2.] \BGyellow<2>{Stories, arguments about mechanisms}
+    \only<2>{\begin{itemize}
+      \item testing an argument, testing 2 against each other
+    \end{itemize}}
+  \item[3.] \BGyellow<3>{Research question}
+    \only<3>{\begin{itemize}
+      \item operationalize the story you have in mind
+    \end{itemize}}
+  \item[4.] \BGyellow<4>{Proper theory, concepts and operationalization}
+    \only<4>{\begin{itemize}
+      \item develop a proper argument with view to empirical test
+    \end{itemize}}
+  \item[5.] \BGyellow<5>{Measurement, unit of analyses, data sources, etc}
+    \only<5>{\begin{itemize}
+      \item ideally think about more than one strategy
+    \end{itemize}}
+  \item[6.] \BGyellow<6>{Inference strategy}
+    \only<6>{\begin{itemize}
+      \item depends on previous steps: one per `arm' or multiple strategies
+    \end{itemize}}
+  \item[7.] \BGyellow<7>{Results \& interpretation}
+    \only<7>{\begin{itemize}
+      \item what do we really learn about the initial topic? next steps?
+    \end{itemize}}
+\end{itemize}
+
+\only<8>{\begin{itemize}
+  \item \textbf{General guideline:} maybe it's not realistic for you right now, but it needs to be feasible (data collection, etc)
+\end{itemize}}
 
 \end{frame}
 % ----------------------------------------------------

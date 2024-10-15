@@ -128,10 +128,8 @@
 \headcommand {\beamer@framepages {63}{63}}
 \headcommand {\slideentry {4}{0}{3}{64/64}{}{0}}
 \headcommand {\beamer@framepages {64}{64}}
-\headcommand {\slideentry {4}{0}{4}{65/72}{}{0}}
-\headcommand {\beamer@framepages {65}{72}}
-\headcommand {\beamer@partpages {1}{72}}
-\headcommand {\beamer@subsectionpages {62}{72}}
-\headcommand {\beamer@sectionpages {62}{72}}
-\headcommand {\beamer@documentpages {72}}
-\headcommand {\gdef \inserttotalframenumber {60}}
+\headcommand {\beamer@partpages {1}{64}}
+\headcommand {\beamer@subsectionpages {62}{64}}
+\headcommand {\beamer@sectionpages {62}{64}}
+\headcommand {\beamer@documentpages {64}}
+\headcommand {\gdef \inserttotalframenumber {59}}
