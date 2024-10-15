@@ -61,9 +61,9 @@
     \item<5-> Example: \textbf{cancer mortality}. At which levels can we measure this?
   \end{itemize}
   \item<6-> We can change the UA of a dataset (usually from bottom to top)
-  \begin{itemize}
-    \item Example: let's say we have an individual-level dataset of diseases and outcome (death)
-  \end{itemize}
+  % \begin{itemize}
+  %   \item Example: let's say we have an individual-level dataset of diseases and outcome (death)
+  % \end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -81,8 +81,8 @@
   \begin{itemize}
     \item Examples: democratic peace, trade flows
   \end{itemize}
-  \item[]
-  \item<2-> How many variables and what's the unit of analyses in the next dataset?
+  % \item[]
+  % \item<2-> How many variables and what's the unit of analyses in the next dataset?
 \end{itemize}
 
 \end{frame}
@@ -141,9 +141,9 @@
     \item `Valid' studies and synthesis studies
     \item Practice-oriented, Esther Duflo: `The Economist as Plumber'
   \end{itemize}
-  \item What are we really learning? \uncover<2->{How much \textit{knowledge} we gain?}
+  \item What are we really learning? How much \textit{knowledge} we gain? %\uncover<2->{How much \textit{knowledge} we gain?}
   \item[]
-  \item<3-> Importance of meta-scientific knowledge
+  \item<2-> Importance of meta-scientific knowledge
   \begin{itemize}
     \item[1.] Robustness of results and incremental science ($\rightarrow$ meta-analyses)
     \item[2.] Generalization of results ($\rightarrow$ construct and external validity)
@@ -195,6 +195,17 @@
     \item[] fixed-effects meta-analysis model \& random effects m-a model
   \end{itemize}
 \end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Theoretical background on natural resources}
+\centering
+
+\includegraphics[width = \textwidth]{../img/conflict_diamonds}
+  
 
 \end{frame}
 % ----------------------------------------------------
@@ -275,36 +286,48 @@
     \item X-axis: Effect size
     \item Y-axis: Measure of precision (e.g. standard error in inverted scale)
   \end{itemize}
-  \item<3-> We should see a \textit{pyramid}: less precision at the bottom and more spread-out effect sizes, more precision at the top
+  \item<3-> We should see a \textit{pyramid}: less precision at the bottom (more spread-out effect sizes), more precision at the top (center at truth)
   \item<4-> If there's publication bias, e.g. we won't see points in the bottom right/left (only positive or negative effects are submitted/published)
+  \item<1-> {\footnotesize References \href{https://www.bmj.com/content/343/bmj.d4002}{here} and \href{https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204}{here}}
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\imageframe{../img/normal-looking-funnel-plot}
+\imageframe{../img/funnel_good}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\imageframe{../img/skewed-funnel-plot}
+\imageframe{../img/funnel_bad}
 % ----------------------------------------------------
   
 % ----------------------------------------------------
-\begin{frame}
-\frametitle{Inverted funnel plots?}
+\begin{frame}<1>[label=funnel]
+\frametitle{Other cases}
 \centering
 
 \begin{itemize}
-  \item We could observe an inverted funnel plot
-  \item That could be the case e.g. if people don't submit `imprecise' estimates but still can't find the true effect (unaccounted for heterogeneity, as in the natural resources example?)
-  \item
-  % \item {\footnotesize See \href{https://dynamicecology.wordpress.com/2021/05/17/what-the-heck-is-up-with-the-many-ecological-meta-analyses-that-have-inverted-funnel-plots/}{this for an example discussion on ecology}}
+  \item Weird funnel plots could also indicate other things different from publication bias
+  \item Asymmetry could be due to \textbf{unknown heterogeneity}
+  \item<2-> Or we could observe an \textbf{inverted funnel plot}
+  \item<2-> That could be the case e.g. if people don't submit `imprecise' estimates but still can't find the true effect (unaccounted for heterogeneity, as in the natural resources example?)
+  \begin{itemize}
+    \item {\footnotesize See e.g. \href{https://dynamicecology.wordpress.com/2021/05/17/what-the-heck-is-up-with-the-many-ecological-meta-analyses-that-have-inverted-funnel-plots/}{this post}}
+  \end{itemize}
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
-  
+
+% ----------------------------------------------------
+\imageframe{../img/funnel_heterogeneity}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\againframe<2->{funnel}
+% ----------------------------------------------------
+
 % ----------------------------------------------------
 \imageframe{../img/inverted-funnel-plot}
 % ----------------------------------------------------
@@ -324,25 +347,13 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Funnel plots in meta-analyses}
-\centering
-
-https://www.bmj.com/content/343/bmj.d4002
-
-https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204
-
-\end{frame}
-% ----------------------------------------------------
-  
-
-% ----------------------------------------------------
-\begin{frame}
 \frametitle{Generalizing results}
 \centering
 
 \begin{itemize}
   \item Meta-analyses are \textbf{not} enough
-  \item We need some kind of formal approach to understand the validity of studies
+  \item There are also formal approaches to understand the validity of studies
+  \item Two key concepts
 \end{itemize}
 
 \end{frame}
@@ -450,55 +461,150 @@ https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204
 \end{frame}
 % ----------------------------------------------------
 
-\section{Mechanism test and additional implications}
+\section{Complementary tests}
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Testing the mechanism}
-\centering
-
-
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Additional implications of the theory}
-\centering
-
-
-
-\end{frame}
-% ----------------------------------------------------
-
-\section{Robustness and inference tests}
-
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Basic guidelines on robustness tests}
-\centering
-
-
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Inference tests: placebo tests}
+\frametitle{Complementary tests}
 \centering
 
 \begin{itemize}
-  \item Reference:
+  \item Once we have the main analysis, things do not end there
+  \item We need more evidence supporting our argument and increasing credibility of results
+  \item Two interrelated ideas:
   \begin{itemize}
-    \item AC Eggers, G Tuñón, A Dafoe (2023) \href{https://doi.org/10.1111/ajps.12818}{Placebo Tests for Causal Inference}. \textit{American Journal of Political Science}, published online.
+    \item Testing \textbf{additional theoretical implications}
+    \item Testing the \textbf{robustness of analyses}
   \end{itemize}
+  
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Additional implications}
+\centering
+
+\begin{itemize}
+  \item[1.] Mechanism
+  \begin{itemize}
+    \item How could we obtain evidence support the mechanism we propose?
+  \end{itemize}
+  \item[2.] Additional empirical observations
+  \begin{itemize}
+    \item if our theory is true, what else should we observe or not?
+    \item can we rule out \textit{other} explanations/mechanisms?
+  \end{itemize}
+  \item These two can also overlap
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Robustness tests}
+\centering
+
+\begin{itemize}
+  \item[1.] Alternative specifications
+  \begin{itemize}
+    \item what happens if we change measurement decisions, model choices, sample, etc?
+    \item testing methodological leverage
+  \end{itemize}
+  \item[2.] Placebo tests
+  \begin{itemize}
+    \item Testing assumptions of the inference strategy
+    \item Looking for relationships where there should be none
+    \item Remember parallel trends assumption in DiD
+  \end{itemize}
+  
+\end{itemize}
+
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Types of placebo tests}
+\centering
+
+\begin{itemize}
+  \item {\small \href{https://doi.org/10.1111/ajps.12818}{Eggers, Tuñón \& Dafoe (2023) Placebo Tests for Causal Inference}}
+  \item Example: \href{https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12355}{Peisakhin \& Rozenas} on effect of Russian news media and exploiting news TV signal strength
+  \item[1.] Placebo outcome test
+  \begin{itemize}
+    \item Testing alternative outcomes
+    \item Ex: Russian TV signal strength should \textit{not} predict \% Russian speakers or other confounders
+  \end{itemize}
+  \item[2.] Placebo treatment test
+  \begin{itemize}
+    \item Testing alternative treatments
+    \item Ex: Russian \textit{sports} TV signal should not predict voting
+  \end{itemize}
+  \item[3.] Placebo population test
+  \begin{itemize}
+    \item Looking at a population where there should be no effect
+    \item Ex: Ukranians that watch satellite TV (signal shouldn't matter)
+  \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+% ----------------------------------------------------
+  
+  
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Testing the mechanism}
+% \centering
+
+
+
+% \end{frame}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Additional implications of the theory}
+% \centering
+
+
+
+% \end{frame}
+% % ----------------------------------------------------
+
+% \section{Robustness and inference tests}
+
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Basic guidelines on robustness tests}
+% \centering
+
+
+
+% \end{frame}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Inference tests: placebo tests}
+% \centering
+
+% \begin{itemize}
+%   \item Reference:
+%   \begin{itemize}
+%     \item AC Eggers, G Tuñón, A Dafoe (2023) \href{https://doi.org/10.1111/ajps.12818}{Placebo Tests for Causal Inference}. \textit{American Journal of Political Science}, published online.
+%   \end{itemize}
+% \end{itemize}
+
+% \end{frame}
+% % ----------------------------------------------------
 
 % \section{Extra: Bartik instruments}
 
@@ -549,6 +655,21 @@ https://journals.sagepub.com/doi/pdf/10.1177/1536867X0400400204
 \centering
 
 \includegraphics[width = \textwidth]{../img/abadie2003b}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Original study}
+\centering
+
+\includegraphics[width = \textwidth]{../img/abadie2003_2}
+
+\begin{itemize}
+  \item By the way: complementary tests of additional implications
+\end{itemize}
+
 
 \end{frame}
 % ----------------------------------------------------
@@ -1657,6 +1778,8 @@ Our true causal model
 
 \end{frame}
 % ----------------------------------------------------
+
+\section{Re-cap \& example}
 
 % ----------------------------------------------------
 \begin{frame}
