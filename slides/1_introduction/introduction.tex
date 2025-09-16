@@ -4,7 +4,7 @@
 % Title --------------------------------------------
 \title[Lecture 1: Introduction to Research Design]{\Large Introduction to Research Design}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2025}
 
 \input{../beamer_preamble.tex}
 
@@ -15,6 +15,21 @@
 \begin{frame}
 
   \titlepage
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Introduction}
+\centering
+
+\begin{itemize}
+  \item<1-> What is this course about?
+  \item<1-> Expectations?
+  \item[]<2->
+  \item<2-> \textbf{What is research? And why do we need to design it?}
+\end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
@@ -51,27 +66,30 @@
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Introduction}
+\frametitle{Challenger example}
 \centering
 
 \begin{itemize}
-  \item<1-> What is this course about?
-  \item<1-> Expectations?
-  \item[]<2->
-  \item<2-> \textbf{What is research? And why do we need to design it?}
+  \item \colorbox{yellow}{Explanatory} research
+  \item What is the role of design here?
+  \item<2-> Which observations to use
+  \item<2-> What \textit{variation} we need to answer the question?
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
-
+  
 % ----------------------------------------------------
 \begin{frame}
 \frametitle{Types of research}
 \centering
 
 \begin{itemize}
-  \item \textit{Theoretical} and \textit{empirical} research
-  \item \textit{Qualitative} and \textit{quantitative} empirical research
+  \item \textit{Theoretical} and \colorbox{yellow}{\textit{empirical} research}
+  \item<2-> \textit{Qualitative} and \colorbox{yellow}{\textit{quantitative} empirical research}
+  \begin{itemize}
+    \item<3-> Descriptive vs explanatory
+  \end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -84,8 +102,17 @@
 
 \begin{itemize}
   \item Goal: answer a question using empirical evidence
-  \item How? exploiting \textbf{empirical variation}
-  \item Research design is essentially knowing where to look at, how to measure it, how to analyze it, how to interpret it, etc -- it's about inference
+  \begin{itemize}
+    \item Usual problems: unanswerable questions, wrong data to question, concepts do not correspond to measurements...
+  \end{itemize}
+  \item<2-> How? exploiting \textbf{empirical variation}
+  \item<2-> Research design is essentially knowing where to look at, how to measure it, how to analyze it, how to interpret it, etc --
+  \item[]<2-> it's about \colorbox{yellow}{inference}
+  \item<3-> Example:
+    \begin{itemize}
+      \item Hotel interested in increasing bookings
+      \item Data used: online bookings and actual visits
+    \end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -104,14 +131,13 @@
     \item Simulations, cases without variation?
     \item etc
   \end{itemize}
-  \item Idea is learning about \textbf{making claims}, or how can we learn from the observable world the right way?
+  \item Idea is learning about \textbf{making claims}, or how can we learn from the observable world the right way
   \item Two things we should learn:
   \item[] how to answer questions \& and how to evaluate answers
 \end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
-
 
 % ----------------------------------------------------
 \begin{frame}
@@ -123,6 +149,27 @@
 \end{frame}
 % ----------------------------------------------------
 
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Empirical evidence and claims}
+\centering
+
+\begin{itemize}
+  \item Let's reverse-engineer this:
+  \begin{itemize}
+    \item What did they probably do?
+  \end{itemize}
+  \item How would you answer the question better?
+  \item<2-> Causal inference and experimental methods
+  \begin{itemize}
+    \item Observation vs manipulation
+  \end{itemize}
+  \item<3-> Gold standard?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+  
 % ----------------------------------------------------
 \imageframe{../img/psycho1}
 % ----------------------------------------------------
@@ -145,13 +192,40 @@
 \end{frame}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\imageframe{../img/replicationcrisis1}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/replicationcrisis1}
+% % ----------------------------------------------------
 
 % ----------------------------------------------------
 \imageframe{../img/replicationcrisis2}
 % ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/marshmallow}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/marshmallow2}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/marshmallow3}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Other types of inference}
+\centering
+
+\begin{itemize}
+  \item We are used to cases where we compare many observations with different values on key variables
+  \item What if we don't have enough observations to answer a question?
+  \item Any idea about examples?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+    
 
 % ----------------------------------------------------
 \imageframe{../img/derecho2022a}
@@ -230,7 +304,7 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
 
 \begin{itemize}[<+->]
   \item[1.] Observation
-  \item[2.] Unit
+  \item[2.] Unit of analysis or unit of observation
   \item[3.] Variables
   \item[4.] Variation
 \end{itemize}
@@ -240,15 +314,15 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
 
 % ----------------------------------------------------
 \begin{frame}<1>[label=variation]
-\frametitle{On variation}
+\frametitle{A few questions on variation}
 \centering
 
 \begin{itemize}
   \item Why do we talk so much about \textit{variation}?
-  \item<2-> Critique of having ``so few observations''?
-  \item<2-> Why do we use statistics at all?
-  \item<2-> What about experiments?
-  \item<2-> Where's the variation in attribution science?
+  \item<2-> Critique of having ``few observations''?
+  \item<3-> Why do we use statistics at all?
+  \item<4-> What about experiments?
+  \item<5-> Where's the variation in attribution science?
 \end{itemize}
 
 \end{frame}
@@ -296,6 +370,24 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{On the unit of analysis}
+\centering
+
+\begin{itemize}
+  \item Most empirical designs can be adapted to different units of analyses
+  \item The unit you use is related to the question and theory
+  \item Example: think again about the hotel that wants to increase bookings
+  \begin{itemize}
+    \item How many different units could you use and how are they related to different questions/theories?
+  \end{itemize}
+  \item<2-> Another example: children educational attainment and contextual factors (peers, school, family, etc)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Reading}
 \centering
 
@@ -319,12 +411,12 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
     \item Relevant: importance and connection theory/empirics (*)
   \end{itemize}
   \item[]<4->
-  \item[]<4-> Examples
+  \item[]<4-> Examples, good and bad
   \begin{itemize}
     \item What is the best Netflix show?
     \item What can we do to help poor countries develop?
     \item What are the shopping patterns of the Spanish population?
-    \item {\small (*) Do individuals from minorities support the use of violence?}
+    \item Do individuals from minorities support the use of violence?
   \end{itemize}
 \end{itemize}
 
@@ -360,10 +452,9 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
 \begin{itemize}
   \item[$>$] From \textbf{theory} to \BGyellow{\textbf{measurement}}
   \item[]
-  \item Concepts
-  \item Operationalization in variables
-  \item Measurement
-  \item Unit of analysis
+  \item<2-> Concepts
+  \item<3-> Operationalization, unit of analysis
+  \item<4-> Measurement
 \end{itemize}
 
 \end{frame}
@@ -378,9 +469,9 @@ In every case, when we talk about \textit{quantitative empirical research}, we w
   \item[$>$] From \textbf{measurement} to \BGyellow{\textbf{strategy}}
   \item[]
   \item Once you have your variables measured, what variation are you going to look at?
-  \begin{itemize}
-    \item Think about how kids learn
-  \end{itemize}
+  % \begin{itemize}
+  %   \item Think about how kids learn
+  % \end{itemize}
   \item Descriptive and causal inference
   \item (Experiments) (*)
 \end{itemize}
@@ -453,8 +544,8 @@ You are hired by the city government as a quantitative analyst to tackle the pro
 \centering
 
 \begin{itemize}
-  \item Tuesdays 18:00--21:00 (except last class)
-  \item Seven sessions between September 17th and October 22nd
+  \item Tuesdays 18:00--21:00 (not always)
+  \item Seven sessions between today and October 20th
   \item[]
   \item My email: \texttt{francisco.villamil@uc3m.es}
   \item Office hours
@@ -510,12 +601,12 @@ You are hired by the city government as a quantitative analyst to tackle the pro
 \begin{itemize}
   \item Get a topic or problem and go through all the steps in the research process
   \item No need to do data analyses or statistics (but you could show something if it's relevant)
-  \item \textbf{Most important thing}: show me you understand how you can learn something about the topic from quantiative data, what different strategies you could use and what are the general and specific limitations of them
+  \item \textbf{Most important thing}: show me you understand how you can learn something about the topic from quantitative data, what different strategies you could use and what are the general and specific limitations of them
   \item Word limit: \textbf{5000 words} (we can talk in case of group essays)
   \begin{itemize}
     \item Appendix obviously does not count
   \end{itemize}
-  \item {\color{red}{Deadline}}: \textbf{October 30th, 23.59h} (exam week)
+  \item {\color{red}{Deadline}}: \textbf{October 28th, 23.59h} (exam week)
 \end{itemize}
 
 \end{frame}
@@ -545,12 +636,12 @@ You are hired by the city government as a quantitative analyst to tackle the pro
 \centering
 
 \begin{itemize}
-  \item Sept 17: Introduction
-  \item Sept 24: Elements of quantitative data
-  \item Oct 1: Causality and experimental evidence
-  \item Oct 8: Causal inference with observational data
-  \item Oct 15: Advanced topics and overview
-  \item Oct 22 (15h-21h): Workshop (double session)
+  \item Sept 16: Introduction
+  \item Sept 23: Elements of quantitative data
+  \item Sept 30: Causality and experimental evidence
+  \item Oct 6 (Monday): Causal inference with observational data
+  \item Oct 14: Advanced topics and overview
+  \item Oct 20 (Monday, 15h-21h): Workshop
 \end{itemize}
 
 \end{frame}
