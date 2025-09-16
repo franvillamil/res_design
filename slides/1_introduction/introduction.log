@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  16 SEP 2025 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  16 SEP 2025 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1796,14 +1796,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [43
 
 ]
-<../img/halley_eclipse.png, id=271, 935.495pt x 806.01125pt>
-File: ../img/halley_eclipse.png Graphic file (type png)
-<use ../img/halley_eclipse.png>
-Package pdftex.def Info: ../img/halley_eclipse.png  used on input line 332.
-(pdftex.def)             Requested size: 317.02205pt x 273.1424pt.
- [44
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
 
- <../img/halley_eclipse.png>]
+[44
+
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1811,13 +1810,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [45
 
 ]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
+<../img/halley_eclipse.png, id=281, 935.495pt x 806.01125pt>
+File: ../img/halley_eclipse.png Graphic file (type png)
+<use ../img/halley_eclipse.png>
+Package pdftex.def Info: ../img/halley_eclipse.png  used on input line 346.
+(pdftex.def)             Requested size: 317.02205pt x 273.1424pt.
+ [46
 
-[46
-
-]
+ <../img/halley_eclipse.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1846,62 +1846,56 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [50
 
 ]
-<../img/ua1.png, id=314, 475.7775pt x 383.4325pt>
-File: ../img/ua1.png Graphic file (type png)
-<use ../img/ua1.png>
-Package pdftex.def Info: ../img/ua1.png  used on input line 360.
-(pdftex.def)             Requested size: 259.35727pt x 209.028pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [51
 
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[52
+
+]
+<../img/ua1.png, id=324, 475.7775pt x 383.4325pt>
+File: ../img/ua1.png Graphic file (type png)
+<use ../img/ua1.png>
+Package pdftex.def Info: ../img/ua1.png  used on input line 374.
+(pdftex.def)             Requested size: 259.35727pt x 209.028pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[53
+
  <../img/ua1.png (PNG copy)>]
-<../img/ua2.png, id=320, 657.45625pt x 684.5575pt>
+<../img/ua2.png, id=330, 657.45625pt x 684.5575pt>
 File: ../img/ua2.png Graphic file (type png)
 <use ../img/ua2.png>
-Package pdftex.def Info: ../img/ua2.png  used on input line 364.
+Package pdftex.def Info: ../img/ua2.png  used on input line 378.
 (pdftex.def)             Requested size: 262.3358pt x 273.14963pt.
- [52
+ [54
 
  <../img/ua2.png>]
-<../img/ua3.png, id=327, 655.44875pt x 604.2575pt>
+<../img/ua3.png, id=337, 655.44875pt x 604.2575pt>
 File: ../img/ua3.png Graphic file (type png)
 <use ../img/ua3.png>
-Package pdftex.def Info: ../img/ua3.png  used on input line 368.
+Package pdftex.def Info: ../img/ua3.png  used on input line 382.
 (pdftex.def)             Requested size: 296.28938pt x 273.14886pt.
- [53
+ [55
 
  <../img/ua3.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
-[54
-
-]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
-[55
-
-]
-<../img/reading.png, id=345, 1060.96375pt x 494.84875pt>
-File: ../img/reading.png Graphic file (type png)
-<use ../img/reading.png>
-Package pdftex.def Info: ../img/reading.png  used on input line 396.
-(pdftex.def)             Requested size: 259.35727pt x 120.9634pt.
-
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
 [56
 
- <../img/reading.png>]
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1909,13 +1903,19 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [57
 
 ]
+<../img/reading.png, id=355, 1060.96375pt x 494.84875pt>
+File: ../img/reading.png Graphic file (type png)
+<use ../img/reading.png>
+Package pdftex.def Info: ../img/reading.png  used on input line 410.
+(pdftex.def)             Requested size: 259.35727pt x 120.9634pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [58
 
-]
+ <../img/reading.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2063,11 +2063,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [79
 
 ]
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 662.
-
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2082,11 +2077,10 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [81
 
 ]
-<../img/mullercrepon.png, id=494, 525.965pt x 511.9125pt>
-File: ../img/mullercrepon.png Graphic file (type png)
-<use ../img/mullercrepon.png>
-Package pdftex.def Info: ../img/mullercrepon.png  used on input line 686.
-(pdftex.def)             Requested size: 226.93576pt x 220.87576pt.
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 676.
+
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -2094,12 +2088,32 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [82
 
- <../img/mullercrepon.png>]
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [83
+
+]
+<../img/mullercrepon.png, id=504, 525.965pt x 511.9125pt>
+File: ../img/mullercrepon.png Graphic file (type png)
+<use ../img/mullercrepon.png>
+Package pdftex.def Info: ../img/mullercrepon.png  used on input line 700.
+(pdftex.def)             Requested size: 226.93576pt x 220.87576pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[84
+
+ <../img/mullercrepon.png>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[85
 
 ]
 \tf@nav=\write7
@@ -2122,10 +2136,10 @@ Package logreq Info: Writing requests to 'introduction.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34574 strings out of 476025
- 693670 string characters out of 5790017
+ 34580 strings out of 476025
+ 693726 string characters out of 5790017
  1861388 words of memory out of 5000000
- 54186 multiletter control sequences out of 15000+600000
+ 54188 multiletter control sequences out of 15000+600000
  524543 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1137b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2137,10 +2151,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on introduction.pdf (83 pages, 4737419 bytes).
+Output written on introduction.pdf (85 pages, 4738909 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 433 compressed objects within 5 object streams
- 173 named destinations out of 1000 (max. 500000)
+ 593 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 177 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
