@@ -1,6 +1,6 @@
 \beamer@sectionintoc {1}{Theories and research questions}{2}{0}{1}
-\beamer@sectionintoc {2}{Concepts and operationalization}{40}{0}{2}
-\beamer@sectionintoc {3}{Measurement}{50}{0}{3}
-\beamer@sectionintoc {4}{Description}{117}{0}{4}
-\beamer@sectionintoc {5}{Example: Wartime civilian deaths}{149}{0}{5}
-\beamer@sectionintoc {6}{Paper discussion}{152}{0}{6}
+\beamer@sectionintoc {2}{Concepts and operationalization}{39}{0}{2}
+\beamer@sectionintoc {3}{Measurement}{52}{0}{3}
+\beamer@sectionintoc {4}{Description}{113}{0}{4}
+\beamer@sectionintoc {5}{Example: Wartime civilian deaths}{145}{0}{5}
+\beamer@sectionintoc {6}{Paper discussion}{148}{0}{6}
