@@ -7,7 +7,7 @@
 % Title --------------------------------------------
 \title[Lecture 3: Causality]{\Large Causality}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2025}
 
 \input{../beamer_preamble.tex}
 
@@ -64,109 +64,109 @@
 
 \section{Intro to explanation}
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Prediction and explanation}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Prediction and explanation}
+% \centering
 
-\begin{itemize}
-  \item Often the gold standards of empirical science
-  \item Not the same
-  \begin{itemize}
-    \item Being able to predict does \textbf{not} mean you are explaining something
-    \item Knowing the exact causal effect of $x$ on $y$ does \textbf{not} mean you are able to predict $y$
-    \item Having a complete causal model would allow for prediction given perfect measurement, but that's impossible in the social sciences
-    \begin{itemize}
-      \item[] (and pretty much any other complex system, think about weather forecasting and problems of non-linear and complex models, computing power limitations, absence of data, measurement error...)
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
+% \begin{itemize}
+%   \item Often the gold standards of empirical science
+%   \item Not the same
+%   \begin{itemize}
+%     \item Being able to predict does \textbf{not} mean you are explaining something
+%     \item Knowing the exact causal effect of $x$ on $y$ does \textbf{not} mean you are able to predict $y$
+%     \item Having a complete causal model would allow for prediction given perfect measurement, but that's impossible in the social sciences
+%     \begin{itemize}
+%       \item[] (and pretty much any other complex system, think about weather forecasting and problems of non-linear and complex models, computing power limitations, absence of data, measurement error...)
+%     \end{itemize}
+%   \end{itemize}
+% \end{itemize}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction (in the social sciences)}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction (in the social sciences)}
+% \centering
 
-\begin{itemize}
-  \item[] The two concepts of prediction:
-  \item Predicting another variable ($\approx$ proxies)
-  \item Out of sample prediction (`predicting the future')
-\end{itemize}
+% \begin{itemize}
+%   \item[] The two concepts of prediction:
+%   \item Predicting another variable ($\approx$ proxies)
+%   \item Out of sample prediction (`predicting the future')
+% \end{itemize}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/spotify}
+% \includegraphics[width = \textwidth]{../img/spotify}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/target_pregnancy}
+% \includegraphics[width = \textwidth]{../img/target_pregnancy}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/blumenstock}
+% \includegraphics[width = \textwidth]{../img/blumenstock}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/blumenstock2}
+% \includegraphics[width = \textwidth]{../img/blumenstock2}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About prediction}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About prediction}
+% \centering
 
-\includegraphics[width = \textwidth]{../img/blumenstock3}
+% \includegraphics[width = \textwidth]{../img/blumenstock3}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{About explanation}
-\centering
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{About explanation}
+% \centering
 
-\begin{itemize}
-  \item When we are dealing with \textit{explanation}, we want to use data to get closer to the \textit{data generating process}
-  \item This is the causal process that generates the outcomes that we are measuring (data)
-  \item<2-> Example:
-  \begin{itemize}
-    \item What is the process generating the data that Spotify receives about your music tastes (i.e. song choice)?
-    \item<3-> So if we ask how weather \textit{impacts} song choice, we are asking about the explanation of song choice, and we want to use data to learn this bit about the data generating process
-  \end{itemize}
-  \item To do that, we need to learn about the concept of \BGyellow{causation}
-\end{itemize}
+% \begin{itemize}
+%   \item When we are dealing with \textit{explanation}, we want to use data to get closer to the \textit{data generating process}
+%   \item This is the causal process that generates the outcomes that we are measuring (data)
+%   \item<2-> Example:
+%   \begin{itemize}
+%     \item What is the process generating the data that Spotify receives about your music tastes (i.e. song choice)?
+%     \item<3-> So if we ask how weather \textit{impacts} song choice, we are asking about the explanation of song choice, and we want to use data to learn this bit about the data generating process
+%   \end{itemize}
+%   \item To do that, we need to learn about the concept of \BGyellow{causation}
+% \end{itemize}
 
-\end{frame}
-% ----------------------------------------------------
+% \end{frame}
+% % ----------------------------------------------------
 
 % % ----------------------------------------------------
 % \begin{frame}
@@ -263,11 +263,47 @@
 % \end{frame}
 % % ----------------------------------------------------
 
-\section{Potential outcomes framework}
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Explaining relationships}
+\centering
+
+\begin{itemize}
+  \item Explanation vs. prediction
+  \item<2-> If we want to explain, we need to know about how the real world works
+  \begin{itemize}
+    \item \textbf{Causal model} (also think about \textbf{data generating process})
+  \end{itemize}
+  \item<3-> We don't necessarily need that for prediction
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Potential outcomes vs causal models/DAGs}
+\frametitle{Explaining relationships}
+\centering
+
+\begin{itemize}
+  \item No brute-force way into causal inference
+  \item Statistical/computational approaches to causality
+  \item<1->[1.] Potential outcomes framework (Rubin model):
+  \begin{itemize}
+    \item more present in economics, linked to experiments (but not only), formal notation and definition of causal estimands, ...
+  \end{itemize}
+  \item<2->[2.] Structural causal model:
+  \begin{itemize}
+    \item use of DAGs, more popular in epidemiology, linked to observational data, increasingly popular in social sciences, ...
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Potential outcomes vs causal models}
 \centering
 
 \includegraphics[width = 0.45\textwidth]{../img/the_book_of_why}
@@ -275,19 +311,8 @@
 \end{frame}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Potential outcomes vs causal models/DAGs}
-\centering
+\section{Potential outcomes framework}
 
-\begin{itemize}
-  \item Potential outcomes more present in economics, linked to experiments, causal estimands
-  \item Causal models and DAGs more popular in epidemiology, linked to observational data, increasingly popular in social sciences
-\end{itemize}
-
-
-\end{frame}
-% ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
