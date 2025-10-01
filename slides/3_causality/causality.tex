@@ -1344,6 +1344,7 @@ cor(df$whiskey_resid, df$risk_resid)
 \end{itemize}
 
  \begin{lstlisting}[language=R]
+ set.seed(7891234)
  df = data.frame(
    intelligence = rnorm(1000, mean = 5, sd = 1.5),
    social_skills = rnorm(1000, mean = 5, sd = 1.5))
@@ -1363,7 +1364,7 @@ cor(df$whiskey_resid, df$risk_resid)
 
  \begin{lstlisting}[language=R]
  > cor(df$intelligence, df$social_skills)
- [1] 0.005902188
+ [1] -0.03982793
  \end{lstlisting}
 
 \end{frame}
@@ -1374,18 +1375,8 @@ cor(df$whiskey_resid, df$risk_resid)
 \frametitle{Collider bias}
 \centering
 
-\includegraphics[width = 0.4\textwidth]{../img/collider_m1}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
 \begin{itemize}
-  \item Now imagine that we have another variable, the probability of being hired in a company, which is we will say is caused by both intelligence and social skills:
+  \item Now imagine that we have another variable, the probability of being hired in a company, which is caused by both intelligence and social skills:
 \end{itemize}
 
 \begin{tikzpicture}
@@ -1398,71 +1389,42 @@ cor(df$whiskey_resid, df$risk_resid)
 \draw[<-] (U) -- (Y);
 \end{tikzpicture}
 
-%\begin{lstlisting}[language=R]
-% df = df %>%
-%  mutate(hired = 1.5 * intelligence + 3 * social_skills) %>%
-%  mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0)) %>%
-%  mutate(hired = hired / max(hired))
-%\end{lstlisting}
-
 \end{frame}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Collider bias}
 \centering
 
-\includegraphics[width = 0.6\textwidth]{../img/collider_m2}
+\begin{itemize}
+  \item This company values intelligence a bit more, but takes both into account. And hires the 25\% best candidates:
+\end{itemize}
 
-% ml = list(
-%   "Model 1" = lm(social_skills ~ intelligence, data = df),
-%   "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))
-% msummary(ml, estimate = "{estimate}{stars}")
+\begin{lstlisting}[language=R]
+  df = df %>%
+    mutate(
+      points = 3 * intelligence + 2 * social_skills) %>%
+    mutate(hired_binary = ifelse(points > quantile(points, 0.75), 1, 0))
+\end{lstlisting}
 
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
-\includegraphics[width = 0.7\textwidth]{../img/collider1}
 
 \end{frame}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
-\includegraphics[width = 0.7\textwidth]{../img/collider2}
-
-\end{frame}
+\imageframe{../img/collider_m1}
+\imageframe{../img/collider_m2}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
-\includegraphics[width = 0.7\textwidth]{../img/collider3}
-
-\end{frame}
+\imageframe{../img/collider1}
+\imageframe{../img/collider2}
+\imageframe{../img/collider3}
+\imageframe{../img/collider4}
+\imageframe{../img/collider5}
 % ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Collider bias}
-\centering
-
-\includegraphics[width = 0.7\textwidth]{../img/collider4}
-
-\end{frame}
-% ----------------------------------------------------
-
+  
 % ----------------------------------------------------
 \begin{frame}
 \frametitle{Collider bias}
@@ -1482,9 +1444,14 @@ cor(df$whiskey_resid, df$risk_resid)
 
 \begin{minipage}{.54\textwidth}\centering
 \begin{itemize}
-  \item Another example in life sciences where we can only use observational data
-  \item Obesity reduces mortality among older people or patients with some chronic diseases (?)
-  \item Collider bias? Y = health, X = environment/genetics
+  \item Another example in life sciences where we can only use observational data, the `obesity paradox'
+  \begin{itemize}
+    \item Obesity reduces mortality among patients with some chronic heart diseases
+  \end{itemize}
+  \item Collider bias?
+  \begin{itemize}
+    \item \url{https://catalogofbias.org/biases/collider-bias/}
+  \end{itemize}
 \end{itemize}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}\centering

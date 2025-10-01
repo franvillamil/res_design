@@ -1,12 +1,6 @@
-\defcounter {refsection}{0}\relax 
 \beamer@slide {confounding}{102}
-\defcounter {refsection}{0}\relax 
 \beamer@slide {reverse}{105}
-\defcounter {refsection}{0}\relax 
 \beamer@slide {bidirect}{106}
-\defcounter {refsection}{0}\relax 
 \beamer@slide {selectbias}{108}
-\defcounter {refsection}{0}\relax 
 \beamer@slide {collider}{110}
-\defcounter {refsection}{0}\relax 
-\beamer@slide {ptbias}{123}
+\beamer@slide {ptbias}{125}

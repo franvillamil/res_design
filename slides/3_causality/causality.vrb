@@ -2,11 +2,14 @@
 \centering
 
 \begin{itemize}
-  \item No correlation
+  \item This company values intelligence a bit more, but takes both into account. And hires the 25\% best candidates:
 \end{itemize}
 
- \begin{lstlisting}[language=R]
- > cor(df$intelligence, df$social_skills)
- [1] 0.005902188
- \end{lstlisting}
+\begin{lstlisting}[language=R]
+  df = df %>%
+    mutate(
+      points = 3 * intelligence + 2 * social_skills) %>%
+    mutate(hired_binary = ifelse(points > quantile(points, 0.75), 1, 0))
+\end{lstlisting}
+
 

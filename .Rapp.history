@@ -1,0 +1,3484 @@
+summary(sunab) ## here the same
+# modelo (>>> con never treated as control)#
+callahan1 = att_gt(#
+  data = data,#
+  yname = "y",#
+  tname = "time",#
+  idname = "id",#
+  gname = "treat_group",#
+  clustervars = "id",#
+  base_period = "universal",#
+  control_group = "nevertreated")
+summary(callahan1) ## comparison of group 2 to time 1 and 3 to 2 are missing
+callahan1_agg = aggte(callahan1, type = "dynamic", bstrap = TRUE)
+summary(callahan1_agg) ## time_to_treat =-1 is missing as well
+ggdid(callahan1_agg)
+#### lo mismo pero con not-yet-treated como control#
+callahan2 = att_gt(#
+  data = data,#
+  yname = "y",#
+  tname = "time",#
+  idname = "id",#
+  gname = "treat_group",#
+  clustervars = "id",#
+  base_period = "universal",#
+  control_group = "notyettreated")#
+# resultados y grafico#
+summary(callahan2) ## same as with nevertreated as control
+callahan2_agg = aggte(callahan2, type = "dynamic", bstrap = TRUE)#
+summary(callahan2_agg) ## same: -1 is NA
+?att_gt
+data$treat_group <- replace(data$treat_group, is.infinite(data$treat_group), 0) ## it is weird that I am required to treat as 0 instead of "Inf"#
+data$treat_group <- as.numeric(data$treat_group)#
+#
+# modelo (>>> con never treated as control)#
+callahan1 = att_gt(#
+  data = data,#
+  yname = "y",#
+  tname = "time",#
+  idname = "id",#
+  gname = "treat_group",#
+  clustervars = "id",#
+  base_period = "universal",#
+  control_group = "nevertreated")#
+#
+# resultados y grafico#
+summary(callahan1) ## comparison of group 2 to time 1 and 3 to 2 are missing#
+ggdid(callahan1)#
+#
+# los general estimates#
+callahan1_agg = aggte(callahan1, type = "dynamic", bstrap = TRUE)#
+summary(callahan1_agg)
+event_study(data, yname = "y", idname = "id", tname = "time", gname = "treat_group", estimator = "impute")  # does not work
+##DiD from the scratch#
+rm(list=ls())#
+library(ggplot2)#
+library(fixest)#
+library(bacondecomp)#
+library(did2s)#
+library(did)#
+library(dplyr)#
+library(ggfixest)#
+set.seed(123)  # Ensure reproducibility following DGP  https://asjadnaqvi.github.io/DiD/docs/code_r#data-generation#
+#
+# 3 time periods, 30 individuals, and 3 treatment groups (entiendo que never = 0, early = 1, late = 2)#
+tmax <- 3#
+imax <- 30#
+nlvls <- 3  # Number of treatment groups#
+data <- expand.grid(time = 1:tmax, id = 1:imax)#
+#
+# Assign cohort per unique id (0 = never, 1 = early, 2 = late)#
+id_to_cohort <- data.frame(id = 1:imax, cohort = sample(c(0, 1, 2), imax, replace = TRUE))#
+#
+# Merge with main dataset#
+data <- merge(data, id_to_cohort, by = "id")#
+#
+# Assign treatment timing based on cohort#
+data$treat_group <- with(data,#
+  ifelse(cohort == 1, 2,  # Early treated (treated in t2)#
+    ifelse(cohort == 2, 3,  # Late treated (treated in t3)#
+    Inf)))                 # Never treated#
+#
+# Assign effect size, ¿also to untreated? Here I do so (I believe)#
+id_to_effect <- data.frame(id = 1:imax, effect = sample(2:10, imax, replace = TRUE))#
+data <- merge(data, id_to_effect, by = "id")#
+#
+# Determine treatment status#
+data$treat <- as.numeric(with(data, time >= treat_group))#
+#
+# Compute relative time since treatment, replacing NA with "Inf" for never-treated individuals#
+data$time_to_treat <- with(data, ifelse(is.finite(treat_group), time - treat_group, 0))#
+#
+# Compute outcome variable#
+data$y <- with(data, id + time + ifelse(treat, effect * time_to_treat+1, 0) + rnorm(nrow(data)))#
+data$ever_treated <- ifelse(data$treat_group != Inf, 1, 0)#
+#
+rm(id_to_cohort, id_to_effect)#
+#
+# Display first few rows#
+head(data)#
+### -----------------------------------------------#
+### TWFE with fixest#
+#
+twfe = feols(y ~ i(time_to_treat * ever_treated, ref = -1) | id + time,#
+             cluster = ~id, data = data)#
+summary(twfe) ## where is "time_to_treat" * ever_treated :: -1"? Missing#
+ggiplot(twfe)#
+#
+sunab =feols(y ~ sunab(treat_group, time) | id + time, data) #
+summary(sunab) ## here the same#
+#
+# El mítico gráfico (no funciona)#
+library(ggplot2)#
+ggplot(twfe)#
+### -----------------------------------------------#
+### Callahan and SantAnna#
+#
+data$treat_group <- replace(data$treat_group, is.infinite(data$treat_group), 0) ## it is weird that I am required to treat as 0 instead of "Inf"#
+data$treat_group <- as.numeric(data$treat_group)#
+#
+# modelo (>>> con never treated as control)#
+callahan1 = att_gt(#
+  data = data,#
+  yname = "y",#
+  tname = "time",#
+  idname = "id",#
+  gname = "treat_group",#
+  clustervars = "id",#
+  base_period = "universal",#
+  control_group = "nevertreated")#
+#
+# resultados y grafico#
+summary(callahan1) ## comparison of group 2 to time 1 and 3 to 2 are missing#
+ggdid(callahan1)#
+#
+# los general estimates#
+callahan1_agg = aggte(callahan1, type = "dynamic", bstrap = TRUE)#
+summary(callahan1_agg) ## time_to_treat =-1 is missing as well#
+ggdid(callahan1_agg)#
+#
+#### lo mismo pero con not-yet-treated como control#
+callahan2 = att_gt(#
+  data = data,#
+  yname = "y",#
+  tname = "time",#
+  idname = "id",#
+  gname = "treat_group",#
+  clustervars = "id",#
+  base_period = "universal",#
+  control_group = "notyettreated")#
+# resultados y grafico#
+summary(callahan2) ## same as with nevertreated as control#
+ggdid(callahan2)#
+#
+# los general estimates#
+callahan2_agg = aggte(callahan2, type = "dynamic", bstrap = TRUE)#
+summary(callahan2_agg) ## same: -1 is NA#
+ggdid(callahan2_agg)#
+### -----------------------------------------------#
+### Compararlos todos (con event_study del package did2s)#
+library(did2s)#
+#
+library(didimputation)#
+# library(data.table)#
+# setDT(data)#
+# data[, .N, by = .(id, time)][, table(N)]#
+#
+event_study(data, yname = "y", idname = "id", tname = "time", gname = "treat_group", estimator = "impute")  # does not work
+? did_imputation
+bjs = did_imputation(data = data, yname = "y", gname = "treat_group",#
+               tname = "time", idname = "id")
+? did_imputation
+data("df_hom", package="did2s")
+bjs1 = did_imputation(data = df_hom, yname = "dep_var", gname = "g",#
+               tname = "year", idname = "unit")
+bjs1
+head(df_hom)
+head(df_hom %>% select(dep_var, g, year, unit))
+head(df_hom %>% select(dep_var, g, year, unit), n=20)
+str(df_hom)
+bjs = did_imputation(data = data, yname = "y", gname = "treat_group",#
+  tname = "time", idname = "id")
+rlang::last_trace()
+rlang::last_trace(drop = FALSE)
+library(data.table)#
+setDT(data)#
+data[, .N, by = .(id, time)][, table(N)]
+head(data)
+str(data)
+str(df_hom)
+str(df_hom %>% select(dep_var, g, year, unit))
+bjs = did_imputation(data = data, yname = "y", gname = "treat_group",#
+  tname = "time", idname = "id")
+data("base_stagg")#
+#
+did_imputation(#
+    data = base_stagg,#
+    yname = "y",#
+    gname = "year_treated",#
+    tname = "year",#
+    idname = "id"#
+)
+session.Info()
+sessionInfo()
+install.packages("data.table", repos="https://rdatatable.gitlab.io/data.table")
+library(data.table)
+sessionInfo()
+bjs = did_imputation(data = data, yname = "y", gname = "treat_group",#
+  tname = "time", idname = "id")
+data("base_stagg")#
+#
+did_imputation(#
+    data = base_stagg,#
+    yname = "y",#
+    gname = "year_treated",#
+    tname = "year",#
+    idname = "id"#
+)
+allmodels = event_study(#
+  data = data, yname = "y", idname = "id",#
+  tname = "time", gname = "treat_group", estimator = "all") ## there are gaps in most graphs#
+### OJO: aquí da problemas por haber hecho los datos a mano, pero al menos sabes cómo se hace#
+plot_event_study(allmodels,separate=FALSE)
+capitalize("HOLA")
+capitalize(c("MARTA BLANCO MARTINEZ, nuevo tutor: PEDRO RIERA SAGRERA",#
+"LIDIA MARTINEZ RUIZ, nuevo tutor: PEDRO RIERA SAGRERA",#
+"ANTONIO NUÑEZ CORTES, JOS, nuevo tutor: LLUÍS ORRIOLS",#
+"MARGALIDA REUS MARTINEZ, nuevo tutor: LLUÍS ORRIOLS",#
+"ALBERTO TEYSSIERE CABELLO, nuevo tutor: LLUÍS ORRIOLS",#
+"JAIME GOMEZ PRIETO, nuevo tutor: IGNACIO SÁNCHEZ-CUENCA RODRÍGUEZ",#
+"MARTA GONZALEZ BARBADO, nuevo tutor: IGNACIO SÁNCHEZ-CUENCA RODRÍGUEZ",#
+"AYAMI GUTIERREZ OSHIMA, nuevo tutor: FRANCISCO VILLAMIL FERNÁNDEZ",#
+"MATILDE LOPEZ-TORRECILLA KJELDSEN, nuevo tutor: FRANCISCO VILLAMIL FERNÁNDEZ",#
+"RUBEN MARDONES DIEZ, nueva tutora: ISIK OZEL",#
+"ANTIA ZAERA SOLLEIRO, nueva tutora: ISIK OZEL"))
+my_csa_plot_averageATT(#
+  df_list = list(estp1_diff_bada, estp1_diff_nava),#
+  filename = "csa_atts_diffusion_badajoz_navarra",#
+  subtitle = subs,#
+  title = NULL,#
+  color = "trt", facet = "prov",#
+  colorlab = "Treatment (exhumation)",#
+  legend = "bottom",#
+  dv_recode = dvs_yr_rec,#
+  out_dir = "did_yearly", h = 3)
+s = c("aydin", "cristina", "diego", "guillermo", "pablo", "sara")
+s[sample(6, 1:6)]
+sample(6, 1:6)
+sample(1:6, 6)
+s[sample(1:6, 6)]
+p=c(290,#
+358,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+145,#
+145,#
+145,#
+148,#
+148,#
+148,#
+148,#
+174,#
+174,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+192,#
+192,#
+192,#
+192,#
+192,#
+349,#
+350,#
+350,#
+351,#
+351,#
+351,#
+364,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+402,#
+402,#
+402,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+415,#
+415,#
+415,#
+415,#
+415,#
+415,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+394,#
+394,#
+394,#
+394,#
+394,#
+394)
+length(p)
+unique(p)
+cbind(unique(p))
+p
+t=data.frame(p,g=NA)
+t
+p=c(290,#
+358,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+481,#
+145,#
+145,#
+145,#
+148,#
+148,#
+148,#
+148,#
+174,#
+174,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+175,#
+192,#
+192,#
+192,#
+192,#
+192,#
+349,#
+350,#
+350,#
+351,#
+351,#
+351,#
+364,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+396,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+398,#
+402,#
+402,#
+402,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+406,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+408,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+409,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+411,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+412,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+413,#
+415,#
+415,#
+415,#
+415,#
+415,#
+415,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+416,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+417,#
+394,#
+394,#
+394,#
+394,#
+394,#
+394)#
+#
+ai=c("N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"S",#
+"N",#
+"N",#
+"S",#
+"S",#
+"S",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"S",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N",#
+"N")#
+#
+t=data.frame(p,ai,g="")#
+t$g = ifelse(t$p %in% c(351,412), "EI-DCHO", t$g)#
+t$g = ifelse(t$p %in% c(349,409), "EI-ADE", t$g)#
+table(t$g, t$ai)
+39+35
+name_to_code("aranguren")
+library(muniSpain)
+name_to_code("aranguren")
+elec = read.csv("~/Downloads/electoral1936_fran.csv")
+head(elec)
+elec$mc = sprintf("%0.5d", elec$muni_code)
+head(elec)
+library(muniSpain)
+elec$p = str_sub(elec$mc, 1, 2)
+library(stringr)
+elec$p = str_sub(elec$mc, 1, 2)
+prov_to_code("ourense")
+elec = subset(elec, p %in% c("32", "28"))
+nrow(elec)
+head(elec)
+elec = read.csv("~/Downloads/electoral1936_fran.csv")
+elec$mc = sprintf("%0.5d", elec$muni_code)
+elec$p = str_sub(elec$mc, 1, 2)
+head(elec)
+table(elec$p)
+str(elec$p)
+code_to_prov(27)
+elec = subset(elec, p %in% c("27"))
+head(elec)
+elec$mc2 = changes_newcode(elec$mc, 1930, 2011)
+head(elec)
+table(elec$mc==elec$mc2)
+l = read.csv("~/Downloads/lugo1936.csv")
+l = read.csv("~/Dropbox/lugo1936.csv")
+head(l)
+l$mc = changes_newcode(l$muni_code, 1930, 2011)
+head8l
+head(l)
+table(l$muni_code==l$mc)
+subset(l,muni_code!=l$mc)
+code_to_name("27013")
+code_to_name("27036")
+code_to_name("27500")
+code_to_name("27902")
+subset(l, mc==27902)
+subset(l, mc==27013)
+subset(l, muni_code==27013)
+name_to_code("Cervo")
+head(l)
+l$muni = code_to_name(l$muni_code)
+head(l)
+l = l[,-6]
+head(l)
+write.csv(l, "~/Dropbox/Lugo1936.csv", row.names = FALSE)
+table(c("ESCRIBANO UBEDA PORTUGUES,  JOSE",#
+"ZAPATERO MIGUEL,  PABLO",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"CELADOR ANGON,  OSCAR",#
+"ZAPATERO MIGUEL,  PABLO",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ZAPATERO MIGUEL,  PABLO",#
+"CELADOR ANGON,  OSCAR",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ESCRIBANO UBEDA PORTUGUES,  JOSE"))
+cbind(table(c("ESCRIBANO UBEDA PORTUGUES,  JOSE",#
+"ZAPATERO MIGUEL,  PABLO",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"CELADOR ANGON,  OSCAR",#
+"ZAPATERO MIGUEL,  PABLO",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ZAPATERO MIGUEL,  PABLO",#
+"CELADOR ANGON,  OSCAR",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"CELADOR ANGON,  OSCAR",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ESCRIBANO UBEDA PORTUGUES,  JOSE")))
+d=c("Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales")
+table(d)
+t=c("JIMÉNEZ ROMERO,  MARTA",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"SAURINA LUCINI,  MARC",#
+"ESCRIBANO UBEDA PORTUGUES,  JOSE",#
+"FERNANDEZ VAZQUEZ,  GUILLERMO",#
+"SANDELL  ,  FRANK RICKARD",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"ALVAREZ NOGAL,  CARLOS",#
+"TERAN VERGARA,  FATIMA DE",#
+"BATTILOSSI  ,  STEFANO",#
+"TERAN VERGARA,  FATIMA DE",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"VEIRA RAMOS,  ALBERTO",#
+"ALVAREZ NOGAL,  CARLOS",#
+"ZAPATERO MIGUEL,  PABLO",#
+"LAHDELMA  ,  ILONA ERZSÉBET",#
+"TENA JUNGUITO,  ANTONIO",#
+"VEIRA RAMOS,  ALBERTO",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"HOUPT  ,  STEFAN OLIVER",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"TERAN VERGARA,  FATIMA DE",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"BATTILOSSI  ,  STEFANO",#
+"TENA JUNGUITO,  ANTONIO",#
+"JUIF  ,  DACIL TANIA",#
+"CELADOR ANGON,  OSCAR",#
+"BATTILOSSI  ,  STEFANO",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"ZAPATERO MIGUEL,  PABLO",#
+"VEIRA RAMOS,  ALBERTO",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"BARAJAS IÑIGO,  MARIA ASCENSIÓN",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"CELADOR ANGON,  OSCAR",#
+"RADL  ,  JONAS",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"ZAPATERO MIGUEL,  PABLO",#
+"OZEL SERBETÇI,  ISIK",#
+"JUIF  ,  DACIL TANIA",#
+"TERAN VERGARA,  FATIMA DE",#
+"ALVAREZ NOGAL,  CARLOS",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"BARAJAS IÑIGO,  MARIA ASCENSIÓN",#
+"CELADOR ANGON,  OSCAR",#
+"JUIF  ,  DACIL TANIA",#
+"ALVAREZ NOGAL,  CARLOS",#
+"HOUPT  ,  STEFAN OLIVER",#
+"RADL  ,  JONAS",#
+"ALVAREZ NOGAL,  CARLOS",#
+"ALVAREZ NOGAL,  CARLOS",#
+"BARAJAS IÑIGO,  MARIA ASCENSIÓN",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"DIAZ GANDASEGUI,  VICENTE",#
+"CELADOR ANGON,  OSCAR",#
+"HOUPT  ,  STEFAN OLIVER",#
+"DIAZ GANDASEGUI,  VICENTE",#
+"HOUPT  ,  STEFAN OLIVER",#
+"TERAN VERGARA,  FATIMA DE",#
+"HOUPT  ,  STEFAN OLIVER",#
+"TENA JUNGUITO,  ANTONIO",#
+"RADL  ,  JONAS",#
+"RADL  ,  JONAS",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"TENA JUNGUITO,  ANTONIO",#
+"TERAN VERGARA,  FATIMA DE",#
+"LAHDELMA  ,  ILONA ERZSÉBET",#
+"RADL  ,  JONAS",#
+"DIAZ GANDASEGUI,  VICENTE",#
+"LAHDELMA  ,  ILONA ERZSÉBET",#
+"TENA JUNGUITO,  ANTONIO",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"TENA JUNGUITO,  ANTONIO",#
+"TENA JUNGUITO,  ANTONIO",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"SANDELL  ,  FRANK RICKARD",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"BATTILOSSI  ,  STEFANO",#
+"BATTILOSSI  ,  STEFANO",#
+"TENA JUNGUITO,  ANTONIO",#
+"SANDELL  ,  FRANK RICKARD",#
+"TENA JUNGUITO,  ANTONIO",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"SANDELL  ,  FRANK RICKARD",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"SANDELL  ,  FRANK RICKARD",#
+"RADL  ,  JONAS",#
+"HOUPT  ,  STEFAN OLIVER",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"HOUPT  ,  STEFAN OLIVER",#
+"TERAN VERGARA,  FATIMA DE",#
+"CELADOR ANGON,  OSCAR",#
+"RADL  ,  JONAS",#
+"SANDELL  ,  FRANK RICKARD",#
+"RADL  ,  JONAS",#
+"TERAN VERGARA,  FATIMA DE",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"DIAZ GANDASEGUI,  VICENTE",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"HOUPT  ,  STEFAN OLIVER",#
+"SANDELL  ,  FRANK RICKARD",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"SANDELL  ,  FRANK RICKARD",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"TERAN VERGARA,  FATIMA DE",#
+"LAHDELMA  ,  ILONA ERZSÉBET",#
+"JUIF  ,  DACIL TANIA",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"FERREIRO PRADO,  LUCÍA",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"LORENZO RODRIGUEZ,  JAVIER",#
+"TERAN VERGARA,  FATIMA DE",#
+"NICOLINI ALESSI,  ESTEBAN ALBERTO",#
+"LORENZO RODRIGUEZ,  JAVIER",#
+"TERAN VERGARA,  FATIMA DE",#
+"SAURINA LUCINI,  MARC",#
+"TERAN VERGARA,  FATIMA DE",#
+"ESCRIBANO UBEDA PORTUGUES,  JOSE",#
+"SAURINA LUCINI,  MARC")
+table(t)
+table(t)[grepl("Der", t)]
+head(rt)
+head(t)
+table(t)[grepl("Der", d)]
+table(d)
+table(grepl("Derecho", d))
+which(grepl("Derecho", d))
+t[which(grepl("Derecho", d))]
+table(t[which(grepl("Derecho", d))])
+setwd("~/Google Drive/Academic/Gestion/TRIBUNALES")#
+source("../coding/funcs.R")#
+library(readxl);library(muniSpain);library(dplyr)#
+library(writexl);library(stringr);library(gt)#
+options(stringsAsFactors = FALSE)#
+#
+# --------------- ##
+##
+mes = "June25"#
+##
+# --------------- ##
+#
+### ===========================================================================#
+### ===========================================================================#
+#### LOAD ######
+#
+# Tribunales#
+tribunales = read.csv(paste0(mes, "/raw/tribunales_cleaned.csv"))#
+#
+# Entregas/solicitudes defensa#
+entregas = read_excel(paste0(mes, "/solicitudes.xlsx")) %>%#
+  rename("tut" = `Tutor`) %>%#
+  mutate(Apellido2 = ifelse(is.na(Apellido2), "", Apellido2))#
+entregas$tut = capitalize(tolower(entregas$tut))
+setwd("~/Google Drive/Academic/Gestion/TRIBUNALES")#
+source("../coding/funcs.R")#
+library(readxl);library(muniSpain);library(dplyr)#
+library(writexl);library(stringr);library(gt)#
+options(stringsAsFactors = FALSE)#
+#
+# --------------- ##
+##
+mes = "June25"#
+##
+# --------------- ##
+#
+## LOAD ## ============================================================#
+#
+horarios = bind_rows(#
+    read_excel(paste0(mes, "/Horarios_por_estudiante_EEII.xlsx")),#
+    read_excel(paste0(mes, "/Horarios_por_estudiante_CCPP.xlsx"))) %>%#
+  arrange(Fecha, Hora)#
+nrow(horarios)#
+#
+# # NOTE los que están por error en septiembre#
+# horarios = horarios[-which(horarios$cambio_manual == "JULIO"),]#
+# nrow(horarios)#
+#
+# Variables#
+horarios = horarios %>% select(NIA, Nombre, Apellido1, Apellido2,#
+  Tribunal, Fecha, Hora)#
+#
+if("cambio_manual" %in% names(horarios)){#
+  horarios = horarios %>% select(-cambio_manual)}#
+#
+# #############################
+# # entregas julio ????#
+# entregas_junio = bind_rows(#
+#   read_excel("Junio23/Horarios_por_estudiante_EEII_def.xlsx"),#
+#   read_excel("Junio23/Horarios_por_estudiante_CCPP_def.xlsx"))#
+# for(n in horarios$NIA[horarios$NIA %in% entregas_junio$NIA]){#
+#   area_junio = str_sub(entregas_junio$Tribunal[entregas_junio$NIA == n], 1, 2)#
+#   area_sept = str_sub(horarios$Tribunal[horarios$NIA == n], 1, 2)#
+#   if(any(area_sept %in% area_junio)){#
+#     print("------------------------------------------------------------")#
+#     print(n)#
+#     print(cbind(horarios %>% filter(NIA == n),#
+#       Trib_Junio = entregas_junio$Tribunal[entregas_junio$NIA == n]))#
+#     print("------------------------------------------------------------")#
+#   }#
+# }#
+#
+trib = read.csv(paste0(mes, "/raw/tribunales_cleaned.csv")) %>%#
+  mutate(Aula = ifelse(is.na(Aula), "", Aula)) %>%#
+  mutate(Evaluadores = gsub("; ", "<br>", Evaluadores)) %>%#
+  mutate(Email = gsub("; ", "<br>", Email)) %>%#
+  mutate(Tutores = gsub("; ", "<br>", Tutores))#
+trib$Evaluadores = paste0("Pres: ", gsub("br>", "br>Secr: ", trib$Evaluadores))#
+## DEFENSAS ONLINE ## ====================================================#
+#
+#### ????:#
+# MARTA MATEO FANO <100432243@alumnos.uc3m.es>#
+# IGNACIO PUIG JAIME <100432734@alumnos.uc3m.es>#
+#
+### NOTE NOTE ONLINE!!!!!!! NOTE#
+#
+online = read.csv(paste0(mes, "/defensa_online_TFG.csv"), header = TRUE)#
+## isabel w: not possible if working in Madrid#
+online = subset(online, !NIU %in% 100385943)#
+## marta fano, no need#
+online = subset(online, !NIU %in% 100432243)#
+online_nia = as.integer(gsub("^100", "", online$NIU))#
+## ADD:#
+online_nia = c(online_nia, 431357) # Julia Gimenez (médico) - 100431357#
+online_nia = c(online_nia, 432212) # Victor, trabajo#
+#
+# assign#
+horarios$Online = ifelse(horarios$NIA %in% online_nia, "ONLINE", "")#
+#
+# Martina presencial en CP7#
+horarios$Online[horarios$NIA == "432057" & horarios$Tribunal == "CP7"] = ""#
+# Cambio día del CP8/EI1#
+horarios$Online[horarios$NIA == "431180" & horarios$Tribunal == "CP8"] = "ONLINE"#
+horarios$Online[horarios$NIA == "366062" & horarios$Tribunal == "CP8"] = "ONLINE"#
+# paste(online[, "Email..UC3M."], collapse=";")#
+# cat(paste(paste0("100", unique(horarios$NIA), "@alumnos.uc3m.es"), collapse = ";"))#
+#
+## CONVOCATORIAS ## ====================================================#
+#
+if(!"horarios" %in% list.files(mes)){dir.create(paste0(mes, "/horarios"))}#
+#
+for(tr in unique(horarios$Tribunal)){#
+#
+  print(tr)#
+  ev = trib[trib$Tribunal==tr, "Evaluadores"]#
+  aula = paste("Aula:", trib[trib$Tribunal==tr, "Aula"])#
+#
+  tit = paste0("<strong>Horarios Tribunal ", tr, "</strong><br>",#
+    ev, "<br>", aula)#
+  fn = paste0(mes, "/horarios/", tr, ".pdf")#
+#
+  horarios %>%#
+    filter(Tribunal == tr) %>%#
+    gt() %>%#
+    fmt_markdown(columns = everything()) %>%#
+    tab_header(title = html(tit)) %>%#
+    tab_options(table.font.size = "10", table.width = pct(100)) %>%#
+    gtsave(fn)#
+  system2("pdfcrop", args = c("--margins '30'", fn, fn))#
+#
+}#
+#
+## CONVOCATORIAS ## ====================================================#
+Sys.sleep(2)#
+#
+print("======================================================")#
+print("ESTUDIANTES:")#
+cat(paste(paste0("100", unique(horarios$NIA), "@alumnos.uc3m.es"), collapse = ";"))#
+print("======================================================")#
+print("PROFESORES:")#
+tribs = read.csv(paste0(mes, "/raw/tribunales_cleaned.csv"))#
+print(paste(unique(unlist(str_split(tribs$Email, ";"))), collapse = ";"))#
+paste(paste0("100", horarios$NIA[horarios$Tribunal=="CP7"], "@alumnos.uc3m.es"), collapse = ";")
+m_BJP_post_h = lm(Q27_1_feeling_BJP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_INC_post_h = lm(Q27_2_feeling_INC ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_SP_post_h = lm(Q27_3_feeling_SP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_AITC_post_h = lm(Q27_4_feeling_AITC ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_DMK_post_h = lm(Q27_5_feeling_DMK ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_TDP_post_h = lm(Q27_6_feeling_TDP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 1))#
+m_BJP_post_nh = lm(Q27_1_feeling_BJP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+m_INC_post_nh = lm(Q27_2_feeling_INC ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+m_SP_post_nh = lm(Q27_3_feeling_SP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+m_AITC_post_nh = lm(Q27_4_feeling_AITC ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+m_DMK_post_nh = lm(Q27_5_feeling_DMK ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+m_TDP_post_nh = lm(Q27_6_feeling_TDP ~ treatment,#
+    data = data %>% filter(post == 1 & relig_hindu == 0))#
+#
+coef_parties_relig = bind_rows(#
+    tidy(m_BJP_post_h) %>% mutate(dv = "BJP", g = "Hindu"),#
+    tidy(m_INC_post_h) %>% mutate(dv = "INC", g = "Hindu"),#
+    tidy(m_SP_post_h) %>% mutate(dv = "SP", g = "Hindu"),#
+    tidy(m_AITC_post_h) %>% mutate(dv = "AITC", g = "Hindu"),#
+    tidy(m_DMK_post_h) %>% mutate(dv = "DMK", g = "Hindu"),#
+    tidy(m_TDP_post_h) %>% mutate(dv = "TDP", g = "Hindu"),#
+    tidy(m_BJP_post_nh) %>% mutate(dv = "BJP", g = "Other"),#
+    tidy(m_INC_post_nh) %>% mutate(dv = "INC", g = "Other"),#
+    tidy(m_SP_post_nh) %>% mutate(dv = "SP", g = "Other"),#
+    tidy(m_AITC_post_nh) %>% mutate(dv = "AITC", g = "Other"),#
+    tidy(m_DMK_post_nh) %>% mutate(dv = "DMK", g = "Other"),#
+    tidy(m_TDP_post_nh) %>% mutate(dv = "TDP", g = "Other")#
+    ) %>%#
+    filter(term == "treatment") %>%#
+    upr_lwr %>%#
+    mutate(sig95 = factor(sig95)) #
+#
+p = ggplot(coef_parties_relig, aes(x = dv, y = est, color = sig95)) +#
+    geom_hline(yintercept = 0, linetype = "dotted") +#
+    geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0,#
+        position = position_dodge(1/4)) +#
+    geom_errorbar(aes(ymin = lwr90, ymax = upr90), linewidth = 1.1, width = 0,#
+        position = position_dodge(1/4)) +#
+    geom_point(position = position_dodge(1/4)) +#
+    coord_flip() +#
+    facet_wrap(~g) +#
+    labs(x = "", y = "ATE", color = "",#
+        title = "ATE on feeling towards main political parties, by religion",#
+        subtitle = "(Standardized outcomes)\n") +#
+    scale_color_manual(values = c("gray65", "black")) +#
+    theme(legend.position = "none")#
+ggsave("img/coef_parties_relig.pdf", height = 3.5, width = 8)
+## Create separate graphs (Nationalist violence)#
+vl = as.Date("1939-04-01")#
+db = as.Date(c("1936-01-01", "1937-01-01", "1938-01-01", "1939-01-01", "1940-01-01",#
+    "1941-01-01", "1942-01-01"))#
+dblims = c(db[1], "1942-12-01")#
+# Euskadi#
+p_euk = viodata %>% filter(region == "Euskadi") %>%#
+    ggplot(aes(x = date, y = v)) +#
+        geom_bar(stat = "identity") +#
+        scale_y_continuous(expand = expansion(mult = 0)) +#
+        scale_x_date(breaks = db, date_labels = "%Y", limits = dblims) +#
+        labs(x = "", y = "", subtitle = "Basque Country") +#
+        geom_vline(xintercept = vl, linetype = "dotted")#
+# Albacete#
+p_alb = viodata %>% filter(region == "Albacete") %>%#
+   ggplot(aes(x = date, y = v)) +#
+        geom_bar(stat = "identity") +#
+        scale_y_continuous(expand = expansion(mult = 0)) +#
+        scale_x_date(breaks = db, date_labels = "%Y", limits = dblims) +#
+        labs(x = "", y = "", subtitle = "Albacete") +#
+        geom_vline(xintercept = vl, linetype = "dotted")#
+# Galicia#
+p_gal = viodata %>% filter(region == "Galicia") %>%#
+    ggplot(aes(x = date, y = v)) +#
+        geom_bar(stat = "identity") +#
+        scale_y_continuous(expand = expansion(mult = 0)) +#
+        scale_x_date(breaks = db, labels = c("1937", "1940"), date_labels = "%Y") +#
+        labs(x = "", y = "", subtitle = "Galicia") +#
+        geom_vline(xintercept = vl, linetype = "dotted")#
+# Toledo#
+p_tol = viodata %>% filter(region == "Toledo") %>%#
+    ggplot(aes(x = date, y = v)) +#
+        geom_bar(stat = "identity") +#
+        scale_y_continuous(expand = expansion(mult = 0)) +#
+        scale_x_date(breaks = db, date_labels = "%Y") +#
+        labs(x = "", y = "", subtitle = "Toledo")#
+# Asturias#
+p_ast = viodata %>%#
+        filter(region == "Asturias" & violence == "nationalist") %>%#
+    ggplot(aes(x = date, y = v)) +#
+        geom_bar(stat = "identity") +#
+        scale_y_continuous(expand = expansion(mult = 0)) +#
+        scale_x_date(breaks = "years", date_labels = "%Y") +#
+        labs(x = "", y = "", subtitle = "Asturias") +#
+        geom_vline(xintercept = vl, linetype = "dotted")#
+#
+p_nac = (p_alb | p_ast | p_euk) / (p_gal | p_tol | plot_spacer())#
+ggsave("img/violence_over_time_nac.pdf", height = 5, width = 9)#
+#
+# load data over time#
+# toledo graph only by year (even if date is 01-01-x)#
+# use patchwork to put it together
+library(infoelectoral)
+e = municipios(tipo_eleccion = "congreso", anno = 2023, mes = "07")
+head(e)
+subset(e, municipio=="Torre-Pacheco")
+x = subset(e, grepl("VOX", denominacion) & poblacion_derecho > 10000)
+str(x)
+nrow(x)
+head(x)
+x$sh = x$votos / (x$votos_candidaturas + x$votos_blancos)
+head(x)
+hist(x$sh)
+x = subset(x, sh > 0.2)
+nrow(x)
+x
+names(x)
+x = x[order(x$sh), c("codigo_provincia",#
+"municipio", "poblacion_derecho", "siglas", "sh")]
+head(x)
+x
+library(muniSpain)
+x$p = code_to_prov(x$codigo_provincia)
+x
+x = subset(x, poblacion_derecho>20000)
+x
+x = subset(x, poblacion_derecho>30000)
+x
+t=c("CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"GARCIA CAMUS,  JUAN MANUEL",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"CLAVERIA ALIAS,  SILVIA",#
+"CANO CORRAL,  NURIA ESTER",#
+"OSTOS MOTA,  GLORIA",#
+"ORRIOLS GALVE,  LLUIS",#
+"NATERA PERAL,  ANTONIO",#
+"CLAVERIA ALIAS,  SILVIA",#
+"GARCIA CAMUS,  JUAN MANUEL",#
+"JURADO NEBREDA,  IGNACIO",#
+"LAVEZZOLO PEREZ,  SEBASTIAN",#
+"IBAÑEZ MESTRES,  GONZALO",#
+"NATERA PERAL,  ANTONIO",#
+"OSTOS MOTA,  GLORIA",#
+"LAVEZZOLO PEREZ,  SEBASTIAN",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"NATERA PERAL,  ANTONIO",#
+"LORENZO RODRIGUEZ,  JAVIER",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"OSTOS MOTA,  GLORIA",#
+"CLAVERIA ALIAS,  SILVIA",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"OZEL SERBETÇI,  ISIK",#
+"NATERA PERAL,  ANTONIO",#
+"LORENZO RODRIGUEZ,  JAVIER",#
+"CLAVERIA ALIAS,  SILVIA",#
+"LAVEZZOLO PEREZ,  SEBASTIAN",#
+"LORENZO RODRIGUEZ,  JAVIER",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"CLAVERIA ALIAS,  SILVIA",#
+"KOSTZER BACA,  IGNACIO",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"CANO CORRAL,  NURIA ESTER",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"CLAVERIA ALIAS,  SILVIA",#
+"KOSTZER BACA,  IGNACIO",#
+"CEPEDA GARCIA DE LEÓN,  JOSE CARMELO",#
+"OZEL SERBETÇI,  ISIK",#
+"ABOUD OIZEROVICH,  LUCIA",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"FERNANDEZ VAZQUEZ,  GUILLERMO",#
+"RANZ ALONSO,  EDUARDO",#
+"RIERA SAGRERA,  PEDRO",#
+"FERNANDEZ VAZQUEZ,  GUILLERMO",#
+"RODRIGUEZ RODRIGUEZ,  IGNACIO",#
+"CRUZ RUBIO,  CESAR NICANDRO",#
+"RIERA SAGRERA,  PEDRO",#
+"LUENA LOPEZ,  CESAR")#
+#
+dp=c("Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Economía",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Economía",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales")
+table(dp)
+dp=c("Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Ciencias Sociales",#
+"Departamento de Derecho Internacional, Eclesiástico y Filosofía del Derecho")
+t=c("RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"LAHDELMA  ,  ILONA ERZSÉBET",#
+"BARAJAS IÑIGO,  MARIA ASCENSIÓN",#
+"ZAPATERO MIGUEL,  PABLO",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"CELADOR ANGON,  OSCAR",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"HOUPT  ,  STEFAN OLIVER",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"HOUPT  ,  STEFAN OLIVER",#
+"ZIDEK  ,  NIKOLINA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"SANDELL  ,  FRANK RICKARD",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"JIMÉNEZ ROMERO,  MARTA",#
+"SANDELL  ,  FRANK RICKARD",#
+"HOUPT  ,  STEFAN OLIVER",#
+"SANDELL  ,  FRANK RICKARD",#
+"BATTILOSSI  ,  STEFANO",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"MAYORAL DIAZ-ASENSIO,  JUAN ANTONIO",#
+"TENA JUNGUITO,  ANTONIO",#
+"BATTILOSSI  ,  STEFANO",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"TERAN VERGARA,  FATIMA DE",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"ZAPATERO MIGUEL,  PABLO",#
+"BARAJAS IÑIGO,  MARIA ASCENSIÓN",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"VEIRA RAMOS,  ALBERTO",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"DIAZ GANDASEGUI,  VICENTE",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"OZEL SERBETÇI,  ISIK",#
+"RADL  ,  JONAS",#
+"ABAD CASTELOS,  MONTSERRAT",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"JUIF  ,  DACIL TANIA",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"VALIENTE FERNANDEZ,  CELIA",#
+"ZAPATERO MIGUEL,  PABLO",#
+"TORRE FERNANDEZ,  MARGARITA",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"RIVAS COMPAINS,  FRANCISCO JAVIER",#
+"SAURINA LUCINI,  MARC",#
+"TERAN VERGARA,  FATIMA DE",#
+"TERAN VERGARA,  FATIMA DE",#
+"DIAZ GORFINKIEL,  MAGDALENA",#
+"SANDELL  ,  FRANK RICKARD",#
+"TENA JUNGUITO,  ANTONIO",#
+"SOJKA SWITON,  ALEKSANDRA ANNA",#
+"JUIF  ,  DACIL TANIA",#
+"ABAD CASTELOS,  MONTSERRAT")
+table(dp)
+grepl("Derecho", dp)
+t[grepl("Derecho", dp)]
+table(t[grepl("Derecho", dp)])
+library(muniSpain)
+name_to_code("laviana")
+library(tinytable)
+sessionInfo()
+remotes::install_github("vincentarelbundock/tinytable")
+library(tinytable)
+sessionInfo()
+library(dplyr)#
+library(ggplot2)#
+library(pwr)
+rep(c(4,6), each = length(n_seq))
+n_seq = seq(500,10000,250)
+n_seq
+rep(c(4,6), each = length(n_seq))
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  mutate(pre_ideology = round(n / 3)) %>%#
+  mutate(treatment_g = round(pre_ideology / tgroups))
+pwrdf
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # mutate(eff_sample = round(n / 3)) %>% # If CATE#
+  mutate(eff_sample = n) %>% # If full sample ATE#
+  mutate(treatment_g = round(n / tgroups))
+pwrdf
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # mutate(eff_sample = round(n / 3)) %>% # If CATE#
+  mutate(eff_sample = n) %>% # If full sample ATE#
+  mutate(treatment_g = round(n / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))#
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+pwrdf
+pwrdf$above8 = pwrdf$power > 0.8
+pwrdf$above8 = pwrdf$power >= 0.8
+pwrdf$above8
+pwrdf$n[pwrdf$above8]
+min(pwrdf$n[pwrdf$above8])
+# Detecting pwr >= 0.8#
+pwrdf$above8 = pwrdf$power >= 0.8#
+min_abs_sample = min(pwrdf$n[pwrdf$above8])#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  # geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_vline(xintercept = min_abs_sample,#
+    linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+st = paste0(st, "\nMinimum sample with simplest design: ", min_abs_sample)#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  # geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_vline(xintercept = min_abs_sample,#
+    linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  mutate(eff_sample = round(n / 2)) %>% # If CATE#
+  # mutate(eff_sample = n) %>% # If full sample ATE#
+  mutate(treatment_g = round(n / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))#
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power#
+#
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)#
+#
+# Detecting pwr >= 0.8#
+pwrdf$above8 = pwrdf$power >= 0.8#
+min_abs_sample = min(pwrdf$n[pwrdf$above8])#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+st = paste0(st, "\nMinimum sample with simplest design: ", min_abs_sample)#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  # geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_vline(xintercept = min_abs_sample,#
+    linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  mutate(eff_sample = round(n / 2)) %>% # If CATE#
+  # mutate(eff_sample = n) %>% # If full sample ATE#
+  mutate(treatment_g = round(n / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))
+pwrdf
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  mutate(eff_sample = round(n / 2)) %>% # If CATE#
+  # mutate(eff_sample = n) %>% # If full sample ATE#
+  mutate(treatment_g = round(eff_sample / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))#
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power#
+#
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)#
+#
+# Detecting pwr >= 0.8#
+pwrdf$above8 = pwrdf$power >= 0.8#
+min_abs_sample = min(pwrdf$n[pwrdf$above8])#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+st = paste0(st, "\nMinimum sample with simplest design: ", min_abs_sample)#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  # geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_vline(xintercept = min_abs_sample,#
+    linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+st = paste0(st, "\nMinimum sample with simplest design: ", min_abs_sample)#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  # geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_vline(xintercept = min_abs_sample,#
+    linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = "bottom", #c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Desktop/power_analysis.pdf", width = 6, height = 4.25)
+library(dplyr)#
+library(ggplot2)#
+library(pwr)#
+#
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  mutate(pre_ideology = round(n / 3)) %>%#
+  mutate(treatment_g = round(pre_ideology / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))
+pwrdf
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq)))
+head(pwrdf)
+library(dplyr)#
+library(ggplot2)#
+library(pwr)#
+#
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # ATE#
+  mutate(treatment_g = tgroups)#
+  # CATE#
+  # mutate(pre_ideology = round(n / 3)) %>%#
+  # mutate(treatment_g = round(pre_ideology / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))#
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power#
+#
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)
+library(dplyr)#
+library(ggplot2)#
+library(pwr)#
+#
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # ATE#
+  mutate(treatment_g = tgroups)#
+  # CATE#
+  # mutate(pre_ideology = round(n / 3)) %>%#
+  # mutate(treatment_g = round(pre_ideology / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))#
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power#
+#
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Dropbox/Academic/PAPs/power.pdf", width = 6, height = 4.25)
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # ATE#
+  mutate(treatment_g = tgroups)#
+  # CATE#
+  # mutate(pre_ideology = round(n / 3)) %>%#
+  # mutate(treatment_g = round(pre_ideology / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))
+pwrdf
+## Sample size#
+n_seq = seq(500,10000,250)#
+pwrdf = data.frame(#
+    n = rep(n_seq,2),#
+    tgroups = rep(c(4,6), each = length(n_seq))) %>%#
+  # ATE#
+  mutate(treatment_g = round(n / tgroups))#
+  # CATE#
+  # mutate(pre_ideology = round(n / 3)) %>%#
+  # mutate(treatment_g = round(pre_ideology / tgroups))#
+pwrdf = bind_rows(#
+  pwrdf %>% mutate(d = 0.15),#
+  pwrdf %>% mutate(d = 0.2))
+pwrdf
+# Power test#
+pwrdf$power = pwr.t.test(n = pwrdf$treatment_g,#
+  d = pwrdf$d, sig.level = .05, power = NULL, type = "two.sample")$power#
+#
+# Labels#
+pwrdf$dlab = paste("Effect size:", pwrdf$d, "SD")#
+pwrdf$tgroupslab = paste0(pwrdf$tgroups, "-treatment design")#
+#
+round(subset(pwrdf, n==7500 & tgroups==6 & d==0.20)$power, 2)#
+round(subset(pwrdf, n==7500 & tgroups==4 & d==0.15)$power, 2)#
+#
+# Plot#
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+p = ggplot(pwrdf, aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 7500, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  facet_wrap(~tgroupslab) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Dropbox/Academic/PAPs/power.pdf", width = 6, height = 4.25)
+head(pwrdf)
+st = "Power analyses calculated to detect a CATE based on a 3-category conditioning variable,\nand 4 or 6 treatment groups (2/4 treatments, plus a placebo + pure control)"#
+p = ggplot(pwrdf %>% filter(tgroups==4),#
+    aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 3000, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  labs(x = "Sample size", y = "Statistical power", subtitle = st) +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Dropbox/Academic/PAPs/power.pdf", width = 6, height = 4.25)
+p = ggplot(pwrdf %>% filter(tgroups==4 & n <= 6000),#
+    aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 3000, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  labs(x = "Sample size", y = "Statistical power") +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.15,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Dropbox/Academic/PAPs/power.pdf", width = 6, height = 4.25)
+p = ggplot(pwrdf %>% filter(tgroups==4 & n <= 6000),#
+    aes(x = n, y = power, group=dlab, color=dlab)) +#
+  geom_hline(yintercept = 0.8, linetype = "dashed") +#
+  geom_vline(xintercept = 3000, linetype = "dotted", color = "red") +#
+  geom_line(linewidth = 1.5) +#
+  labs(x = "Sample size", y = "Statistical power") +#
+  theme_bw() +#
+  theme(#
+    plot.subtitle = element_text(size = 8),#
+    legend.position = c(0.85,0.12),#
+    legend.title=element_blank(),#
+    panel.grid = element_blank())+ #
+  scale_color_manual(values = c("#b6bfe0", "#42598a"))#
+ggsave("~/Dropbox/Academic/PAPs/power.pdf", width = 6, height = 4.25)
+pwrdf
+pwrdf%>%filter(n==3000)
+pwrdf%>%filter(n==3000&tgroups==4)
+?pwr.t.test
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))
+df = df %>%#
+ mutate(hired = 1.5 * intelligence + 3 * social_skills) %>%#
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0)) %>%#
+ mutate(hired = hired / max(hired))
+df
+head(df)
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0)) %>%#
+ mutate(hired = hired / max(hired))
+df
+head(df)
+mutate(hired = hired / max(hired))
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))
+head(df)
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired = hired / max(hired)) %>% #
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))
+head(df)
+quantile(df$hired, 0.75)
+head(df, n=20)
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+msummary(ml, estimate = "{estimate}{stars}")
+library(modelsummary)
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+msummary(ml, estimate = "{estimate}{stars}")
+modelsummary(ml, estimate = "{estimate}{stars}")
+modelsummary(ml, estimate = "{estimate}{stars}",output="html")
+set.seed(7891234)#
+#
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))#
+#
+cor(df$intelligence, df$social_skills)
+set.seed(7891234)#
+#
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))#
+#
+cor(df$intelligence, df$social_skills)#
+#
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired = hired / max(hired)) %>% #
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))#
+#
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+modelsummary(ml, estimate = "{estimate}{stars}", output="html")
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw()
+pdf("slides/img/collider1.pdf", height = 4, width = 4)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw()#
+dev.off()
+setwd("~/Documents/course_materials/res_design")#
+library(modelsummary)#
+library(dplyr)#
+library(ggplot2)#
+set.seed(7891234)#
+#
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))#
+#
+cor(df$intelligence, df$social_skills)#
+#
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired = hired / max(hired)) %>% #
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))#
+#
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+modelsummary(ml, estimate = "{estimate}{stars}", output="html")#
+#
+pdf("slides/img/collider1.pdf", height = 4, width = 4)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw()#
+dev.off()
+pdf("slides/img/collider1.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw()#
+dev.off()
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth("lm") +#
+  theme_bw()#
+dev.off()
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw()#
+dev.off()
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw()#
+dev.off()
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none")#
+dev.off()
+head(df)
+pdf("slides/img/collider1.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw()#
+dev.off()#
+#
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw()#
+dev.off()#
+#
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_colour_continuous(palette = c("#FEE0D2", "#FC9272", "#DE2D26"))#
+dev.off()#
+#
+pdf("slides/img/collider4.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_colour_continuous(palette = c("#FEE0D2", "#FC9272", "#DE2D26"))#
+dev.off()#
+#
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_colour_continuous(palette = c("#FEE0D2", "#FC9272", "#DE2D26"))#
+dev.off()
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none")#
+dev.off()#
+#
+pdf("slides/img/collider4.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none")#
+dev.off()#
+#
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none")#
+dev.off()
+pdf("slides/img/collider1.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider4.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()
+setwd("~/Documents/course_materials/res_design")#
+library(modelsummary)#
+library(dplyr)#
+library(ggplot2)#
+library(RColorBrewer)#
+set.seed(7891234)#
+#
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))#
+#
+cor(df$intelligence, df$social_skills)#
+#
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired = hired / max(hired)) %>% #
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))#
+#
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+modelsummary(ml, estimate = "{estimate}{stars}", output="html")#
+#
+### PLOTS#
+#
+pdf("slides/img/collider1.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_colour_brewer(palette = "RdYlGn")#
+dev.off()
+str(df$hired)
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_color_brewer(palette = "RdYlGn")
+?scale_color_gradient
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_color_gradient(low="red",high="green")
+?scale_color_gradient
+setwd("~/Documents/course_materials/res_design")#
+library(modelsummary)#
+library(dplyr)#
+library(ggplot2)#
+set.seed(7891234)#
+#
+df = data.frame(#
+   intelligence = rnorm(1000, mean = 5, sd = 1.5),#
+   social_skills = rnorm(1000, mean = 5, sd = 1.5))#
+#
+cor(df$intelligence, df$social_skills)#
+#
+df = df %>%#
+ mutate(hired = 3 * intelligence + 2 * social_skills) %>%#
+ mutate(hired = hired / max(hired)) %>% #
+ mutate(hired_binary = ifelse(hired > quantile(hired, 0.75), 1, 0))#
+#
+ml = list(#
+  "Model 1" = lm(social_skills ~ intelligence, data = df),#
+  "Model 2" = lm(social_skills ~ intelligence + hired_binary, data = df))#
+modelsummary(ml, estimate = "{estimate}{stars}", output="html")#
+#
+### PLOTS#
+#
+pdf("slides/img/collider1.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider2.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider3.pdf", height = 5, width = 5)#
+ggplot(df, aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_color_gradient(low="red",high="green")#
+dev.off()#
+#
+pdf("slides/img/collider4.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_color_gradient(low="red",high="green")#
+dev.off()#
+#
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills, color = hired)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10)) +#
+  scale_color_gradient(low="red",high="green")#
+dev.off()
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()
+pdf("slides/img/collider4.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  # geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()#
+#
+pdf("slides/img/collider5.pdf", height = 5, width = 5)#
+ggplot(df %>% filter(hired_binary == 1),#
+    aes(x = intelligence, y = social_skills)) +#
+  geom_point() +#
+  geom_smooth(method="lm") +#
+  theme_bw() + theme(legend.position = "none") +#
+  scale_x_continuous(limits = c(0,10)) +#
+  scale_y_continuous(limits = c(0,10))#
+dev.off()
