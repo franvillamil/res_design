@@ -9,7 +9,8 @@
   df = df %>%
     mutate(
       points = 3 * intelligence + 2 * social_skills) %>%
-    mutate(hired_binary = ifelse(points > quantile(points, 0.75), 1, 0))
+    mutate(hired_binary =
+      ifelse(points > quantile(points, 0.75), 1, 0))
 \end{lstlisting}
 
 

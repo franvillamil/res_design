@@ -946,7 +946,7 @@ $ATU = mean(10, 0, -10, 5) = 1.25$
 
 \begin{itemize}[<+->]
 \item We can draw the process we're trying to study
-\item Main idea: focus on the \textit{data generating process}
+\item Main idea: focus on the \textit{causal model}
   \begin{itemize}
   \item What had to happen for kids with university-degree parents to get richer?
   \item In other words, what mechanisms were in play behind what we see in the data?
@@ -1137,7 +1137,7 @@ df = data.frame(
   # Rich people have 3x more money to buy whiskey
   mutate(whiskey = 3*rich + runif(500, 0, 4)) %>%
   # Health risk is worse if you drink more whiskey, but rich people have better health overall
-  mutate(risk = -2*rich + .3*whiskey + rnorm(500, 2))
+  mutate(risk = -2*rich + 0.3*whiskey + rnorm(500, 2))
  \end{lstlisting}
 
 \end{frame}
@@ -1297,7 +1297,7 @@ cor(df$whiskey_resid, df$risk_resid)
 \begin{itemize}
   \item Selection bias in statistics: sampling issue
   \item Quite different in causality: we're dealing with \BGyellow{selection into treatment}
-  \item Remember example from HIV treatments studies
+  % \item Remember example from HIV treatments studies
 \end{itemize}
 
 \end{frame}
@@ -1339,7 +1339,7 @@ cor(df$whiskey_resid, df$risk_resid)
 \centering
 
 \begin{itemize}
-  \item Are smart people weirdos?
+  \item Do smart people lack social skills?
   \item We have 1,000 people, with \textbf{randomly} distributed intelligence and social skills
 \end{itemize}
 
@@ -1405,7 +1405,8 @@ cor(df$whiskey_resid, df$risk_resid)
   df = df %>%
     mutate(
       points = 3 * intelligence + 2 * social_skills) %>%
-    mutate(hired_binary = ifelse(points > quantile(points, 0.75), 1, 0))
+    mutate(hired_binary =
+      ifelse(points > quantile(points, 0.75), 1, 0))
 \end{lstlisting}
 
 
