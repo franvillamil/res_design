@@ -4,7 +4,7 @@
 % Title --------------------------------------------
 \title[Lecture 4: Causal methods]{\Large Causal methods with observational data}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2025}
 
 \input{../beamer_preamble.tex}
 
@@ -17,6 +17,38 @@
 % ----------------------------------------------------
 \begin{frame}
   \titlepage
+\end{frame}
+% ----------------------------------------------------
+
+\section{Housekeeping}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item \BGyellow{\textbf{Groups?}} Send me an email \textbf{\colorbox{yellow}{before} Oct 14th}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item Logistics:
+  \begin{itemize}
+    \item 10-15 slots
+    \item 10min presentation + 10min feedback
+    \item If less groups, we can increase time
+  \end{itemize}
+  \item \textbf{Questions?}
+\end{itemize}
+
 \end{frame}
 % ----------------------------------------------------
 
@@ -127,7 +159,7 @@
 \begin{itemize}
   \item[-] Five techniques commonly used in causal inference
   \begin{itemize}
-    \item two of them use for controlling (closing back-doors), and the other three to exploit `pre-made` causal models
+    \item two of them used for controlling (closing back-doors), and the other three to exploit `pre-made` causal models
     \item btw, what is controlling? when you control for Z, you remove the variation in X and Y that is \textit{explained by Z} (\href{https://www.nickchk.com/anim/Animation\%20of\%20Control.gif}{see this})
   \end{itemize}
   \item[]
@@ -272,15 +304,15 @@
     \begin{itemize}
       \item Minimum wage increase, terrorist attacks, influx of refugees, ...
     \end{itemize}
-  \item A naive idea would be to compare how it was \textit{before} the treatment with how it is \textit{after} the treatment, right?
+  \item<2-> A naive idea would be to compare how it was \textit{before} the treatment with how it is \textit{after} the treatment, right?
     \begin{itemize}
       \item e.g. in municipalities that removed Francoist streets, how much did Vox grow between 2016 and 2019?
     \end{itemize}
-  \item or we could just compare treated vs control \textit{after} treatment
+  \item<3-> or we could just compare treated vs control \textit{after} treatment
     \begin{itemize}
       \item e.g. did Vox get more votes in 2019 in municipalities that removed F streets?
     \end{itemize}
-  \item DiD idea: use a control group that works as a \BGyellow{counterfactual} for how much would $Y$ have changed without treatment
+  \item<4-> \textbf{DiD idea}: use a control group that works as a \BGyellow{counterfactual} for how much would $Y$ have changed without treatment
   \end{itemize}
 
 \end{frame}
@@ -423,21 +455,21 @@
 \imageframe{../img/staggered4}
 % ----------------------------------------------------
 
-% ----------------------------------------------------
-\imageframe{../img/exhumacion_argentina}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/exhumacion_argentina}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\imageframe{../img/map_graves}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/map_graves}
+% % ----------------------------------------------------
 
-% ----------------------------------------------------
-\imageframe{../img/map_graves_exhumation}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/map_graves_exhumation}
+% % ----------------------------------------------------
       
-% ----------------------------------------------------
-\imageframe{../img/exhumaciones_navarra}
-% ----------------------------------------------------
+% % ----------------------------------------------------
+% \imageframe{../img/exhumaciones_navarra}
+% % ----------------------------------------------------
   
 
 % ----------------------------------------------------
@@ -452,7 +484,7 @@
     \item What is the effect of being drafted into the military? (birth year)
     \item Effect of national policies in ethnic identification in Africa? (distance to colonial borders)
   \end{itemize}
-  \item The source of the exogenous variation:
+  \item<2-> The source of the exogenous variation:
   \begin{itemize}
     \item Although many variables confound the relationships between $X$ and $Y$, nothing should be too different \textit{around the cutoff} between treatment and control groups (local randomization assumption)
   \end{itemize}
@@ -521,8 +553,8 @@
   \begin{itemize}
     \item could also be a case of confounding, cutoff $\leftarrow Z \rightarrow$ outcome
   \end{itemize}
-  \item \BGyellow{Precise sorting}: maybe something is \textit{actually} affecting sorting around the cutoff (next example)
-  \item Causal effect \BGyellow{independent of treatment}: being above/below cutoff affects $Y$ independent of the treatment we're interesting in
+  \item<2-> \BGyellow{Precise sorting}: maybe something is \textit{actually} affecting sorting around the cutoff (next example)
+  \item<3-> Causal effect \BGyellow{independent of treatment}: being above/below cutoff affects $Y$ independent of the treatment we're interesting in
 \end{itemize}
 
 \end{frame}
@@ -595,7 +627,7 @@
   \begin{itemize}
     \item e.g. if you analyze $income \leftarrow education$ and only use data from individuals who grew up in big cities, you are already controlling for urban/rural
   \end{itemize}
-  \item Matching builds on this, and it is essentially about keeping in the same only comparable observations, or \textit{matched pairs}
+  \item<2-> Matching builds on this, and it is essentially about keeping in the same only comparable observations, or \textit{matched pairs}
   \item \href{https://www.nickchk.com/anim/Animation\%20of\%20Matching.gif}{Example of $Y \leftarrow Treatment$ matching on $X$}
 \end{itemize}
 
@@ -611,7 +643,7 @@
   \item Normally you match treated units on a few control units (so you would get the \textbf{ATT})
   \item But in some cases you do the opposite, because you have more treated units that control (and you get the \textbf{ATC})
   \begin{itemize}
-    \item Example from Ukraine survey paper
+    \item Example from Ukraine survey paper {\small (combining matching with other)}
   \end{itemize}
   \item Two basic approaches:
   \begin{itemize}
@@ -722,38 +754,6 @@
 \centering
 
 \includegraphics[width = \textwidth]{../img/villamilbalcells}
-
-\end{frame}
-% ----------------------------------------------------
-
-\section{Re-cap and essay guidelines}
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Re-cap and final essay}
-\centering
-
-\begin{itemize}
-  \item \BGyellow{\textbf{Groups?}} Send me an email \textbf{before Oct 15th}
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Re-cap and final essay}
-\centering
-
-\begin{itemize}
-  \item Logistics:
-  \begin{itemize}
-    \item 10-15 slots
-    \item 10min presentation + 10min feedback
-    \item If less groups, we can increase time
-  \end{itemize}
-  \item \textbf{Questions?}
-\end{itemize}
 
 \end{frame}
 % ----------------------------------------------------
