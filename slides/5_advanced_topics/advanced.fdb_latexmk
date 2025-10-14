@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber advanced"] 1728998156 "advanced.bcf" "advanced.bbl" "advanced" 1729004397 0
-  "advanced.bcf" 1729004397 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
+["biber advanced"] 1760447030 "advanced.bcf" "advanced.bbl" "advanced" 1760447725 0
+  "advanced.bcf" 1760447725 107310 7061014b03a00bddcc5da929a9599744 "pdflatex"
   (generated)
   "advanced.bbl"
   "advanced.blg"
   (rewritten before read)
-["pdflatex"] 1729004392 "advanced.tex" "advanced.pdf" "advanced" 1729004397 0
-  "../beamer_preamble.tex" 1726589189 8181 7680845884e2bb79f3d7eb98acbf2652 ""
+["pdflatex"] 1760447720 "advanced.tex" "advanced.pdf" "advanced" 1760447725 0
+  "../beamer_preamble.tex" 1760446371 8214 56dae65495fa04f6b2a1b626ae9e1841 ""
   "../img/abadie2003.jpg" 1699008514 279287 8db3f090d33d238fa927cdac9d9d998e ""
   "../img/abadie2003_2.jpg" 1729002388 273160 76987f61c69813ac791f650a5bcca4d5 ""
   "../img/abadie2003b.jpg" 1699008514 110493 6d6181674cc1e06ead7da2cbe327a6dc ""
@@ -14,9 +14,6 @@
   "../img/blair_apsr2.jpg" 1699008514 160883 047128270cd8a5cf490d3ae5db7c3ec0 ""
   "../img/blair_apsr3.jpg" 1699008514 197052 a3f7c4a1037451162c18e2a56972e546 ""
   "../img/blair_apsr4.jpg" 1699008514 139770 dc65c29bd1d50562a450657badb59809 ""
-  "../img/carl1.png" 1695886627 215007 019a28f1c908c128e33402779e121d8e ""
-  "../img/carl10.png" 1695886627 698993 0a00333b52a6adffcb7130d5df89cc48 ""
-  "../img/carl9.png" 1695886627 206284 f7d57531fb43a891655188af52c67408 ""
   "../img/conflict_diamonds.jpg" 1695886696 167467 43dc00527b39c3cfae58b6b1e8698091 ""
   "../img/did1.pdf" 1695886627 4675 6baaee76604f2b2b61050bf300003f94 ""
   "../img/did2.pdf" 1695886627 4713 8706a3df758f0b5cfc6aed327ae2fdcf ""
@@ -29,7 +26,6 @@
   "../img/did_TJ_hist.jpeg" 1695886627 112579 c53c5e5f710c0a40e1479e0dc92691ea ""
   "../img/did_snow.pdf" 1695886627 4831 94aeb850cff66ae00596093636353da3 ""
   "../img/egami_hartman.jpg" 1699008514 266952 2cecfbabb24b00dc7b3c1e64bfa746f1 ""
-  "../img/electoral_data_excel.jpg" 1699008514 509474 e61fd8bcd89c00dcf797294e9501da88 ""
   "../img/fe1.pdf" 1695886627 7053 b323a83b2fddee541ff09e7a4363200f ""
   "../img/fe2.pdf" 1695886627 8796 5835aae66cdbe43cb903b3d16e4d2e69 ""
   "../img/fe3.pdf" 1695886627 8842 65770097bbb89f50c41fef8a7ab32b38 ""
@@ -336,13 +332,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705144455 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705144389 7883460 1550c7dc5e1a65f25c597afed28e1262 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "advanced.aux" 1729004397 22290 4f3958d1d0f83d4493e0fbc8ed33b8cf "pdflatex"
-  "advanced.bbl" 1728998157 0 d41d8cd98f00b204e9800998ecf8427e "biber advanced"
-  "advanced.nav" 1729004397 15268 80544c16faa95232dfee0ed2fa0ef52f "pdflatex"
-  "advanced.out" 1729004397 1997 5da259d4b7ce829c769e2a36bcee5391 "pdflatex"
-  "advanced.run.xml" 1729004397 2292 7f1eae6cc80576a89d7c8111081cf7e7 "pdflatex"
-  "advanced.tex" 1729004381 56315 d37a1e1c82ce95523a3542fc108655ae ""
-  "advanced.toc" 1729004397 393 b5248a8a54a43c30a2dc801a733ba45f "pdflatex"
+  "advanced.aux" 1760447725 21386 a72bfc794a83360280696d2496f2e5af "pdflatex"
+  "advanced.bbl" 1760447031 0 d41d8cd98f00b204e9800998ecf8427e "biber advanced"
+  "advanced.nav" 1760447725 14588 45b877bc9bd58682858fd4c9d4f6c81d "pdflatex"
+  "advanced.out" 1760447725 1852 016c742c1781d5c87573289845c289ee "pdflatex"
+  "advanced.run.xml" 1760447725 2292 7f1eae6cc80576a89d7c8111081cf7e7 "pdflatex"
+  "advanced.tex" 1760447717 56369 45d76b022a13795c9be0dca30825de8e ""
+  "advanced.toc" 1760447725 392 b566ef1dc5f4bbbf573b352b3aad1e65 "pdflatex"
   (generated)
   "advanced.aux"
   "advanced.bcf"

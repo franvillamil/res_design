@@ -1,7 +1,7 @@
 \beamer@sectionintoc {1}{Review}{2}{0}{1}
-\beamer@sectionintoc {2}{Generalizing results}{14}{0}{2}
-\beamer@sectionintoc {3}{Complementary tests}{59}{0}{3}
-\beamer@sectionintoc {4}{Extra: Synthetic control methods}{64}{0}{4}
-\beamer@sectionintoc {5}{Questions}{70}{0}{5}
-\beamer@sectionintoc {6}{Causal methods again, in detail}{72}{0}{6}
-\beamer@sectionintoc {7}{Re-cap \& example}{152}{0}{7}
+\beamer@sectionintoc {2}{Generalizing results}{7}{0}{2}
+\beamer@sectionintoc {3}{Complementary tests}{53}{0}{3}
+\beamer@sectionintoc {4}{Extra: Synthetic control methods}{58}{0}{4}
+\beamer@sectionintoc {5}{Questions}{64}{0}{5}
+\beamer@sectionintoc {6}{Causal methods again, in detail}{66}{0}{6}
+\beamer@sectionintoc {7}{Re-cap \& example}{137}{0}{7}

@@ -2,9 +2,9 @@
 % \documentclass[aspectratio=169]{beamer}
 
 % Title --------------------------------------------
-\title[Lecture 5: Advanced topics]{\Large Advanced topics \& overview}
+\title[Lecture 5: Advanced topics]{\Large Generalization \& overview}
 \author[]{Francisco Villamil}
-\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2024}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2025}
 
 \input{../beamer_preamble.tex}
 
@@ -42,89 +42,90 @@
 \end{frame}
 % ----------------------------------------------------
 
-\subsection*{Unit of analysis}
+% \subsection*{Unit of analysis}
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Unit of analysis}
+% \centering
+
+% \begin{itemize}
+%   \item<2-> \textbf{Level at which we have our observations}
+%   \begin{itemize}
+%     \item Imagine you have an Excel spreadsheet with the data: each \BGyellow{row} indicates what?
+%   \end{itemize}
+%   \item<3-> Deeply related to the variables we have
+%   \begin{itemize}
+%     \item The UA is the level at which you are measuring your variables
+%     \item<4-> Not all variables can be measured at the same level
+%     \item<5-> Example: \textbf{cancer mortality}. At which levels can we measure this?
+%   \end{itemize}
+%   \item<6-> We can change the UA of a dataset (usually from bottom to top)
+%   % \begin{itemize}
+%   %   \item Example: let's say we have an individual-level dataset of diseases and outcome (death)
+%   % \end{itemize}
+% \end{itemize}
+
+% \end{frame}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Unit of analysis}
+% \centering
+
+% \begin{itemize}
+%   \item[] Most important things:
+%   \item Be able to identify it
+%   \item \textbf{Choose the right unit of analysis} depending on the theory and mechanisms we are testing
+%   \begin{itemize}
+%     \item Examples: democratic peace, trade flows
+%   \end{itemize}
+%   % \item[]
+%   % \item<2-> How many variables and what's the unit of analyses in the next dataset?
+% \end{itemize}
+
+% \end{frame}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \imageframe{../img/electoral_data_excel}
+% % ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{Unit of analysis}
+\frametitle{Design example}
 \centering
 
-\begin{itemize}
-  \item<2-> \textbf{Level at which we have our observations}
-  \begin{itemize}
-    \item Imagine you have an Excel spreadsheet with the data: each \BGyellow{row} indicates what?
-  \end{itemize}
-  \item<3-> Deeply related to the variables we have
-  \begin{itemize}
-    \item The UA is the level at which you are measuring your variables
-    \item<4-> Not all variables can be measured at the same level
-    \item<5-> Example: \textbf{cancer mortality}. At which levels can we measure this?
-  \end{itemize}
-  \item<6-> We can change the UA of a dataset (usually from bottom to top)
-  % \begin{itemize}
-  %   \item Example: let's say we have an individual-level dataset of diseases and outcome (death)
-  % \end{itemize}
-\end{itemize}
+Let's say we're interesting in exploring the problem of\\\textbf{AI automation and the labor market},\\where do we start?
+
+\vspace{25pt}
+
+\begin{flushleft}
+{\small Remember:}\\\vspace{10pt}
+% ----------------------------------------------------
+\begin{minipage}{.4\textwidth}
+  \begin{enumerate}\footnotesize
+  \item Topic
+  \item RQ
+  \item Theory and mechanisms
+\end{enumerate}
+\end{minipage}
+% ----------------------------------------------------
+\begin{minipage}{.5\textwidth}
+  \begin{enumerate}\footnotesize\setcounter{enumi}{3}
+  \item Concepts, measurement
+  \item Strategy
+  \item {\color{blue}{Results, interpretation \& relevance}}
+\end{enumerate}
+\end{minipage}
+% ----------------------------------------------------
+\end{flushleft}
+  
 
 \end{frame}
 % ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Unit of analysis}
-\centering
-
-\begin{itemize}
-  \item[] Most important things:
-  \item Be able to identify it
-  \item \textbf{Choose the right unit of analysis} depending on the theory and mechanisms we are testing
-  \begin{itemize}
-    \item Examples: democratic peace, trade flows
-  \end{itemize}
-  % \item[]
-  % \item<2-> How many variables and what's the unit of analyses in the next dataset?
-\end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\imageframe{../img/electoral_data_excel}
-% ----------------------------------------------------
-
-% % ----------------------------------------------------
-% \begin{frame}
-% \frametitle{How many variables? Unit of analysis?}
-% \centering
-
-% \includegraphics[width = 0.9\textwidth]{../img/covid_vote}
-
-% \end{frame}
-% % ----------------------------------------------------
-
-% % ----------------------------------------------------
-% \begin{frame}
-% \frametitle{How many variables? Unit of analysis?}
-% \centering
-
-% \includegraphics[width = \textwidth]{../img/global_inflation_ft}
-
-% \end{frame}
-% % ----------------------------------------------------
-
-% % ----------------------------------------------------
-% \begin{frame}
-% \frametitle{How many variables? Unit of analysis?}
-% \centering
-
-% \includegraphics[width = 0.65\textwidth]{../img/emissions}
-
-% \end{frame}
-% % ----------------------------------------------------
-
-% % ----------------------------------------------------
-% \imageframe{../img/Minard}
-% % ----------------------------------------------------
+  
 
 \section{Generalizing results}
 
@@ -141,10 +142,28 @@
     \item `Valid' studies and synthesis studies
     \item Practice-oriented, Esther Duflo: `The Economist as Plumber'
   \end{itemize}
-  \item What are we really learning? How much \textit{knowledge} we gain? %\uncover<2->{How much \textit{knowledge} we gain?}
-  \item[]
-  \item<2-> Importance of meta-scientific knowledge
+  \item What are we really learning? How much \textit{knowledge} we gain?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Generalizing results}
+\centering
+
+\begin{itemize}
+  \item[1.] Connection theory-empirics
   \begin{itemize}
+    \item We start with big questions and then narrow them down
+    \item Usually because we need to so in order to answer \textit{something}
+    \item But it is important to look back at the big question
+    \item Think that in \textbf{every decision} on RQs, concepts, measurements, strategy... you lose some detail
+  \end{itemize}
+  \item<2->[2.] Importance of meta-scientific knowledge
+  \begin{itemize}
+    \item[] Quantitative approaches for looking at the big picture
     \item[1.] Robustness of results and incremental science ($\rightarrow$ meta-analyses)
     \item[2.] Generalization of results ($\rightarrow$ construct and external validity)
   \end{itemize}
@@ -160,7 +179,7 @@
 \centering
 
 \begin{itemize}
-  \item Effect of commodity prices on conflict
+  \item Effect of natural resources (oil, diamonds, etc) on conflict
   \item What's the \BGyellow{causal inference problem} here?
   \item<2-> But there are options to solve this, right?
 \end{itemize}
@@ -175,12 +194,16 @@
 
 \includegraphics[width = \textwidth]{../img/blair_apsr}
 
+\begin{itemize}
+  \item Idea: Commodity \textbf{prices} are often \textbf{exogenous} to internal conflict
+\end{itemize}
+
 \end{frame}
 % ----------------------------------------------------
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{An example of a meta-analysis}
+\frametitle{How are meta-analyses done}
 \centering
 
 \begin{itemize}
@@ -389,7 +412,7 @@
   \item We say we are analyzing the effect of $X$ on $Y$, but are we really measuring that?
   \item[]
   \item<2->[1.] Construct validity of the \BGyellow{cause}: bundled treatments, exclusion restriction (assigment only affects through treatment), SUTVA, etc
-  \item<3->[2.] Construct validity of the \BGyellow{outcome}: similar, making sure the empirical measure mirrors the theoretical construct
+  \item<3->[2.] Construct validity of the \BGyellow{outcome}: similar, making sure the empirical measure mirrors the theoretical construct: thing e.g. about measuring polarization
 \end{itemize}
 
 \end{frame}
@@ -835,7 +858,7 @@
   \end{itemize}
 \end{itemize}
 
-\uncover<4->{\includegraphics[width = 0.8\textwidth]{../img/matching_dag_distance}}
+\uncover<1->{\includegraphics[width = 0.8\textwidth]{../img/matching_dag_distance}}
 
 \end{frame}
 % ----------------------------------------------------
@@ -854,7 +877,7 @@
   \end{itemize}
 \end{itemize}
 
-\uncover<4->{\includegraphics[width = .85\textwidth]{../img/matching_dag_ps}}
+\uncover<1->{\includegraphics[width = .85\textwidth]{../img/matching_dag_ps}}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1745,36 +1768,6 @@ Our true causal model
   \item[1.] Run a `first-stage' regression to predict the treamtnet with the instrument
   \item[2.] Use the predicted values to predict the outcome in the `second-stage'
 \end{itemize}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Alternative approaches to IV: build your own}
-\centering
-
-\includegraphics[width = 0.8\textwidth]{../img/carl1}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Alternative approaches to IV: build your own}
-\centering
-
-\includegraphics[width = \textwidth]{../img/carl9}
-
-\end{frame}
-% ----------------------------------------------------
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{Alternative approaches to IV: build your own}
-\centering
-
-\includegraphics[width = \textwidth]{../img/carl10}
 
 \end{frame}
 % ----------------------------------------------------
