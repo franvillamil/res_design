@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  10 SEP 2026 12:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  10 SEP 2026 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2067,7 +2067,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 <../img/spotify.png, id=540, 963.6pt x 367.87437pt>
 File: ../img/spotify.png Graphic file (type png)
 <use ../img/spotify.png>
-Package pdftex.def Info: ../img/spotify.png  used on input line 839.
+Package pdftex.def Info: ../img/spotify.png  used on input line 837.
 (pdftex.def)             Requested size: 291.77383pt x 111.39038pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -2308,11 +2308,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [112
 
 ]
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 1273.
-
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2320,6 +2315,11 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [113
 
 ]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 1275.
+
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2348,11 +2348,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [117
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 1345.
-
-(./introduction.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2360,13 +2355,25 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [118
 
 ]
-<../img/replicationcrisis2.png, id=784, 1208.515pt x 743.77875pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1347.
+
+(./introduction.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[119
+
+]
+<../img/replicationcrisis2.png, id=789, 1208.515pt x 743.77875pt>
 File: ../img/replicationcrisis2.png Graphic file (type png)
 <use ../img/replicationcrisis2.png>
-Package pdftex.def Info: ../img/replicationcrisis2.png  used on input line 1355
+Package pdftex.def Info: ../img/replicationcrisis2.png  used on input line 1357
 .
 (pdftex.def)             Requested size: 364.1985pt x 224.14542pt.
- [119
+ [120
 
  <../img/replicationcrisis2.png>])
 \tf@nav=\write7
@@ -2389,8 +2396,8 @@ Package logreq Info: Writing requests to 'introduction.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35056 strings out of 476025
- 702640 string characters out of 5790017
+ 35058 strings out of 476025
+ 702661 string characters out of 5790017
  1869388 words of memory out of 5000000
  54558 multiletter control sequences out of 15000+600000
  528104 words of font info for 88 fonts, out of 8000000 for 9000
@@ -2408,10 +2415,10 @@ local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/l
 ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on introduction.pdf (119 pages, 5012183 bytes).
+Output written on introduction.pdf (120 pages, 5013416 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
- 254 named destinations out of 1000 (max. 500000)
+ 913 PDF objects out of 1000 (max. 8388607)
+ 718 compressed objects within 8 object streams
+ 256 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,11 +12,11 @@ layout: default
 
 ### Schedule 2026
 
-| Date and time        | Topic                                   | Slides | Reading |
-| :---        | :---                                    | :---   | :--- |
-| **Tue, Sep 15** (18h-21h) | Why design at all? | | |
-| **Tue, Sep 22** (18h-21h)  | Questions, and where the data comes from | | [[Google Flu](https://www.science.org/doi/10.1126/science.1248506)] |
-| **Tue, Sep 29** (18h-21h)  | Do the numbers mean what you think? | | [[Roads to Rule](https://journals.sagepub.com/doi/10.1177/0022002720963674)] |
-| **Tue, Oct 6** (18h-21h)    | What comparisons can we use to establish causal claims? | | [[Guess et al.](https://www.science.org/doi/10.1126/science.abp9364)] |
-| **Tue, Oct 13** (18h-21h) | What variation can you exploit, and how far does it travel? | | |
-| **Mon, Oct 26** (15h-21h)  | Final essay workshop (*double session*) | | |
+| Date and time | Topic | Slides | Reading |
+| :--- | :--- | :--- | :--- |
+| **Tue,&nbsp;Sep&nbsp;15**&nbsp;(18h-21h) | Why design at all? | | |
+| **Tue,&nbsp;Sep&nbsp;22**&nbsp;(18h-21h) | Questions and data | | [[Google&nbsp;Flu](https://www.science.org/doi/10.1126/science.1248506)] |
+| **Tue,&nbsp;Sep&nbsp;29**&nbsp;(18h-21h) | Measurement and description | | [[Roads&nbsp;to&nbsp;Rule](https://journals.sagepub.com/doi/10.1177/0022002720963674)] |
+| **Tue,&nbsp;Oct&nbsp;6**&nbsp;(18h-21h) | Causality | | [[Guess&nbsp;et&nbsp;al.](https://www.science.org/doi/10.1126/science.abp9364)] |
+| **Tue,&nbsp;Oct&nbsp;13**&nbsp;(18h-21h) | Designs and credibility | | |
+| **Mon,&nbsp;Oct&nbsp;26**&nbsp;(15h-21h) | Final essay workshop (*double&nbsp;session*) | | |

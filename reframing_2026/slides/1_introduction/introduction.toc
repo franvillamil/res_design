@@ -5,4 +5,4 @@
 \beamer@sectionintoc {5}{From data to a question}{65}{0}{5}
 \beamer@sectionintoc {6}{Exercise: audit a claim}{94}{0}{6}
 \beamer@sectionintoc {7}{Course logistics}{100}{0}{7}
-\beamer@sectionintoc {8}{Appendix}{118}{1}{8}
+\beamer@sectionintoc {8}{Appendix}{119}{1}{8}

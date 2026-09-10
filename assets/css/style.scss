@@ -98,21 +98,27 @@ pre {
 table {
   width:100%;
   border-collapse:collapse;
+  font-size:12px;
+  line-height:1.35;
 }
 
 th, td {
   text-align:left;
-  padding:5px 10px;
+  padding:5px 6px;
   border-bottom:1px solid #e5e5e5;
+  vertical-align:top;
+}
+
+th {
+  color:#444;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
 }
 
 dt {
   color:#444;
   font-weight:500;
-}
-
-th {
-  color:#444;
 }
 
 img {
