@@ -44,7 +44,7 @@ about how you'd describe / explain / predict?*
 | 1 | Introduction | **Why design at all?** What does it mean to answer a question with evidence? |
 | 2 | Questions and data | **What is the question, and where would the data come from?** |
 | 3 | Measurement | **Do the numbers mean what you think they mean?** |
-| 4 | Causality | **What comparison would license a causal claim?** |
+| 4 | Causality | **What comparisons can we use to establish causal claims?** |
 | 5 | Designs and credibility | **What variation can you actually exploit, and how far does the answer travel?** |
 | 6 | Workshop | Students run their own designs through questions 1–5 |
 

@@ -7,7 +7,8 @@ Drafted 2026-09-03. **Course starts Tue Sep 15, 2026** (12 days out).
 The course currently spends **2.5 of its 5 lectures on causal-inference machinery** (potential
 outcomes → DAGs → biases → FE/DiD/RDD/IV → the same methods again in more detail), and roughly
 **half a lecture on measurement and description**. For a cohort at the *start* of a CSS master's
-who will meet estimation again with the math in AQM, that allocation is backwards: the things
+whose own programme runs a full methods sequence — statistics, survey methods, data science, R,
+causal inference, data mining — that allocation is backwards: the things
 that actually break MA theses are bad questions, found data of unknown provenance, and
 unvalidated measures — not a shaky grasp of the DiD estimator. The reframing **compresses
 causality to ~1.5 sessions, gives measurement + description a full session, and opens a new
@@ -27,6 +28,7 @@ are unchanged.
 | [`05_readings.md`](05_readings.md) | Assigned readings per session + instructor background |
 | [`06_assessment.md`](06_assessment.md) | Milestone ladder, assessment weights, workshop format |
 | [`07_todo.md`](07_todo.md) | Triaged task list: before Sep 15 / during term / next year |
+| [`08_outline_2026.md`](08_outline_2026.md) | **Logistics decisions + detailed 5-lecture outline for review, and the week-by-week build order** |
 
 ## Headline changes
 
@@ -38,16 +40,17 @@ are unchanged.
 4. **Session 5's duplicate methods block is cut** (~65 frames re-teaching FE/DiD/RDD/IV with
    regression algebra — both redundant and outside the stated no-statistics scope). The freed
    time goes to generalization, credibility/reproducibility, and research ethics.
-5. **A milestone ladder** replaces the current jump from week 4 to the workshop: five short,
-   cheap-to-grade deliverables that assemble into the final essay.
+5. **Five design memos** replace the current jump from week 4 to the workshop: short pair
+   exercises, each running off that week's paper, handed in before the following session.
 6. **Decks get capped at ~55 frames** with the overflow moved to explicit appendix sections.
    Current decks run 86–110 frames for a 3h slot that also has to fit a paper discussion.
 
 ## Known instructor intents already folded in
 
 - The note at the top of `syllabus_research_design.tex` — *raise the final essay to 50–60%,
-  drop participation* — is implemented in [`06_assessment.md`](06_assessment.md) (essay 55%,
-  participation dropped).
+  drop participation* — is superseded by the settled scheme in
+  [`06_assessment.md`](06_assessment.md): memos 20 / presentation 35 / peer feedback 10 /
+  essay 35, with participation and the graded paper commentary both dropped.
 - `syllabus_research_design.tex` still says **Fall 2025** and Sep 16; `index.md` already has the
   2026 dates. The syllabus needs updating either way — see [`07_todo.md`](07_todo.md).
 

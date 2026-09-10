@@ -1,0 +1,40 @@
+% Notes configuration
+\usepackage{pgfpages}
+\setbeameroption{show notes}
+\pgfpagesuselayout{4 on 1}[a4paper, landscape, border shrink=5mm]
+\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
+
+% Customize note page: remove header, preview, date
+\setbeamertemplate{note page}{%
+  \insertnote%
+}
+
+% Fix page numbers and spacing in notes
+\newlength{\parskipbackup}
+\setlength{\parskipbackup}{\parskip}
+\newlength{\parindentbackup}
+\setlength{\parindentbackup}{\parindent}
+
+\let\notebackup\note
+\renewcommand{\note}[1]{\notebackup{%
+  \mode<handout>{\addtocounter{page}{-1}}%
+  \setlength{\parindent}{0ex}%
+  \setlength{\parskip}{10pt}%
+  \noindent%
+  {\normalsize{}#1}%
+  \setlength{\parskip}{\parskipbackup}%
+  \setlength{\parindent}{\parindentbackup}%
+}%
+}
+
+% Override AtBeginSection to include note for roadmap frame
+\AtBeginSection[]{
+  \begin{frame}
+    \frametitle{Roadmap}
+    \tableofcontents[current]
+    \note{}
+  \end{frame}
+}

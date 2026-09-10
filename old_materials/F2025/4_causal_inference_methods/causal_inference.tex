@@ -1,0 +1,903 @@
+\documentclass[aspectratio=43]{beamer}
+% \documentclass[aspectratio=169]{beamer}
+
+% Title --------------------------------------------
+\title[Lecture 4: Causal methods]{\Large Causal methods with observational data}
+\author[]{Francisco Villamil}
+\date[]{Research Design for Social Sciences\\MA Computational Social Science, UC3M\\Fall 2025}
+
+\input{../beamer_preamble.tex}
+
+\usepackage{amsmath}
+\renewcommand<>{\BGyellow}[1]{\only#2{\beameroriginal{\BGyellow}}{#1}}
+
+\begin{document}
+% ====================================================
+
+% ----------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+% ----------------------------------------------------
+
+\section{Housekeeping}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item \BGyellow{\textbf{Groups?}} Send me an email \textbf{\colorbox{yellow}{before} Oct 14th}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap and final essay}
+\centering
+
+\begin{itemize}
+  \item Logistics:
+  \begin{itemize}
+    \item 10-15 slots
+    \item 10min presentation + 10min feedback
+    \item If less groups, we can increase time
+  \end{itemize}
+  \item \textbf{Questions?}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Intro and overview}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Re-cap}
+\centering
+
+\begin{itemize}
+  \item[1.] Problem/topic
+  \item[2.] Stories, arguments about mechanisms
+  \item[3.] Research question
+  \item[4.] Proper theory, concepts and operationalization
+  \item[5.] Measurement, unit of analyses, data sources, etc
+  \item[6.] \BGyellow{Inference strategy}
+  \item[7.] Results \& interpretation
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Methods and causal inference}
+\centering
+
+\begin{itemize}
+  \item Most of the time is \textbf{impossible} to control for all relevant variables (i.e. not able to close all back-door paths)
+  \item So what do we do? We try to find ways to control for unobserved confounding
+  \item One option is to rely on \textbf{additional controlling techniques}
+  \begin{itemize}
+    \item \BGyellow{Matching}: also depends on observables, but parametric advantages, etc (anyway, not a solution for $U$)
+    \item \BGyellow{Fixed effects}: can control for group-level unobservables, and correct issues related to ecological fallacy
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Methods and causal inference}
+\centering
+
+\begin{itemize}
+  \item Another option is to find a source of \BGyellow{exogenous variation} and exploit
+  \item There are a few methods related to causal inference not because they uncover causal relationships but because they are designed to exploit \textit{`typical' exogenous sources of variation}
+  \item Situations where there is \textit{something} that introduces variation in the treatment that is independent from confounders and you can exploit to analyse
+  \begin{itemize}
+    \item Same as randomization (of treatment assignment) in experiments
+  \end{itemize}
+  \item (In H-K's \textit{The Effect}, they're called `template causal diagrams')
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Exogenous variation}
+\centering
+
+\includegraphics[width = \textwidth]{../img/smoking1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Exogenous variation}
+\centering
+
+\includegraphics[width = \textwidth]{../img/smoking2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \begin{frame}
+% \frametitle{Methods and causal inference}
+% \centering
+%
+% \begin{itemize}
+%   \item[1.] Time
+%   \begin{itemize}
+%     \item we can exploit changes over time in treated vs control units, e.g. imagine checking effect of good nutrition on a child who is growing anyway
+%   \end{itemize}
+%   \item[2.] Cut-offs
+%   \begin{itemize}
+%     \item sometimes something happens just when you cross a cut-off (getting into university, winning an election, a geographical border, being born Jan 1st...)
+%   \end{itemize}
+%   \item[3.] A third, unrelated variable
+%   \begin{itemize}
+%     \item you win the lottery, you get a sudden increase in disposable income
+%   \end{itemize}
+% \end{itemize}
+%
+% \end{frame}
+% % ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Methods and causal inference}
+\centering
+
+\begin{itemize}
+  \item[-] Five techniques commonly used in causal inference
+  \begin{itemize}
+    \item two of them used for controlling (closing back-doors), and the other three to exploit `pre-made` causal models
+    \item btw, what is controlling? when you control for Z, you remove the variation in X and Y that is \textit{explained by Z} (\href{https://www.nickchk.com/anim/Animation\%20of\%20Control.gif}{see this})
+  \end{itemize}
+  \item[]
+  \item<2->[1.] Fixed effects
+  \item<2->[2.] Difference-in-differences
+  \item<2->[3.] Regression discontinuity design
+  \item<2->[4.] Instrumental variables
+  \item<2->[5.] Matching
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Methods in brief}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\begin{itemize}
+  \item The problem with covariate adjustment is that we need to \textit{observe} those variables, but we usually have unobserved confounders
+  \item An strategy in that case is to try within-group comparisons, which blocks all group-wide confounding
+  \item For example, imagine cases when our $U$ variable is:
+  \begin{itemize}
+    \item \textit{city of origin}, in an individual-level analysis; \textit{school effects} in an analyses of students grades; \textit{individual background}, in a panel survey analysis...
+  \end{itemize}
+  \item It corrects for \BGyellow{ecological fallacy} (esp. Simpson's paradox)
+  \item Estimation: dummy variable for each group
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe3}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe4}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe5}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe6}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe7}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe8}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Fixed effects}
+\centering
+
+\includegraphics[width = 0.7\textwidth]{../img/fe9}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\begin{itemize}
+  \item Treatments usually occur at a particular moment in time, e.g.:
+    \begin{itemize}
+      \item Minimum wage increase, terrorist attacks, influx of refugees, ...
+    \end{itemize}
+  \item<2-> A naive idea would be to compare how it was \textit{before} the treatment with how it is \textit{after} the treatment, right?
+    \begin{itemize}
+      \item e.g. in municipalities that removed Francoist streets, how much did Vox grow between 2016 and 2019?
+    \end{itemize}
+  \item<3-> or we could just compare treated vs control \textit{after} treatment
+    \begin{itemize}
+      \item e.g. did Vox get more votes in 2019 in municipalities that removed F streets?
+    \end{itemize}
+  \item<4-> \textbf{DiD idea}: use a control group that works as a \BGyellow{counterfactual} for how much would $Y$ have changed without treatment
+  \end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/did1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/did2}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/did3}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/did4}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/did5}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Difference-in-differences estimation}
+\centering
+
+\begin{itemize}
+  \item You normally estimate it using a regression model (OLS or logit, depending on the outcome) on panel data
+  \begin{itemize}
+    \item each unit has one observation per period (at least, before/after treatment)
+  \end{itemize}
+  \item Variables: time, group (treated or not), and their interaction
+\end{itemize}
+
+\begin{equation}
+\begin{split}
+    Y_{it} =&  \beta_0 + \beta_1 Treated_{i} + \beta_2 After_{t} +\\
+    &\beta_3 (Treated_{i} \times After_{t}) + \beta^\top \mathbf{x}_{i} + \epsilon_{it}
+\end{split}
+\end{equation}
+
+\begin{itemize}
+  \item \BGyellow{Key assumption}: control group is a good counterfactual
+  \begin{itemize}
+    \item checking parallel trends assumption
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{DiD and staggered treatments}
+\centering
+
+\begin{itemize}
+  \item Normal DiD works on a before/after setting, where treatment affects all units at the same time
+  \item What if treatment is \textbf{staggered}?
+\end{itemize}
+
+
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\imageframe{../img/staggered1}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{DiD and staggered treatments}
+\centering
+
+\begin{itemize}
+  \item Different strategies to deal with this
+  \item Naive: Two-Way Fixed Effects (TWFE)
+  \begin{itemize}
+    \item Problem when having heterogenous effects over time
+  \end{itemize}
+  \item More recently: DiD estimates under treatment heterogeneity
+  \begin{itemize}
+    \item Goodman-Bacon 2021 {\footnotesize (``Difference-in-Differences with Variation in Treatment Timing'')}
+    \item Callaway and Sant'Anna 2021 {\footnotesize (``Difference-in-Differences with Multiple Time Periods'')}
+    \item Roth et al. 2023 {\footnotesize (``What’s Trending in Difference-in-Differences?'')}
+  \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/staggered1}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/staggered2}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\imageframe{../img/staggered3}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/staggered4}
+% ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \imageframe{../img/exhumacion_argentina}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \imageframe{../img/map_graves}
+% % ----------------------------------------------------
+
+% % ----------------------------------------------------
+% \imageframe{../img/map_graves_exhumation}
+% % ----------------------------------------------------
+      
+% % ----------------------------------------------------
+% \imageframe{../img/exhumaciones_navarra}
+% % ----------------------------------------------------
+  
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Regression discontinuity design}
+\centering
+
+\begin{itemize}
+  \item RDD works well when assignment into treatment depends on a cutoff along a \BGyellow{running variable}
+  \begin{itemize}
+    \item Do incumbent politicians have an electoral advantage? (vote share)
+    \item What is the effect of being drafted into the military? (birth year)
+    \item Effect of national policies in ethnic identification in Africa? (distance to colonial borders)
+  \end{itemize}
+  \item<2-> The source of the exogenous variation:
+  \begin{itemize}
+    \item Although many variables confound the relationships between $X$ and $Y$, nothing should be too different \textit{around the cutoff} between treatment and control groups (local randomization assumption)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Regression discontinuity design}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/rdd_teffect}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Regression discontinuity design}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/rdd_teffect}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Regression discontinuity design}
+\centering
+
+\begin{itemize}
+  \item \BGyellow{Key assumption}: other confounders also vary along the running variable, but are independent to the \textit{jump over cutoff}
+\end{itemize}
+
+\vspace{50pt}
+
+\includegraphics[width = \textwidth]{../img/rdd_dag}
+
+\vspace{15pt}
+
+{\scriptsize Huntington-Klein, \textit{The Effect}, p.508}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{RDD estimates the \BGyellow{LATE}}
+\centering
+
+\includegraphics[width = \textwidth]{../img/rdd_procedure}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Threats in RDD}
+\centering
+
+\begin{itemize}
+  \item \BGyellow{Outcome $\rightarrow$ cutoff}: what we study might actually affect cutoff (e.g. colonial borders and ethnic ID)
+  \begin{itemize}
+    \item could also be a case of confounding, cutoff $\leftarrow Z \rightarrow$ outcome
+  \end{itemize}
+  \item<2-> \BGyellow{Precise sorting}: maybe something is \textit{actually} affecting sorting around the cutoff (next example)
+  \item<3-> Causal effect \BGyellow{independent of treatment}: being above/below cutoff affects $Y$ independent of the treatment we're interesting in
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Threats in RDD: precise sorting}
+\centering
+
+\includegraphics[width = \textwidth]{../img/marathon_finishing_times}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Instrumental variables}
+\centering
+
+\begin{tikzpicture}[every text node part/.style={align=center}, scale = 0.75]
+\node (r) at (0,0){\texttt{random}};
+\node (y) at (7,0){Y};
+\node (x) at (3.5,0){X};
+\node (u) at (5,1.5){U};
+\draw[->] (r) -- (x);
+\draw[->] (x) -- (y);
+\draw[->, dashed] (u) -- (y);
+\draw[->, dashed] (u) -- (x);
+\end{tikzpicture}
+
+\begin{itemize}
+  \item Probably closest idea to a `natural experiment'
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Instrumental variables}
+\centering
+
+\begin{itemize}
+  \item Find an exogenous source of variation in the treatment variable
+  \begin{itemize}
+    \item e.g., we want to know the effect of protests on government action, and we use \textit{rainfall} as an instrument
+  \end{itemize}
+  \item Isolate that variation and use it to identify the causal effect
+  \begin{itemize}
+    \item two-stage least squares, or 2SLS
+  \end{itemize}
+  \item[]
+  \item<2->[] \textbf{Assumptions:}
+  \item<2-> \BGyellow{Relevance}: the instrument explains at least some part of the treatment variable
+  \item<2-> Validity or \BGyellow{exclusion restriction}: no back door paths between the instrument and the outcome
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Overview of the 3 design templates}
+\centering
+
+\begin{itemize}
+  \item Difference-in-differences
+  \item Regression discontinuity
+  \item Instrumental variables
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example: Instrumental variables}
+\centering
+
+\includegraphics[width = \textwidth]{../img/india_riots1}
+  
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example: Instrumental variables}
+\centering
+
+\includegraphics[width = \textwidth]{../img/india_riots2}
+  
+\begin{itemize}
+  \item<2-> What's the \textbf{problem} here?
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+  
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example: Instrumental variables}
+\centering
+
+\includegraphics[width = \textwidth]{../img/india_riots3}
+
+\begin{itemize}
+  \item<2-> What could be a source of \textbf{exogenous variation}? (i.e. quasi-experiment)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example: Instrumental variables}
+\centering
+
+\includegraphics[width = \textwidth]{../img/india_riots4}
+  
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example: Regression discontinuity}
+\centering
+
+\includegraphics[width = \textwidth]{../img/boix_jewish1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\imageframe{../img/boix_jewish2}
+% ----------------------------------------------------
+% ----------------------------------------------------
+\imageframe{../img/boix_jewish3}
+% ----------------------------------------------------
+% ----------------------------------------------------
+\imageframe{../img/boix_jewish4}
+% ----------------------------------------------------
+% ----------------------------------------------------
+\imageframe{../img/boix_jewish5}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Alternative approaches to IV: build your own}
+\centering
+
+\includegraphics[width = 0.8\textwidth]{../img/carl1}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Alternative approaches to IV: build your own}
+\centering
+
+\includegraphics[width = \textwidth]{../img/carl9}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Alternative approaches to IV: build your own}
+\centering
+
+\includegraphics[width = \textwidth]{../img/carl10}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{(Extra) Example on theory, evidence and putting it all together}
+\centering
+
+\includegraphics[width = \textwidth]{../img/race_democratic_peace}
+  
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Remember, usual causal inference strategies}
+\centering
+
+\begin{enumerate}
+  \item {\color{red}{Fixed effects}}
+  \item {\color{blue}{Difference-in-differences}}
+  \item {\color{blue}{Regression discontinuity design}}
+  \item {\color{blue}{Instrumental variables}}
+  \item {\color{red}{Matching}}
+\end{enumerate}
+
+\end{frame}
+% ----------------------------------------------------
+
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Matching}
+\centering
+
+\begin{itemize}
+  \item Main idea behind matching: adding control variables is \textit{not the only way} to control / close back doors
+  \item When you use a subset selecting on a variable, you are controlling for that variable
+  \begin{itemize}
+    \item e.g. if you analyze $income \leftarrow education$ and only use data from individuals who grew up in big cities, you are already controlling for urban/rural
+  \end{itemize}
+  \item<2-> Matching builds on this, and it is essentially about keeping in the same only comparable observations, or \textit{matched pairs}
+  \item<3-> \href{https://www.nickchk.com/anim/Animation\%20of\%20Matching.gif}{Example of $Y \leftarrow Treatment$ matching on $X$}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Matching}
+\centering
+
+\begin{itemize}
+  \item Normally you match treated units on a few control units (so you would get the \textbf{ATT})
+  \item But in some cases you do the opposite, because you have more treated units that control (and you get the \textbf{ATC})
+  \begin{itemize}
+    \item Example from Ukraine survey paper {\small (combining matching with other)}
+  \end{itemize}
+  \item Two basic approaches:
+  \begin{itemize}
+    \item \BGyellow{Distance matching:} you select observations that have similar values on the matching variables
+    \item \BGyellow{Propensity score matching:} we estimate the probability of being treated based on a set of variables, and then control/subset for that propensity score
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Overall inference strategy}
+\centering
+
+\begin{itemize}
+  \item In ideal experimental setting, we actually don't need any sophisticated statistics
+  \begin{itemize}
+    \item We can just compare the \textit{mean} of the treatment group and the \textit{mean} of the control group, that's it
+  \end{itemize}
+  \item<2-> In observational data, these two types of tools (controlling + exploiting exogenous variation) are often used in combination
+  \item<2-> But \textbf{always remember} these methods \textbf{depend} on a \textbf{causal model}
+  \item<2-> Let's look at an example {\footnotesize (from Huntington-Klein \textit{The Effect}, kind of)}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Controlling \textbf{and} exploting exogeneity}
+\centering
+
+\begin{itemize}
+  \item Q: \textbf{Does pollution determine transport choice?}
+  \item And say we are going to observe variation across \textit{days}
+  \begin{itemize}
+    \item Outcome: car driving
+    \item Treatment: pollution levels
+  \end{itemize}
+  \item Clear problem of endogeneity, no? {\footnotesize (driving in $t_{-1}$, economic activity, etc)}
+  % \item \BGyellow{Z} $\rightarrow$ Pollution {\color{red}{$\rightarrow$}} Driving $\leftarrow$ Z
+\end{itemize}
+
+\includegraphics[width = 0.75\textwidth]{../img/pollution_dag}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Controlling \textbf{and} exploting exogeneity}
+\centering
+
+\includegraphics[width = 0.9\textwidth]{../img/china_pollution}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Controlling \textbf{and} exploting exogeneity}
+\centering
+
+\begin{itemize}
+  \item But it's not enough with wind direction, no?
+\end{itemize}
+
+\vspace{30pt}
+
+\uncover<2->{\includegraphics[width = \textwidth]{../img/china_pollution_dag}}
+
+\begin{itemize}
+  \item<2->[] (And city, in this case)
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Controlling \textbf{and} exploting exogeneity}
+\centering
+
+\begin{itemize}
+  \item So in this case, we need to do two things:
+  \item[1.] Exploit exogenous variation
+  \begin{itemize}
+    \item In this case, using an instrumental variables approach, which isolates the variation in pollution which is explained by variation in wind direction
+  \end{itemize}
+  \item<2->[2.] \textit{And} control for weather, season, and city
+  \begin{itemize}
+    \item Using a regression with control variables, or matching, or fixed effects
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+
+\section{Paper discussion}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Paper discussion}
+\centering
+
+\includegraphics[width = \textwidth]{../img/villamilbalcells}
+
+\end{frame}
+% ----------------------------------------------------
+
+% ====================================================
+\end{document}

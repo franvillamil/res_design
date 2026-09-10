@@ -15,10 +15,11 @@ sequencing below exploits that.
 - [ ] **Update the syllabus.** `syllabi/current/syllabus_research_design.tex` still says
       *Fall 2025* and Sep 16; `index.md` already has the 2026 dates. Fix the term, the dates,
       and the session table.
-- [ ] **Set the new assessment weights** in the syllabus (essay 55%, participation dropped) —
+- [ ] **Set the new assessment weights** in the syllabus (memos 20 / presentation 35 /
+      feedback 10 / essay 35; participation and graded paper commentary both dropped) —
       per the instructor note already at the top of that file. This has to be right on day one
       because students are told the weights in session 1.
-- [ ] **Add the milestone ladder to the syllabus** (`06_assessment.md`) — also has to be
+- [ ] **Add the memo schedule to the syllabus** (`06_assessment.md`) — also has to be
       announced in session 1, and it's five table rows.
 - [ ] **Swap the session 2 reading** to Lazer et al. (Google Flu) and move Müller-Crepon to
       session 3, in both the syllabus and `index.md`.
@@ -93,8 +94,9 @@ Mostly deletion, so this is the cheapest session to prepare.
 
 ## Before Oct 26 (workshop)
 
-- [ ] Assign peer reviewers and circulate M5 sketches ~3 days ahead.
-- [ ] Write the peer-review sheet (two written comments, handed in — this is the 10%).
+- [ ] Pair the groups and circulate each group's M5 sketch to its partner (~12 groups, 6 pairings).
+- [ ] Write the peer-review sheet (written comments on the paired group, handed in — the 10%,
+      graded on the group).
 - [ ] Fix the slot schedule: 12 min / 8 min / hard stop.
 - [ ] Prepare the required-slides list, including **"the threat I can't solve."**
 
@@ -130,8 +132,8 @@ most of the CSS benefit while leaving the session order and all five decks where
    the freed 60–70 minutes on credibility (Breznau, pre-registration) and ethics. This is the
    single highest-value change in the whole plan and it is a *deletion*, so it costs nothing
    but the decision.
-4. **Add the milestone ladder** (`06_assessment.md`). Pure syllabus text, no slides, and it is
-   the thing most likely to improve the essays.
+4. **Add the memo schedule and new weights** (`06_assessment.md`). Pure syllabus text, no
+   slides, and it is the thing most likely to improve the essays.
 
 That is realistically one day of work, fits in the 12 days available, and leaves the full
 restructuring — splitting session 2, promoting measurement to its own session — as next

@@ -49,7 +49,8 @@ machinery: `Controlling in regression`, `Fixed effects and regression` (×3),
 
 Two problems at once. It duplicates session 4, and it breaks the course's own stated scope —
 the syllabus promises "we will not cover statistical techniques or advanced data analysis."
-**Cut the whole section**; park it as an optional appendix deck for students continuing to AQM.
+**Cut the whole section**; park it as an optional appendix deck. The programme has a dedicated
+causal inference course that covers this properly.
 
 ### 2. Nothing in the course is about where computational data comes from
 
@@ -100,7 +101,7 @@ it badly. The fix is not faster delivery, it is an explicit appendix convention.
 The final essay is 40% of the grade and is the first research design most of these students
 will ever have written. The only checkpoints are a `Re-cap and final essay` slide in session 4
 and the workshop itself in session 6. Students arrive at the workshop having started thinking
-about their design that week. A milestone ladder fixes this at near-zero grading cost — see
+about their design that week. Five short pair memos fix this at modest grading cost — see
 `06_assessment.md`.
 
 ### 7. Infrastructure: no presenter notes anywhere

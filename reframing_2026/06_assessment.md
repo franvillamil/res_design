@@ -1,61 +1,75 @@
-# Assessment and the milestone ladder
+# Assessment
 
 ## Weights
 
-The comment at the top of `syllabus_research_design.tex` records the intent to raise the final
-essay to 50–60% and drop participation. Implemented:
+**Settled scheme** (class of ~40; see `08_outline_2026.md` §1.1 for the reasoning):
 
-| Component | Current | Proposed |
-| :--- | ---: | ---: |
-| Participation | 15% | — |
-| Paper commentaries (3 × 5%) | 15% | 15% |
-| Workshop presentation | 20% | 20% |
-| Workshop feedback (peer review) | 10% | 10% |
-| **Final essay** | **40%** | **55%** |
+| Component | Current | New | Graded as |
+| :--- | ---: | ---: | :--- |
+| Participation | 15% | — | — |
+| Paper commentaries | 15% | — | dropped; readings ungraded |
+| Design memos (5) | — | **15%** | pair (M5: group) |
+| Workshop presentation | 20% | **35%** | group |
+| Workshop peer feedback | 10% | **10%** | group |
+| Final essay | 40% | **40%** | **group only** |
 
-Dropping participation is the right call for a seven-session course: it is hard to grade
-defensibly, and the paper commentaries already reward engagement in a way that leaves a paper
-trail. The expectation of active participation stays in the syllabus text as an expectation,
-just not as a number.
+Four moves, each with a reason:
 
-## The milestone ladder — the main addition
+1. **Participation goes**, as intended. It cannot be graded defensibly, least of all with 40
+   students in an evening slot.
+2. **Paper commentaries go, and nothing replaces them.** A short written commentary is close to
+   the ideal LLM task — bounded, generic, and invisible to the marker. It bought a paper trail and
+   little else. Readings stay assigned and get discussed in class; there is simply no enforcement,
+   which is a deliberate choice and worth stating to students plainly once. No discussant either:
+   three papers cannot give forty students a turn.
+3. **The workshop presentation becomes the largest single graded event at 35%.** It is the one
+   thing that cannot be outsourced — a group in front of the room, answering questions about a
+   design they have to have understood.
+4. **The essay is group-only.** The presentation, the feedback and the essay are one piece of work
+   seen three times; splitting the essay off from the group that presented it would not make
+   sense, and at 40 students it is 40 documents rather than 12.
 
-The problem: the essay is 55% and is the first research design most of these students have
-ever written, and the only checkpoint before the workshop is a recap slide in session 4. In
-practice students start thinking about their design in week 5.
+Everything except the essay is graded on a pair or a group. That trades individual resolution for
+work you can actually evaluate at this class size, and for feedback that comes out of a document
+rather than out of whoever speaks loudest.
 
-The fix: five short deliverables, each due at the start of a session, each **directly produced
-by that week's material**, and each a paragraph of the eventual essay.
+*Risk to note:* 45% of the grade is earned on the workshop day. Group work absorbs one person
+being ill; decide in advance what happens if a whole group misses it.
 
-| # | Due | Deliverable | Length | Feeds on |
+## The memos — the main addition
+
+The problem it solves: the essay is the first research design most of these students will ever
+write, and without checkpoints they start thinking about it in week 5.
+
+Five short exercises, half a page, submitted on **Aula Global by Monday night** (formally Tuesday
+00:00). M1–M4 in **pairs**; M5 by the **workshop group**.
+
+| # | Set | Due | Task | Length |
 | :--- | :--- | :--- | :--- | :--- |
-| **M1** | Session 2 | A topic, and why anyone should care | 2–3 sentences | Session 1 |
-| **M2** | Session 3 | Topic → research question. Name the units, and the variation you'd exploit | ~half page | Session 2 |
-| **M3** | Session 4 | Your key concept, how you'd measure it, and one threat to that measure | ~half page | Session 3 |
-| **M4** | Session 5 | The comparison you'd make, and what would bias it | ~half page | Session 4 |
-| **M5** | 3 days before workshop | 1-page design sketch, assembled from M1–M4 | 1 page | Session 5 |
+| **M1** | Session 1 | Mon Sep 21 | audit a claim: goal, data needed, first doubt | ~half page |
+| **M2** | Session 2 | Mon Sep 28 | a found data source: who made it, who's missing | ~half page |
+| **M3** | Session 3 | Mon Oct 5 | one concept, operationalised two ways | ~half page |
+| **M4** | Session 4 | Mon Oct 12 | a causal claim: the comparison, and what would bias it | ~half page |
+| **M5** | Session 5 | **Mon Oct 19** | *the group's project* — written by the workshop group | 1 page |
 
 Design notes:
 
-- **Ungraded, but required.** Checked as done / not done, folded into the essay grade only in
-  the sense that a student who did them writes a better essay. This keeps grading cost near
-  zero — five items × 12 students is about 40 minutes a week of skimming, and most of it is
-  reading three sentences.
-- **Feedback is oral and collective**, not written. Open each session by putting two or three
-  anonymised M-submissions on screen and workshopping them for ten minutes. This is the
-  highest-value teaching in the course: students learn far more from watching a real question
-  get sharpened than from a lecture about sharpening questions. It also costs no prep beyond
-  choosing which ones.
-- **M5 goes to the assigned peer reviewer**, not just to the instructor. Peer reviewers who
-  have read a document give specific feedback; reviewers hearing a talk cold give vague
-  feedback. This is what makes the 10% peer-review component gradeable.
-- **The essay is explicitly a pre-analysis plan.** Say this in session 1, repeat it in session
-  5 when pre-registration is covered. It converts a vague "essay about research design" into a
-  document with a known genre, and it is genuinely what the assignment is.
-
-Each milestone maps to one of the five design questions from `02_spine.md`, so the ladder and
-the course structure are the same object seen twice. That is deliberate: by session 5 students
-have answered all five questions about their own project, and the essay is assembly plus prose.
+- **M1–M4 are deliberately not about the student's own project.** They stop students having to
+  commit to a topic in week 1 and defend it for five weeks, and practising the skill on someone
+  else's problem is easier — there is nothing at stake in admitting the design is broken.
+- **M5 is the bridge**, and breaks the pattern twice: written by the workshop group rather than a
+  pair, and due a week earlier than the rule would give (Mon Oct 19), because the partner group
+  needs time to read it. Without it the workshop is the first look anyone has had at their design.
+- **The prompts run off the lecture, not the reading.** They are deliberately generic about
+  material — any claim, any dataset they can reach — so students pick something they care about,
+  and the skill is visibly transferable.
+- **Marked done / done-well**, not graded in detail. 20 pairs at half a page is 25–35 minutes a
+  week.
+- **The AI trade, stated honestly:** written at home in pairs, these are not AI-proof the way
+  in-class writing would have been. What limits it is that they are low-stakes (4% each), tied to
+  a paper discussed in the room, and that the real assessment is the workshop. If pairs start
+  handing in generated text, the cheap fix is ten minutes of two pairs talking through their memo
+  at the start of the next session.
 
 ## Final essay — sharpen the prompt
 
@@ -73,31 +87,31 @@ quantitatively, with the structure suggested in the syllabus) is good. Three add
    why, what is missing from it, and can you actually get it. For a CSS cohort proposing to use
    found data, this is the paragraph most likely to save them from an unworkable thesis.
 
-Keep group essays allowed. Keep the deadline structure (roughly a week after the workshop) —
-it lets students incorporate feedback, which is the whole point of holding a workshop.
+Essays are group-only. **Deadline: Oct 27, the day after the workshop**, on Aula Global. The
+essay should be finished *before* the presentation — the extra day is for acting on feedback, not
+for writing. Say that explicitly; otherwise the deadline reads as a week's grace.
 
-## Paper commentaries
+## Papers — no longer graded
 
-Keep as-is: no summary, a few discussion points, brought or sent before class, 5% each. The
-one change is which papers, per `05_readings.md` — the commentaries now attach to Google Flu
-(session 2), Müller-Crepon (session 3), and Guess et al. (session 4).
-
-Worth adding to the syllabus: a one-line statement of what a good commentary looks like, since
-this cohort has likely never written one. Something like *"three or four specific points you
-would raise if the author were in the room; at least one about the design rather than the
-findings."*
+Reading stays expected; nothing is handed in and nothing is marked. There is no enforcement
+mechanism, by choice — say so once, in week 1, without threatening, and rely on short papers and a
+discussion that assumes they were read. Papers per `05_readings.md`: Google Flu
+(session 2), Müller-Crepon (session 3), Guess et al. (session 4). Villamil & Balcells moves out of
+the paper slot and becomes a worked example you present in session 5.
 
 ## Workshop format
 
-6 hours, ~12–15 slots. Proposed:
+6 hours, ~12 slots. Proposed:
 
-- **12 min present / 8 min discuss / hard stop.** 15 slots × 20 min = 5h, leaving an hour for
-  breaks and a closing session.
+- **12 min present / 8 min discuss / hard stop.** 40 students in groups of 3–4 is ~12 slots;
+  12 × 20 min = 4h, leaving room for breaks and a closing session.
 - **Required slides:** (1) the goal — describe/explain/predict; (2) the question; (3) units and
   variation; (4) the concept and its measure; (5) the comparison; (6) **the threat I can't
   solve.**
-- **Assigned peer reviewers**, one or two per presenting group, who have read the M5 sketch and
-  come with two written comments. Hand these in — that is the 10%.
-- **Close with 20 minutes on what the room got wrong collectively.** After 15 presentations
+- **Groups paired with each other**, each reviewing its partner. Both have read the partner's M5
+  sketch (due Mon Oct 19, a week ahead) and arrive with written comments; both hand them in, and
+  that is the 10% — **graded on the group.** ~12 groups gives 6 pairings. Have a group's feedback follow immediately after its
+  partner presents, so the pairing is visible and reciprocal.
+- **Close with 20 minutes on what the room got wrong collectively.** After 12 presentations
   there will be two or three recurring errors, and naming them is worth more than any single
   piece of individual feedback.

@@ -1,24 +1,23 @@
 # Readings
 
-Constraint: seven sessions, students at the start of a 1-year MA, three graded paper
-commentaries. Keep **one assigned item per session**, short, and with no statistics the
-students can't skip past.
+Constraint: six sessions, students at the start of a 1-year MA, ~40 of them, and **no graded
+commentary** — nothing enforces the reading. So papers must be short enough that reading them is
+obviously cheaper than sitting through the discussion without having done it.
 
-## Assigned — one per session
+## Assigned — sessions 2, 3 and 4 only
 
-### Session 1 — Introduction
-- Hannah Fry, ["What Data Can't Do"](https://www.newyorker.com/magazine/2021/03/29/what-data-cant-do),
-  *The New Yorker*, 29/03/2021. **[keep]** — ungraded, sets tone.
-- *Optional:* Matthew Salganik, [*Bit by Bit*](https://www.bitbybitbook.com/) ch. 1
-  ("Introduction"). Free online, ~15 pages. Worth assigning because it frames the whole MA.
+### Session 1 — Why design at all?
+- **No assigned reading.** Students can't reliably be reached before the course starts, so
+  nothing is set in advance. Salganik, [*Bit by Bit*](https://www.bitbybitbook.com/) ch. 1 is
+  worth mentioning in class as optional — free, ~15 pages, and it frames the whole MA.
 
 ### Session 2 — Questions and data provenance — **[changed]**
 - David Lazer, Ryan Kennedy, Gary King & Alessandro Vespignani (2014),
   "The Parable of Google Flu: Traps in Big Data Analysis," *Science* 343(6176): 1203–1205.
 
   **Why this one:** three pages, zero equations, and it carries the whole session — drift,
-  measurement validity, big-data hubris, and the platform as part of the DGP. Graded
-  commentary #1.
+  measurement validity, big-data hubris, and the platform as part of the DGP. Ungraded, like all
+  the readings — but three pages is short enough that reading it is obviously cheaper than not.
 
   *Discussion prompts:* What was GFT actually measuring? Whose behaviour changed — the
   public's, or Google's? Would more data have fixed it? What would you have had to do in
@@ -36,8 +35,7 @@ students can't skip past.
   **Why here:** it is fundamentally an operationalization paper — a relational concept of
   state capacity constructed out of road networks. In the measurement session the discussion
   becomes "what concept, what operationalization, what would you have done instead," which is
-  a much better use of it than a general discussion of quantitative research. Graded
-  commentary #2.
+  a much better use of it than a general discussion of quantitative research.
 
   *Discussion prompts:* What is the concept, in one sentence, without using the word "roads"?
   What does the road network fail to capture? Tell me a story where their measure goes up and
@@ -49,8 +47,7 @@ students can't skip past.
   campaign?"](https://www.science.org/doi/10.1126/science.abp9364), *Science* 381(6656): 398–404.
   **[keep]**
 
-  Graded commentary #3. Students can skip the statistics entirely and still discuss the design,
-  which is the point.
+  Students can skip the statistics entirely and still discuss the design, which is the point.
 
   *Discussion prompts:* What exactly was randomized, and what wasn't? Who consented, and how
   does that bound the estimate? If the effect is near zero, what have we learned — about feeds,
@@ -122,8 +119,7 @@ Useful for building the new blocks; too long or too technical for this cohort.
 
 ## Textbook list on the syllabus
 
-Current list (Huntington-Klein, Imai, Toshkov, Cunningham) is fine and should stay. One
-addition is worth making explicit for this cohort:
+**Done** — the 2026 syllabus now lists Salganik first with annotations. Original reasoning:
 
 - **Salganik, *Bit by Bit*** — free online, no statistics, and it is the only one of these
   books that is *about* computational social science research design rather than about

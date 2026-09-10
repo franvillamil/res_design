@@ -14,9 +14,9 @@ layout: default
 
 | Date and time        | Topic                                   | Slides | Reading |
 | :---        | :---                                    | :---   | :--- |
-| **Tue, Sep 15** (18h-21h) | Introduction to Research Design | <!-- [[PDF](https://github.com//franvillamil/res_design/blob/master/slides/1_introduction/introduction.pdf)] --> | <!--[[link](https://www.newyorker.com/magazine/2021/03/29/what-data-cant-do)] --> |
-| **Tue, Sep 22** (18h-21h)  | Elements of quantitative data | <!-- [[PDF](https://github.com//franvillamil/res_design/blob/master/slides/2_basics_quantitative_data/basics_quant_data.pdf)] --> | <!--  [[link](https://journals.sagepub.com/doi/10.1177/0022002720963674)] --> |
-| **Tue, Sep 29** (18h-21h)  | Causality | <!-- [[PDF](https://github.com//franvillamil/res_design/blob/master/slides/3_causality/causality.pdf)] --> | <!-- [[link](https://www.science.org/doi/10.1126/science.abp9364)] --> |
-| **Tue, Oct 6** (18h-21h)    | Methods of causal inference | <!-- [[PDF](https://github.com//franvillamil/res_design/blob/master/slides/4_causal_inference_methods/causal_inference.pdf)] --> | <!-- [[link](https://journals.sagepub.com/doi/10.1177/20531680211058550)] --> |
-| **Tue, Oct 13** (18h-21h) | Advanced topics and overview | <!-- [[PDF](https://github.com//franvillamil/res_design/blob/master/slides/5_advanced_topics/advanced.pdf)] --> | |
+| **Tue, Sep 15** (18h-21h) | Why design at all? | | |
+| **Tue, Sep 22** (18h-21h)  | Questions, and where the data comes from | | [[Google Flu](https://www.science.org/doi/10.1126/science.1248506)] |
+| **Tue, Sep 29** (18h-21h)  | Do the numbers mean what you think? | | [[Roads to Rule](https://journals.sagepub.com/doi/10.1177/0022002720963674)] |
+| **Tue, Oct 6** (18h-21h)    | What comparisons can we use to establish causal claims? | | [[Guess et al.](https://www.science.org/doi/10.1126/science.abp9364)] |
+| **Tue, Oct 13** (18h-21h) | What variation can you exploit, and how far does it travel? | | |
 | **Mon, Oct 26** (15h-21h)  | Final essay workshop (*double session*) | | |

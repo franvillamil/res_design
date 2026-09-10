@@ -51,11 +51,12 @@ Source deck: `1_introduction/introduction.tex` (39 frames — closest to right a
   hour one, which sets the participation norm for a small cohort.
 
 ### Milestone briefed at the end
-M1: one sentence naming a topic. Due at the start of session 2.
+M1 (pairs, due on Aula Global before session 2): audit a claim — its goal, the data it would
+need, the first thing you'd doubt.
 
 ### Reading
-Hannah Fry, *What Data Can't Do* (keep). Add Salganik, *Bit by Bit* ch. 1 — free online,
-short, and it frames the whole MA, not just this course.
+**None.** Students aren't reachable before the course starts, so nothing is assigned in
+advance. Mention Salganik, *Bit by Bit* ch. 1 in class as optional.
 
 ---
 
@@ -169,7 +170,7 @@ can be "what concept, what operationalization, what would you have done instead.
 
 ---
 
-## Session 4 — What comparison licenses a causal claim? (Tue Oct 6)
+## Session 4 — What comparisons can we use to establish causal claims? (Tue Oct 6)
 
 Source: `3_causality/causality.tex` (91 frames → trim to ~55).
 
@@ -188,7 +189,7 @@ Source: `3_causality/causality.tex` (91 frames → trim to ~55).
 
 ### Cut / compress
 - `Off topic: Controlling` ×4 → **1 conceptual frame**. Controlling as blocking a back door,
-  not as adding a regressor. The regression version belongs to AQM.
+  not as adding a regressor. The regression version belongs to the programme's methods courses.
 - Restore the **prediction** frames here or in session 1 (currently 6 commented frames). If
   the triad is properly introduced in session 1, one or two frames here suffice: prediction
   needs no causal identification, which is exactly why it can't answer a causal question.
@@ -269,8 +270,8 @@ the *first* ~45 frames of `5_advanced_topics/advanced.tex`. The remaining ~65 fr
 The entire `Causal methods again, in detail` section of `advanced.tex` — ~65 frames covering
 controlling in regression, matching mechanics, propensity scores, FE (×13), DiD (×13), RDD
 (×10), IV (×8). Duplicative of Block A and outside the course's stated scope. Move to
-`slides/appendix_methods_detail/` and offer as optional self-study for students continuing
-to AQM.
+`slides/appendix_methods_detail/` and offer as optional reference — the programme already runs a
+dedicated causal inference course, which some students take in this same semester.
 
 ### Milestone
 M4 collected. M5 briefed: 1-page design sketch, swapped with an assigned peer before the
