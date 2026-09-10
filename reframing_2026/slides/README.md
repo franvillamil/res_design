@@ -10,6 +10,8 @@ slides/
   beamer_preamble.tex        -> symlink to ../../slides/beamer_preamble.tex
   beamer_notes_preamble.tex     new: pgfpages 4-on-1 config for the notes version
   img                        -> symlink to ../../slides/img
+  2_questions_and_data/            session 2, same three-file pattern
+                                   + teaching_notes_session2.{md,pdf}
   1_introduction/
     intro_body.tex                 all frames + \note{} — this is the file you edit
     introduction.tex               wrapper: the presentation
@@ -47,5 +49,5 @@ pdflatex introduction_notes.tex    # notes version, built independently
   (empty is fine — it keeps the slide/note pairing in sync in the 4-on-1 layout).
 - Images use the tikz `remember picture, overlay` pattern, not `\imageframe{}`,
   because `\imageframe` cannot carry a `\note{}`.
-- Session 1 is 67 frames including section roadmaps. Session 1 has no paper
+- Session 1 is 69 frames, session 2 is 50, both including section roadmaps. Session 1 has no paper
   discussion, so it has ~140 min of lecture time; later sessions should target ~55.

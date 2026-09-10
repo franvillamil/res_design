@@ -29,14 +29,18 @@ and compile clean. What follows is everything still outstanding.
 Only session 1 exists so far. Each new deck goes in `reframing_2026/slides/`, built from
 [`08_outline_2026.md`](08_outline_2026.md) and adjusted for how the previous session actually went.
 
-### By Sep 22 — session 2, "Questions and data" (the big build)
+### By Sep 22 — session 2, "Questions and data" — **BUILT**
 
-- [ ] Split `2_basics_quantitative_data/` into the RQ/theory front half plus a new provenance block
-- [ ] Build the data-provenance block (~28 frames): designed vs found, Salganik's ten
-      characteristics, Xbox, Google Flu, algorithmic confounding, post-API access, ethics preview
-- [ ] Move **levels of explanation** (macro/meso/micro) here from the measurement material
-- [ ] Source two figures: **CDC vs GFT** over-prediction, and the **Xbox** demographic skew
-- [ ] Mark the Charlie Kirk slot `% SWAPPABLE:`
+`slides/2_questions_and_data/` — 50 frames, compiles clean. Block A (topic → question, theory,
+mechanisms, levels of explanation moved here) + the new provenance block (readymade/custommade,
+Salganik's ten characteristics, Xbox, Google Flu, algorithmic confounding, post-API, dirty and
+sensitive) + a structured paper discussion and the Memo 2 brief.
+
+- [ ] **Two figures still missing**, both marked `% TODO:` in `questions_body.tex`. The frames work
+      without them, so this is an improvement rather than a blocker:
+  - the **CDC vs GFT** over-prediction time series (Google Flu)
+  - the **Xbox** demographic-skew bar chart and forecast-vs-outcome plot
+- [x] **Done** - teaching notes for session 2 (`teaching_notes_session2.pdf`, 10pp).
 
 ### By Sep 29 — session 3, "Measurement and description"
 
@@ -81,12 +85,16 @@ Only session 1 exists so far. Each new deck goes in `reframing_2026/slides/`, bu
       people, silence gets filled by the same three voices. Needs think-pair-share throughout:
       pose, 60 seconds silent, 2 minutes in pairs, take 3–4 contributions — and call on *pairs*,
       not individuals. Also: make the three unit-of-analysis graphs a show of hands.
-- [ ] **Teaching notes for sessions 2–5.** Only session 1 has one.
-- [ ] **Em-dash pass on the plan docs and teaching notes.** Done for the syllabus and slides; the
-      rest still has them (167 in the session-1 teaching notes, 143 in the outline).
+- [ ] **Teaching notes for sessions 3–5.** Sessions 1 and 2 have them.
+- [ ] **Em-dash pass on the plan docs and the session-1 teaching notes.** Done for the syllabus,
+      both decks, and the session-2 teaching notes. Still outstanding: 167 in the session-1
+      teaching notes, 143 in the outline. Note the two teaching guides now use different heading
+      styles as a result; session 1 should be brought into line when this is done.
 - [ ] **Decide when the new decks replace `res_design/slides/`.** The old decks are untouched and
       still what `index.md` would link to.
 - [ ] `index.md`: add slide PDF links as each deck is finished.
+- [x] **Done** — Aula Global course ID in the website sidebar, now `id=208247`. Sidebar year fixed to
+      2026, schedule table reduced to 13px.
 
 ## Housekeeping
 
