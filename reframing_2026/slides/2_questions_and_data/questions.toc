@@ -1,6 +1,7 @@
 \beamer@sectionintoc {1}{From topic to research question}{3}{0}{1}
-\beamer@sectionintoc {2}{Theory, mechanisms, levels}{33}{0}{2}
-\beamer@sectionintoc {3}{Where does the data come from?}{44}{0}{3}
-\beamer@sectionintoc {4}{Ten things about big data sources}{53}{0}{4}
-\beamer@sectionintoc {5}{Paper: The Parable of Google Flu}{96}{0}{5}
-\beamer@sectionintoc {6}{Before next week}{101}{0}{6}
+\beamer@sectionintoc {2}{Theory, mechanisms, levels}{38}{0}{2}
+\beamer@sectionintoc {3}{Where does the data come from?}{49}{0}{3}
+\beamer@sectionintoc {4}{Ten things about big data sources}{58}{0}{4}
+\beamer@sectionintoc {5}{So where do you actually get data?}{105}{0}{5}
+\beamer@sectionintoc {6}{Paper: The Parable of Google Flu}{118}{0}{6}
+\beamer@sectionintoc {7}{Before next week}{123}{0}{7}

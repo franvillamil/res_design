@@ -159,18 +159,20 @@ they read it. Choosing short papers is doing most of the work here — Google Fl
 **2. Put the prompts on the slides.** Three or four specific questions per paper, on screen,
 prepared in advance — not "what did you think?" These are drafted per paper in Part 2.
 
-**3. Structure the 45 minutes**, and structure it around pair and small-group work, because
-open-floor discussion does not function at this class size:
+**3. Structure the 25 minutes** — and it is 25, not half the session — around pair and
+small-group work, because open-floor discussion does not function at this class size:
 
 ```
- 5 min  You: one slide on why this paper is here — which design question it illustrates
- 8 min  You: the design in three slides — what they did, what varies, what it rests on
-       (this replaces the discussant; at 40 students nobody gets a turn anyway)
-12 min  Prompt 1 on screen. Pairs, 4 min, then take 4–5 contributions
-12 min  Prompt 2, same shape
- 8 min  Groups of four: "redesign it" — one change you'd make and what it buys
- 5 min  You: close on the design lesson
+ 3 min  You: why this paper is here, and which design question it illustrates
+ 6 min  Prompts 1-2 on screen. Pairs, 3 min, then 3-4 contributions
+ 6 min  Prompts 3-4, same shape
+ 7 min  Groups of four: "redesign it" — one change you'd make and what it buys
+ 3 min  You: close on the design lesson
 ```
+
+**This number drives everything else.** At 25 minutes rather than 45, a three-hour session needs
+roughly **120 minutes of lecture content**, which is 20 minutes more than an earlier version of
+this plan assumed. Sessions 3-5 must be built against 120, not 100.
 
 The "redesign it" step matters more than it looks. Asking students to *evaluate* a published
 Science paper is intimidating and produces deference; asking what they would change is a question
@@ -210,8 +212,8 @@ Two optional additions worth knowing about, both from your Obsidian note:
 
 - **Syllabus needs updating regardless** — it still says *Fall 2025* and Sep 16. `index.md`
   already has the correct 2026 dates.
-- **Deck length cap: ~55 frames.** A 3h slot holds ~100–110 min of lecture once you account for
-  arrival, a break, 45 min of paper discussion and 20 min of memo writing. Current decks run
+- **Deck length cap: ~60 frames.** A 3h slot holds ~120 min of lecture once you account for
+  arrival, a break, ~25 min of paper discussion and the closing brief. Current decks run
   39/86/91/58/110. Everything over the cap goes after `\section{Appendix}` and is skipped live.
 - **Presenter notes.** No deck in this course has a single `\note{}`. As decks get rebuilt I'll
   use the two-wrapper pattern from `CLAUDE.md` so you get a slides+notes PDF for each.
@@ -261,12 +263,12 @@ not a two-way fixed effects specification. This is the line session 5 currently 
 ### Session shape (all lecture sessions)
 
 ```
-18:00–18:15  arrival; recap; the five-questions slide
-18:15–19:05  block A (~25-28 frames)
-19:05–19:15  break
-19:15–19:55  block B (~20-25 frames)
-19:55–20:40  paper discussion (structured; pairs + small groups)
-20:40–21:00  set the memo, next week, questions
+18:00–18:12  arrival; recap; the five-questions slide
+18:12–19:10  block A (~25-28 frames)
+19:10–19:20  break
+19:20–20:20  block B (~25-30 frames)
+20:20–20:45  paper discussion (~25 min; pairs + small groups)
+20:45–21:00  set the memo, next week, questions
 ```
 
 ---

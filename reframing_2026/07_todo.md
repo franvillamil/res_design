@@ -24,6 +24,29 @@ and compile clean. What follows is everything still outstanding.
 
 ---
 
+## The content budget (corrected)
+
+The paper discussion is **~25 minutes, not half the session**. An earlier version of this plan
+assumed 45-50, which under-filled session 2 by about 20 minutes before it was fixed. The real
+budget for a lecture session:
+
+```
+ 180  slot
+ -12  arrival / settling
+ -10  break
+ -25  paper discussion
+ -13  close, memo brief, questions
+ ---
+ 120  minutes of lecture content
+```
+
+At roughly 2-2.5 min per frame with a couple of pair exercises, that is **about 55-60 frames
+including section roadmaps**. Session 1 (no paper) has more time and runs 69. Session 2 now runs
+59. **Build sessions 3-5 against 120 minutes, not 100.**
+
+Each deck should carry a little more than fits, with a short "if you are running behind" list in
+its teaching notes, rather than a little less.
+
 ## Before each session — the decks
 
 Only session 1 exists so far. Each new deck goes in `reframing_2026/slides/`, built from
@@ -35,6 +58,11 @@ Only session 1 exists so far. Each new deck goes in `reframing_2026/slides/`, bu
 mechanisms, levels of explanation moved here) + the new provenance block (readymade/custommade,
 Salganik's ten characteristics, Xbox, Google Flu, algorithmic confounding, post-API, dirty and
 sensitive) + a structured paper discussion and the Memo 2 brief.
+
+Expanded 2026-09-11 from 50 to 59 frames after correcting the paper-discussion budget: restored
+the "Research and RQs" recap and the Mahou exercise in Block A, added "Incomplete", and added a
+new practical block (where data actually lives, what a codebook gives you, what a real data file
+looks like, and a six-question checklist before committing to a source).
 
 - [ ] **Two figures still missing**, both marked `% TODO:` in `questions_body.tex`. The frames work
       without them, so this is an improvement rather than a blocker:

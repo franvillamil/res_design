@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  10 SEP 2026 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  11 SEP 2026 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,7 +1478,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 64.
+ut line 57.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1512,13 +1512,19 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [7
 
 ]
+<../img/mahou.jpeg, id=96, 780.9175pt x 963.6pt>
+File: ../img/mahou.jpeg Graphic file (type jpg)
+<use ../img/mahou.jpeg>
+Package pdftex.def Info: ../img/mahou.jpeg  used on input line 86.
+(pdftex.def)             Requested size: 150.91412pt x 186.21771pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [8
 
-]
+ <../img/mahou.jpeg>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1624,19 +1630,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [23
 
 ]
-<../img/umu_erasmus.png, id=175, 600.2425pt x 913.4125pt>
-File: ../img/umu_erasmus.png Graphic file (type png)
-<use ../img/umu_erasmus.png>
-Package pdftex.def Info: ../img/umu_erasmus.png  used on input line 271.
-(pdftex.def)             Requested size: 145.88692pt x 221.99704pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [24
 
- <../img/umu_erasmus.png>]
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1665,13 +1665,19 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [28
 
 ]
+<../img/umu_erasmus.png, id=208, 600.2425pt x 913.4125pt>
+File: ../img/umu_erasmus.png Graphic file (type png)
+<use ../img/umu_erasmus.png>
+Package pdftex.def Info: ../img/umu_erasmus.png  used on input line 328.
+(pdftex.def)             Requested size: 145.88692pt x 221.99704pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [29
 
-]
+ <../img/umu_erasmus.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1692,7 +1698,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [32
 
-] (./questions.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1707,20 +1713,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [34
 
 ]
-<../img/predicting_conflict.png, id=240, 603.25375pt x 338.26375pt>
-File: ../img/predicting_conflict.png Graphic file (type png)
-<use ../img/predicting_conflict.png>
-Package pdftex.def Info: ../img/predicting_conflict.png  used on input line 403
-.
-(pdftex.def)             Requested size: 324.19536pt x 181.7874pt.
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [35
 
- <../img/predicting_conflict.png>]
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1734,7 +1733,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [37
 
-]
+] (./questions.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1749,11 +1748,12 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [39
 
 ]
-<../img/leipzig1989.jpeg, id=268, 734.745pt x 487.8225pt>
-File: ../img/leipzig1989.jpeg Graphic file (type jpg)
-<use ../img/leipzig1989.jpeg>
-Package pdftex.def Info: ../img/leipzig1989.jpeg  used on input line 467.
-(pdftex.def)             Requested size: 259.35727pt x 172.19937pt.
+<../img/predicting_conflict.png, id=274, 603.25375pt x 338.26375pt>
+File: ../img/predicting_conflict.png Graphic file (type png)
+<use ../img/predicting_conflict.png>
+Package pdftex.def Info: ../img/predicting_conflict.png  used on input line 460
+.
+(pdftex.def)             Requested size: 324.19536pt x 181.7874pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
@@ -1761,7 +1761,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [40
 
- <../img/leipzig1989.jpeg>]
+ <../img/predicting_conflict.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1782,7 +1782,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [43
 
-] (./questions.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1790,13 +1790,19 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [44
 
 ]
+<../img/leipzig1989.jpeg, id=303, 734.745pt x 487.8225pt>
+File: ../img/leipzig1989.jpeg Graphic file (type jpg)
+<use ../img/leipzig1989.jpeg>
+Package pdftex.def Info: ../img/leipzig1989.jpeg  used on input line 524.
+(pdftex.def)             Requested size: 259.35727pt x 172.19937pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [45
 
-]
+ <../img/leipzig1989.jpeg>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1804,51 +1810,27 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [46
 
 ]
-<../img/salganik_readymade.png, id=312, 810.02625pt x 600.2425pt>
-File: ../img/salganik_readymade.png Graphic file (type png)
-<use ../img/salganik_readymade.png>
-Package pdftex.def Info: ../img/salganik_readymade.png  used on input line 555.
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
 
-(pdftex.def)             Requested size: 364.19943pt x 269.87766pt.
- [47
+[47
 
- <../img/salganik_readymade.png>]
-<../img/afrobaro.png, id=319, 870.25125pt x 677.53125pt>
-File: ../img/afrobaro.png Graphic file (type png)
-<use ../img/afrobaro.png>
-Package pdftex.def Info: ../img/afrobaro.png  used on input line 578.
-(pdftex.def)             Requested size: 155.6027pt x 121.14397pt.
-<../img/ucdp_info.png, id=320, 1649.16125pt x 909.3975pt>
-File: ../img/ucdp_info.png Graphic file (type png)
-<use ../img/ucdp_info.png>
-Package pdftex.def Info: ../img/ucdp_info.png  used on input line 578.
-(pdftex.def)             Requested size: 155.58989pt x 85.79698pt.
-
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [48
 
- <../img/afrobaro.png> <../img/ucdp_info.png>]
-<../img/nature_creditcard.png, id=328, 782.925pt x 640.3925pt>
-File: ../img/nature_creditcard.png Graphic file (type png)
-<use ../img/nature_creditcard.png>
-Package pdftex.def Info: ../img/nature_creditcard.png  used on input line 601.
-(pdftex.def)             Requested size: 155.60262pt x 127.27495pt.
-<../img/twitter_protests.png, id=329, 687.56876pt x 672.5125pt>
-File: ../img/twitter_protests.png Graphic file (type png)
-<use ../img/twitter_protests.png>
-Package pdftex.def Info: ../img/twitter_protests.png  used on input line 601.
-(pdftex.def)             Requested size: 153.5947pt x 150.2313pt.
-
+] (./questions.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [49
 
- <../img/nature_creditcard.png> <../img/twitter_protests.png>]
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1863,27 +1845,51 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [51
 
 ]
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
+<../img/salganik_readymade.png, id=347, 810.02625pt x 600.2425pt>
+File: ../img/salganik_readymade.png Graphic file (type png)
+<use ../img/salganik_readymade.png>
+Package pdftex.def Info: ../img/salganik_readymade.png  used on input line 612.
 
-[52
+(pdftex.def)             Requested size: 364.19943pt x 269.87766pt.
+ [52
 
-] (./questions.toc)
+ <../img/salganik_readymade.png>]
+<../img/afrobaro.png, id=354, 870.25125pt x 677.53125pt>
+File: ../img/afrobaro.png Graphic file (type png)
+<use ../img/afrobaro.png>
+Package pdftex.def Info: ../img/afrobaro.png  used on input line 635.
+(pdftex.def)             Requested size: 155.6027pt x 121.14397pt.
+<../img/ucdp_info.png, id=355, 1649.16125pt x 909.3975pt>
+File: ../img/ucdp_info.png Graphic file (type png)
+<use ../img/ucdp_info.png>
+Package pdftex.def Info: ../img/ucdp_info.png  used on input line 635.
+(pdftex.def)             Requested size: 155.58989pt x 85.79698pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [53
 
-]
+ <../img/afrobaro.png> <../img/ucdp_info.png>]
+<../img/nature_creditcard.png, id=363, 782.925pt x 640.3925pt>
+File: ../img/nature_creditcard.png Graphic file (type png)
+<use ../img/nature_creditcard.png>
+Package pdftex.def Info: ../img/nature_creditcard.png  used on input line 658.
+(pdftex.def)             Requested size: 155.60262pt x 127.27495pt.
+<../img/twitter_protests.png, id=364, 687.56876pt x 672.5125pt>
+File: ../img/twitter_protests.png Graphic file (type png)
+<use ../img/twitter_protests.png>
+Package pdftex.def Info: ../img/twitter_protests.png  used on input line 658.
+(pdftex.def)             Requested size: 153.5947pt x 150.2313pt.
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [54
 
-]
+ <../img/nature_creditcard.png> <../img/twitter_protests.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -1904,7 +1910,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [57
 
-]
+] (./questions.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2170,7 +2176,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [95
 
-] (./questions.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2205,7 +2211,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [100
 
-] (./questions.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2233,6 +2239,185 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [104
 
+] (./questions.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[105
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[106
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[107
+
+]
+<../img/wbank.png, id=661, 1010.77625pt x 437.635pt>
+File: ../img/wbank.png Graphic file (type png)
+<use ../img/wbank.png>
+Package pdftex.def Info: ../img/wbank.png  used on input line 1058.
+(pdftex.def)             Requested size: 155.60449pt x 67.37195pt.
+<../img/eurostat.png, id=662, 700.6175pt x 497.86pt>
+File: ../img/eurostat.png Graphic file (type png)
+<use ../img/eurostat.png>
+Package pdftex.def Info: ../img/eurostat.png  used on input line 1058.
+(pdftex.def)             Requested size: 155.61162pt x 110.57788pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[108
+
+ <../img/wbank.png> <../img/eurostat.png>]
+<../img/afrobaro_codebook.png, id=670, 1407.2575pt x 885.3075pt>
+File: ../img/afrobaro_codebook.png Graphic file (type png)
+<use ../img/afrobaro_codebook.png>
+Package pdftex.def Info: ../img/afrobaro_codebook.png  used on input line 1078.
+
+(pdftex.def)             Requested size: 298.25987pt x 187.63567pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[109
+
+ <../img/afrobaro_codebook.png>]
+<../img/electoral_data_excel.jpg, id=678, 1766.6pt x 1007.765pt>
+File: ../img/electoral_data_excel.jpg Graphic file (type jpg)
+<use ../img/electoral_data_excel.jpg>
+Package pdftex.def Info: ../img/electoral_data_excel.jpg  used on input line 11
+01.
+(pdftex.def)             Requested size: 296.86765pt x 169.34949pt.
+
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[110
+
+ <../img/electoral_data_excel.jpg>]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[111
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[112
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[113
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[114
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[115
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[116
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[117
+
+] (./questions.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[118
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[119
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[120
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[121
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[122
+
+] (./questions.toc)
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[123
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[124
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[125
+
+]
+Overfull \hbox (2.12503pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[126
+
 ])
 \tf@nav=\write7
 \openout7 = `questions.nav'.
@@ -2245,16 +2430,16 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
  (./questions.aux)
 Package rerunfilecheck Info: File `questions.out' has not changed.
-(rerunfilecheck)             Checksum: 604C348FE66D279655C6A0B34053FFF7;1167.
+(rerunfilecheck)             Checksum: FBAB0D0946DC88F6CCE99CA33DF875ED;1398.
 Package logreq Info: Writing requests to 'questions.run.xml'.
 \openout1 = `questions.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34494 strings out of 476025
- 692291 string characters out of 5790017
+ 34626 strings out of 476025
+ 694614 string characters out of 5790017
  1861388 words of memory out of 5000000
- 54053 multiletter control sequences out of 15000+600000
+ 54133 multiletter control sequences out of 15000+600000
  527939 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1134b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2267,10 +2452,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr
 /local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on questions.pdf (104 pages, 1768180 bytes).
+Output written on questions.pdf (126 pages, 3064716 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 581 compressed objects within 6 object streams
- 215 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 885 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 260 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 

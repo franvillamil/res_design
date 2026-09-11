@@ -777,8 +777,8 @@ paper is close to the perfect task for a language model, and marking it would te
 about who actually read it. So the course runs on the assumption that they are adults on a
 master's programme.
 
-Then state the consequence rather than the threat: if you have not read it, forty-five minutes of
-the session is a conversation you cannot join.
+Then state the consequence rather than the threat: if you have not read it, a chunk of the session
+is a conversation you cannot join.
 
 **Say what the discussion will actually look like**, because it is not a seminar of twelve and
 they will assume it is: you present the design in a few slides, then they work in **pairs** on

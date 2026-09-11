@@ -1,22 +1,21 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  10 SEP 2026 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  11 SEP 2026 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **introduction.tex
 (./introduction.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22>
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex
+/beamer/beamer.cls
 Document Class: beamer 2023/02/20 v3.69 A class for typesetting presentations
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/usr/
+local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count185
 )
 \beamer@tempbox=\box51
 \beamer@tempcount=\count186
 \c@beamerpauses=\count187
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
 \beamer@slideinframe=\count188
 \beamer@minimum=\count189
@@ -24,8 +23,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 )
 \beamer@commentbox=\box53
 \beamer@modecount=\count190
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 \headdp=\dimen140
@@ -71,18 +69,15 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \beamer@sectionadjust=\count274
 \beamer@toclastsection=\count275
 \beamer@tocsectionnumber=\count276
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty (/us
+r/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 ))
 \beamer@paperwidth=\skip49
 \beamer@paperheight=\skip50
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
@@ -98,9 +93,8 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen162
 \Gm@layoutvoffset=\dimen163
 \Gm@dimlist=\toks17
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/loca
+l/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks18
@@ -112,18 +106,16 @@ x
 ) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/us
+r/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks19
 \pgfkeys@temptoks=\toks20
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
 tered.code.tex
 \pgfkeys@tmptoks=\toks21
-)))
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (
+/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
 \pgf@x=\dimen166
 \pgf@xa=\dimen167
 \pgf@xb=\dimen168
@@ -162,35 +154,29 @@ code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
 code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+erarithmetics.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/mat
+h/pgfmathcalc.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/mat
+h/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count285
 ))) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/us
+r/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@x=\dimen177
@@ -237,12 +223,10 @@ code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
@@ -362,52 +346,40 @@ Package: xxcolor 2003/10/24 ver 0.1
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count298
@@ -415,20 +387,16 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 \@linkdim=\dimen267
 \Hy@linkcounter=\count299
 \Hy@pagecounter=\count300
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count301
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -445,17 +413,14 @@ Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4425.
 \c@Hy@tempcnt=\count302
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen268
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
 (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
@@ -472,14 +437,12 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
 \Hy@abspage=\count304
 
-
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
@@ -498,10 +461,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
-y) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasefont.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+y) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasefont.sty (/us
+r/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks28
@@ -515,34 +477,28 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: sansmathaccent 2020/01/31
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
 
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
-)))))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator.sty
+))))) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetranslator
+.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasemisc.sty) (/u
+sr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty) (/u
+sr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
 \beamer@argscount=\count307
 \beamer@lastskipcover=\skip51
 \beamer@trivlistdepth=\count308
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetitle.sty) (/u
+sr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasesection.sty
 \c@lecture=\count309
 \c@part=\count310
 \c@section=\count311
 \c@subsection=\count312
 \c@subsubsection=\count313
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
 \beamer@framebox=\box66
 \beamer@frametitlebox=\box67
 \beamer@zoombox=\box68
@@ -557,11 +513,9 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 \beamer@envbody=\toks29
 \framewidth=\dimen272
 \c@framenumber=\count317
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 \beamer@splitbox=\box69
 \beamer@autobreakcount=\count318
 \beamer@autobreaklastheight=\dimen273
@@ -571,12 +525,11 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
 sty
 \beamer@footins=\box70
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasecolor.sty) (/u
+sr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 \beamer@frameboxcopy=\box71
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetoc.sty) (/usr
+/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 \beamer@sbttoks=\toks32
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
@@ -603,31 +556,26 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \c@table=\count320
 \abovecaptionskip=\skip57
 \belowcaptionskip=\skip58
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
 s.tex)
 \beamer@section@min@dim=\dimen282
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty (
+/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip59
-
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks34
 \ex@=\dimen283
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen284
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count321
@@ -677,8 +625,7 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks39
 \thm@bodyfont=\toks40
@@ -691,9 +638,8 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks44
 )
 \c@theorem=\count333
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (
+/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
@@ -709,21 +655,18 @@ y))) (../beamer_preamble.tex
 erbeamer.sty)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 162.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \c@tracingmulticols=\count334
 \mult@box=\box76
@@ -791,18 +734,14 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \mult@nat@firstbox=\box119
 \colbreak@box=\box120
 \mc@col@check@num=\count343
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count344
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 \c@tabx@nest=\count345
@@ -864,7 +803,6 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \c@mincompwidth=\count390
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
@@ -956,13 +894,11 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip88
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \c@textcitecount=\count459
@@ -981,7 +917,6 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-natbib.def
 File: blx-natbib.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
@@ -989,12 +924,10 @@ Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
 File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count468
@@ -1002,7 +935,6 @@ File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
 File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
@@ -1015,16 +947,13 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count470
@@ -1034,34 +963,27 @@ Package biblatex Info: ... and expl3
 (biblatex)             2023-02-22 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr
+/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
+/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks45
 \XKV@tempa@toks=\toks46
 )
 \XKV@depth=\count471
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/trimclip.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box122
@@ -1071,7 +993,6 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen305
 \tc@ury=\dimen306
 Package trimclip Info: Using driver 'tc-pdftex.def'.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
@@ -1083,19 +1004,16 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen312
 \adjbox@pdepth=\dimen313
 \adjbox@ptotalheight=\dimen314
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count472
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box123
 \sift@deathcycles=\count473
 \@vwid@loff=\dimen315
 \@vwid@roff=\dimen316
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen317
 \ar@mcellbox=\box124
@@ -1127,8 +1045,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count476
 \@lastruleclass=\count477
 \@thisrulewidth=\dimen331
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen332
 \TX@old@table=\dimen333
@@ -1137,8 +1054,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen336
 \TX@cols=\count478
 \TX@ftn=\toks48
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip91
 \subfigcapskip=\skip92
@@ -1150,20 +1066,17 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \c@lofdepth=\count480
 \c@subtable=\count481
 \c@lotdepth=\count482
-
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip95
 \subfig@bottom=\skip96
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/hf-tikz/hf-tikz.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hf-tikz/hf-tikz.sty
 Package: hf-tikz 2014/07/25 v0.3a A simple way to highlight formulas and formul
 a parts.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/
+local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
@@ -1184,9 +1097,8 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr
+/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen341
 \pgffor@skip=\dimen342
@@ -1269,7 +1181,7 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \@quotelevel=\count493
 \@quotereset=\count494
- (./introduction.aux)
+(./introduction.aux)
 \openout1 = `introduction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1290,7 +1202,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1340,7 +1251,6 @@ LaTeX Font Info:    ... okay on input line 12.
 \everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
@@ -1350,13 +1260,11 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 12.
-
 (./introduction.out) (./introduction.out)
 \@outlinefile=\write6
 \openout6 = `introduction.out'.
@@ -1440,7 +1348,6 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
@@ -1450,9 +1357,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout5 = `introduction.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'introduction.bbl' not found.
-
-No file introduction.bbl.
+Package biblatex Info: ... file 'introduction.bbl' found.
+(./introduction.bbl)
 Package biblatex Info: Reference section=0 on input line 12.
 Package biblatex Info: Reference segment=0 on input line 12.
 (./introduction.nav)
@@ -1545,7 +1451,7 @@ File: ../img/challenger1.jpg Graphic file (type jpg)
 <use ../img/challenger1.jpg>
 Package pdftex.def Info: ../img/challenger1.jpg  used on input line 110.
 (pdftex.def)             Requested size: 364.16974pt x 189.2483pt.
- [12
+[12
 
  <../img/challenger1.jpg>]
 <../img/challenger2.jpg, id=132, 2190.1825pt x 1152.305pt>
@@ -1553,7 +1459,7 @@ File: ../img/challenger2.jpg Graphic file (type jpg)
 <use ../img/challenger2.jpg>
 Package pdftex.def Info: ../img/challenger2.jpg  used on input line 122.
 (pdftex.def)             Requested size: 364.17175pt x 191.59906pt.
- [13
+[13
 
  <../img/challenger2.jpg>]
 <../img/challenger_wiki.jpg, id=139, 1834.855pt x 1027.84pt>
@@ -1561,7 +1467,7 @@ File: ../img/challenger_wiki.jpg Graphic file (type jpg)
 <use ../img/challenger_wiki.jpg>
 Package pdftex.def Info: ../img/challenger_wiki.jpg  used on input line 136.
 (pdftex.def)             Requested size: 364.19273pt x 204.01169pt.
- [14
+[14
 
  <../img/challenger_wiki.jpg>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -1583,7 +1489,7 @@ File: ../img/plane_wwii.png Graphic file (type png)
 <use ../img/plane_wwii.png>
 Package pdftex.def Info: ../img/plane_wwii.png  used on input line 169.
 (pdftex.def)             Requested size: 337.68115pt x 251.29759pt.
- [17
+[17
 
  <../img/plane_wwii.png (PNG copy)>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -1770,7 +1676,7 @@ File: ../img/psycho1.png Graphic file (type png)
 <use ../img/psycho1.png>
 Package pdftex.def Info: ../img/psycho1.png  used on input line 432.
 (pdftex.def)             Requested size: 352.26836pt x 273.14925pt.
- [40
+[40
 
  <../img/psycho1.png>]
 <../img/psycho4.png, id=308, 1279.78125pt x 457.71pt>
@@ -1791,7 +1697,7 @@ File: ../img/marshmallow.jpg Graphic file (type jpg)
 <use ../img/marshmallow.jpg>
 Package pdftex.def Info: ../img/marshmallow.jpg  used on input line 455.
 (pdftex.def)             Requested size: 174.99pt x 273.13739pt.
- [42
+[42
 
  <../img/marshmallow.jpg>]
 <../img/marshmallow3.png, id=321, 878.28125pt x 675.52374pt>
@@ -1799,7 +1705,7 @@ File: ../img/marshmallow3.png Graphic file (type png)
 <use ../img/marshmallow3.png>
 Package pdftex.def Info: ../img/marshmallow3.png  used on input line 465.
 (pdftex.def)             Requested size: 355.1391pt x 273.1527pt.
- [43
+[43
 
  <../img/marshmallow3.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -1814,7 +1720,7 @@ File: ../img/derecho2022a.png Graphic file (type png)
 <use ../img/derecho2022a.png>
 Package pdftex.def Info: ../img/derecho2022a.png  used on input line 494.
 (pdftex.def)             Requested size: 364.18759pt x 205.31158pt.
- [45
+[45
 
  <../img/derecho2022a.png>]
 <../img/derecho2022c.png, id=341, 1217.54875pt x 750.805pt>
@@ -1835,7 +1741,7 @@ File: ../img/derecho2022b.jpg Graphic file (type jpg)
 <use ../img/derecho2022b.jpg>
 Package pdftex.def Info: ../img/derecho2022b.jpg  used on input line 517.
 (pdftex.def)             Requested size: 331.92068pt x 273.2511pt.
- [47
+[47
 
  <../img/derecho2022b.jpg>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -1850,7 +1756,7 @@ File: ../img/halley_eclipse.png Graphic file (type png)
 <use ../img/halley_eclipse.png>
 Package pdftex.def Info: ../img/halley_eclipse.png  used on input line 546.
 (pdftex.def)             Requested size: 317.02205pt x 273.1424pt.
- [49
+[49
 
  <../img/halley_eclipse.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -1941,7 +1847,7 @@ File: ../img/ua2.png Graphic file (type png)
 <use ../img/ua2.png>
 Package pdftex.def Info: ../img/ua2.png  used on input line 663.
 (pdftex.def)             Requested size: 262.3358pt x 273.14963pt.
- [61
+[61
 
  <../img/ua2.png>]
 <../img/ua3.png, id=445, 655.44875pt x 604.2575pt>
@@ -1949,7 +1855,7 @@ File: ../img/ua3.png Graphic file (type png)
 <use ../img/ua3.png>
 Package pdftex.def Info: ../img/ua3.png  used on input line 677.
 (pdftex.def)             Requested size: 296.28938pt x 273.14886pt.
- [62
+[62
 
  <../img/ua3.png>]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -2067,7 +1973,7 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 <../img/spotify.png, id=540, 963.6pt x 367.87437pt>
 File: ../img/spotify.png Graphic file (type png)
 <use ../img/spotify.png>
-Package pdftex.def Info: ../img/spotify.png  used on input line 837.
+Package pdftex.def Info: ../img/spotify.png  used on input line 839.
 (pdftex.def)             Requested size: 291.77383pt x 111.39038pt.
 
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
@@ -2167,14 +2073,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [92
 
-]
+] (./introduction.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [93
 
-] (./introduction.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2209,14 +2115,14 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 
 [98
 
-]
+] (./introduction.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
 
 [99
 
-] (./introduction.toc)
+]
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2308,6 +2214,11 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [112
 
 ]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 1276.
+
+
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2315,11 +2226,6 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [113
 
 ]
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 1275.
-
-
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2348,6 +2254,11 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [117
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1348.
+
+(./introduction.toc)
 Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [][] 
  []
@@ -2355,25 +2266,13 @@ Overfull \hbox (2.12503pt too wide) has occurred while \output is active
 [118
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 1347.
-
-(./introduction.toc)
-Overfull \hbox (2.12503pt too wide) has occurred while \output is active
-[][] 
- []
-
-[119
-
-]
-<../img/replicationcrisis2.png, id=789, 1208.515pt x 743.77875pt>
+<../img/replicationcrisis2.png, id=784, 1208.515pt x 743.77875pt>
 File: ../img/replicationcrisis2.png Graphic file (type png)
 <use ../img/replicationcrisis2.png>
-Package pdftex.def Info: ../img/replicationcrisis2.png  used on input line 1357
+Package pdftex.def Info: ../img/replicationcrisis2.png  used on input line 1358
 .
 (pdftex.def)             Requested size: 364.1985pt x 224.14542pt.
- [120
+[119
 
  <../img/replicationcrisis2.png>])
 \tf@nav=\write7
@@ -2385,7 +2284,7 @@ Package pdftex.def Info: ../img/replicationcrisis2.png  used on input line 1357
 \tf@snm=\write9
 \openout9 = `introduction.snm'.
 
- (./introduction.aux)
+(./introduction.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2397,7 +2296,7 @@ Package logreq Info: Writing requests to 'introduction.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  35058 strings out of 476025
- 702661 string characters out of 5790017
+ 702674 string characters out of 5790017
  1869388 words of memory out of 5000000
  54558 multiletter control sequences out of 15000+600000
  528104 words of font info for 88 fonts, out of 8000000 for 9000
@@ -2415,10 +2314,10 @@ local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/l
 ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on introduction.pdf (120 pages, 5013416 bytes).
+Output written on introduction.pdf (119 pages, 5013129 bytes).
 PDF statistics:
- 913 PDF objects out of 1000 (max. 8388607)
- 718 compressed objects within 8 object streams
- 256 named destinations out of 1000 (max. 500000)
+ 908 PDF objects out of 1000 (max. 8388607)
+ 714 compressed objects within 8 object streams
+ 254 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

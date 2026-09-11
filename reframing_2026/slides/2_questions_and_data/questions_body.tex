@@ -41,6 +41,63 @@ Today is two halves that look unrelated and are not: how to get to a question wo
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Research and RQs}
+\centering
+
+\begin{itemize}
+  \item Research $=$ answering questions
+  \item<2-> Re-cap on research types:
+  \begin{itemize}
+    \item<2->[1.] \textbf{Normative} vs. \textbf{positive} research
+    \item<3->[2.] Positive: \textbf{theoretical} vs. \textbf{empirical}
+    \item<4->[3.] Empirical: \textbf{describe}, \textbf{explain}, \textbf{predict}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Two minutes of placing. The third line is last week's triad, so this is a recap rather than new material.
+
+The normative/positive line is worth thirty seconds: ``should Spain raise the minimum wage'' is not a research question in this sense, however important. ``What happened to employment when it was raised'' is. Students conflate the two constantly, and in the workshop it shows up as a design that cannot answer the thing they actually care about.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Example on types of questions and evidence}
+\centering
+
+\begin{minipage}{.49\textwidth}\centering
+  \begin{itemize}
+    \item You are doing the analytics behind a campaign for Mahou
+    \item[]
+    \item Think of questions that are:
+    \begin{itemize}
+      \item Descriptive
+      \item Explanatory
+      \item Predictive
+    \end{itemize}
+    \item[]
+    \item Which ones could you answer with the data a brewer actually has?
+  \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{.49\textwidth}\centering
+\includegraphics[width = 0.95\textwidth]{../img/mahou}
+\end{minipage}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Pairs, four minutes, then take six or seven answers and sort them on the board into the three columns. It is the fastest way to find out whether the triad actually stuck from last week.
+
+What usually comes back:
+\begin{itemize}
+  \item \textbf{Describe}: who drinks it, where, when, how has that changed?
+  \item \textbf{Explain}: did the last campaign increase sales? does price affect switching?
+  \item \textbf{Predict}: which bars will order more next quarter?
+\end{itemize}
+
+The second question is the sharp one, and it previews the whole second half: a brewer has sales data, not consumption data, and has it for its own products, not the competition's. Most of the interesting questions need data the company does not have, which is the found-data problem arriving from the commercial side.}
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{What is a research question?}
 \centering
 
@@ -807,7 +864,7 @@ The closing line is the whole problem. A drifting measure does not throw an erro
 % TODO: source the CDC-vs-GFT over-prediction time series figure
 \end{frame}
 % ----------------------------------------------------
-\note{Do not give away the diagnosis yet. The paper discussion is in forty minutes and this is its setup.
+\note{Do not give away the diagnosis yet. The paper discussion is later tonight and this is its setup.
 
 The sequence matters: it worked, then it failed in a specific way, then it failed persistently. A system that had never worked would not be interesting.
 
@@ -934,6 +991,151 @@ Do not moralise. The honest position is that this is a real constraint on what c
 
 The credit-card study earlier in the session is a good callback: entirely legitimate research, and also a dataset that could identify almost anyone in it.}
 
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Incomplete}
+\centering
+
+\vspace{10pt}
+\begin{itemize}[<+->]
+  \item The variable you need is almost never the variable that was recorded
+  \begin{itemize}
+    \item platforms record what is useful to them, not what is useful to you
+  \end{itemize}
+  \vspace{10pt}
+  \item No demographics. No income. No control variables
+  \vspace{10pt}
+  \item You can sometimes \textbf{infer} what is missing. That is a model, and models can be wrong
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{The seventh characteristic, and the one that bites earliest in a student project.
+
+Concretely: a platform dataset will tell you what an account posted and when, and almost never who the person is, how much they earn, or where they live. The variables you would want as controls are exactly the ones nobody had a commercial reason to store.
+
+The third bullet is the bridge to next week. Inferring gender or ideology or location from behaviour is common and sometimes done well, but it turns one measurement problem into two: now you need to know how good the inference is, and the error will not be random. That is the classifier-output-as-a-variable problem, and it is session 3.}
+
+% ====================================================
+\section{So where do you actually get data?}
+% ====================================================
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{A practical interlude}
+\centering
+
+\vspace{20pt}
+{\large You have a question. Now what?}
+
+\vspace{25pt}
+\begin{itemize}
+  \item<2-> Most projects in this programme use data somebody has already published
+  \item<2-> Knowing what exists, and what it looks like when it arrives, is a real skill
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Fifteen minutes, and unglamorous on purpose. It is also the most immediately useful thing tonight, and it is exactly what Memo 2 asks for.
+
+Students routinely propose designs that require data nobody has ever collected, and equally routinely miss that the thing they need has been sitting on a public portal for fifteen years. Both are failures of the same skill.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Places things actually live}
+\centering
+
+\begin{minipage}{.48\textwidth}\centering
+\includegraphics[keepaspectratio, width=\textwidth, height=0.5\paperheight]{../img/wbank}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}\centering
+\includegraphics[keepaspectratio, width=\textwidth, height=0.5\paperheight]{../img/eurostat}
+\end{minipage}
+
+\vspace{8pt}
+{\footnotesize Also: INE, Eurobarometer, ESS, V-Dem, UCDP, national statistical offices, municipal open data portals, replication archives (Dataverse, OSF).}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Do not read the list. Point out the categories and move:
+
+\begin{itemize}
+  \item \textbf{International organisations} (World Bank, Eurostat, OECD): comparable, aggregated, usually country-year.
+  \item \textbf{National statistical offices} (INE): far more granular, often only in Spanish, often municipal.
+  \item \textbf{Academic projects} (V-Dem, UCDP, ESS, Afrobarometer): built for research, with codebooks.
+  \item \textbf{Replication archives}: the most underused. Every paper in a decent journal now deposits its data, which means the measure someone built for their paper is sitting there for you.
+\end{itemize}
+
+That last one is worth thirty seconds. If a published paper measured the thing they care about, they can usually just get it.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{What a codebook gives you}
+\centering
+
+\includegraphics[keepaspectratio, width=0.92\textwidth, height=0.72\paperheight]{../img/afrobaro_codebook}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Afrobarometer. This is what designed data looks like from the inside, and it is worth reading a couple of lines aloud.
+
+Three things to point at:
+\begin{itemize}
+  \item The \textbf{exact question wording}. ``How much do you trust the police'' is a specific stimulus, not a concept. Next week is about the gap between the two.
+  \item The \textbf{value labels}, including 9 for ``don't know'' and 98 for ``refused''. If you analyse this without reading the codebook, you will average in a 98 and produce nonsense. This happens constantly.
+  \item The footnote: \textit{not asked in BFO, SWZ}. The variable silently does not exist for two countries, and nothing in the data file will tell you.
+\end{itemize}
+
+Found data has none of this. That is the whole point of the section.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{And what it looks like when it arrives}
+\centering
+
+\includegraphics[keepaspectratio, width=0.95\textwidth, height=0.62\paperheight]{../img/electoral_data_excel}
+
+\vspace{6pt}
+{\footnotesize Spanish municipal election results. What is the unit? What is missing?}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Spend two or three minutes here, as a live reading exercise. Ask both questions on the slide and take answers.
+
+\begin{itemize}
+  \item \textbf{Unit}: the municipality. But each row holds two elections, so it is really municipality-wide with election-specific columns. To analyse change you would reshape it.
+  \item \textbf{Missing}: look at Orbaizeta, which has no PP vote share in 2019. Is that a zero, a coalition running under another name, or a genuine gap? \textbf{The file will not tell you.} A blank cell and a real zero look identical once you load it.
+  \item The columns are shares, not counts, so you cannot recover turnout numbers or weight by size without merging population in.
+\end{itemize}
+
+The transferable lesson: \textbf{a dataset is not self-explanatory}, and every one of these questions has to be answered before the first analysis, not after.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{Before you commit to a data source}
+\centering
+
+\vspace{5pt}
+\begin{itemize}[<+->]
+  \item Who made it, and \textbf{why}?
+  \item What is the \textbf{unit}, and what is the coverage in space and time?
+  \item Is there a \textbf{codebook}? If not, what replaces it?
+  \item Who or what is \textbf{missing}?
+  \item Can you actually \textbf{get it}, and could someone else get it again?
+  \item Has it \textbf{changed} over the period you care about?
+\end{itemize}
+
+\vspace{12pt}
+\uncover<7->{{\footnotesize \asher{Six questions. They are also, more or less, Memo 2.}}}
+
+\end{frame}
+% ----------------------------------------------------
+\note{The checklist, and the practical distillation of the whole evening. Every question maps back to something from the session: purpose to the readymade/custommade distinction, missing to non-representative and incomplete, getting it to post-API, changed to drift.
+
+Tell them to run any dataset they are considering for the essay through these six. A source that fails question 5 is not a source, however good the idea.
+
+This is the slide to put back up when you set Memo 2 in twenty minutes.}
+
 % ====================================================
 \section{Paper: The Parable of Google Flu}
 % ====================================================
@@ -956,13 +1158,13 @@ The credit-card study earlier in the session is a good callback: entirely legiti
 % ----------------------------------------------------
 \note{One slide on why it is on the list, per the structure we use every week: this is the design question the paper illustrates.
 
-Then the sequence: I present the design, pairs work the prompts on screen, small groups redesign it, I close. About forty-five minutes.
+Then the sequence: I set it up, pairs work the prompts on screen, small groups redesign it, I close. About twenty-five minutes in total, so keep it moving.
 
 Nothing was handed in and nothing is marked, so start by asking how many have read it and adjust honestly rather than pretending.}
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{In pairs: four minutes each}
+\frametitle{In pairs}
 \centering
 
 \vspace{10pt}
@@ -978,7 +1180,7 @@ Nothing was handed in and nothing is marked, so start by asking how many have re
 
 \end{frame}
 % ----------------------------------------------------
-\note{Take them two at a time: four minutes in pairs, then four or five contributions, then the next two. Open-floor does not work at this size.
+\note{\textbf{Twelve minutes total}, so this has to move. Prompts 1 and 2 together: three minutes in pairs, then three or four contributions. Then 3 and 4 the same way. Open-floor does not work at this size, but neither does letting a pair turn run long.
 
 \begin{itemize}
   \item[1.] Not flu. Search behaviour correlated with CDC reports of flu. The gap between those is the whole paper.
@@ -999,7 +1201,7 @@ Nothing was handed in and nothing is marked, so start by asking how many have re
 {\large Build something that does not break the same way.}
 
 \vspace{20pt}
-{\footnotesize \asher{Eight minutes. One change, and what it buys you.}}
+{\footnotesize \asher{Seven minutes. One change, and what it buys you.}}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1007,7 +1209,7 @@ Nothing was handed in and nothing is marked, so start by asking how many have re
 
 Good answers, roughly in order of sophistication: combine search with CDC data rather than replacing it; re-fit continuously instead of once; choose terms with a causal story rather than by correlation alone; hold out seasons rather than weeks; publish the model so failures are diagnosable.
 
-Take three groups, not twelve.}
+Take three groups, not twelve. Seven minutes, and cut to five if the prompts ran over.}
 
 % ----------------------------------------------------
 \begin{frame}
