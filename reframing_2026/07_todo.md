@@ -108,16 +108,14 @@ looks like, and a six-question checklist before committing to a source).
 
 ## Carried over
 
-- [ ] **Apply the 40-student pass to the session-1 teaching notes.** They still say "let silences
-      sit" (line ~396) and treat the Socratic blocks as if this were a seminar of twelve. With 40
-      people, silence gets filled by the same three voices. Needs think-pair-share throughout:
-      pose, 60 seconds silent, 2 minutes in pairs, take 3–4 contributions — and call on *pairs*,
-      not individuals. Also: make the three unit-of-analysis graphs a show of hands.
+- [x] **Done** - 40-student pass on the session-1 teaching notes. Think-pair-share replaces "let
+      silences sit" at the variation block, the three unit-of-analysis graphs are now a show of
+      hands, and a general note on method was added to the front of the guide.
 - [ ] **Teaching notes for sessions 3–5.** Sessions 1 and 2 have them.
-- [ ] **Em-dash pass on the plan docs and the session-1 teaching notes.** Done for the syllabus,
-      both decks, and the session-2 teaching notes. Still outstanding: 167 in the session-1
-      teaching notes, 143 in the outline. Note the two teaching guides now use different heading
-      styles as a result; session 1 should be brought into line when this is done.
+- [ ] **Em-dash pass on the plan docs.** Done for the syllabus, both decks, and both teaching
+      guides (which now share a heading style). Still outstanding: ~143 in `08_outline_2026.md`
+      and scattered through the other plan files. These are internal working documents, so this is
+      cosmetic.
 - [ ] **Decide when the new decks replace `res_design/slides/`.** The old decks are untouched and
       still what `index.md` would link to.
 - [ ] `index.md`: add slide PDF links as each deck is finished.
