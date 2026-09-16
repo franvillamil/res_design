@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Housekeeping}{2}{0}{1}
-\beamer@sectionintoc {2}{Intro and overview}{5}{0}{2}
-\beamer@sectionintoc {3}{Methods in brief}{13}{0}{3}
-\beamer@sectionintoc {4}{Paper discussion}{84}{0}{4}

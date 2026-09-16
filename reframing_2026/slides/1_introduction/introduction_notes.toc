@@ -1,8 +1,0 @@
-\beamer@sectionintoc {1}{Why design at all?}{4}{0}{1}
-\beamer@sectionintoc {2}{Three ways to answer a question}{13}{0}{2}
-\beamer@sectionintoc {3}{Evidence, claims, and inference}{20}{0}{3}
-\beamer@sectionintoc {4}{Units, observations, variation}{36}{0}{4}
-\beamer@sectionintoc {5}{From data to a question}{43}{0}{5}
-\beamer@sectionintoc {6}{Exercise: audit a claim}{55}{0}{6}
-\beamer@sectionintoc {7}{Course logistics}{58}{0}{7}
-\beamer@sectionintoc {8}{Appendix}{70}{1}{8}
