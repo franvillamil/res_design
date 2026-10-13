@@ -182,6 +182,9 @@ Scope reminder: they will see estimators, standard errors and software elsewhere
 
 \begin{itemize}
   \item When you control for $Z$, you compare units with the \textbf{same value of $Z$}
+  \begin{itemize}
+    \item (Technically: you remove variation due to the other variable)
+  \end{itemize}
   \vspace{8pt}
   \item Subsetting is controlling too
   \begin{itemize}
@@ -315,9 +318,37 @@ So instead of measuring them, we compare students only to classmates from the sa
   \end{tikzpicture}
 \end{frame}
 % ----------------------------------------------------
-\note{Simulated data. Pooling all students, the relationship looks flat or even negative: students with the highest high school grades do worse at university.
+\note{Simulated data. Pooling all students, the relationship looks flat or even negative. Ask: what would you conclude from this plot? Then ask what might be hiding in it.}
 
-Ask: what would you conclude from this plot? Then ask what might be hiding in it.}
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe2}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{The pooled regression line: negative. Taken at face value, better high school grades predict worse university grades.}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe3}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{Colour by school. Three schools, and they sit in very different places on both axes. The red school has the highest high school grades and the lowest university grades: it inflates grades.}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe4}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{Fit a line within each school: every one of them is positive. The pooled negative slope came entirely from differences \textbf{between} schools. This is Simpson's paradox.}
 
 % ----------------------------------------------------
 \begin{frame}[plain]
@@ -327,9 +358,37 @@ Ask: what would you conclude from this plot? Then ask what might be hiding in it
   \end{tikzpicture}
 \end{frame}
 % ----------------------------------------------------
-\note{Colour by school. Three schools, and the red one inflates grades: its students get high marks in high school and then do worse at university. The horizontal lines are the school means.
+\note{How fixed effects get there. First, the mean university grade in each school (horizontal lines).}
 
-Within each school, the relationship is clearly positive. The pooled pattern was driven by differences between schools.}
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe6}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{Subtract each school's mean from the outcome: every student is now measured relative to their classmates. Differences in university grades between schools are gone.}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe7}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{Same for the treatment: the mean high school grade in each school (vertical lines).}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, height=.85\paperheight]{../img/fe8}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{Subtract those means too. All three schools are now centred on zero on both axes. What is left is only within-school variation.}
 
 % ----------------------------------------------------
 \begin{frame}[plain]
@@ -339,9 +398,9 @@ Within each school, the relationship is clearly positive. The pooled pattern was
   \end{tikzpicture}
 \end{frame}
 % ----------------------------------------------------
-\note{This is what fixed effects do: subtract each school's mean from both variables, so every student is measured relative to their classmates. All between-school differences are gone, and the within-school slope appears.
+\note{The slope through the demeaned data is the fixed effects estimate: positive, as in each school. Every between-school confounder (grade inflation, environment, teachers) is held constant without being measured.
 
-Name it: this is Simpson's paradox, and fixed effects are the design answer to it. Also connects to the ecological fallacy from earlier sessions.}
+Connects to the ecological fallacy from earlier sessions.}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -358,12 +417,10 @@ Name it: this is Simpson's paradox, and fixed effects are the design answer to i
   \begin{itemize}
     \item all between-group variation is thrown away
   \end{itemize}
-  \vspace{8pt}
-  \item Reverse causality within the group
 \end{itemize}
 
 \vspace{15pt}
-\uncover<3->{{\small Variation used: differences \textit{within} groups\\Must be true: \textbf{no confounders that vary within groups}}}
+\uncover<2->{{\small Variation used: differences \textit{within} groups\\Must be true: \textbf{no confounders that vary within groups}}}
 
 \end{frame}
 % ----------------------------------------------------
@@ -614,6 +671,36 @@ This is a balance test, and it is also a placebo test (more on these later). It 
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Two more cutoffs}
+\centering
+
+\begin{itemize}
+  \item \textbf{Military retirement age} in Burundi
+  \begin{itemize}
+    \item does serving in an ethnically integrated army reduce prejudice?
+    \item soldiers just below vs.\ just above the age for mandatory retirement
+    \item {\footnotesize \asher{Samii (2013), \textit{APSR}}}
+  \end{itemize}
+  \vspace{12pt}
+  \item<2-> \textbf{Close elections} and the incumbency advantage
+  \begin{itemize}
+    \item<2-> does holding office help you win the next election?
+    \item<2-> parties that barely won (50.1\%) vs.\ barely lost (49.9\%)
+    \item<2-> {\footnotesize \asher{Lee (2008), \textit{Journal of Econometrics}}}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Two quick examples, to show how general the running-variable idea is.
+\begin{itemize}
+  \item Samii: in post-war Burundi, the army was integrated with ethnic quotas. Who stays in depends on a retirement age rule, not on attitudes, so soldiers just on either side of the age cutoff differ in exposure to the integrated army and little else. He finds integration reduced prejudice.
+  \item Lee: the canonical close-election RDD. Whether a party barely wins or barely loses a US House race is close to a coin flip, so comparing what happens next isolates the effect of incumbency. He finds a large advantage.
+\end{itemize}
+The second has become a whole industry, which is the next slide.}
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Threats: what if units can choose their side?}
 \centering
 
@@ -630,6 +717,40 @@ The standard check is to look for bunching in the distribution of the running va
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{Are close elections really coin flips?}
+\centering
+
+\begin{itemize}
+  \item<1-> \textbf{Sorting}: in postwar US House races, incumbents win close races far more often than they lose them
+  \begin{itemize}
+    \item<1-> better resources and information at the margin?
+    \item<1-> {\footnotesize \asher{Caughey \& Sekhon (2011), \textit{Political Analysis}}}
+  \end{itemize}
+  \vspace{6pt}
+  \item<2-> But across 40,000 close races in other countries and offices, no such sorting
+  \begin{itemize}
+    \item<2-> {\footnotesize \asher{Eggers et al.\ (2015), \textit{AJPS}}}
+  \end{itemize}
+  \vspace{6pt}
+  \item<3-> \textbf{What is the treatment?} Winning a close race also changes the type of candidate who wins
+  \begin{itemize}
+    \item<3-> comparing winners with a trait (e.g.\ women, incumbents) mixes that trait with whatever let them win a close race
+    \item<3-> {\footnotesize \asher{Marshall (2024), \textit{AJPS}}}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{The close-election RDD is the most used RDD in political science, and also one of the most debated.
+\begin{itemize}
+  \item Sorting: Caughey and Sekhon showed that in the US House, bare winners and bare losers differ before the election (incumbent party, spending, expert ratings). If one side can tip the result at the margin, the cutoff is not a coin flip.
+  \item Eggers et al.\ checked thousands of close races elsewhere and found the US House is the exception rather than the rule. The check is a design question, not a given.
+  \item Marshall: even with perfect local randomisation, comparing close winners who have trait X with close winners who don't does not isolate X. To win a close race against an opponent, a candidate with a disadvantage on X must be stronger on something else. The estimate bundles X with those compensating traits.
+\end{itemize}
+This is construct validity again (later today): the design is clean, but the treatment is not what the label says.}
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{What RDD needs}
 \centering
 
@@ -641,7 +762,7 @@ The standard check is to look for bunching in the distribution of the running va
     \item borders separate many things at once: compound treatments
   \end{itemize}
   \vspace{8pt}
-  \item<3-> The estimate is \textbf{local}: it is the effect for units near the cutoff
+  \item<3-> The estimate is \textbf{local} (LATE): it is the effect for units near the cutoff
 \end{itemize}
 
 \vspace{15pt}
@@ -844,6 +965,35 @@ The instrument: daily wind direction carrying pollution from distant upwind loca
 
 % ----------------------------------------------------
 \begin{frame}
+\frametitle{The naive version: wind direction alone}
+\centering
+
+\vspace{15pt}
+\begin{tikzpicture}[every text node part/.style={align=center}, scale = 0.85]
+\node (wd) at (0,0){Wind\\direction};
+\node (p) at (4,0){Pollution};
+\node (d) at (8,0){Driving};
+\node (u) at (6,2.5){U\\{\footnotesize (economic activity, traffic)}};
+\draw[->, thick] (wd) -- (p);
+\draw[->, thick] (p) -- (d);
+\draw[->, dashed] (u) -- (p);
+\draw[->, dashed] (u) -- (d);
+\end{tikzpicture}
+
+\vspace{20pt}
+\begin{itemize}
+  \item Use only the variation in pollution that comes from the wind
+  \item Valid \textbf{if} wind direction affects driving only through pollution
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{The textbook IV picture applied to this case. U is everything that drives both pollution and travel. Wind direction moves pollution and, on this graph, nothing else. If this were the whole story, the instrument alone would do.
+
+Ask the room: what else might wind direction be connected to? That leads to the next slide.}
+
+% ----------------------------------------------------
+\begin{frame}
 \frametitle{Combining: does pollution make people leave the city?}
 \centering
 
@@ -863,7 +1013,7 @@ Back to the opening: most good papers do both.}
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{In pairs: which template?}
+\frametitle{Try with these questions, which template?}
 \centering
 
 \vspace{5pt}
@@ -890,21 +1040,6 @@ Back to the opening: most good papers do both.}
   \item RDD on close mixed-gender elections. Threat: the effect is local to competitive races.
   \item Field experiment if possible; otherwise fixed effects on panel data of users. Threat: who chooses to read cross-cutting news.
 \end{enumerate}}
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{}
-\centering
-
-\vspace{40pt}
-{\Large Break}
-
-\vspace{10pt}
-{\small 10 minutes}
-
-\end{frame}
-% ----------------------------------------------------
-\note{Halfway point. If running late, the slides on staggered DiD, the funnel plots and the second meta-analysis slide can be skipped without losing the thread.}
 
 % ====================================================
 \section{How far does it travel?}
@@ -1052,6 +1187,72 @@ Not a reason for despair, but for theory: knowing \textbf{why} an effect occurre
 \note{Blair, Christensen and Rudkin (2021). Natural resources and conflict is a classic endogeneity problem: resource-rich countries differ in many ways.
 
 The design that many papers converged on: world commodity prices are exogenous to any one country's conflict, so price shocks interacted with a country's production give a DiD-type design with country and year fixed effects. The meta-analysis pools 46 such studies.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{How are meta-analyses done?}
+\centering
+
+\begin{itemize}
+  \item[1.] Literature review $\rightarrow$ 3,300 records
+  \vspace{6pt}
+  \item<2->[2.] Keep studies with \textbf{the same design and topic}:
+  \begin{itemize}
+    \item[] {\footnotesize ``the 46 included studies (102 estimates) quantitatively analyze the effect of plausibly exogenous variation in world commodity prices on armed civil conflict by using a generalized difference-in-difference design with unit and time fixed effects''}
+  \end{itemize}
+  \vspace{6pt}
+  \item<3->[3.] Make studies comparable $\rightarrow$ standardize the coefficients
+  \vspace{6pt}
+  \item<4->[4.] Pool them: fixed-effects and random-effects meta-analysis models
+\end{itemize}
+
+\end{frame}
+% ----------------------------------------------------
+\note{The point is step 2: a meta-analysis only makes sense across studies that estimate the same thing in the same way. Here, they all use the same design (the commodity price DiD with fixed effects from the first half of today).
+
+Fixed-effects meta-analysis assumes one true effect; random-effects allows the true effect to vary across studies. No need to go further.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{What does theory predict?}
+\centering
+
+\begin{itemize}
+  \item[H1:] resources are the \textbf{prize} to be won by fighting (+)
+  \item[H2:] higher prices change the \textbf{opportunity cost} of fighting\\(-- for labour-intensive, + for capital-intensive)
+  \item[H3:] \textbf{lootable} resources can be captured by fighting (+)
+\end{itemize}
+
+\vspace{10pt}
+\includegraphics[width = \textwidth]{../img/blair_apsr2}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Three mechanisms, and they do not all point the same way. H2 is the key one: when coffee prices rise, farm work pays better and joining a rebel group is less attractive. When oil prices rise, there is more to fight over, and oil employs few people.
+
+The table is the theoretical prediction for each commodity type. Note the pooled row: the hypotheses predict a mix, so a pooled null would be uninformative.}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, width=.9\paperwidth]{../img/blair_apsr3}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{The results. Pooled: centred on zero. By type: agriculture negative, oil and gas positive, as H2 predicts. The light dots are individual study estimates, sized by precision; the dark markers are the meta-analysis estimates.}
+
+% ----------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[at = (current page.center), yshift = 0cm] (cover) {%
+      \includegraphics[keepaspectratio, width=.95\paperwidth]{../img/blair_apsr4}};
+  \end{tikzpicture}
+\end{frame}
+% ----------------------------------------------------
+\note{The evidence gap map: where the estimates come from. Mostly Africa, mostly agriculture and artisanal minerals; almost nothing on commercial minerals outside Africa, and nothing from North America for most types.
+
+This is external validity made visible: the pooled knowledge is about some places and some commodities.}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1278,22 +1479,19 @@ The last line is common to the three: description of one platform, an effect at 
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{In your groups: twenty minutes}
+\frametitle{First steps}
 \centering
 
 \vspace{10pt}
 \begin{enumerate}
   \item Say your question in one sentence. Which goal?
   \vspace{8pt}
-  \item Which \textbf{row of the table} is your design?
+  \item Which template(s) could you use?
   \vspace{8pt}
   \item What has to be true? How would you check it?
   \vspace{8pt}
   \item Which threat will you \textbf{not} be able to solve?
 \end{enumerate}
-
-\vspace{15pt}
-{\small I'll come round. No group yet? Use this to find one}
 
 \end{frame}
 % ----------------------------------------------------
@@ -1309,7 +1507,7 @@ Watch for the usual problems: questions that are topics, designs that are a list
 
 % ----------------------------------------------------
 \begin{frame}
-\frametitle{One project, seen three times}
+\frametitle{Housekeeping}
 \centering
 
 \vspace{15pt}
@@ -1379,6 +1577,42 @@ Final essay & 40\% & the group \\
 Graded lightly like the other memos (done, or done well). The real function is to fix the groups and give the paired group a head start.
 
 Anyone still without a group should talk to me today, not on Monday night.}
+
+% ----------------------------------------------------
+\begin{frame}
+\frametitle{The research process}
+\centering
+
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}
+\node (topic) at (1,0) {Topic};
+\node (rq) at (2.5,0) {RQ};
+\node (theory) at (4,0) {Theory};
+\node (measure) at (6,0) {Measure};
+\node (strat) at (8,0) {Strategy};
+\node (analyses) at (10,0) {Analyses};
+\node (results) at (12,0) {Results};
+
+\draw[->, line width=0.4mm] (topic) to[out=280, in=260] (rq) node[] {};
+\draw[->, line width=0.4mm] (rq) to[out=280, in=260] (theory) node[] {};
+\draw[->, line width=0.4mm] (theory) to[out=280, in=260] (measure) node[] {};
+\draw[->, line width=0.4mm] (measure) to[out=280, in=260] (strat) node[] {};
+\draw[->, line width=0.4mm] (strat) to[out=280, in=260] (analyses) node[] {};
+\draw[->, line width=0.4mm] (analyses) to[out=280, in=260] (results) node[] {};
+\draw[->, line width=0.4mm, red] (results) to[out=160, in=20] (topic) node[] {};
+
+\end{tikzpicture}}
+
+\vspace{20pt}
+\begin{flushleft}
+\footnotesize Same diagram as in session 1. Your project covers everything up to \textbf{Strategy}
+\end{flushleft}
+
+\end{frame}
+% ----------------------------------------------------
+\note{Back to the diagram from the first session. Memo 5, the presentation and the essay cover topic, question, theory, measure and strategy. Analyses and results are not required: no data analysis.
+
+The red arrow still applies: expect to go back and rewrite the question once the design is clearer.}
 
 % ----------------------------------------------------
 \begin{frame}
@@ -1519,30 +1753,6 @@ Two formats, one logic. The comparison format suits groups that cannot agree on 
 \note{Not compulsory, but if they follow it they will not forget anything. The design and threats sections should be the longest; introduction and argument should be short. A long literature review is the most common way to waste words.
 
 Placebo tests and robustness checks belong in the design section: what would you run to convince a sceptic?}
-
-% ----------------------------------------------------
-\begin{frame}
-\frametitle{How to get there in two weeks}
-\centering
-
-\begin{itemize}
-  \item \textbf{This week}: agree on the question and the design. Write Memo 5
-  \vspace{6pt}
-  \item \textbf{Next week}: write the essay. One editor, everyone reads everything
-  \vspace{6pt}
-  \item \textbf{Oct 26}: present the essay you have written
-  \vspace{6pt}
-  \item \textbf{Oct 27}: revise with the feedback, submit by 23.59h
-\end{itemize}
-
-\vspace{15pt}
-\uncover<2->{{\small The extra day is for \textbf{feedback}, not for starting}}
-
-\end{frame}
-% ----------------------------------------------------
-\note{The syllabus is explicit: the essay should be finished before the workshop. The day after is to act on the feedback from the paired group and the room.
-
-On group work: splitting sections works only if someone reads the whole thing for consistency. The measure in section 4 has to be the one the design in section 5 uses.}
 
 % ----------------------------------------------------
 \begin{frame}

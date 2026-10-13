@@ -1,12 +1,12 @@
 \beamer@sectionintoc {1}{Two strategies}{5}{0}{1}
 \beamer@sectionintoc {2}{Controlling and matching}{9}{0}{2}
 \beamer@sectionintoc {3}{Fixed effects}{13}{0}{3}
-\beamer@sectionintoc {4}{Difference-in-differences}{20}{0}{4}
-\beamer@sectionintoc {5}{Regression discontinuity}{29}{0}{5}
-\beamer@sectionintoc {6}{Instrumental variables}{38}{0}{6}
-\beamer@sectionintoc {7}{Putting it together}{45}{0}{7}
-\beamer@sectionintoc {8}{How far does it travel?}{51}{0}{8}
-\beamer@sectionintoc {9}{Keeping yourself honest}{59}{0}{9}
-\beamer@sectionintoc {10}{Ethics for computational work}{65}{0}{10}
-\beamer@sectionintoc {11}{Wrapping up}{68}{0}{11}
-\beamer@sectionintoc {12}{Memo 5, workshop and essay}{71}{0}{12}
+\beamer@sectionintoc {4}{Difference-in-differences}{26}{0}{4}
+\beamer@sectionintoc {5}{Regression discontinuity}{35}{0}{5}
+\beamer@sectionintoc {6}{Instrumental variables}{46}{0}{6}
+\beamer@sectionintoc {7}{Putting it together}{53}{0}{7}
+\beamer@sectionintoc {8}{How far does it travel?}{59}{0}{8}
+\beamer@sectionintoc {9}{Keeping yourself honest}{71}{0}{9}
+\beamer@sectionintoc {10}{Ethics for computational work}{77}{0}{10}
+\beamer@sectionintoc {11}{Wrapping up}{80}{0}{11}
+\beamer@sectionintoc {12}{Memo 5, workshop and essay}{83}{0}{12}
