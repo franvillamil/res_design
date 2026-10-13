@@ -18,5 +18,5 @@ layout: default
 | **Tue,&nbsp;Sep&nbsp;22** | Questions and data | [[PDF](https://franvillamil.github.io/res_design/slides/2_questions_and_data/questions.pdf)] | [[Google&nbsp;Flu](https://www.science.org/doi/10.1126/science.1248506)] |
 | **Tue,&nbsp;Sep&nbsp;29** | Measurement and description | [[PDF](https://franvillamil.github.io/res_design/slides/3_measurement/measurement.pdf)] | [[Roads&nbsp;to&nbsp;Rule](https://journals.sagepub.com/doi/10.1177/0022002720963674)] |
 | **Tue,&nbsp;Oct&nbsp;6** | Causality | [[PDF](https://franvillamil.github.io/res_design/slides/4_causality/causality.pdf)] | [[Guess&nbsp;et&nbsp;al.](https://www.science.org/doi/10.1126/science.abp9364)] |
-| **Tue,&nbsp;Oct&nbsp;13** | Designs and credibility | | |
+| **Tue,&nbsp;Oct&nbsp;13** | Designs and credibility | [[PDF](https://franvillamil.github.io/res_design/slides/5_designs/designs.pdf)] | |
 | **Mon,&nbsp;Oct&nbsp;26**&nbsp;(15-21h) | Final essay workshop (*double&nbsp;session*) | | |
